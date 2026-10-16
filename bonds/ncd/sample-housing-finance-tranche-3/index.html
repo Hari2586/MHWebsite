@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+
+<html lang="en-IN">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>Sample Housing Finance Limited NCD | MoneyHoney</title>
+<meta content="Sample NCD issue for illustration: Sample Housing Finance Limited, Tranche III, open until 26 Oct 2026. 8 series, 8.90% to 9.90% effective yield, rated AA+." name="description"/>
+<link href="https://example.com/bonds/ncd/sample-housing-finance-tranche-3/" rel="canonical"/>
+<meta content="website" property="og:type"/>
+<meta content="MoneyHoney" property="og:site_name"/>
+<meta content="en_IN" property="og:locale"/>
+<meta content="Sample Housing Finance Limited NCD | MoneyHoney" property="og:title"/>
+<meta content="Sample NCD issue for illustration: Sample Housing Finance Limited, Tranche III, open until 26 Oct 2026. 8 series, 8.90% to 9.90% effective yield, rated AA+." property="og:description"/>
+<meta content="https://example.com/bonds/ncd/sample-housing-finance-tranche-3/" property="og:url"/>
+<meta content="https://example.com/assets/og/ncd.png" property="og:image"/>
+<meta content="1200" property="og:image:width"/>
+<meta content="630" property="og:image:height"/>
+<meta content="MoneyHoney: NCD Public Issues" property="og:image:alt"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://example.com/"}, {"@type": "ListItem", "position": 2, "name": "Bonds & NCDs", "item": "https://example.com/bonds/"}, {"@type": "ListItem", "position": 3, "name": "NCD IPO", "item": "https://example.com/bonds/ncd/"}, {"@type": "ListItem", "position": 4, "name": "Sample Housing Finance Limited", "item": "https://example.com/bonds/ncd/sample-housing-finance-tranche-3/"}]}, {"@type": "WebPage", "name": "Sample Housing Finance Limited", "url": "https://example.com/bonds/ncd/sample-housing-finance-tranche-3/", "dateModified": "2026-10-16", "isPartOf": {"@id": "https://example.com/#website"}, "publisher": {"@id": "https://example.com/#organization"}}, {"@type": "Organization", "@id": "https://example.com/#organization", "name": "MoneyHoney", "url": "https://example.com/", "description": "AMFI Registered Mutual Fund Distributor & SIF Distributor, ARN-60930"}]}</script>
+<link href="../../../assets/mh.css" rel="stylesheet"/><meta content="noindex, nofollow" name="robots"/><link href="../../../assets/sunrise/sunrise.css" rel="stylesheet"/><script defer="" src="../../../assets/sunrise/sunrise.js"></script>
+<script defer="" src="../../../assets/mh.js"></script>
+<style>
+
+.demo-note{margin:var(--space-4) 0}.demo-note p{margin:0}
+.page-head .breadcrumb{margin-bottom:var(--space-4)}
+.ncd-layout{display:grid;gap:var(--space-6);grid-template-columns:minmax(0,1fr);padding-bottom:var(--space-16)}
+/* the Apply card sits beside the page from 1,200px (as the bond lists' side panel does), so the accordions' tables have
+   room; below that the Apply bar is fixed at the foot */
+@media (min-width:1200px){.ncd-layout{grid-template-columns:minmax(0,1fr) 320px;align-items:start}.ncd-side{position:sticky;top:calc(var(--nav-height) + var(--space-4))}}
+.hero{color:var(--color-surface-page);padding:var(--space-5)}
+@media (min-width:600px){.hero{padding:var(--space-6)}}
+.hero__top{display:flex;flex-wrap:wrap;gap:var(--space-3);align-items:flex-start;padding-bottom:var(--space-4);border-bottom:1px solid var(--color-brand-secondary)}
+.tile{display:inline-grid;place-items:center;width:48px;height:48px;flex-shrink:0;border-radius:var(--radius-btn);background:var(--color-surface-page);color:var(--color-brand);font-weight:var(--font-weight-semibold);font-size:var(--text-sm)}
+.tile-sm{width:40px;height:40px;border:1px solid var(--color-border-soft)}
+.hero h1{font-size:var(--text-lg);line-height:1.35;color:var(--color-surface-page);margin:0}
+.hero__name{flex:1;min-width:0}
+.hero__dates{margin:var(--space-1) 0 0;font-size:var(--text-sm);color:var(--color-brand-light)}
+.hero__tags{display:flex;gap:var(--space-2);flex-wrap:wrap}
+@media (max-width:599px){.hero__tags{flex-basis:100%;padding-left:calc(48px + var(--space-3))}}
+.pill{display:inline-flex;align-items:center;height:24px;padding:0 var(--space-2);border-radius:var(--radius-pill);font-size:var(--text-xs);font-weight:var(--font-weight-medium);background:var(--color-brand-secondary);color:var(--color-surface-page)}
+.pill-open{background:var(--color-success-bg);color:var(--color-success-text)}
+.pill-prebook{background:var(--color-brand-tint-200);color:var(--color-brand)}
+.pill-closed{background:var(--color-surface-elevated);color:var(--color-text-strong)}
+.hero__stats{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:var(--space-4);margin:var(--space-4) 0 0}
+@media (min-width:768px){.hero__stats{grid-template-columns:repeat(4,minmax(0,1fr))}}
+.hero__stats div{display:flex;flex-direction:column;gap:var(--space-1)}
+.hero__stats dt{font-size:var(--text-xs);color:var(--color-brand-light);order:2}
+.hero__stats dd{margin:0;order:1;font-weight:var(--font-weight-semibold);font-variant-numeric:tabular-nums}
+.hero__ret dd{font-family:var(--font-family-display);font-size:var(--text-xl);font-weight:800;color:var(--color-surface-page)}
+.countdown{display:inline-block;margin:var(--space-4) 0 0;padding:var(--space-1) var(--space-3);border-radius:var(--radius-pill);background:var(--color-brand-tint);color:var(--color-brand);font-size:var(--text-xs);font-weight:var(--font-weight-medium);white-space:nowrap}
+.countdown.soon{background:var(--color-warning-bg);color:var(--color-warning-text)}
+.countdown.closed{background:var(--color-surface-elevated);color:var(--color-text-strong)}
+.series{margin-top:var(--space-6)}
+.ret,.table td.ret{color:var(--color-text-deep);font-weight:var(--font-weight-semibold)}
+.ncd-layout :is(.card__title,.block__title){font-size:var(--text-lg);font-weight:700;line-height:1.3;color:var(--color-brand);margin:0 0 var(--space-4)}
+.tag{display:inline-block;margin-left:var(--space-1);padding:0 var(--space-2);border-radius:var(--radius-xs);background:var(--color-brand-tint);color:var(--color-brand);font-size:var(--text-xs)}
+.sort,.linkrow{border:0;background:none;padding:0;font:inherit;color:inherit;cursor:pointer;min-height:44px;text-align:left}
+.sort{text-transform:inherit;letter-spacing:inherit}
+.linkrow{color:var(--color-brand);font-weight:var(--font-weight-semibold)}
+/* 44px targets that keep the rows their usual height (the cells' 12px padding takes the overhang) */
+@media (min-width:768px){.table .sort,.table .linkrow{margin-block:calc(-1 * var(--space-3))}}
+#series-table tbody tr{cursor:pointer}
+.meta{font-size:var(--text-xs);color:var(--color-text-cool);margin:var(--space-2) 0}
+.strong{font-weight:var(--font-weight-medium);color:var(--color-text-deep);display:block}
+.block{margin-top:var(--space-8);padding:var(--space-5);background:var(--color-surface-app);border-radius:var(--radius-card)}
+.docs{display:grid;grid-template-columns:repeat(auto-fill,minmax(140px,1fr));gap:var(--space-3)}
+.doc-tile{display:flex;flex-direction:column;gap:var(--space-3);align-items:flex-start;padding:var(--space-4);min-height:96px;background:var(--color-surface-page);border:1px solid var(--color-border-soft);border-radius:var(--radius-card);color:var(--color-brand);font:inherit;font-size:var(--text-sm);text-align:left;cursor:pointer;text-decoration:none;transition:border-color var(--duration-fast)}
+.doc-tile:hover{border-color:var(--color-brand)}
+.doc{width:24px;height:24px}
+.acc{background:var(--color-surface-page);border:1px solid var(--color-border-soft);border-radius:var(--radius-card);margin-top:var(--space-3)}
+.acc summary{display:flex;align-items:center;gap:var(--space-3);min-height:56px;padding:0 var(--space-4);cursor:pointer;list-style:none}
+.acc summary::-webkit-details-marker{display:none}
+.acc__title{font-weight:var(--font-weight-medium);color:var(--color-text-deep);flex:1}
+.acc__value{font-size:var(--text-sm);color:var(--color-text-strong);margin-left:auto;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;max-width:50%}
+.chev{width:16px;height:16px;flex-shrink:0;color:var(--color-text-cool)}
+.acc[open] .chev{transform:rotate(180deg)}
+.acc__body{padding:0 var(--space-4) var(--space-4);font-size:var(--text-sm);color:var(--color-text-strong)}
+.acc__body h3{font-size:var(--text-sm);margin:var(--space-4) 0 var(--space-2);color:var(--color-text-deep)}
+.acc__body p{margin:0 0 var(--space-2)}
+.acc__body tr.total td{font-weight:var(--font-weight-semibold)}
+.eyebrow{font-size:var(--text-xs);font-weight:var(--font-weight-medium);letter-spacing:0.06em;text-transform:uppercase;color:var(--color-brand)}
+.rate-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:var(--space-3)}
+.rate-card{padding:var(--space-4);background:var(--color-surface-app);border-radius:var(--radius-card)}
+.people{list-style:none;padding:0;margin:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:var(--space-3)}
+.people li{display:flex;gap:var(--space-3);padding:var(--space-3);border:1px solid var(--color-border-soft);border-radius:var(--radius-card)}
+.people .meta{margin:0;display:block}
+.avatar{display:inline-grid;place-items:center;width:32px;height:32px;flex-shrink:0;border-radius:var(--radius-btn);background:var(--color-brand-tint);color:var(--color-brand);font-weight:var(--font-weight-semibold)}
+.bullets{margin:0;padding-left:var(--space-5)}
+.timeline{list-style:none;margin:0;padding:0}
+.timeline li{display:grid;grid-template-columns:12px 1fr auto;gap:var(--space-3);align-items:center;padding:var(--space-2) 0}
+.timeline__dot{width:10px;height:10px;border-radius:var(--radius-full);border:2px solid var(--color-brand-300)}
+.timeline li.done .timeline__dot{background:var(--color-brand);border-color:var(--color-brand)}
+.timeline__date{color:var(--color-text-cool);font-variant-numeric:tabular-nums}
+.ncd-disclaimer{margin-top:var(--space-8);font-size:var(--text-sm);color:var(--color-text-strong)}
+.side p{font-size:var(--text-sm);color:var(--color-text-strong)}
+.btn-block{width:100%}
+.mbar{display:none}
+@media (max-width:1199px){
+  .ncd-side{display:none}
+  .mbar{display:flex;position:fixed;left:0;right:0;bottom:0;z-index:20;align-items:center;justify-content:space-between;gap:var(--space-3);padding:var(--space-3) var(--gutter);background:var(--color-surface-page);border-top:1px solid var(--color-border-soft)}
+  .mbar div{display:flex;flex-direction:column}.mbar .meta{margin:0}
+}
+.drawer{position:fixed;top:0;right:0;bottom:0;z-index:var(--z-modal);width:100%;max-width:576px;display:flex;flex-direction:column;background:var(--color-surface-page);border-left:1px solid var(--color-border-soft);box-shadow:var(--shadow-lift)}
+.drawer[hidden],.modal[hidden],.backdrop[hidden]{display:none}
+.drawer__head{display:flex;justify-content:space-between;align-items:center;padding:var(--space-4) var(--space-6)}
+.drawer__body{flex:1;overflow:auto;padding:0 var(--space-6) var(--space-6);display:flex;flex-direction:column;gap:var(--space-4)}
+.drawer__body h2{font-size:var(--text-lg);margin:0}
+.dr-meta{margin:0;font-size:var(--text-sm);color:var(--color-text-strong)}
+.drawer__foot{display:grid;grid-auto-flow:column;grid-auto-columns:1fr;gap:var(--space-3);padding:var(--space-4) var(--space-6);border-top:1px solid var(--color-border-soft)}
+.icon-btn{display:inline-grid;place-items:center;width:44px;height:44px;border:0;background:none;color:var(--color-text-cool);border-radius:var(--radius-btn);cursor:pointer}
+.icon-btn svg{width:20px;height:20px}
+.stepper{display:grid;grid-template-columns:44px 1fr auto 44px;gap:var(--space-3);align-items:center;padding:var(--space-2);border:1px solid var(--color-border-soft);border-radius:var(--radius-card)}
+.stepper .step{padding:0;min-width:44px}
+.stepper .step svg{width:16px;height:16px}
+.stepper .input{text-align:center;font-weight:var(--font-weight-semibold);font-size:16px;width:100%}
+.dkv dt.total,.dkv dd.total{color:var(--color-brand);font-weight:var(--font-weight-semibold);padding-top:var(--space-3);border-top:1px solid var(--color-border-subtle)}
+.dkv dt.total{margin-right:calc(-1 * var(--space-4));padding-right:var(--space-4)}
+.est .dkv{margin-top:var(--space-4)}
+.dkv .sub{grid-column:1/-1;font-size:var(--text-xs);color:var(--color-text-cool);margin:calc(-1 * var(--space-2)) 0 0}
+.dkv .sub.strong{color:var(--color-text-deep);margin-top:var(--space-2)}
+@media (min-width:768px){.dkv .sub.mob{display:none}}
+.vh{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.modal h2{font-size:var(--text-lg);margin:0 0 var(--space-3)}
+.modal p{font-size:var(--text-sm);color:var(--color-text-strong)}
+.modal__actions{display:flex;flex-wrap:wrap;gap:var(--space-3);margin-top:var(--space-5)}
+</style>
+</head>
+<body class="page-bond">
+<header class="sr-header"><div class="sr-aud"><nav aria-label="Audience" class="sr-wrap"><a aria-current="true" href="../../../index.html">Investors</a><a href="../../../solutions/nri/index.html">NRIs</a><a href="https://ba.moneyhoney.co.in/">Business Associates</a></nav></div><div class="sr-head"><div class="sr-wrap sr-head__row"><a aria-label="MoneyHoney home" class="sr-logo" href="../../../index.html"><svg aria-label="MoneyHoney" fill="none" height="20" role="img" viewbox="0 0 139 20" width="139" xmlns="http://www.w3.org/2000/svg">
+<path d="M1 10C1 15.2842 5.12632 19.6211 10.3474 20C10.3474 18.4632 9.46316 17.0316 8.07368 16.3579C5.67368 15.2211 4.01053 12.8 4.01053 9.97895C4.01053 7.51579 5.27368 5.36842 7.18947 4.08421V7.64211C7.18947 9.36842 8.6 10.7789 10.3474 10.7789V0C5.12632 0.4 1 4.73684 1 10Z" fill="#FF4A00"></path>
+<path d="M21.2318 10C21.2318 15.2842 17.1054 19.6211 11.8844 20C11.8844 18.4632 12.7686 17.0316 14.1581 16.3579C16.5581 15.2211 18.2212 12.8 18.2212 9.97895C18.2212 7.51579 16.9581 5.36842 15.0212 4.08421V7.64211C15.0212 9.36842 13.6107 10.7789 11.8633 10.7789V0C17.0844 0.4 21.2107 4.73684 21.2107 10H21.2318Z" fill="#FF4A00"></path>
+<path d="M13.4418 14.0201C13.4418 15.3043 12.4103 16.3359 11.126 16.3359C9.84184 16.3359 8.81026 15.3043 8.81026 14.0201C8.81026 12.7359 9.84184 11.7043 11.126 11.7043C12.4103 11.7043 13.4418 12.7359 13.4418 14.0201Z" fill="#16205B"></path>
+<path d="M27.6319 3.41083H29.5477C30.1582 3.41083 30.7056 3.72662 31.0214 4.23188L33.6951 8.52662L36.3687 4.23188C36.6845 3.72662 37.253 3.41083 37.8424 3.41083H39.7582V15.474H38.5161C37.7372 15.474 37.1056 14.8424 37.1056 14.0635V7.6003L33.6951 12.7582H33.6319L30.2424 7.66346V14.0845C30.2424 14.8635 29.6108 15.495 28.8319 15.495H27.6319V3.43188V3.41083Z" fill="#16205B"></path>
+<path d="M49.0839 10.905V10.8629C49.0839 9.49451 48.0944 8.31556 46.6418 8.31556C45.1892 8.31556 44.2207 9.47345 44.2207 10.8419V10.884C44.2207 12.2524 45.2102 13.4313 46.6628 13.4313C48.1155 13.4313 49.0839 12.2735 49.0839 10.905ZM41.6102 10.905V10.8629C41.6102 8.21029 43.7576 6.06293 46.6628 6.06293C49.5681 6.06293 51.6734 8.18924 51.6734 10.8419V10.884C51.6734 13.5366 49.526 15.684 46.6207 15.684C43.7155 15.684 41.6102 13.5577 41.6102 10.905Z" fill="#16205B"></path>
+<path d="M53.2529 6.25173H55.0003C55.5055 6.25173 55.9055 6.65173 55.9055 7.13594V7.557C56.5161 6.77805 57.295 6.08331 58.6213 6.08331C60.6213 6.08331 61.7792 7.38858 61.7792 9.51489V15.4938H60.3897C59.695 15.4938 59.1476 14.9465 59.1476 14.2517V10.3359C59.1476 9.09384 58.5582 8.46226 57.5476 8.46226C56.5371 8.46226 55.9055 9.09384 55.9055 10.3359V14.2517C55.9055 14.9254 55.3371 15.4938 54.6634 15.4938H53.274V6.25173H53.2529Z" fill="#16205B"></path>
+<path d="M69.8203 10.1471C69.673 8.96819 68.9782 8.18924 67.8624 8.18924C66.7467 8.18924 66.0519 8.96819 65.8414 10.1471H69.8203ZM63.273 10.905V10.8629C63.273 8.23135 65.1677 6.06293 67.8624 6.06293C70.9782 6.06293 72.3888 8.46293 72.3888 11.0735C72.3888 11.284 72.3888 11.5156 72.3467 11.7682H65.8624C66.1151 12.9471 66.9572 13.5787 68.1361 13.5787C68.8309 13.5787 69.3782 13.4103 69.9256 13.0103C70.2203 12.7998 70.6203 12.8419 70.873 13.0735L71.8835 13.9577C71.0203 15.0313 69.7572 15.684 68.073 15.684C65.273 15.684 63.2098 13.7471 63.2098 10.905H63.273Z" fill="#16205B"></path>
+<path d="M80.8733 6.2522H82.4312L78.8523 15.7048C78.1365 17.5785 77.3786 18.2943 75.7996 18.2943C74.8523 18.2943 74.1365 18.0627 73.4628 17.6627L74.2417 16.0206C74.3049 15.8943 74.4523 15.8311 74.5786 15.8943C74.8733 16.0417 75.2102 16.1259 75.4628 16.1259C75.9049 16.1259 76.1575 15.9785 76.3891 15.5154L72.747 6.2522H74.2839C75.0417 6.2522 75.6944 6.73641 75.926 7.43114L77.6523 12.5469L79.3154 7.36799C79.526 6.6943 80.1575 6.2522 80.8523 6.2522H80.8733Z" fill="#16205B"></path>
+<path d="M84.4945 3.41083H85.6735C86.4945 3.41083 87.1682 4.06346 87.1682 4.88451V8.18977H92.0945V4.88451C92.0945 4.06346 92.7682 3.41083 93.5893 3.41083H94.7682V15.474H93.6314C92.7682 15.474 92.0945 14.7792 92.0945 13.9371V10.6319H87.1682V13.9371C87.1682 14.7792 86.4735 15.474 85.6314 15.474H84.4945V3.41083Z" fill="#FF4A00"></path>
+<path d="M104.073 10.905V10.8629C104.073 9.49451 103.083 8.31556 101.631 8.31556C100.178 8.31556 99.2098 9.47345 99.2098 10.8419V10.884C99.2098 12.2524 100.199 13.4313 101.652 13.4313C103.105 13.4313 104.073 12.2735 104.073 10.905ZM96.6203 10.905V10.8629C96.6203 8.21029 98.7677 6.06293 101.673 6.06293C104.578 6.06293 106.683 8.18924 106.683 10.8419V10.884C106.683 13.5366 104.536 15.684 101.631 15.684C98.7256 15.684 96.6203 13.5577 96.6203 10.905Z" fill="#FF4A00"></path>
+<path d="M135.863 6.2522H137.421L133.842 15.7048C133.126 17.5785 132.368 18.2943 130.789 18.2943C129.842 18.2943 129.126 18.0627 128.452 17.6627L129.231 16.0206C129.294 15.8943 129.442 15.8311 129.589 15.8943C129.884 16.0417 130.199 16.1259 130.473 16.1259C130.915 16.1259 131.168 15.9785 131.399 15.5154L127.757 6.2522H129.294C130.052 6.2522 130.705 6.73641 130.936 7.43114L132.663 12.5469L134.326 7.36799C134.536 6.6943 135.168 6.2522 135.863 6.2522Z" fill="#FF4A00"></path>
+<path d="M108.243 6.25173H109.99C110.495 6.25173 110.895 6.65173 110.895 7.13594V7.557C111.506 6.77805 112.285 6.08331 113.611 6.08331C115.611 6.08331 116.769 7.38858 116.769 9.51489V15.4938H115.379C114.685 15.4938 114.137 14.9465 114.137 14.2517V10.3359C114.137 9.09384 113.548 8.46226 112.537 8.46226C111.527 8.46226 110.895 9.09384 110.895 10.3359V14.2517C110.895 14.9254 110.327 15.4938 109.653 15.4938H108.264V6.25173H108.243Z" fill="#FF4A00"></path>
+<path d="M124.895 10.1471C124.747 8.96819 124.053 8.18924 122.937 8.18924C121.821 8.18924 121.126 8.96819 120.916 10.1471H124.895ZM118.326 10.905V10.8629C118.326 8.23135 120.221 6.06293 122.916 6.06293C126.032 6.06293 127.442 8.46293 127.442 11.0735C127.442 11.284 127.442 11.5156 127.4 11.7682H120.916C121.168 12.9471 122.01 13.5787 123.189 13.5787C123.884 13.5787 124.432 13.4103 124.979 13.0103C125.274 12.7998 125.674 12.8419 125.926 13.0735L126.937 13.9577C126.074 15.0313 124.81 15.684 123.126 15.684C120.326 15.684 118.263 13.7471 118.263 10.905H118.326Z" fill="#FF4A00"></path>
+</svg></a><nav aria-label="Main" class="sr-nav"><div class="sr-nav__item"><button aria-controls="mega-invest" aria-expanded="false" class="sr-nav__top" type="button">Invest <svg aria-hidden="true" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><path d="m6 9 6 6 6-6"></path></svg></button><div class="sr-mega" id="mega-invest"><div class="sr-mega__col"><p class="sr-mega__h">Mutual funds</p><a class="sr-mega__link" href="../../../mutual-funds/index.html"><b>Mutual Funds</b><span>All 1,774 open schemes by category</span></a><a class="sr-mega__link" href="../../../mutual-funds/explore/index.html"><b>Explore Funds</b><span>Filter by category, cost and risk</span></a><a class="sr-mega__link" href="../../../mutual-funds/screens/index.html"><b>Fund Screens</b><span>Ready-made lists, each with its rule</span></a><a class="sr-mega__link" href="../../../mutual-funds/screener/index.html"><b>Screener</b><span>Every scheme on one table</span></a><a class="sr-mega__link" href="../../../mutual-funds/amc/index.html"><b>Fund Houses</b><span>The 49 fund houses we distribute</span></a></div><div class="sr-mega__col"><p class="sr-mega__h">Beyond mutual funds</p><a class="sr-mega__link" href="../../../sif/index.html"><b>SIF</b><span>Specialised Investment Funds, from ₹10,00,000</span></a><a class="sr-mega__link" href="../../../gift-city-funds/index.html"><b>GIFT City Funds</b><span>Dollar funds for NRIs and residents</span></a><a class="sr-mega__link" href="../../../mutual-funds/nfo/index.html"><b>New Fund Offers</b><span>Open, upcoming and recently closed</span></a><a class="sr-mega__link" href="../../../mutual-funds/dividends/index.html"><b>Dividends (IDCW)</b><span>Record dates and history</span></a></div><div class="sr-mega__promo"><b>Not sure where to start?</b><p>Six questions on your goals, your debts and your nerve.</p><a class="sr-more" href="../../../solutions/know-yourself/index.html">Know Yourself <svg aria-hidden="true" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a></div></div></div><div class="sr-nav__item"><button aria-controls="mega-save" aria-current="page" aria-expanded="false" class="sr-nav__top" type="button">Save <svg aria-hidden="true" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><path d="m6 9 6 6 6-6"></path></svg></button><div class="sr-mega" id="mega-save"><div class="sr-mega__col"><p class="sr-mega__h">Fixed deposits</p><a class="sr-mega__link" href="../../../fixed-deposits/index.html"><b>Fixed Deposits</b><span>FDs from banks, housing finance companies and NBFCs</span></a><a class="sr-mega__link" href="../../../fixed-deposits/bank-fd-rates/index.html"><b>Compare FD Rates</b><span>Bank FD rates side by side</span></a><a class="sr-mega__link" href="../../../fixed-deposits/explore/index.html"><b>FD Explorer</b><span>Filter by tenure, payout and rating</span></a><a class="sr-mega__link" href="../../../fixed-deposits/guide/index.html"><b>FD Guide</b><span>Payouts, tax, early withdrawal</span></a></div><div class="sr-mega__col"><p class="sr-mega__h">Bonds</p><a class="sr-mega__link" href="../../../bonds/index.html"><b>Bonds &amp; NCDs</b><span>Every bond we offer</span></a><a class="sr-mega__link" href="../../../bonds/ncd/index.html"><b>NCD IPOs</b><span>Open public issues, series and ratings</span></a><a class="sr-mega__link" href="../../../bonds/rbi-bonds/index.html"><b>RBI Floating Rate Bonds</b><span>Government of India, reset every six months</span></a><a class="sr-mega__link" href="../../../bonds/capital-gain-bonds/index.html"><b>Capital Gain Bonds</b><span>REC, PFC and IRFC series</span></a></div><div class="sr-mega__promo"><b>Most of your savings in FDs?</b><p>See what else could sit beside them, and what it would change.</p><a class="sr-more" href="../../../solutions/beyond-fixed-deposits/index.html">Beyond Fixed Deposits <svg aria-hidden="true" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a></div></div></div><div class="sr-nav__item"><button aria-controls="mega-plan" aria-expanded="false" class="sr-nav__top" type="button">Plan <svg aria-hidden="true" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><path d="m6 9 6 6 6-6"></path></svg></button><div class="sr-mega" id="mega-plan"><div class="sr-mega__col"><p class="sr-mega__h">Goals</p><a class="sr-mega__link" href="../../../solutions/retirement/index.html"><b>Retirement</b><span>How much you need, and how to draw it</span></a><a class="sr-mega__link" href="../../../solutions/child-education/index.html"><b>Child Education</b><span>What school and college will cost</span></a><a class="sr-mega__link" href="../../../solutions/sip/index.html"><b>SIP</b><span>How much to invest each month</span></a><a class="sr-mega__link" href="../../../solutions/wealth/index.html"><b>Building Wealth</b><span>A plan for money you will not touch</span></a><a class="sr-mega__link" href="../../../solutions/women/index.html"><b>Women and Money</b><span>Plans that fit career breaks</span></a></div><div class="sr-mega__col"><p class="sr-mega__h">Money checks</p><a class="sr-mega__link" href="../../../solutions/emergency-fund/index.html"><b>Emergency Fund</b><span>Could you pay your bills for 6 months?</span></a><a class="sr-mega__link" href="../../../solutions/tax-saving/index.html"><b>Tax Saving (ELSS)</b><span>Does ELSS still save you tax?</span></a><a class="sr-mega__link" href="../../../solutions/portfolio-health/index.html"><b>Portfolio Health</b><span>Is your money in the right places?</span></a><a class="sr-mega__link" href="../../../solutions/nri/index.html"><b>NRI Investing</b><span>Investing in India from abroad</span></a><a class="sr-mega__link" href="../../../solutions/index.html"><b>All Solutions</b><span>17 goals and checks</span></a></div><div class="sr-mega__promo"><b>Run the numbers</b><p>SIP, retirement, FD, tax regime, XIRR and 20 more calculators.</p><a class="sr-more" href="../../../calculators/index.html">All Calculators <svg aria-hidden="true" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a></div></div></div><div class="sr-nav__item"><button aria-controls="mega-learn" aria-expanded="false" class="sr-nav__top" type="button">Learn <svg aria-hidden="true" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><path d="m6 9 6 6 6-6"></path></svg></button><div class="sr-mega" id="mega-learn"><div class="sr-mega__col"><p class="sr-mega__h">Read and watch</p><a class="sr-mega__link" href="../../../blog/index.html"><b>Blog</b><span>Plain explainers and founder notes</span></a><a class="sr-mega__link" href="../../../videos/index.html"><b>Videos and Posts</b><span>Market updates on video</span></a><a class="sr-mega__link" href="../../../mutual-funds/market-outlook/index.html"><b>Market Outlook</b><span>A fund house's monthly view</span></a><a class="sr-mega__link" href="../../../methodology/index.html"><b>Methodology</b><span>Where our figures come from</span></a></div><div class="sr-mega__col"><p class="sr-mega__h">Guides</p><a class="sr-mega__link" href="../../../fixed-deposits/guide/index.html"><b>FD Guide</b><span>How fixed deposits work</span></a><a class="sr-mega__link" href="../../../bonds/ncd/guide/index.html"><b>NCD Guide</b><span>Ratings, risks and how to apply</span></a><a class="sr-mega__link" href="../../../bonds/capital-gain-bonds/guide/index.html"><b>Capital Gain Bond Guide</b><span>Who can claim, and the time limit</span></a><a class="sr-mega__link" href="../../../bonds/rbi-bonds/guide/index.html"><b>RBI Bond Guide</b><span>How the rate is set</span></a></div><div class="sr-mega__promo"><b>The power of compounding in SIPs</b><p>How small monthly amounts turn into long-term wealth.</p><a class="sr-more" href="../../../blog/power-of-compounding-in-sip-mutual-funds/index.html">Read the Post <svg aria-hidden="true" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a></div></div></div><div class="sr-nav__item"><a class="sr-nav__top" href="../../../contact/index.html">Talk to Us</a></div></nav><div class="sr-head__end"><a class="sr-signin" href="https://inv.moneyhoney.co.in/#/investor-login">Sign In</a><a class="btn btn-primary" href="../../../get-started/index.html">Get Started</a></div><details class="sr-mnav"><summary aria-label="Menu"><svg aria-hidden="true" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"></path></svg></summary><div class="sr-mnav__panel"><details><summary>Invest</summary><a href="../../../mutual-funds/index.html">Mutual Funds</a><a href="../../../mutual-funds/explore/index.html">Explore Funds</a><a href="../../../mutual-funds/screens/index.html">Fund Screens</a><a href="../../../mutual-funds/screener/index.html">Screener</a><a href="../../../mutual-funds/amc/index.html">Fund Houses</a><a href="../../../sif/index.html">SIF</a><a href="../../../gift-city-funds/index.html">GIFT City Funds</a><a href="../../../mutual-funds/nfo/index.html">New Fund Offers</a><a href="../../../mutual-funds/dividends/index.html">Dividends (IDCW)</a></details><details><summary>Save</summary><a href="../../../fixed-deposits/index.html">Fixed Deposits</a><a href="../../../fixed-deposits/bank-fd-rates/index.html">Compare FD Rates</a><a href="../../../fixed-deposits/explore/index.html">FD Explorer</a><a href="../../../fixed-deposits/guide/index.html">FD Guide</a><a href="../../../bonds/index.html">Bonds &amp; NCDs</a><a href="../../../bonds/ncd/index.html">NCD IPOs</a><a href="../../../bonds/rbi-bonds/index.html">RBI Floating Rate Bonds</a><a href="../../../bonds/capital-gain-bonds/index.html">Capital Gain Bonds</a></details><details><summary>Plan</summary><a href="../../../solutions/retirement/index.html">Retirement</a><a href="../../../solutions/child-education/index.html">Child Education</a><a href="../../../solutions/sip/index.html">SIP</a><a href="../../../solutions/wealth/index.html">Building Wealth</a><a href="../../../solutions/women/index.html">Women and Money</a><a href="../../../solutions/emergency-fund/index.html">Emergency Fund</a><a href="../../../solutions/tax-saving/index.html">Tax Saving (ELSS)</a><a href="../../../solutions/portfolio-health/index.html">Portfolio Health</a><a href="../../../solutions/nri/index.html">NRI Investing</a><a href="../../../solutions/index.html">All Solutions</a></details><details><summary>Learn</summary><a href="../../../blog/index.html">Blog</a><a href="../../../videos/index.html">Videos and Posts</a><a href="../../../mutual-funds/market-outlook/index.html">Market Outlook</a><a href="../../../methodology/index.html">Methodology</a><a href="../../../fixed-deposits/guide/index.html">FD Guide</a><a href="../../../bonds/ncd/guide/index.html">NCD Guide</a><a href="../../../bonds/capital-gain-bonds/guide/index.html">Capital Gain Bond Guide</a><a href="../../../bonds/rbi-bonds/guide/index.html">RBI Bond Guide</a></details><details><summary>Talk to Us</summary><a href="../../../contact/index.html">Contact</a><a href="tel:+917738032704">Call +91 77380 32704</a><a href="https://wa.me/917738032704">WhatsApp Us</a></details><div class="sr-mnav__cta"><a class="btn btn-secondary" href="https://inv.moneyhoney.co.in/#/investor-login">Sign In</a></div></div></details></div></div></header>
+<main class="container" id="main">
+<div class="page-head stack-sm">
+<div class="demo-note alert alert-warning" role="note"><svg aria-hidden="true" fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="1.5" viewbox="0 0 24 24"><circle cx="12" cy="12" r="9"></circle><path d="M12 8v5M12 16h.01"></path></svg>
+<p><strong>Illustration.</strong> Sample issue for illustration. This company, its figures and its ratings are fictional. It is not an offer of securities.</p></div>
+<nav aria-label="Breadcrumb" class="breadcrumb">
+<a href="../../../index.html">Home</a>
+<svg aria-hidden="true" fill="none" height="12" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24" width="12"><path d="m9 18 6-6-6-6"></path></svg>
+<a href="../../index.html">Bonds &amp; NCDs</a>
+<svg aria-hidden="true" fill="none" height="12" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24" width="12"><path d="m9 18 6-6-6-6"></path></svg>
+<a href="../index.html">NCD IPO</a>
+<svg aria-hidden="true" fill="none" height="12" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24" width="12"><path d="m9 18 6-6-6-6"></path></svg>
+<span aria-current="page">Sample Housing Finance Limited</span>
+</nav>
+</div>
+<div class="ncd-layout">
+<div class="ncd-main">
+<section aria-labelledby="h1" class="hero">
+<div class="hero__top">
+<span aria-hidden="true" class="tile">SH</span>
+<div class="hero__name"><h1 id="h1">Sample Housing Finance Limited</h1><p class="hero__dates">Tranche III · 14 Oct - 26 Oct</p></div>
+<div class="hero__tags"><span class="pill pill-open">OPEN</span><span class="pill">Illustration</span></div>
+</div>
+<dl class="hero__stats">
+<div><dt>Credit rating</dt><dd>AA+</dd></div>
+<div><dt>Min investment</dt><dd>₹10,000</dd></div>
+<div><dt>Issue size</dt><dd>600 Cr</dd></div>
+<div class="hero__ret"><dt>Returns up to</dt><dd>9.90%</dd></div>
+</dl>
+<p class="countdown" id="countdown">Closes on 26 Oct, 5:00 pm</p>
+</section>
+<section aria-labelledby="h-series" class="card series">
+<h2 class="card__title" id="h-series">Select series</h2>
+<div class="table-wrap"><table class="table table-hover table-stack" data-calc="" id="series-table">
+<thead><tr><th scope="col"><button class="sort" data-k="no" type="button">Series</button></th><th scope="col"><button class="sort" data-k="returns" type="button">Returns</button></th>
+<th scope="col"><button class="sort" data-k="months" type="button">Tenure</button></th><th scope="col">Payout</th></tr></thead>
+<tbody><tr data-i="0">
+<td data-label="Series"><button class="linkrow" data-open="0" type="button">Series 1</button></td>
+<td class="ret" data-label="Returns">8.90% p.a.</td>
+<td data-label="Tenure">24 Months</td><td data-label="Payout">Annual</td></tr><tr data-i="1">
+<td data-label="Series"><button class="linkrow" data-open="1" type="button">Series 2</button></td>
+<td class="ret" data-label="Returns">8.88% p.a.</td>
+<td data-label="Tenure">36 Months</td><td data-label="Payout">Monthly</td></tr><tr data-i="2">
+<td data-label="Series"><button class="linkrow" data-open="2" type="button">Series 3</button></td>
+<td class="ret" data-label="Returns">9.25% p.a.</td>
+<td data-label="Tenure">36 Months</td><td data-label="Payout">Annual</td></tr><tr data-i="3">
+<td data-label="Series"><button class="linkrow" data-open="3" type="button">Series 4</button></td>
+<td class="ret" data-label="Returns">9.25% p.a.</td>
+<td data-label="Tenure">36 Months</td><td data-label="Payout">At maturity</td></tr><tr data-i="4">
+<td data-label="Series"><button class="linkrow" data-open="4" type="button">Series 5</button></td>
+<td class="ret" data-label="Returns">9.11% p.a.</td>
+<td data-label="Tenure">60 Months</td><td data-label="Payout">Monthly</td></tr><tr data-i="5">
+<td data-label="Series"><button class="linkrow" data-open="5" type="button">Series 6</button></td>
+<td class="ret" data-label="Returns">9.50% p.a.</td>
+<td data-label="Tenure">60 Months</td><td data-label="Payout">Annual</td></tr><tr data-i="6">
+<td data-label="Series"><button class="linkrow" data-open="6" type="button">Series 7</button></td>
+<td class="ret" data-label="Returns">9.90% p.a.</td>
+<td data-label="Tenure">120 Months</td><td data-label="Payout">Annual</td></tr><tr data-i="7">
+<td data-label="Series"><button class="linkrow" data-open="7" type="button">Series 8</button></td>
+<td class="ret" data-label="Returns">9.90% p.a.</td>
+<td data-label="Tenure">120 Months</td><td data-label="Payout">At maturity</td></tr></tbody>
+</table></div>
+<p class="meta">Returns are the coupon rate for fixed series paying interest, and the effective yield for the others. Select a series to see its details and an estimate for your amount.</p>
+</section>
+<section aria-labelledby="h-issue" class="block">
+<h2 class="block__title" id="h-issue">About issue</h2>
+<div class="docs"><button class="doc-tile" data-signin="" type="button"><svg aria-hidden="true" class="doc" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"></path><path d="M14 3v5h5"></path><path d="M9 13h6M9 17h4"></path></svg><span>Issue Highlights</span></button><button class="doc-tile" data-signin="" type="button"><svg aria-hidden="true" class="doc" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"></path><path d="M14 3v5h5"></path><path d="M9 13h6M9 17h4"></path></svg><span>Product Note</span></button><button class="doc-tile" data-signin="" type="button"><svg aria-hidden="true" class="doc" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"></path><path d="M14 3v5h5"></path><path d="M9 13h6M9 17h4"></path></svg><span>Prospectus</span></button></div>
+<p class="meta">Investors are advised to refer the offer document, and the risk factors contained therein, before applying in the issue.</p>
+<details class="acc"><summary><span class="acc__title">Bidding demand</span><span class="acc__value">On subscription</span><svg aria-hidden="true" class="chev" fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="1.5" viewbox="0 0 24 24"><path d="m6 9 6 6 6-6"></path></svg></summary><div class="acc__body">
+<p class="meta">Sample figures for illustration, as on 16 Oct 2026, 10:49 am. Crores of rupees. On a real issue the source is BSE and NSE.</p>
+<h3>Category wise bidding</h3>
+<div class="table-wrap"><table class="table table-stack table-stack-md" data-calc=""><thead><tr><th scope="col">Category</th><th scope="col">Allocation</th><th scope="col">Base allocation (Cr)</th><th scope="col">Total allocation (Cr)</th><th scope="col">Bids received (Cr)</th><th scope="col">Times subscribed (base)</th></tr></thead>
+<tbody><tr><td data-label="Category">I: Institutional Investors</td><td data-label="Allocation">10%</td><td data-label="Base allocation (Cr)">30.00</td><td data-label="Total allocation (Cr)">60.00</td><td data-label="Bids received (Cr)">10.50</td><td data-label="Times subscribed (base)">0.35</td></tr><tr><td data-label="Category">II: Non-Institutional Investors</td><td data-label="Allocation">10%</td><td data-label="Base allocation (Cr)">30.00</td><td data-label="Total allocation (Cr)">60.00</td><td data-label="Bids received (Cr)">3.60</td><td data-label="Times subscribed (base)">0.12</td></tr><tr><td data-label="Category">III: High Net Worth Individuals</td><td data-label="Allocation">40%</td><td data-label="Base allocation (Cr)">120.00</td><td data-label="Total allocation (Cr)">240.00</td><td data-label="Bids received (Cr)">69.60</td><td data-label="Times subscribed (base)">0.58</td></tr><tr><td data-label="Category">IV: Retail Individual Investors</td><td data-label="Allocation">40%</td><td data-label="Base allocation (Cr)">120.00</td><td data-label="Total allocation (Cr)">240.00</td><td data-label="Bids received (Cr)">52.80</td><td data-label="Times subscribed (base)">0.44</td></tr>
+<tr class="total"><td data-label="Category">Total</td><td data-label="Allocation">100%</td><td data-label="Base allocation (Cr)">300.00</td><td data-label="Total allocation (Cr)">600.00</td><td data-label="Bids received (Cr)">136.50</td><td data-label="Times subscribed (base)">0.46</td></tr></tbody></table></div>
+<h3>Allotment process in case of oversubscription of base issue size</h3>
+<p>NCDs are allotted first-come, first-served, by the date of upload on the exchange platform, until the day the issue is fully subscribed. Bids received on that day and after are allotted proportionately. The prospectus sets the exact method for each issue.</p>
+</div></details>
+<details class="acc"><summary><span class="acc__title">Who can apply</span><span class="acc__value">4 categories</span><svg aria-hidden="true" class="chev" fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="1.5" viewbox="0 0 24 24"><path d="m6 9 6 6 6-6"></path></svg></summary><div class="acc__body">
+<div class="table-wrap"><table class="table table-stack" data-calc=""><thead><tr><th scope="col">Category</th><th scope="col">Reserved</th><th scope="col">Who can apply</th></tr></thead>
+<tbody><tr><td data-label="Category">I: Institutional Investors</td><td data-label="Reserved">10%</td><td data-label="Who can apply">Banks, mutual funds, insurance companies, provident and pension funds, and other institutions</td></tr><tr><td data-label="Category">II: Non-Institutional Investors</td><td data-label="Reserved">10%</td><td data-label="Who can apply">Companies, trusts, LLPs, partnership firms, co-operative societies and other bodies, any amount</td></tr><tr><td data-label="Category">III: High Net Worth Individuals</td><td data-label="Reserved">40%</td><td data-label="Who can apply">Resident individuals and HUFs applying for more than ₹2,00,000 across all series</td></tr><tr><td data-label="Category">IV: Retail Individual Investors</td><td data-label="Reserved">40%</td><td data-label="Who can apply">Resident individuals and HUFs applying for up to ₹2,00,000 across all series</td></tr></tbody></table></div>
+<p class="meta">Non-resident Indians are not eligible to apply in this issue. Additional interest from the issuer: Women investors +0.10% p.a. (Allottee who is a woman on the deemed date of allotment; lost on transfer.).</p>
+</div></details>
+<details class="acc"><summary><span class="acc__title">Allotment timeline</span><span class="acc__value">Listing 29 Oct 2026</span><svg aria-hidden="true" class="chev" fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="1.5" viewbox="0 0 24 24"><path d="m6 9 6 6 6-6"></path></svg></summary><div class="acc__body">
+<ol class="timeline"><li class="done"><span aria-hidden="true" class="timeline__dot"></span><span class="timeline__label">Issue opens</span><span class="timeline__date">14 Oct 2026</span></li><li class=""><span aria-hidden="true" class="timeline__dot"></span><span class="timeline__label">Issue closes</span><span class="timeline__date">26 Oct 2026</span></li><li class=""><span aria-hidden="true" class="timeline__dot"></span><span class="timeline__label">Basis of allotment</span><span class="timeline__date">27 Oct 2026</span></li><li class=""><span aria-hidden="true" class="timeline__dot"></span><span class="timeline__label">Deemed date of allotment</span><span class="timeline__date">28 Oct 2026</span></li><li class=""><span aria-hidden="true" class="timeline__dot"></span><span class="timeline__label">Credit to demat account</span><span class="timeline__date">28 Oct 2026</span></li><li class=""><span aria-hidden="true" class="timeline__dot"></span><span class="timeline__label">Listing on BSE and NSE</span><span class="timeline__date">29 Oct 2026</span></li></ol>
+<p class="meta">Listing within 3 working days of the issue closing (T+3), as SEBI requires.</p>
+</div></details>
+<details class="acc"><summary><span class="acc__title">Registrar</span><span class="acc__value">Sample Registrar Services Limited</span><svg aria-hidden="true" class="chev" fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="1.5" viewbox="0 0 24 24"><path d="m6 9 6 6 6-6"></path></svg></summary><div class="acc__body">
+<p class="strong">Sample Registrar Services Limited</p><p>Hyderabad (fictional address)</p>
+<dl class="kv"><dt>Tel</dt><dd>+91 40 0000 0000</dd><dt>Email</dt><dd>ncd.shfl@sample-registrar.example</dd></dl>
+</div></details>
+<details class="acc"><summary><span class="acc__title">Debenture trustee</span><span class="acc__value">Sample Trusteeship Services Limited</span><svg aria-hidden="true" class="chev" fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="1.5" viewbox="0 0 24 24"><path d="m6 9 6 6 6-6"></path></svg></summary><div class="acc__body">
+<p class="strong">Sample Trusteeship Services Limited</p><p>Mumbai (fictional address)</p>
+<dl class="kv"><dt>Email</dt><dd>grievance@sample-trustee.example</dd><dt>Contact person</dt><dd>Compliance Officer</dd></dl>
+</div></details>
+<details class="acc"><summary><span class="acc__title">Credit rating</span><span class="acc__value">AA+</span><svg aria-hidden="true" class="chev" fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="1.5" viewbox="0 0 24 24"><path d="m6 9 6 6 6-6"></path></svg></summary><div class="acc__body">
+<div class="rate-grid"><div class="rate-card"><p class="strong">Sample Ratings Limited</p>
+<dl class="kv"><dt>Credit rating</dt><dd>AA+</dd><dt>Outlook</dt><dd>Stable</dd><dt>Rated on</dt><dd>21 Sep 2026</dd></dl>
+<p class="meta">AA+: High degree of safety regarding timely servicing of financial obligations; very low credit risk.</p></div><div class="rate-card"><p class="strong">Example Credit Ratings Limited</p>
+<dl class="kv"><dt>Credit rating</dt><dd>AA+</dd><dt>Outlook</dt><dd>Stable</dd><dt>Rated on</dt><dd>24 Sep 2026</dd></dl>
+<p class="meta">AA+: High degree of safety regarding timely servicing of financial obligations; very low credit risk.</p></div></div>
+</div></details>
+<details class="acc"><summary><span class="acc__title">Issuance mode</span><span class="acc__value">In dematerialised form only</span><svg aria-hidden="true" class="chev" fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="1.5" viewbox="0 0 24 24"><path d="m6 9 6 6 6-6"></path></svg></summary><div class="acc__body"><p>Dematerialised form only (trading in demat form only).</p></div></details>
+<details class="acc"><summary><span class="acc__title">Listing &amp; trading</span><span class="acc__value">BSE &amp; NSE</span><svg aria-hidden="true" class="chev" fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="1.5" viewbox="0 0 24 24"><path d="m6 9 6 6 6-6"></path></svg></summary><div class="acc__body">
+<p>The NCDs will be listed on BSE and NSE and traded in dematerialised form only.</p>
+</div></details>
+<details class="acc"><summary><span class="acc__title">TDS on interest income</span><span class="acc__value">10% for resident individuals</span><svg aria-hidden="true" class="chev" fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="1.5" viewbox="0 0 24 24"><path d="m6 9 6 6 6-6"></path></svg></summary><div class="acc__body"><p>TDS at 10% on interest to resident individuals, where interest in the year exceeds ₹10,000. Form 121 can be submitted where tax is nil.</p></div></details>
+<details class="acc"><summary><span class="acc__title">Interest &amp; maturity payment</span><span class="acc__value">Direct bank credit</span><svg aria-hidden="true" class="chev" fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="1.5" viewbox="0 0 24 24"><path d="m6 9 6 6 6-6"></path></svg></summary><div class="acc__body"><p>Direct credit to the bank account linked to the demat account (NACH / NEFT / RTGS).</p></div></details>
+</section>
+<section aria-labelledby="h-company" class="block">
+<h2 class="block__title" id="h-company">About company</h2>
+<details class="acc"><summary><span class="acc__title">Company profile</span><span class="acc__value">Sample Housing Finance Limited</span><svg aria-hidden="true" class="chev" fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="1.5" viewbox="0 0 24 24"><path d="m6 9 6 6 6-6"></path></svg></summary><div class="acc__body"><p>Sample Housing Finance Limited is a fictional housing finance company, used on this site to illustrate an NCD public issue. In this illustration it gives home loans to salaried and self-employed borrowers in tier 2 and tier 3 towns, with an average loan of ₹14,50,000 and 186 branches across nine states.</p></div></details>
+<details class="acc"><summary><span class="acc__title">Management team</span><svg aria-hidden="true" class="chev" fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="1.5" viewbox="0 0 24 24"><path d="m6 9 6 6 6-6"></path></svg></summary><div class="acc__body"><ul class="people"><li><span aria-hidden="true" class="avatar">V</span><span><span class="strong">V. Sample</span><span class="meta">Managing Director and CEO</span></span></li><li><span aria-hidden="true" class="avatar">N</span><span><span class="strong">N. Sample</span><span class="meta">Chief Financial Officer</span></span></li><li><span aria-hidden="true" class="avatar">D</span><span><span class="strong">D. Sample</span><span class="meta">Chief Risk Officer</span></span></li><li><span aria-hidden="true" class="avatar">J</span><span><span class="strong">J. Sample</span><span class="meta">Company Secretary and Compliance Officer</span></span></li></ul></div></details>
+<details class="acc"><summary><span class="acc__title">Key highlights</span><svg aria-hidden="true" class="chev" fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="1.5" viewbox="0 0 24 24"><path d="m6 9 6 6 6-6"></path></svg></summary><div class="acc__body"><ul class="bullets"><li>Home loans are 78% of the loan book and loans against property 22% (31 Mar 2026, illustration)</li><li>Loan book of ₹18,240 Crores across 1,26,000 borrowers</li><li>Gross stage 3 assets of 1.4% (31 Mar 2026, illustration)</li><li>Capital adequacy ratio of 27.2%, of which Tier II is 3.1%</li></ul></div></details>
+<details class="acc"><summary><span class="acc__title">Financial performance</span><svg aria-hidden="true" class="chev" fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="1.5" viewbox="0 0 24 24"><path d="m6 9 6 6 6-6"></path></svg></summary><div class="acc__body">
+<p class="eyebrow">Standalone (₹ Cr)</p>
+<div class="table-wrap"><table class="table table-stack table-stack-md" data-calc=""><thead><tr><th scope="col">Particulars</th><th scope="col">FY26</th><th scope="col">FY25</th><th scope="col">FY24</th><th scope="col">FY23</th><th scope="col">FY22</th></tr></thead>
+<tbody><tr><td data-label="Particulars">Total income</td><td data-label="FY26">2,535.70</td><td data-label="FY25">2,240.15</td><td data-label="FY24">1,968.90</td><td data-label="FY23">1,702.35</td><td data-label="FY22">1,488.60</td></tr><tr><td data-label="Particulars">Profit after tax</td><td data-label="FY26">378.95</td><td data-label="FY25">331.20</td><td data-label="FY24">289.75</td><td data-label="FY23">248.10</td><td data-label="FY22">212.40</td></tr><tr><td data-label="Particulars">Net worth</td><td data-label="FY26">3,431.45</td><td data-label="FY25">3,098.60</td><td data-label="FY24">2,804.35</td><td data-label="FY23">2,540.20</td><td data-label="FY22">2,310.75</td></tr><tr><td data-label="Particulars">Total assets</td><td data-label="FY26">21,205.95</td><td data-label="FY25">18,712.40</td><td data-label="FY24">16,390.85</td><td data-label="FY23">14,285.10</td><td data-label="FY22">12,440.30</td></tr></tbody></table></div>
+<p class="meta">Years ending 31 March. Sample figures for illustration.</p>
+</div></details>
+<details class="acc"><summary><span class="acc__title">Dividend history</span><svg aria-hidden="true" class="chev" fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="1.5" viewbox="0 0 24 24"><path d="m6 9 6 6 6-6"></path></svg></summary><div class="acc__body">
+<div class="table-wrap"><table class="table table-stack" data-calc=""><thead><tr><th scope="col">Year</th><th scope="col">Dividend per share</th></tr></thead>
+<tbody><tr><td data-label="Year">FY25</td><td data-label="Dividend per share">₹1.20</td></tr><tr><td data-label="Year">FY26</td><td data-label="Dividend per share">₹1.50</td></tr></tbody></table></div>
+<p class="meta">Equity shares of face value ₹10.</p>
+</div></details>
+<details class="acc"><summary><span class="acc__title">Head office address</span><svg aria-hidden="true" class="chev" fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="1.5" viewbox="0 0 24 24"><path d="m6 9 6 6 6-6"></path></svg></summary><div class="acc__body"><p>2nd Floor, Sample Chambers, Ashram Road, Ahmedabad 380009 (fictional address)</p></div></details>
+</section>
+<div class="ncd-disclaimer">
+<p><strong>Investments in debt securities, municipal debt securities/ securitised debt instruments are subject to risks including delay and/ or default in payment. Read all the offer related documents carefully.</strong></p>
+<p>NCDs are not bank deposits and are not insured by DICGC. Listing on BSE and NSE and filing with SEBI do not mean that SEBI or the exchanges have approved the issue or vouch for the issuer.</p>
+<p>See the <a href="../../../calculators/ncd/index.html">NCD calculator</a> for a dated payout schedule, or <a href="../index.html">all NCD IPOs</a>.</p>
+</div>
+</div>
+<aside aria-label="Apply" class="ncd-side">
+<div class="card side">
+<h2 class="card__title">Apply for this NCD</h2>
+<p>Choose a series from the table to see its details, then sign in to your investor account to apply.</p>
+<button class="btn btn-primary btn-block" data-signin="" type="button">Apply now</button>
+<p class="meta">Minimum ₹10,000 (10 NCDs of ₹1,000), then in multiples of ₹1,000.</p>
+</div>
+</aside>
+</div>
+<div class="mbar"><div><span class="meta">Min investment</span><strong>₹10,000</strong></div>
+<button class="btn btn-primary" data-signin="" type="button">Apply now</button></div>
+<div class="backdrop" hidden="" id="drawer-bd"></div>
+<section aria-labelledby="dr-title" aria-modal="true" class="drawer" hidden="" id="drawer" role="dialog">
+<div class="drawer__head"><span aria-hidden="true" class="tile tile-sm">SH</span>
+<button aria-label="Close" class="icon-btn" data-close="" type="button"><svg aria-hidden="true" fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="1.5" viewbox="0 0 24 24"><path d="M6 6l12 12M18 6 6 18"></path></svg></button></div>
+<div class="drawer__body">
+<h2 id="dr-title">Series</h2><p class="dr-meta" id="dr-meta"></p>
+<div class="stepper"><button aria-label="One unit less" class="btn btn-secondary step" data-step="-1" type="button"><svg aria-hidden="true" fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="2" viewbox="0 0 24 24"><path d="M5 12h14"></path></svg></button>
+<label><span class="vh">Units</span><input class="input" id="units" inputmode="numeric" min="1" step="1" type="number" value="10"/></label><span>units</span>
+<button aria-label="One unit more" class="btn btn-secondary step" data-step="1" type="button"><svg aria-hidden="true" fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="2" viewbox="0 0 24 24"><path d="M12 5v14M5 12h14"></path></svg></button></div>
+<div class="card"><dl class="kv dkv" id="dr-amounts"></dl></div>
+<div class="card"><dl class="kv dkv" id="dr-details"></dl></div>
+<p class="meta">Estimate using the investor platform's calculation, before tax. <a href="../../../calculators/ncd/index.html" id="dr-calc">Open in NCD calculator</a></p>
+</div>
+<div class="drawer__foot"><button class="btn btn-secondary" data-close="" type="button">Cancel</button><button class="btn btn-primary" data-signin="" type="button">Apply</button></div>
+</section>
+<div class="backdrop" hidden="" id="si-bd"></div>
+<section aria-labelledby="si-title" aria-modal="true" class="modal" hidden="" id="signin" role="dialog">
+<h2 id="si-title">Sign in required to invest</h2>
+<p>To apply for Sample Housing Finance Limited NCDs, sign in to your MoneyHoney investor account. New to MoneyHoney? Create an account; you need a PAN, a demat account and a bank account in your name.</p>
+<div class="modal__actions"><a class="btn btn-primary" href="https://inv.moneyhoney.co.in/#/investor-login">Sign in</a><a class="btn btn-secondary" href="https://inv.moneyhoney.co.in/#/registration">Create account</a>
+<button class="btn btn-ghost" data-close="" type="button">Cancel</button></div>
+</section>
+<script>
+(function () {
+/* The investor platform's series-drawer figures, copied exactly (select-series.component.ts calcFullInterest,
+   calcStaggeredInterest and the panel getters). Mirrors calcmath.ncd_platform; tests/test_calc.py compares them.
+   s: {coupon_basis, frequency, coupon, effective_yield, tenor_months, face_value, issue_price, staggered: [{months, amount}]}
+   deemedIso: 'YYYY-MM-DD'. Dates are UTC so the day counts match the build. */
+function ncdPlatform(s, units, deemedIso) {
+  var p = deemedIso.split('-'), deemed = new Date(Date.UTC(+p[0], +p[1] - 1, +p[2]));
+  var r2 = function (x) { return Math.round(x * 100) / 100; };
+  var addM = function (d, m) { var x = new Date(d.getTime()); x.setUTCMonth(x.getUTCMonth() + m); return x; };
+  var daysBetween = function (a, b) { return Math.round((b - a) / 86400000); };
+  var basis = s.coupon_basis.toLowerCase(), simple = s.frequency !== 'Cumulative';
+  var rate = ((basis === 'fixed' || basis === 'zero coupon') && simple && s.coupon != null ? s.coupon : s.effective_yield) / 100;
+  var showInterest = basis === 'fixed' && simple, showMaturity = !(basis === 'variable' && !simple);
+  var fdiv = {Monthly: 12, Quarterly: 4, 'Half Yearly': 2, Annual: 1}[s.frequency] || 12;
+  var inv = units * s.issue_price, faceInv = units * s.face_value, periods = [], interest, per;
+  if (s.staggered && s.staggered.length) {
+    var bal = faceInv, prev = deemed, total = 0;
+    s.staggered.slice().sort(function (a, b) { return a.months * 30 - b.months * 30; }).forEach(function (q) {
+      var d = addM(deemed, q.months), days = daysBetween(prev, d), intr = r2(bal * rate * days / 365), n = days / (365 / fdiv), amt = units * q.amount;
+      periods.push({period: q.months + ' Months', interest: intr, per_payout: n > 0 ? r2(intr / n) : intr, maturity: amt});
+      total += intr; bal = Math.max(0, bal - amt); prev = d;
+    });
+    interest = r2(total); per = 0;
+  } else {
+    var days = daysBetween(deemed, addM(deemed, s.tenor_months)), tot = r2(faceInv * rate * days / 365), n = days / (365 / fdiv);
+    interest = tot; per = n > 0 ? r2(tot / n) : tot;
+  }
+  if (!showInterest) interest = 0;
+  if (!showInterest || (s.staggered && s.staggered.length)) per = 0;
+  var maturity = !showMaturity ? 0 : (s.staggered && s.staggered.length) ? periods.reduce(function (a, q) { return a + q.maturity; }, 0)
+    : inv + (showInterest ? interest : 0);
+  return {investment: inv, interest: interest, per_payout: per, maturity: maturity, periods: periods, show_interest: showInterest, rate: rate * 100};
+}
+
+  var S = [{"no": 1, "months": 24, "payout": "Annual", "per": "year", "returns": 8.9, "tags": [], "calc": {"coupon_basis": "Fixed", "frequency": "Annual", "coupon": 8.9, "effective_yield": 8.9, "tenor_months": 24, "face_value": 1000, "issue_price": 1000, "staggered": []}, "rows": [["Tenure", "24 Months"], ["Coupon basis", "Fixed"], ["Interest payout", "Annual"], ["Rate of interest", "8.90% p.a."]], "priv": [["Women investors*", "+ 0.10% p.a."]], "tail": [["Compounding frequency", "NA"], ["Nature", "Secured"], ["Seniority in repayment", "Senior"], ["Deemed allotment date*", "28 Oct 2026"]], "calc_hash": "#amt=10000&coupon=8.9&freq=annual&months=24&allot=2026-10-28"}, {"no": 2, "months": 36, "payout": "Monthly", "per": "month", "returns": 8.88, "tags": [], "calc": {"coupon_basis": "Fixed", "frequency": "Monthly", "coupon": 8.88, "effective_yield": 9.25, "tenor_months": 36, "face_value": 1000, "issue_price": 1000, "staggered": []}, "rows": [["Tenure", "36 Months"], ["Coupon basis", "Fixed"], ["Interest payout", "Monthly"], ["Rate of interest", "9.25% p.a."]], "priv": [["Women investors*", "+ 0.10% p.a."]], "tail": [["Compounding frequency", "NA"], ["Nature", "Secured"], ["Seniority in repayment", "Senior"], ["Deemed allotment date*", "28 Oct 2026"]], "calc_hash": "#amt=10000&coupon=8.88&freq=monthly&months=36&allot=2026-10-28"}, {"no": 3, "months": 36, "payout": "Annual", "per": "year", "returns": 9.25, "tags": [], "calc": {"coupon_basis": "Fixed", "frequency": "Annual", "coupon": 9.25, "effective_yield": 9.25, "tenor_months": 36, "face_value": 1000, "issue_price": 1000, "staggered": []}, "rows": [["Tenure", "36 Months"], ["Coupon basis", "Fixed"], ["Interest payout", "Annual"], ["Rate of interest", "9.25% p.a."]], "priv": [["Women investors*", "+ 0.10% p.a."]], "tail": [["Compounding frequency", "NA"], ["Nature", "Secured"], ["Seniority in repayment", "Senior"], ["Deemed allotment date*", "28 Oct 2026"]], "calc_hash": "#amt=10000&coupon=9.25&freq=annual&months=36&allot=2026-10-28"}, {"no": 4, "months": 36, "payout": "At maturity", "per": "month", "returns": 9.25, "tags": [], "calc": {"coupon_basis": "Fixed", "frequency": "Cumulative", "coupon": null, "effective_yield": 9.25, "tenor_months": 36, "face_value": 1000, "issue_price": 1000, "staggered": []}, "rows": [["Tenure", "36 Months"], ["Coupon basis", "Fixed"], ["Interest payout", "At maturity"], ["Rate of interest", "9.25% p.a."]], "priv": [["Women investors*", "+ 0.10% p.a."]], "tail": [["Compounding frequency", "Annual"], ["Nature", "Secured"], ["Seniority in repayment", "Senior"], ["Deemed allotment date*", "28 Oct 2026"]], "calc_hash": "#amt=10000&coupon=9.25&freq=cum&months=36&allot=2026-10-28"}, {"no": 5, "months": 60, "payout": "Monthly", "per": "month", "returns": 9.11, "tags": [], "calc": {"coupon_basis": "Fixed", "frequency": "Monthly", "coupon": 9.11, "effective_yield": 9.5, "tenor_months": 60, "face_value": 1000, "issue_price": 1000, "staggered": []}, "rows": [["Tenure", "60 Months"], ["Coupon basis", "Fixed"], ["Interest payout", "Monthly"], ["Rate of interest", "9.50% p.a."]], "priv": [["Women investors*", "+ 0.10% p.a."]], "tail": [["Compounding frequency", "NA"], ["Nature", "Secured"], ["Seniority in repayment", "Senior"], ["Deemed allotment date*", "28 Oct 2026"]], "calc_hash": "#amt=10000&coupon=9.11&freq=monthly&months=60&allot=2026-10-28"}, {"no": 6, "months": 60, "payout": "Annual", "per": "year", "returns": 9.5, "tags": [], "calc": {"coupon_basis": "Fixed", "frequency": "Annual", "coupon": 9.5, "effective_yield": 9.5, "tenor_months": 60, "face_value": 1000, "issue_price": 1000, "staggered": []}, "rows": [["Tenure", "60 Months"], ["Coupon basis", "Fixed"], ["Interest payout", "Annual"], ["Rate of interest", "9.50% p.a."]], "priv": [["Women investors*", "+ 0.10% p.a."]], "tail": [["Compounding frequency", "NA"], ["Nature", "Secured"], ["Seniority in repayment", "Senior"], ["Deemed allotment date*", "28 Oct 2026"]], "calc_hash": "#amt=10000&coupon=9.5&freq=annual&months=60&allot=2026-10-28"}, {"no": 7, "months": 120, "payout": "Annual", "per": "year", "returns": 9.9, "tags": [], "calc": {"coupon_basis": "Fixed", "frequency": "Annual", "coupon": 9.9, "effective_yield": 9.9, "tenor_months": 120, "face_value": 1000, "issue_price": 1000, "staggered": []}, "rows": [["Tenure", "120 Months"], ["Coupon basis", "Fixed"], ["Interest payout", "Annual"], ["Rate of interest", "9.90% p.a."]], "priv": [["Women investors*", "+ 0.10% p.a."]], "tail": [["Compounding frequency", "NA"], ["Nature", "Unsecured"], ["Seniority in repayment", "Subordinated"], ["Deemed allotment date*", "28 Oct 2026"]], "calc_hash": "#amt=10000&coupon=9.9&freq=annual&months=120&allot=2026-10-28"}, {"no": 8, "months": 120, "payout": "At maturity", "per": "month", "returns": 9.9, "tags": [], "calc": {"coupon_basis": "Fixed", "frequency": "Cumulative", "coupon": null, "effective_yield": 9.9, "tenor_months": 120, "face_value": 1000, "issue_price": 1000, "staggered": []}, "rows": [["Tenure", "120 Months"], ["Coupon basis", "Fixed"], ["Interest payout", "At maturity"], ["Rate of interest", "9.90% p.a."]], "priv": [["Women investors*", "+ 0.10% p.a."]], "tail": [["Compounding frequency", "Annual"], ["Nature", "Unsecured"], ["Seniority in repayment", "Subordinated"], ["Deemed allotment date*", "28 Oct 2026"]], "calc_hash": "#amt=10000&coupon=9.9&freq=cum&months=120&allot=2026-10-28"}], D = {"deemed": "2026-10-28", "minUnits": 10, "faceValue": 1000, "closeAt": "2026-10-26T17:00:00+05:30", "status": "Open"};
+  var inr = function (n) { return '₹' + Math.round(n).toLocaleString('en-IN'); };
+  var $ = function (id) { return document.getElementById(id); };
+  // countdown (platform getClosingCountdown), with the 5:00 pm close
+  var cd = $('countdown');
+  if (D.status === 'Open') {
+    var ms = new Date(D.closeAt) - Date.now();
+    if (ms > 0) { var hours = Math.floor(ms / 3600000);
+      if (hours <= 24) { var h = Math.max(1, hours); cd.textContent = 'Closing in ' + h + (h === 1 ? ' hour' : ' hours'); cd.classList.add('soon'); }
+      else { var d = Math.ceil(hours / 24); cd.textContent = 'Closing in ' + d + (d === 1 ? ' day' : ' days'); } }
+  }
+  var cur = null, units = $('units');
+  function row(a, b, cls) { return '<dt' + (cls ? ' class="' + cls + '"' : '') + '>' + a + '</dt><dd' + (cls ? ' class="' + cls + '"' : '') + '>' + b + '</dd>'; }
+  function sub(t) { return '<p class="sub">' + t + '</p>'; }
+  function render() {
+    var s = S[cur], u = Math.max(1, parseInt(units.value, 10) || 1), r = ncdPlatform(s.calc, u, D.deemed);
+    $('dr-title').textContent = 'Series ' + s.no;
+    $('dr-meta').innerHTML = '<span class="ret">' + s.returns.toFixed(2) + '% p.a.</span> | ' + s.payout + ' | ' + s.months + ' Months';
+    var a = row('Investment amount', inr(r.investment)) + sub('Min. investment: ' + inr(D.minUnits * D.faceValue));
+    if (r.show_interest) a += row('Interest amount', inr(r.interest));
+    if (s.calc.staggered.length) {
+      r.periods.forEach(function (p) { a += sub('Approx. ' + inr(p.per_payout) + ' per ' + s.per + ' | ' + p.period); });
+      a += '<p class="sub strong">Maturity amount will be paid in staggered manner</p>' + row('Maturity amount', inr(r.maturity), 'total');
+      r.periods.forEach(function (p) { a += row('Maturity amount (' + p.period + ')', inr(p.maturity)); });
+    } else {
+      if (r.per_payout > 0) a += '<p class="sub mob">Approx. ' + inr(r.per_payout) + ' per ' + s.per + ' | ' + s.months + ' Months</p>';
+      a += row('Maturity amount', inr(r.maturity), 'total') + sub('The total amount you receive at maturity, including principal and interest.');
+    }
+    $('dr-amounts').innerHTML = a;
+    var det = '';
+    s.rows.forEach(function (x) { det += row(x[0], /% p\.a\.$/.test(x[1]) ? '<span class="ret">' + x[1] + '</span>' : x[1]); });
+    s.priv.forEach(function (x) { det += row(x[0], '<span class="ret">' + x[1] + '</span>'); });
+    s.tail.forEach(function (x) { det += row(x[0], x[1]); });
+    $('dr-details').innerHTML = det;
+    var c = $('dr-calc');
+    if (s.calc_hash) { c.hidden = false; c.href = c.href.split('#')[0] + s.calc_hash.replace(/amt=\d+/, 'amt=' + u * D.faceValue); } else c.hidden = true;
+  }
+  var lastFocus = null;
+  function openLayer(id, bd) { lastFocus = document.activeElement; $(bd).hidden = false; var el = $(id); el.hidden = false; var f = el.querySelector('button, a, input'); if (f) f.focus(); }
+  function closeLayer(id, bd) { $(bd).hidden = true; $(id).hidden = true; if (lastFocus) lastFocus.focus(); }
+  function openDrawer(i) { cur = i; units.value = D.minUnits; render(); openLayer('drawer', 'drawer-bd'); }
+  document.querySelectorAll('#series-table tbody tr').forEach(function (tr) {
+    tr.addEventListener('click', function () { openDrawer(+tr.dataset.i); });
+  });
+  document.querySelectorAll('[data-step]').forEach(function (b) { b.addEventListener('click', function () {
+    units.value = Math.max(1, (parseInt(units.value, 10) || 1) + (+b.dataset.step)); render(); }); });
+  units.addEventListener('input', render);
+  function signin() { if (!$('drawer').hidden) closeLayer('drawer', 'drawer-bd'); openLayer('signin', 'si-bd'); }
+  document.querySelectorAll('[data-signin]').forEach(function (b) { b.addEventListener('click', signin); });
+  document.querySelectorAll('#drawer [data-close]').forEach(function (b) { b.addEventListener('click', function () { closeLayer('drawer', 'drawer-bd'); }); });
+  document.querySelectorAll('#signin [data-close]').forEach(function (b) { b.addEventListener('click', function () { closeLayer('signin', 'si-bd'); }); });
+  $('drawer-bd').addEventListener('click', function () { closeLayer('drawer', 'drawer-bd'); });
+  $('si-bd').addEventListener('click', function () { closeLayer('signin', 'si-bd'); });
+  document.addEventListener('keydown', function (e) {
+    if (e.key !== 'Escape') return;
+    if (!$('signin').hidden) closeLayer('signin', 'si-bd'); else if (!$('drawer').hidden) closeLayer('drawer', 'drawer-bd');
+  });
+  document.addEventListener('keydown', function (e) {       // keep Tab inside an open dialog
+    if (e.key !== 'Tab') return;
+    var open = !$('signin').hidden ? $('signin') : !$('drawer').hidden ? $('drawer') : null;
+    if (!open) return;
+    var f = Array.prototype.filter.call(open.querySelectorAll('button, a[href], input'), function (el) { return !el.hidden && el.offsetParent !== null; });
+    if (!f.length) return;
+    if (e.shiftKey && document.activeElement === f[0]) { e.preventDefault(); f[f.length - 1].focus(); }
+    else if (!e.shiftKey && document.activeElement === f[f.length - 1]) { e.preventDefault(); f[0].focus(); }
+  });
+  var tb = document.querySelector('#series-table tbody'), dir = {};
+  document.querySelectorAll('.sort').forEach(function (b) { b.addEventListener('click', function () {
+    var k = b.dataset.k; dir[k] = -(dir[k] || -1);
+    Array.prototype.slice.call(tb.rows).sort(function (x, y) { return (S[x.dataset.i][k] - S[y.dataset.i][k]) * dir[k]; })
+      .forEach(function (r) { tb.appendChild(r); }); }); });
+  window.mhNcd = function (i, u) { return ncdPlatform(S[i].calc, u, D.deemed); };
+})();
+</script>
+</main>
+<section aria-labelledby="sr-sun-h" class="sr-sun"><div class="sr-wrap"><h2 id="sr-sun-h">Ready to apply?</h2><p>Apply while an issue is open. The bonds reach your demat account after allotment.</p><div class="sr-sun__cta"><a class="btn btn-primary" href="../../../get-started/index.html?intent=bonds">Get Started</a><a class="sr-more" href="tel:+917738032704">Or call +91 77380 32704 <svg aria-hidden="true" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a></div></div><svg aria-hidden="true" class="sr-sun__art" focusable="false" preserveaspectratio="xMidYMax slice" viewbox="0 0 1440 240"><circle cx="720" cy="250" fill="#FF8A50" fill-opacity=".30" r="230"></circle><circle cx="720" cy="250" fill="#FF4A00" r="168"></circle><path d="M0 170c160-34 300-34 460-6s300 30 460 4 340-36 520-4v76H0z" fill="#2E3D99"></path><path d="M0 196c200-26 380-24 560 0s360 22 540 0 240-18 340-8v52H0z" fill="#16205B"></path><path d="M0 220c240-14 480-14 720 0s480 14 720 0v20H0z" fill="#0C1240"></path></svg></section><footer class="sr-foot" data-nosnippet=""><div class="sr-wrap"><div class="sr-foot__top"><div><a aria-label="MoneyHoney home" class="sr-logo" href="../../../index.html" tabindex="-1"><svg aria-label="MoneyHoney" fill="none" height="20" role="img" viewbox="0 0 139 20" width="139" xmlns="http://www.w3.org/2000/svg">
+<path d="M1 10C1 15.2842 5.12632 19.6211 10.3474 20C10.3474 18.4632 9.46316 17.0316 8.07368 16.3579C5.67368 15.2211 4.01053 12.8 4.01053 9.97895C4.01053 7.51579 5.27368 5.36842 7.18947 4.08421V7.64211C7.18947 9.36842 8.6 10.7789 10.3474 10.7789V0C5.12632 0.4 1 4.73684 1 10Z" fill="#FF4A00"></path>
+<path d="M21.2318 10C21.2318 15.2842 17.1054 19.6211 11.8844 20C11.8844 18.4632 12.7686 17.0316 14.1581 16.3579C16.5581 15.2211 18.2212 12.8 18.2212 9.97895C18.2212 7.51579 16.9581 5.36842 15.0212 4.08421V7.64211C15.0212 9.36842 13.6107 10.7789 11.8633 10.7789V0C17.0844 0.4 21.2107 4.73684 21.2107 10H21.2318Z" fill="#FF4A00"></path>
+<path d="M13.4418 14.0201C13.4418 15.3043 12.4103 16.3359 11.126 16.3359C9.84184 16.3359 8.81026 15.3043 8.81026 14.0201C8.81026 12.7359 9.84184 11.7043 11.126 11.7043C12.4103 11.7043 13.4418 12.7359 13.4418 14.0201Z" fill="#16205B"></path>
+<path d="M27.6319 3.41083H29.5477C30.1582 3.41083 30.7056 3.72662 31.0214 4.23188L33.6951 8.52662L36.3687 4.23188C36.6845 3.72662 37.253 3.41083 37.8424 3.41083H39.7582V15.474H38.5161C37.7372 15.474 37.1056 14.8424 37.1056 14.0635V7.6003L33.6951 12.7582H33.6319L30.2424 7.66346V14.0845C30.2424 14.8635 29.6108 15.495 28.8319 15.495H27.6319V3.43188V3.41083Z" fill="#16205B"></path>
+<path d="M49.0839 10.905V10.8629C49.0839 9.49451 48.0944 8.31556 46.6418 8.31556C45.1892 8.31556 44.2207 9.47345 44.2207 10.8419V10.884C44.2207 12.2524 45.2102 13.4313 46.6628 13.4313C48.1155 13.4313 49.0839 12.2735 49.0839 10.905ZM41.6102 10.905V10.8629C41.6102 8.21029 43.7576 6.06293 46.6628 6.06293C49.5681 6.06293 51.6734 8.18924 51.6734 10.8419V10.884C51.6734 13.5366 49.526 15.684 46.6207 15.684C43.7155 15.684 41.6102 13.5577 41.6102 10.905Z" fill="#16205B"></path>
+<path d="M53.2529 6.25173H55.0003C55.5055 6.25173 55.9055 6.65173 55.9055 7.13594V7.557C56.5161 6.77805 57.295 6.08331 58.6213 6.08331C60.6213 6.08331 61.7792 7.38858 61.7792 9.51489V15.4938H60.3897C59.695 15.4938 59.1476 14.9465 59.1476 14.2517V10.3359C59.1476 9.09384 58.5582 8.46226 57.5476 8.46226C56.5371 8.46226 55.9055 9.09384 55.9055 10.3359V14.2517C55.9055 14.9254 55.3371 15.4938 54.6634 15.4938H53.274V6.25173H53.2529Z" fill="#16205B"></path>
+<path d="M69.8203 10.1471C69.673 8.96819 68.9782 8.18924 67.8624 8.18924C66.7467 8.18924 66.0519 8.96819 65.8414 10.1471H69.8203ZM63.273 10.905V10.8629C63.273 8.23135 65.1677 6.06293 67.8624 6.06293C70.9782 6.06293 72.3888 8.46293 72.3888 11.0735C72.3888 11.284 72.3888 11.5156 72.3467 11.7682H65.8624C66.1151 12.9471 66.9572 13.5787 68.1361 13.5787C68.8309 13.5787 69.3782 13.4103 69.9256 13.0103C70.2203 12.7998 70.6203 12.8419 70.873 13.0735L71.8835 13.9577C71.0203 15.0313 69.7572 15.684 68.073 15.684C65.273 15.684 63.2098 13.7471 63.2098 10.905H63.273Z" fill="#16205B"></path>
+<path d="M80.8733 6.2522H82.4312L78.8523 15.7048C78.1365 17.5785 77.3786 18.2943 75.7996 18.2943C74.8523 18.2943 74.1365 18.0627 73.4628 17.6627L74.2417 16.0206C74.3049 15.8943 74.4523 15.8311 74.5786 15.8943C74.8733 16.0417 75.2102 16.1259 75.4628 16.1259C75.9049 16.1259 76.1575 15.9785 76.3891 15.5154L72.747 6.2522H74.2839C75.0417 6.2522 75.6944 6.73641 75.926 7.43114L77.6523 12.5469L79.3154 7.36799C79.526 6.6943 80.1575 6.2522 80.8523 6.2522H80.8733Z" fill="#16205B"></path>
+<path d="M84.4945 3.41083H85.6735C86.4945 3.41083 87.1682 4.06346 87.1682 4.88451V8.18977H92.0945V4.88451C92.0945 4.06346 92.7682 3.41083 93.5893 3.41083H94.7682V15.474H93.6314C92.7682 15.474 92.0945 14.7792 92.0945 13.9371V10.6319H87.1682V13.9371C87.1682 14.7792 86.4735 15.474 85.6314 15.474H84.4945V3.41083Z" fill="#FF4A00"></path>
+<path d="M104.073 10.905V10.8629C104.073 9.49451 103.083 8.31556 101.631 8.31556C100.178 8.31556 99.2098 9.47345 99.2098 10.8419V10.884C99.2098 12.2524 100.199 13.4313 101.652 13.4313C103.105 13.4313 104.073 12.2735 104.073 10.905ZM96.6203 10.905V10.8629C96.6203 8.21029 98.7677 6.06293 101.673 6.06293C104.578 6.06293 106.683 8.18924 106.683 10.8419V10.884C106.683 13.5366 104.536 15.684 101.631 15.684C98.7256 15.684 96.6203 13.5577 96.6203 10.905Z" fill="#FF4A00"></path>
+<path d="M135.863 6.2522H137.421L133.842 15.7048C133.126 17.5785 132.368 18.2943 130.789 18.2943C129.842 18.2943 129.126 18.0627 128.452 17.6627L129.231 16.0206C129.294 15.8943 129.442 15.8311 129.589 15.8943C129.884 16.0417 130.199 16.1259 130.473 16.1259C130.915 16.1259 131.168 15.9785 131.399 15.5154L127.757 6.2522H129.294C130.052 6.2522 130.705 6.73641 130.936 7.43114L132.663 12.5469L134.326 7.36799C134.536 6.6943 135.168 6.2522 135.863 6.2522Z" fill="#FF4A00"></path>
+<path d="M108.243 6.25173H109.99C110.495 6.25173 110.895 6.65173 110.895 7.13594V7.557C111.506 6.77805 112.285 6.08331 113.611 6.08331C115.611 6.08331 116.769 7.38858 116.769 9.51489V15.4938H115.379C114.685 15.4938 114.137 14.9465 114.137 14.2517V10.3359C114.137 9.09384 113.548 8.46226 112.537 8.46226C111.527 8.46226 110.895 9.09384 110.895 10.3359V14.2517C110.895 14.9254 110.327 15.4938 109.653 15.4938H108.264V6.25173H108.243Z" fill="#FF4A00"></path>
+<path d="M124.895 10.1471C124.747 8.96819 124.053 8.18924 122.937 8.18924C121.821 8.18924 121.126 8.96819 120.916 10.1471H124.895ZM118.326 10.905V10.8629C118.326 8.23135 120.221 6.06293 122.916 6.06293C126.032 6.06293 127.442 8.46293 127.442 11.0735C127.442 11.284 127.442 11.5156 127.4 11.7682H120.916C121.168 12.9471 122.01 13.5787 123.189 13.5787C123.884 13.5787 124.432 13.4103 124.979 13.0103C125.274 12.7998 125.674 12.8419 125.926 13.0735L126.937 13.9577C126.074 15.0313 124.81 15.684 123.126 15.684C120.326 15.684 118.263 13.7471 118.263 10.905H118.326Z" fill="#FF4A00"></path>
+</svg></a><p class="sr-foot__id">Money Honey Financial Services Private Limited · AMFI Registered Mutual Fund Distributor &amp; SIF Distributor · ARN-60930, valid till 6 May 2028</p></div><nav aria-label="Footer" class="sr-foot__cols"><div><h3>Invest</h3><ul><li><a href="../../../mutual-funds/index.html">Mutual Funds</a></li><li><a href="../../../mutual-funds/explore/index.html">Explore Funds</a></li><li><a href="../../../mutual-funds/screens/index.html">Fund Screens</a></li><li><a href="../../../mutual-funds/screener/index.html">Screener</a></li><li><a href="../../../sif/index.html">SIF</a></li><li><a href="../../../gift-city-funds/index.html">GIFT City Funds</a></li><li><a href="../../../mutual-funds/nfo/index.html">New Fund Offers</a></li></ul></div><div><h3>Save</h3><ul><li><a href="../../../fixed-deposits/index.html">Fixed Deposits</a></li><li><a href="../../../fixed-deposits/bank-fd-rates/index.html">Compare FD Rates</a></li><li><a href="../../../bonds/ncd/index.html">NCD IPOs</a></li><li><a href="../../../bonds/rbi-bonds/index.html">RBI Bonds</a></li><li><a href="../../../bonds/capital-gain-bonds/index.html">Capital Gain Bonds</a></li></ul></div><div><h3>Plan</h3><ul><li><a href="../../../solutions/index.html">Solutions</a></li><li><a href="../../../solutions/retirement/index.html">Retirement</a></li><li><a href="../../../solutions/child-education/index.html">Child Education</a></li><li><a href="../../../solutions/sip/index.html">SIP</a></li><li><a href="../../../solutions/tax-saving/index.html">Tax Saving</a></li><li><a href="../../../calculators/index.html">Calculators</a></li></ul></div><div><h3>Learn</h3><ul><li><a href="../../../blog/index.html">Blog</a></li><li><a href="../../../videos/index.html">Videos and Posts</a></li><li><a href="../../../mutual-funds/market-outlook/index.html">Market Outlook</a></li><li><a href="../../../mutual-funds/dividends/index.html">Dividends (IDCW)</a></li><li><a href="../../../methodology/index.html">Methodology</a></li></ul></div><div><h3>Company</h3><ul><li><a href="../../../about/index.html">About</a></li><li><a href="../../../contact/index.html">Contact</a></li><li><a href="https://ba.moneyhoney.co.in/">Business Associates</a></li><li><a href="../../../mutual-funds/amc/index.html">Fund Houses We Distribute</a></li><li><a href="../../../site-map/index.html">Site Map</a></li></ul></div><div><h3>Disclosures</h3><ul><li><a href="../../../disclaimer/index.html">Disclaimer</a></li><li><a href="../../../commission-disclosure/index.html">Commission Disclosure</a></li><li><a href="../../../contact/index.html#grievance-redressal">Grievance Redressal</a></li><li><a href="https://smartodr.in/">SMART ODR</a></li></ul></div></nav></div><section aria-labelledby="sr-disc-h" class="sr-disc"><h2 class="sr-disc__h" id="sr-disc-h">Important MoneyHoney Disclosures</h2><p class="sr-disc__lead">About Risk</p><p>Mutual Fund investments are subject to market risks, read all scheme related documents carefully.</p><p>Investments in Specialized Investment Fund involves relatively higher risk including potential loss of capital, liquidity risk and market volatility. Please read all investment strategy related documents carefully before making the investment decision.</p></section><p class="sr-foot__legal"><span>MoneyHoney is a mutual fund distributor, not a SEBI-registered investment adviser.</span><a href="../../../disclaimer/index.html">Disclaimer</a><a href="../../../commission-disclosure/index.html">Commission Disclosure</a><a href="../../../site-map/index.html">Site Map</a></p></div></footer>
+</body>
+</html>

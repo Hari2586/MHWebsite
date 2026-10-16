@@ -1,0 +1,702 @@
+<!DOCTYPE html>
+
+<html lang="en-IN">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>FD Calculator: Maturity and Interest Payouts | MoneyHoney</title>
+<meta content="Maturity amount or every interest payment on the bank and company FDs we offer, at each card's rate for your investor type, or the deposit for a target." name="description"/>
+<link href="https://example.com/calculators/fixed-deposit/" rel="canonical"/>
+<meta content="website" property="og:type"/>
+<meta content="MoneyHoney" property="og:site_name"/>
+<meta content="en_IN" property="og:locale"/>
+<meta content="FD Calculator: Maturity and Interest Payouts | MoneyHoney" property="og:title"/>
+<meta content="Maturity amount or every interest payment on the bank and company FDs we offer, at each card's rate for your investor type, or the deposit for a target." property="og:description"/>
+<meta content="https://example.com/calculators/fixed-deposit/" property="og:url"/>
+<meta content="https://example.com/assets/og/calculators.png" property="og:image"/>
+<meta content="1200" property="og:image:width"/>
+<meta content="630" property="og:image:height"/>
+<meta content="MoneyHoney: Calculators" property="og:image:alt"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://example.com/"}, {"@type": "ListItem", "position": 2, "name": "Calculators", "item": "https://example.com/calculators/"}, {"@type": "ListItem", "position": 3, "name": "FD Calculator", "item": "https://example.com/calculators/fixed-deposit/"}]}, {"@type": "WebPage", "name": "FD Calculator", "url": "https://example.com/calculators/fixed-deposit/", "dateModified": "2026-10-16", "isPartOf": {"@id": "https://example.com/#website"}, "publisher": {"@id": "https://example.com/#organization"}}, {"@type": "Organization", "@id": "https://example.com/#organization", "name": "MoneyHoney", "url": "https://example.com/", "description": "AMFI Registered Mutual Fund Distributor & SIF Distributor, ARN-60930"}]}</script>
+<link href="../../assets/mh.css" rel="stylesheet"/><meta content="noindex, nofollow" name="robots"/><link href="../../assets/sunrise/sunrise.css" rel="stylesheet"/><script defer="" src="../../assets/sunrise/sunrise.js"></script>
+<script defer="" src="../../assets/mh.js"></script>
+<style>
+/* The calculator block (_calc_block.html), on the calculator pages and on pages that embed one. */
+.calc{display:grid;grid-template-columns:minmax(280px,380px) 1fr;gap:var(--space-6);align-items:start;margin:var(--space-6) 0}
+@media (max-width:860px){.calc{grid-template-columns:1fr}}
+.calcform .field{margin-bottom:var(--space-5)}
+.calcform .field[hidden]{display:none}
+.flabel{display:block;font-size:var(--text-sm);font-weight:var(--font-weight-medium);color:var(--color-text-deep);margin-bottom:var(--space-2)}
+.flabel.sp{margin-top:var(--space-3)}
+.calcform .row2{display:flex;gap:var(--space-3);align-items:center}
+.calcform input[type=range]{flex:1;min-width:0;min-height:44px;accent-color:var(--color-brand)}
+.calcform input[type=number]{width:132px;font-size:16px}
+.calcform input[type=number].wide,.calcform input[type=date],.calcform .select{width:100%;font-size:16px}
+.calcform .basis{font-size:var(--text-sm);color:var(--color-text-cool);margin-top:var(--space-2)}
+.calcform .segmented button{min-height:44px;font-size:var(--text-sm)}
+.flows{width:100%;border-collapse:collapse}
+.flows th{font-size:var(--text-xs);font-weight:var(--font-weight-medium);color:var(--color-text-cool);text-align:left;padding:0 0 var(--space-2)}
+.flows thead{display:none}
+.flows tr{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr) 44px;gap:var(--space-2);padding:var(--space-3) 0;border-top:1px solid var(--color-border-soft)}
+.flows td{padding:0;min-width:0}
+@media (max-width:560px){.flows tr{grid-template-columns:minmax(0,1fr) 44px}.flows td:nth-child(1){grid-column:1;grid-row:1}.flows td:nth-child(4){grid-column:2;grid-row:1}.flows td:nth-child(3){grid-column:1/-1;grid-row:2}.flows td:nth-child(2){grid-column:1/-1;grid-row:3}}
+@media (min-width:561px){.flows td:nth-child(2){grid-column:1/-1;grid-row:2}}
+.calcform .flows .input,.calcform .flows .select{min-width:0;width:100%;font-size:16px}
+.flows .btn{min-height:44px;width:44px;padding:0;justify-content:center}
+.vh{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+#addFlow{margin-top:var(--space-3);min-height:44px}
+.res{min-width:0}
+.res h2{margin-top:0}
+.res-grid{display:grid;grid-template-columns:repeat(var(--cols),minmax(0,1fr));gap:var(--space-3)}
+.res-grid .op{display:none}
+.res-grid.strip{display:flex;flex-wrap:wrap;align-items:center;gap:var(--space-2)}
+.res-grid.strip .card{flex:1 1 140px}
+.res-grid.strip .op{display:block;font-size:var(--text-lg);color:var(--color-text-cool)}
+@media (max-width:560px){.res-grid{grid-template-columns:1fr}.res-grid.strip{flex-direction:column;align-items:stretch}.res-grid.strip .op{text-align:center}}
+.res .stat__value{font-size:var(--text-xl);overflow-wrap:anywhere;font-variant-numeric:normal}
+.illus{display:inline-block;margin-bottom:var(--space-2)}
+.chart{width:100%;height:auto;margin-top:var(--space-4)}
+.chart text{font-size:12px;fill:var(--chart-axis)}
+.legend{display:flex;flex-wrap:wrap;gap:var(--space-4);font-size:var(--text-sm);color:var(--color-text-strong);margin-top:var(--space-2)}
+.legend .sw{display:inline-block;width:12px;height:12px;border-radius:2px;margin-right:var(--space-2);vertical-align:-1px}
+.sw-a{background:var(--chart-3)}.sw-b{background:var(--chart-1)}
+.formula{font-size:var(--text-base);background:var(--color-surface-app);border:1px solid var(--color-border-soft);border-radius:var(--radius-card);padding:var(--space-4);margin:var(--space-3) 0;overflow-wrap:anywhere}
+.k1{font-size:var(--text-base);color:var(--color-text-strong);margin-top:var(--space-4)}
+#rNote:empty{display:none}
+</style>
+<noscript><style>/* without JavaScript the chart is the build's phone-first drawing (calculators.CHART_BOX): no wider than 420px,
+   so its 12px labels draw at 12–17px */
+.chart{max-width:420px}</style></noscript><style>main h3{margin-top:var(--space-6);margin-bottom:var(--space-2)}
+.calc-after{margin-top:var(--space-4)}.calc-after p+p{margin-top:var(--space-2)}</style>
+</head>
+<body>
+<header class="sr-header"><div class="sr-aud"><nav aria-label="Audience" class="sr-wrap"><a aria-current="true" href="../../index.html">Investors</a><a href="../../solutions/nri/index.html">NRIs</a><a href="https://ba.moneyhoney.co.in/">Business Associates</a></nav></div><div class="sr-head"><div class="sr-wrap sr-head__row"><a aria-label="MoneyHoney home" class="sr-logo" href="../../index.html"><svg aria-label="MoneyHoney" fill="none" height="20" role="img" viewbox="0 0 139 20" width="139" xmlns="http://www.w3.org/2000/svg">
+<path d="M1 10C1 15.2842 5.12632 19.6211 10.3474 20C10.3474 18.4632 9.46316 17.0316 8.07368 16.3579C5.67368 15.2211 4.01053 12.8 4.01053 9.97895C4.01053 7.51579 5.27368 5.36842 7.18947 4.08421V7.64211C7.18947 9.36842 8.6 10.7789 10.3474 10.7789V0C5.12632 0.4 1 4.73684 1 10Z" fill="#FF4A00"></path>
+<path d="M21.2318 10C21.2318 15.2842 17.1054 19.6211 11.8844 20C11.8844 18.4632 12.7686 17.0316 14.1581 16.3579C16.5581 15.2211 18.2212 12.8 18.2212 9.97895C18.2212 7.51579 16.9581 5.36842 15.0212 4.08421V7.64211C15.0212 9.36842 13.6107 10.7789 11.8633 10.7789V0C17.0844 0.4 21.2107 4.73684 21.2107 10H21.2318Z" fill="#FF4A00"></path>
+<path d="M13.4418 14.0201C13.4418 15.3043 12.4103 16.3359 11.126 16.3359C9.84184 16.3359 8.81026 15.3043 8.81026 14.0201C8.81026 12.7359 9.84184 11.7043 11.126 11.7043C12.4103 11.7043 13.4418 12.7359 13.4418 14.0201Z" fill="#16205B"></path>
+<path d="M27.6319 3.41083H29.5477C30.1582 3.41083 30.7056 3.72662 31.0214 4.23188L33.6951 8.52662L36.3687 4.23188C36.6845 3.72662 37.253 3.41083 37.8424 3.41083H39.7582V15.474H38.5161C37.7372 15.474 37.1056 14.8424 37.1056 14.0635V7.6003L33.6951 12.7582H33.6319L30.2424 7.66346V14.0845C30.2424 14.8635 29.6108 15.495 28.8319 15.495H27.6319V3.43188V3.41083Z" fill="#16205B"></path>
+<path d="M49.0839 10.905V10.8629C49.0839 9.49451 48.0944 8.31556 46.6418 8.31556C45.1892 8.31556 44.2207 9.47345 44.2207 10.8419V10.884C44.2207 12.2524 45.2102 13.4313 46.6628 13.4313C48.1155 13.4313 49.0839 12.2735 49.0839 10.905ZM41.6102 10.905V10.8629C41.6102 8.21029 43.7576 6.06293 46.6628 6.06293C49.5681 6.06293 51.6734 8.18924 51.6734 10.8419V10.884C51.6734 13.5366 49.526 15.684 46.6207 15.684C43.7155 15.684 41.6102 13.5577 41.6102 10.905Z" fill="#16205B"></path>
+<path d="M53.2529 6.25173H55.0003C55.5055 6.25173 55.9055 6.65173 55.9055 7.13594V7.557C56.5161 6.77805 57.295 6.08331 58.6213 6.08331C60.6213 6.08331 61.7792 7.38858 61.7792 9.51489V15.4938H60.3897C59.695 15.4938 59.1476 14.9465 59.1476 14.2517V10.3359C59.1476 9.09384 58.5582 8.46226 57.5476 8.46226C56.5371 8.46226 55.9055 9.09384 55.9055 10.3359V14.2517C55.9055 14.9254 55.3371 15.4938 54.6634 15.4938H53.274V6.25173H53.2529Z" fill="#16205B"></path>
+<path d="M69.8203 10.1471C69.673 8.96819 68.9782 8.18924 67.8624 8.18924C66.7467 8.18924 66.0519 8.96819 65.8414 10.1471H69.8203ZM63.273 10.905V10.8629C63.273 8.23135 65.1677 6.06293 67.8624 6.06293C70.9782 6.06293 72.3888 8.46293 72.3888 11.0735C72.3888 11.284 72.3888 11.5156 72.3467 11.7682H65.8624C66.1151 12.9471 66.9572 13.5787 68.1361 13.5787C68.8309 13.5787 69.3782 13.4103 69.9256 13.0103C70.2203 12.7998 70.6203 12.8419 70.873 13.0735L71.8835 13.9577C71.0203 15.0313 69.7572 15.684 68.073 15.684C65.273 15.684 63.2098 13.7471 63.2098 10.905H63.273Z" fill="#16205B"></path>
+<path d="M80.8733 6.2522H82.4312L78.8523 15.7048C78.1365 17.5785 77.3786 18.2943 75.7996 18.2943C74.8523 18.2943 74.1365 18.0627 73.4628 17.6627L74.2417 16.0206C74.3049 15.8943 74.4523 15.8311 74.5786 15.8943C74.8733 16.0417 75.2102 16.1259 75.4628 16.1259C75.9049 16.1259 76.1575 15.9785 76.3891 15.5154L72.747 6.2522H74.2839C75.0417 6.2522 75.6944 6.73641 75.926 7.43114L77.6523 12.5469L79.3154 7.36799C79.526 6.6943 80.1575 6.2522 80.8523 6.2522H80.8733Z" fill="#16205B"></path>
+<path d="M84.4945 3.41083H85.6735C86.4945 3.41083 87.1682 4.06346 87.1682 4.88451V8.18977H92.0945V4.88451C92.0945 4.06346 92.7682 3.41083 93.5893 3.41083H94.7682V15.474H93.6314C92.7682 15.474 92.0945 14.7792 92.0945 13.9371V10.6319H87.1682V13.9371C87.1682 14.7792 86.4735 15.474 85.6314 15.474H84.4945V3.41083Z" fill="#FF4A00"></path>
+<path d="M104.073 10.905V10.8629C104.073 9.49451 103.083 8.31556 101.631 8.31556C100.178 8.31556 99.2098 9.47345 99.2098 10.8419V10.884C99.2098 12.2524 100.199 13.4313 101.652 13.4313C103.105 13.4313 104.073 12.2735 104.073 10.905ZM96.6203 10.905V10.8629C96.6203 8.21029 98.7677 6.06293 101.673 6.06293C104.578 6.06293 106.683 8.18924 106.683 10.8419V10.884C106.683 13.5366 104.536 15.684 101.631 15.684C98.7256 15.684 96.6203 13.5577 96.6203 10.905Z" fill="#FF4A00"></path>
+<path d="M135.863 6.2522H137.421L133.842 15.7048C133.126 17.5785 132.368 18.2943 130.789 18.2943C129.842 18.2943 129.126 18.0627 128.452 17.6627L129.231 16.0206C129.294 15.8943 129.442 15.8311 129.589 15.8943C129.884 16.0417 130.199 16.1259 130.473 16.1259C130.915 16.1259 131.168 15.9785 131.399 15.5154L127.757 6.2522H129.294C130.052 6.2522 130.705 6.73641 130.936 7.43114L132.663 12.5469L134.326 7.36799C134.536 6.6943 135.168 6.2522 135.863 6.2522Z" fill="#FF4A00"></path>
+<path d="M108.243 6.25173H109.99C110.495 6.25173 110.895 6.65173 110.895 7.13594V7.557C111.506 6.77805 112.285 6.08331 113.611 6.08331C115.611 6.08331 116.769 7.38858 116.769 9.51489V15.4938H115.379C114.685 15.4938 114.137 14.9465 114.137 14.2517V10.3359C114.137 9.09384 113.548 8.46226 112.537 8.46226C111.527 8.46226 110.895 9.09384 110.895 10.3359V14.2517C110.895 14.9254 110.327 15.4938 109.653 15.4938H108.264V6.25173H108.243Z" fill="#FF4A00"></path>
+<path d="M124.895 10.1471C124.747 8.96819 124.053 8.18924 122.937 8.18924C121.821 8.18924 121.126 8.96819 120.916 10.1471H124.895ZM118.326 10.905V10.8629C118.326 8.23135 120.221 6.06293 122.916 6.06293C126.032 6.06293 127.442 8.46293 127.442 11.0735C127.442 11.284 127.442 11.5156 127.4 11.7682H120.916C121.168 12.9471 122.01 13.5787 123.189 13.5787C123.884 13.5787 124.432 13.4103 124.979 13.0103C125.274 12.7998 125.674 12.8419 125.926 13.0735L126.937 13.9577C126.074 15.0313 124.81 15.684 123.126 15.684C120.326 15.684 118.263 13.7471 118.263 10.905H118.326Z" fill="#FF4A00"></path>
+</svg></a><nav aria-label="Main" class="sr-nav"><div class="sr-nav__item"><button aria-controls="mega-invest" aria-expanded="false" class="sr-nav__top" type="button">Invest <svg aria-hidden="true" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><path d="m6 9 6 6 6-6"></path></svg></button><div class="sr-mega" id="mega-invest"><div class="sr-mega__col"><p class="sr-mega__h">Mutual funds</p><a class="sr-mega__link" href="../../mutual-funds/index.html"><b>Mutual Funds</b><span>All 1,774 open schemes by category</span></a><a class="sr-mega__link" href="../../mutual-funds/explore/index.html"><b>Explore Funds</b><span>Filter by category, cost and risk</span></a><a class="sr-mega__link" href="../../mutual-funds/screens/index.html"><b>Fund Screens</b><span>Ready-made lists, each with its rule</span></a><a class="sr-mega__link" href="../../mutual-funds/screener/index.html"><b>Screener</b><span>Every scheme on one table</span></a><a class="sr-mega__link" href="../../mutual-funds/amc/index.html"><b>Fund Houses</b><span>The 49 fund houses we distribute</span></a></div><div class="sr-mega__col"><p class="sr-mega__h">Beyond mutual funds</p><a class="sr-mega__link" href="../../sif/index.html"><b>SIF</b><span>Specialised Investment Funds, from ₹10,00,000</span></a><a class="sr-mega__link" href="../../gift-city-funds/index.html"><b>GIFT City Funds</b><span>Dollar funds for NRIs and residents</span></a><a class="sr-mega__link" href="../../mutual-funds/nfo/index.html"><b>New Fund Offers</b><span>Open, upcoming and recently closed</span></a><a class="sr-mega__link" href="../../mutual-funds/dividends/index.html"><b>Dividends (IDCW)</b><span>Record dates and history</span></a></div><div class="sr-mega__promo"><b>Not sure where to start?</b><p>Six questions on your goals, your debts and your nerve.</p><a class="sr-more" href="../../solutions/know-yourself/index.html">Know Yourself <svg aria-hidden="true" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a></div></div></div><div class="sr-nav__item"><button aria-controls="mega-save" aria-expanded="false" class="sr-nav__top" type="button">Save <svg aria-hidden="true" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><path d="m6 9 6 6 6-6"></path></svg></button><div class="sr-mega" id="mega-save"><div class="sr-mega__col"><p class="sr-mega__h">Fixed deposits</p><a class="sr-mega__link" href="../../fixed-deposits/index.html"><b>Fixed Deposits</b><span>FDs from banks, housing finance companies and NBFCs</span></a><a class="sr-mega__link" href="../../fixed-deposits/bank-fd-rates/index.html"><b>Compare FD Rates</b><span>Bank FD rates side by side</span></a><a class="sr-mega__link" href="../../fixed-deposits/explore/index.html"><b>FD Explorer</b><span>Filter by tenure, payout and rating</span></a><a class="sr-mega__link" href="../../fixed-deposits/guide/index.html"><b>FD Guide</b><span>Payouts, tax, early withdrawal</span></a></div><div class="sr-mega__col"><p class="sr-mega__h">Bonds</p><a class="sr-mega__link" href="../../bonds/index.html"><b>Bonds &amp; NCDs</b><span>Every bond we offer</span></a><a class="sr-mega__link" href="../../bonds/ncd/index.html"><b>NCD IPOs</b><span>Open public issues, series and ratings</span></a><a class="sr-mega__link" href="../../bonds/rbi-bonds/index.html"><b>RBI Floating Rate Bonds</b><span>Government of India, reset every six months</span></a><a class="sr-mega__link" href="../../bonds/capital-gain-bonds/index.html"><b>Capital Gain Bonds</b><span>REC, PFC and IRFC series</span></a></div><div class="sr-mega__promo"><b>Most of your savings in FDs?</b><p>See what else could sit beside them, and what it would change.</p><a class="sr-more" href="../../solutions/beyond-fixed-deposits/index.html">Beyond Fixed Deposits <svg aria-hidden="true" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a></div></div></div><div class="sr-nav__item"><button aria-controls="mega-plan" aria-current="page" aria-expanded="false" class="sr-nav__top" type="button">Plan <svg aria-hidden="true" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><path d="m6 9 6 6 6-6"></path></svg></button><div class="sr-mega" id="mega-plan"><div class="sr-mega__col"><p class="sr-mega__h">Goals</p><a class="sr-mega__link" href="../../solutions/retirement/index.html"><b>Retirement</b><span>How much you need, and how to draw it</span></a><a class="sr-mega__link" href="../../solutions/child-education/index.html"><b>Child Education</b><span>What school and college will cost</span></a><a class="sr-mega__link" href="../../solutions/sip/index.html"><b>SIP</b><span>How much to invest each month</span></a><a class="sr-mega__link" href="../../solutions/wealth/index.html"><b>Building Wealth</b><span>A plan for money you will not touch</span></a><a class="sr-mega__link" href="../../solutions/women/index.html"><b>Women and Money</b><span>Plans that fit career breaks</span></a></div><div class="sr-mega__col"><p class="sr-mega__h">Money checks</p><a class="sr-mega__link" href="../../solutions/emergency-fund/index.html"><b>Emergency Fund</b><span>Could you pay your bills for 6 months?</span></a><a class="sr-mega__link" href="../../solutions/tax-saving/index.html"><b>Tax Saving (ELSS)</b><span>Does ELSS still save you tax?</span></a><a class="sr-mega__link" href="../../solutions/portfolio-health/index.html"><b>Portfolio Health</b><span>Is your money in the right places?</span></a><a class="sr-mega__link" href="../../solutions/nri/index.html"><b>NRI Investing</b><span>Investing in India from abroad</span></a><a class="sr-mega__link" href="../../solutions/index.html"><b>All Solutions</b><span>17 goals and checks</span></a></div><div class="sr-mega__promo"><b>Run the numbers</b><p>SIP, retirement, FD, tax regime, XIRR and 20 more calculators.</p><a class="sr-more" href="../../calculators/index.html">All Calculators <svg aria-hidden="true" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a></div></div></div><div class="sr-nav__item"><button aria-controls="mega-learn" aria-expanded="false" class="sr-nav__top" type="button">Learn <svg aria-hidden="true" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><path d="m6 9 6 6 6-6"></path></svg></button><div class="sr-mega" id="mega-learn"><div class="sr-mega__col"><p class="sr-mega__h">Read and watch</p><a class="sr-mega__link" href="../../blog/index.html"><b>Blog</b><span>Plain explainers and founder notes</span></a><a class="sr-mega__link" href="../../videos/index.html"><b>Videos and Posts</b><span>Market updates on video</span></a><a class="sr-mega__link" href="../../mutual-funds/market-outlook/index.html"><b>Market Outlook</b><span>A fund house's monthly view</span></a><a class="sr-mega__link" href="../../methodology/index.html"><b>Methodology</b><span>Where our figures come from</span></a></div><div class="sr-mega__col"><p class="sr-mega__h">Guides</p><a class="sr-mega__link" href="../../fixed-deposits/guide/index.html"><b>FD Guide</b><span>How fixed deposits work</span></a><a class="sr-mega__link" href="../../bonds/ncd/guide/index.html"><b>NCD Guide</b><span>Ratings, risks and how to apply</span></a><a class="sr-mega__link" href="../../bonds/capital-gain-bonds/guide/index.html"><b>Capital Gain Bond Guide</b><span>Who can claim, and the time limit</span></a><a class="sr-mega__link" href="../../bonds/rbi-bonds/guide/index.html"><b>RBI Bond Guide</b><span>How the rate is set</span></a></div><div class="sr-mega__promo"><b>The power of compounding in SIPs</b><p>How small monthly amounts turn into long-term wealth.</p><a class="sr-more" href="../../blog/power-of-compounding-in-sip-mutual-funds/index.html">Read the Post <svg aria-hidden="true" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a></div></div></div><div class="sr-nav__item"><a class="sr-nav__top" href="../../contact/index.html">Talk to Us</a></div></nav><div class="sr-head__end"><a class="sr-signin" href="https://inv.moneyhoney.co.in/#/investor-login">Sign In</a><a class="btn btn-primary" href="../../get-started/index.html">Get Started</a></div><details class="sr-mnav"><summary aria-label="Menu"><svg aria-hidden="true" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"></path></svg></summary><div class="sr-mnav__panel"><details><summary>Invest</summary><a href="../../mutual-funds/index.html">Mutual Funds</a><a href="../../mutual-funds/explore/index.html">Explore Funds</a><a href="../../mutual-funds/screens/index.html">Fund Screens</a><a href="../../mutual-funds/screener/index.html">Screener</a><a href="../../mutual-funds/amc/index.html">Fund Houses</a><a href="../../sif/index.html">SIF</a><a href="../../gift-city-funds/index.html">GIFT City Funds</a><a href="../../mutual-funds/nfo/index.html">New Fund Offers</a><a href="../../mutual-funds/dividends/index.html">Dividends (IDCW)</a></details><details><summary>Save</summary><a href="../../fixed-deposits/index.html">Fixed Deposits</a><a href="../../fixed-deposits/bank-fd-rates/index.html">Compare FD Rates</a><a href="../../fixed-deposits/explore/index.html">FD Explorer</a><a href="../../fixed-deposits/guide/index.html">FD Guide</a><a href="../../bonds/index.html">Bonds &amp; NCDs</a><a href="../../bonds/ncd/index.html">NCD IPOs</a><a href="../../bonds/rbi-bonds/index.html">RBI Floating Rate Bonds</a><a href="../../bonds/capital-gain-bonds/index.html">Capital Gain Bonds</a></details><details><summary>Plan</summary><a href="../../solutions/retirement/index.html">Retirement</a><a href="../../solutions/child-education/index.html">Child Education</a><a href="../../solutions/sip/index.html">SIP</a><a href="../../solutions/wealth/index.html">Building Wealth</a><a href="../../solutions/women/index.html">Women and Money</a><a href="../../solutions/emergency-fund/index.html">Emergency Fund</a><a href="../../solutions/tax-saving/index.html">Tax Saving (ELSS)</a><a href="../../solutions/portfolio-health/index.html">Portfolio Health</a><a href="../../solutions/nri/index.html">NRI Investing</a><a href="../../solutions/index.html">All Solutions</a></details><details><summary>Learn</summary><a href="../../blog/index.html">Blog</a><a href="../../videos/index.html">Videos and Posts</a><a href="../../mutual-funds/market-outlook/index.html">Market Outlook</a><a href="../../methodology/index.html">Methodology</a><a href="../../fixed-deposits/guide/index.html">FD Guide</a><a href="../../bonds/ncd/guide/index.html">NCD Guide</a><a href="../../bonds/capital-gain-bonds/guide/index.html">Capital Gain Bond Guide</a><a href="../../bonds/rbi-bonds/guide/index.html">RBI Bond Guide</a></details><details><summary>Talk to Us</summary><a href="../../contact/index.html">Contact</a><a href="tel:+917738032704">Call +91 77380 32704</a><a href="https://wa.me/917738032704">WhatsApp Us</a></details><div class="sr-mnav__cta"><a class="btn btn-secondary" href="https://inv.moneyhoney.co.in/#/investor-login">Sign In</a></div></div></details></div></div></header>
+<main class="sr-main" id="main"><section class="sr-hero sr-world-peach"><div class="sr-wrap sr-hero__grid"><div class="sr-hero__copy"><div class="page-head stack-sm">
+<nav aria-label="Breadcrumb" class="breadcrumb">
+<a href="../../index.html">Home</a>
+<svg aria-hidden="true" fill="none" height="12" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24" width="12"><path d="m9 18 6-6-6-6"></path></svg>
+<a href="../index.html">Calculators</a>
+<svg aria-hidden="true" fill="none" height="12" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24" width="12"><path d="m9 18 6-6-6-6"></path></svg>
+<span aria-current="page">FD Calculator</span>
+</nav>
+<h1>FD Calculator</h1>
+</div><p class="lede">Pick one of the FDs we offer, who is investing, the tenure and how interest is paid. The calculator uses that company's card rate, adds the senior citizen and women's extras the way its card does, and works out the maturity amount or every interest payment, before tax. Switch to Deposit for a Target to find the amount that reaches a maturity figure you choose.</p></div><div class="sr-hero__art sr-hero__illus"><svg aria-hidden="true" focusable="false" viewbox="0 0 420 320"><circle cx="210" cy="168" fill="#3A4796" fill-opacity="0.07" r="146"></circle><rect fill="#16205B" height="248" rx="20" width="224" x="108" y="54"></rect><rect fill="#C9CEE8" height="54" rx="8" width="184" x="128" y="76"></rect><text fill="#16205B" font-family='"Source Serif 4",Georgia,serif' font-size="30" font-weight="600" text-anchor="end" x="296" y="114">12%</text><rect fill="#FFFFFF" height="30" rx="6" width="38" x="128" y="150"></rect><rect fill="#FFFFFF" height="30" rx="6" width="38" x="178" y="150"></rect><rect fill="#FFFFFF" height="30" rx="6" width="38" x="228" y="150"></rect><rect fill="#FFFFFF" height="30" rx="6" width="38" x="278" y="150"></rect><rect fill="#FFFFFF" height="30" rx="6" width="38" x="128" y="192"></rect><rect fill="#FFFFFF" height="30" rx="6" width="38" x="178" y="192"></rect><rect fill="#FFFFFF" height="30" rx="6" width="38" x="228" y="192"></rect><rect fill="#FFFFFF" height="30" rx="6" width="38" x="278" y="192"></rect><rect fill="#FFFFFF" height="30" rx="6" width="38" x="128" y="234"></rect><rect fill="#FFFFFF" height="30" rx="6" width="38" x="178" y="234"></rect><rect fill="#FFFFFF" height="30" rx="6" width="38" x="228" y="234"></rect><rect fill="#FF4A00" height="30" rx="6" width="38" x="278" y="234"></rect></svg></div></div></section><div class="sr-body"><div class="container sr-content" id="sr-content">
+
+
+<div class="calc">
+<form aria-label="FD Calculator inputs" class="card calcform" id="calcForm">
+<div class="field">
+<label class="flabel" for="mode">Calculate</label>
+<select class="select" data-f="mode" id="mode"><option selected="" value="amount">Maturity for an Amount</option><option value="target">Deposit for a Target</option></select>
+</div>
+<div class="field">
+<label class="flabel" for="co">Company</label>
+<select class="select" data-f="co" id="co"><option value="bajaj-finance">Bajaj Finance</option><option value="shriram-finance">Shriram Finance</option><option value="mahindra-finance">Mahindra Finance</option><option value="icici-home-finance">ICICI Home Finance</option><option selected="" value="lic-housing-finance">LIC Housing Finance</option><option value="pnb-housing-finance">PNB Housing Finance</option><option value="hdfc-bank">HDFC Bank</option><option value="utkarsh-small-finance-bank">Utkarsh Small Finance Bank</option></select>
+</div>
+<div class="field">
+<label class="flabel" for="series">Scheme</label>
+<select class="select" data-f="series" id="series"><option selected="" value="sanchay">Sanchay Public Deposit</option><option value="green">Green Deposit</option><option value="corporate">Corporate Deposit</option></select>
+</div>
+<div class="field">
+<label class="flabel" for="as">Investing As</label>
+<select class="select" data-f="as" id="as"><option selected="" value="individual">Individual</option><option value="minor">Minor (Through a Guardian)</option><option value="nri">NRI</option><option value="nri-minor">NRI Minor</option><option value="huf">HUF</option><option value="huf-nri">NRI HUF</option><option value="proprietorship">Sole Proprietorship</option><option value="firm">Partnership Firm</option><option value="llp">LLP</option><option value="company">Company</option><option value="trust">Trust</option><option value="aop">Association of Persons (AOP)</option><option value="boi">Body of Individuals (BOI)</option><option value="government">Government Agency</option><option value="local-authority">Local Authority</option><option value="ajp">Artificial Juridical Person</option></select>
+<p class="basis">Rates and who can invest differ by investor type; NRIs invest in company FDs for 12 to 36 months.</p>
+</div>
+<div class="field">
+<label class="flabel" for="senior">Senior Citizen (60 and Over)</label>
+<select class="select" data-f="senior" id="senior"><option selected="" value="no">No</option><option value="yes">Yes</option></select>
+</div>
+<div class="field">
+<label class="flabel" for="women">Woman Depositor</label>
+<select class="select" data-f="women" id="women"><option selected="" value="no">No</option><option value="yes">Yes</option></select>
+<p class="basis">Shriram Finance and Mahindra Finance add 0.05% for women depositors.</p>
+</div>
+<div class="field">
+<label class="flabel" for="ten">Tenure (Months)</label>
+<div class="row2"><input class="input wide" data-f="ten" id="ten" max="3652" min="1" step="1" type="number" value="36"/></div>
+<p class="basis">In months; Utkarsh Small Finance Bank's card is in days.</p>
+</div>
+<div class="field">
+<label class="flabel" for="pay">Interest Paid</label>
+<select class="select" data-f="pay" id="pay"><option selected="" value="cumulative">Cumulative (at Maturity)</option><option value="monthly">Monthly</option><option value="quarterly">Quarterly</option><option value="yearly">Yearly</option></select>
+</div>
+<div class="field" data-show="mode=amount">
+<label class="flabel" for="amt">Deposit Amount (₹)</label>
+<div class="row2"><input class="input wide" data-f="amt" id="amt" max="1000000000" min="1000" step="1000" type="number" value="100000"/></div>
+<p class="basis">Each company has a minimum, and some take deposits only in multiples.</p>
+</div>
+<div class="field" data-show="mode=target" hidden="">
+<label class="flabel" for="target">Target Maturity Amount (₹)</label>
+<div class="row2"><input class="input wide" data-f="target" id="target" max="1000000000" min="1000" step="1000" type="number" value="200000"/></div>
+<p class="basis">Works with the cumulative option.</p>
+</div>
+<div class="field">
+<label class="flabel" for="start">Deposit Date</label>
+<input class="input" data-f="start" id="start" type="date" value="2026-10-16"/>
+<p class="basis">The day the company receives your money.</p>
+</div>
+</form>
+<section aria-labelledby="rHead" aria-live="polite" class="res" data-block="fd">
+<span class="badge illus">Before Tax</span>
+<h2 id="rHead">LIC Housing Finance Sanchay Public Deposit: ₹1,00,000 for 3 Years</h2>
+<div class="res-grid" style="--cols: 4">
+<div class="card stat"><span class="stat__label">Interest Rate (p.a.)</span><span class="stat__value" id="s0">7.20%</span></div><div class="card stat"><span class="stat__label">Total Interest, Before Tax</span><span class="stat__value" id="s1">₹23,193</span></div><div class="card stat"><span class="stat__label">Paid at Maturity</span><span class="stat__value" id="s2">₹1,23,193</span></div><div class="card stat"><span class="stat__label">Maturity Date</span><span class="stat__value" id="s3">16 Oct 2029</span></div>
+</div>
+<p class="note" id="rNote">Interest rate 7.20% p.a., cumulative option, for Individual investors. Rates w.e.f. 1 Sep 2026. Interest compounds yearly for whole years, with simple interest for the months after. Interest is taxable. Tax is deducted at 10% once interest from the company exceeds ₹10,000 in a financial year (20% without PAN). If your tax is nil, you can submit Form 121, which replaced Forms 15G and 15H.</p>
+<p class="note"><a href="../../fixed-deposits/lic-housing-finance/index.html?plan=36m-cumulative&amp;as=individual" id="fdPlan">See this plan on the company page</a></p>
+<p class="k1">This calculator works out interest from each company's card rate for the plan you choose, before tax. The company's deposit receipt and statements are the reference: payments that fall on holidays, and the company's own rounding, can move a payment by a day or a rupee. Rates can change. The rate on the day you invest applies. MoneyHoney is an AMFI-registered Mutual Fund Distributor. Fixed deposits are not mutual fund products, and AMFI and SEBI grievance mechanisms do not apply to them. Complaints lie with the company first, then with the RBI Ombudsman for NBFCs and banks, or the National Housing Bank for housing finance companies.</p>
+</section>
+</div>
+<h2>Interest Schedule</h2>
+<div class="table-wrap"><table class="table table-stack" data-calc="" id="ytab">
+<thead><tr><th scope="col">Payment</th><th scope="col">Date</th><th scope="col">Days</th><th scope="col">Interest</th><th scope="col">Principal</th><th scope="col">Total Payment</th></tr></thead>
+<tbody><tr><td data-label="Payment">1</td><td class="num" data-label="Date">16 Oct 2029</td><td class="num" data-label="Days">1096</td><td class="num" data-label="Interest">₹23,193</td><td class="num" data-label="Principal">₹1,00,000</td><td class="num" data-label="Total Payment">₹1,23,193</td></tr></tbody>
+</table></div>
+<h2>How the FD Calculator Works</h2>
+<p>The rate is the company's printed card rate for the scheme, tenure and payout you pick, for your investor type. Extras are added the way the card adds them: a separate senior citizen card (Bajaj Finance, Shriram Finance, Utkarsh Small Finance Bank), a flat extra (ICICI Home Finance, LIC Housing Finance, PNB Housing Finance), an extra that depends on the tenure (Mahindra Finance), or an extra on the quarterly rate (HDFC Bank).</p><p>A cumulative deposit grows by each company's own method:</p><div class="formula">Bajaj Finance, Mahindra Finance: amount × (1 + rate)<sup>months ÷ 12</sup></div><div class="formula">ICICI Home Finance, LIC Housing Finance, PNB Housing Finance: amount × (1 + rate)<sup>years</sup> × (1 + rate × months ÷ 12)</div><div class="formula">Shriram Finance: amount × (1 + monthly rate ÷ 12)<sup>months</sup></div><p>The two banks work out interest day by day, in calendar-month parts, and add it to the deposit every quarter; Utkarsh pays simple interest on deposits of 180 days or less. With a payout, each payment counts the actual days in its period, on the company's payment dates, and is rounded to the rupee:</p><div class="formula">Interest = amount × payout rate × days ÷ 365 (366 for days in a leap year)</div><p>A full year at a yearly payout pays the rate itself, and the maturity date is the deposit date plus the tenure.</p>
+<h3>Worked Example</h3>
+<p>₹1,00,000 in LIC Housing Finance's Sanchay Public Deposit for 3 years, cumulative, at 7.20% p.a. (rates w.e.f. 1 Sep 2026): interest compounds once a year for the whole years, so the deposit grows to <strong>₹1,23,193</strong> by 16 Oct 2029, ₹23,193 of interest before tax. The monthly payout needs at least ₹2,00,000 and pays 6.95% p.a.: on ₹2,00,000 that is about ₹1,158 a month, each payment counted by the days in its month, and ₹41,700 in all.</p>
+<h2>Why Real Results Differ</h2>
+<ul><li>Payment dates that fall on holidays move to a working day, and each company's own rounding can move a payment by a rupee.</li><li>A deposit gets the card in force on the day the company receives the money, and companies revise their cards.</li><li>Tax is deducted at source above the yearly threshold, and interest is taxed at your slab rate; the figures here are before tax.</li><li>Early withdrawal pays a lower rate, and a company FD is locked in for the first 3 months.</li></ul>
+<section class="sr-faq"><h2>Frequently Asked Questions</h2><div class="faq">
+<details><summary>Can I enter my own interest rate?</summary><p>No. This calculator is for the FDs MoneyHoney offers: the rate comes from each company's card for the plan and investor type you choose.</p></details>
+<details><summary>Why does the first payment differ from the rest?</summary><p>It covers the days from your deposit date to the company's first payment date, so it is shorter or longer than a full period.</p></details>
+<details><summary>Does it deduct TDS?</summary><p>No. The figures are before tax. Tax is deducted at 10% once interest from a company passes ₹10,000 in a financial year, or ₹50,000 at a bank (₹1,00,000 for senior citizens), unless you submit Form 121.</p></details>
+<details><summary>Why is the maturity a rupee different from the company's card?</summary><p>The card rounds its own way, and a bank's figure depends on the calendar days in each quarter, so the deposit date can move it by a rupee or two.</p></details>
+</div></section>
+
+<h2>Fixed Deposit Pages</h2>
+<div class="linkgrid"><a class="card" href="../../fixed-deposits/index.html">Fixed Deposits<span class="card__meta">Company and bank FDs we offer, with rates for your investor type</span></a><a class="card" href="../../fixed-deposits/explore/index.html">FD Explorer<span class="card__meta">Every plan open to your investor type</span></a><a class="card" href="../../fixed-deposits/bank-fd-rates/index.html">Bank FD Interest Rates<span class="card__meta">Rates at banks across India, by tenure</span></a><a class="card" href="../../fixed-deposits/guide/tax-tds-and-form-121/index.html">Tax, TDS and Form 121<span class="card__meta">How FD interest is taxed</span></a></div>
+<section data-block="related">
+<h2>Related Calculators</h2>
+<div class="linkgrid"><a class="card" href="../ncd/index.html">NCD Calculator<span class="card__meta">Interest, maturity amount and payout dates of an NCD</span></a><a class="card" href="../capital-gain-bonds/index.html">Capital Gain Bond Calculator<span class="card__meta">Tax saved on a property gain, and the bonds' interest</span></a><a class="card" href="../rbi-bonds/index.html">RBI Bond Calculator<span class="card__meta">Every interest payment, TDS and your earliest exit date</span></a><a class="card" href="../inflation/index.html">Inflation Calculator<span class="card__meta">Future cost and today's buying power</span></a></div>
+</section>
+<script>
+(function () {
+/* Shared calculator helpers (included once per page, inside the page's IIFE). Mirrors sitegen/calcmath.py:
+   compute(v) returns {head, stats, rows, bars, note}; boot() wires the form and renders the result.
+   After each render the document gets an 'mh-calc' event with the result (the Solutions pages mirror it), and
+   window.mhCalc(over) recomputes with some fields changed, without touching the form; window.mhRead() gives the
+   field values the calculator is using. */
+var $ = function (id) { return document.getElementById(id); };
+function inr(v) { var n = Math.floor(Math.abs(v) + 0.5); return (v < 0 && n ? '-' : '') + '₹' + n.toLocaleString('en-IN'); }
+function pc1(v) { return v.toFixed(1) + '%'; }
+function pc(v) { return (+v) + '%'; }
+function years(n) { return (+n) + ' Year' + (n == 1 ? '' : 's'); }
+function dur(months) {
+  var y = Math.floor(months / 12), m = months % 12, out = [];
+  if (y) out.push(years(y));
+  if (m) out.push(m + ' Month' + (m == 1 ? '' : 's'));
+  return out.join(' ') || '0 Months';
+}
+function sipFv(p, n, r) { var i = r / 1200; return n > 0 ? p * (Math.pow(1 + i, n) - 1) / i * (1 + i) : 0; }
+function sipNeeded(gap, n, r) { var i = r / 1200; return gap > 0 && n > 0 ? gap * i / ((Math.pow(1 + i, n) - 1) * (1 + i)) : 0; }
+function isoDate(s) { var p = s.split('-'); return new Date(Date.UTC(+p[0], +p[1] - 1, +p[2])); }
+
+function read() {
+  var v = {};
+  document.querySelectorAll('#calcForm [data-f]').forEach(function (el) {
+    if (el.type === 'number') {
+      var lo = +el.min, hi = +el.max, x = parseFloat(el.value);
+      if (isNaN(x)) x = lo;
+      v[el.dataset.f] = Math.min(hi, Math.max(lo, x));
+    } else v[el.dataset.f] = el.value;
+  });
+  var fl = $('flows');
+  if (fl) v.flows = Array.prototype.map.call(fl.tBodies[0].rows, function (tr) {
+    return [tr.querySelector('input[type=date]').value, tr.querySelector('select').value, parseFloat(tr.querySelector('input[type=number]').value) || 0];
+  });
+  return v;
+}
+
+function chartSvg(bars, W, H) {
+  if (!bars.length) return '';
+  var x0 = 8, top = 0;
+  bars.forEach(function (b) { top = Math.max(top, b[1], b[2]); });
+  top = top || 1;
+  var n = bars.length, slot = (W - x0) / n, bw = Math.max(1, slot / 2 - 1), step = n <= 15 ? 1 : n <= 60 ? 5 : 10, s = '';
+  bars.forEach(function (b, k) {
+    var x = x0 + k * slot, ha = b[1] / top * H, hb = b[2] / top * H;
+    s += '<rect x="' + x.toFixed(1) + '" y="' + (H - ha + 10).toFixed(1) + '" width="' + bw.toFixed(1) + '" height="' + ha.toFixed(1) + '" rx="1" fill="var(--chart-3)"/>' +
+         '<rect x="' + (x + bw + 1).toFixed(1) + '" y="' + (H - hb + 10).toFixed(1) + '" width="' + bw.toFixed(1) + '" height="' + hb.toFixed(1) + '" rx="1" fill="var(--chart-1)"/>';
+    if (step === 1 || b[0] % step === 0) s += '<text x="' + (x + bw + 0.5).toFixed(1) + '" y="' + (H + 32) + '" text-anchor="middle">' + b[0] + '</text>';
+  });
+  return s;
+}
+
+function render(r) {
+  $('rHead').textContent = r.head;
+  r.stats.forEach(function (s, k) { $('s' + k).textContent = s; });
+  $('rNote').textContent = r.note || '';
+  var tab = $('ytab');
+  if (tab) {
+    var heads = Array.prototype.map.call(tab.tHead.rows[0].cells, function (th) { return th.textContent; });
+    tab.tBodies[0].innerHTML = r.rows.map(function (row) {
+      return '<tr>' + row.map(function (c, k) { return '<td data-label="' + heads[k] + '"' + (k ? ' class="num"' : '') + '>' + c + '</td>'; }).join('') + '</tr>';
+    }).join('');
+  }
+  lastR = r;
+  drawChart(r);
+  document.dispatchEvent(new CustomEvent('mh-calc', { detail: r }));
+}
+
+/* The chart draws at the width it gets (spec 2.2), so its 12px labels stay 12px: its viewBox is as wide as the chart
+   (never wider), and up to 1.4 times the build's height on a wide screen. boot() draws it on load and again when its
+   width changes, with an 'mh-chart' event for mh.js's hit zones. Without scripts the build's phone-first drawing
+   stays (calculators.CHART_BOX). */
+var lastR = null;
+function chartWidth(ch) { return Math.floor(ch.getBoundingClientRect().width); }
+function drawChart(r) {
+  var ch = $('chart');
+  if (!ch || !r) return;
+  if (!ch.dataset.box) { var vb = ch.viewBox.baseVal; ch.dataset.box = vb.width + ' ' + vb.height; }
+  var box = ch.dataset.box.split(' ').map(Number), W = chartWidth(ch) || box[0];
+  var H = Math.round(box[1] * Math.min(1.4, Math.max(1, W / box[0])));
+  ch.setAttribute('viewBox', '0 0 ' + W + ' ' + H);
+  ch.setAttribute('width', W); ch.setAttribute('height', H);
+  ch.innerHTML = chartSvg(r.bars, W - 8, H - 40);
+}
+
+function boot(compute) {
+  var form = $('calcForm');
+  function showHide() {
+    form.querySelectorAll('[data-show]').forEach(function (d) {
+      var kv = d.dataset.show.split('=');          // field=value, or field=a|b for any of several values
+      d.hidden = kv[1].split('|').indexOf($(kv[0]).value) < 0;
+    });
+  }
+  function run() { showHide(); render(compute(read())); }
+  window.mhRead = read;
+  window.mhCalc = function (over) {
+    var v = read();
+    Object.keys(over || {}).forEach(function (k) { v[k] = over[k]; });
+    return compute(v);
+  };
+  form.addEventListener('submit', function (e) { e.preventDefault(); });
+  form.querySelectorAll('input[type=range][data-for]').forEach(function (sl) {
+    var box = $(sl.dataset.for);
+    sl.addEventListener('input', function () { box.value = sl.value; run(); });
+    box.addEventListener('input', function () { sl.value = box.value; run(); });
+  });
+  form.querySelectorAll('[data-f]').forEach(function (el) {
+    el.addEventListener(el.tagName === 'SELECT' || el.type === 'date' ? 'change' : 'input', run);
+    if (el.type === 'number') el.addEventListener('change', function () {
+      var x = parseFloat(el.value);
+      el.value = Math.min(+el.max, Math.max(+el.min, isNaN(x) ? +el.min : x));
+      var sl = form.querySelector('[data-for="' + el.id + '"]');
+      if (sl) sl.value = el.value;
+      run();
+    });
+  });
+  form.querySelectorAll('[data-presets] button').forEach(function (b) {
+    b.addEventListener('click', function () {
+      var vals = JSON.parse(b.dataset.preset);
+      Object.keys(vals).forEach(function (id) {
+        $(id).value = vals[id];
+        var sl = form.querySelector('[data-for="' + id + '"]');
+        if (sl) sl.value = vals[id];
+        var g = form.querySelector('[data-picker="' + id + '"]');   // a rate: mark the asset class it is, if any
+        if (g) g.querySelectorAll('button').forEach(function (x) {
+          var on = +x.dataset.v === +vals[id];
+          x.setAttribute('aria-pressed', on ? 'true' : 'false');
+          if (on) $('basis-' + id).textContent = x.dataset.basis;
+        });
+      });
+      b.parentNode.querySelectorAll('button').forEach(function (x) { x.setAttribute('aria-pressed', x === b ? 'true' : 'false'); });
+      $('presetNote').textContent = b.dataset.note;
+      run();
+    });
+  });
+  form.querySelectorAll('[data-picker]').forEach(function (g) {
+    g.addEventListener('click', function (e) {
+      var b = e.target.closest('button');
+      if (!b) return;
+      g.querySelectorAll('button').forEach(function (x) { x.setAttribute('aria-pressed', x === b ? 'true' : 'false'); });
+      var id = g.dataset.picker;
+      $(id).value = b.dataset.v;
+      form.querySelector('[data-for="' + id + '"]').value = b.dataset.v;
+      $('basis-' + id).textContent = b.dataset.basis;
+      run();
+    });
+  });
+  var fl = $('flows');
+  if (fl) {
+    var body = fl.tBodies[0];
+    fl.addEventListener('input', run);
+    fl.addEventListener('change', run);
+    fl.addEventListener('click', function (e) {
+      if (e.target.closest('[data-remove]') && body.rows.length > 2) { e.target.closest('tr').remove(); run(); }
+    });
+    $('addFlow').addEventListener('click', function () {
+      var tr = body.rows[body.rows.length - 1].cloneNode(true);
+      tr.querySelector('input[type=number]').value = '';
+      body.appendChild(tr);
+      tr.querySelector('input[type=date]').focus();
+    });
+  }
+  var ch = $('chart');
+  if (ch) {
+    lastR = compute(read());
+    drawChart(lastR);
+    // redraw at a new width: on a resize, and as printing starts and ends (the print media change comes with the paper's
+    // layout in place, and a ResizeObserver does not fire for it), so the chart prints at its width on paper
+    var fit = function () {
+      var w = chartWidth(ch);
+      if (w && w !== ch.viewBox.baseVal.width && lastR) { drawChart(lastR); document.dispatchEvent(new CustomEvent('mh-chart', { detail: lastR })); }
+    };
+    if (window.ResizeObserver) new ResizeObserver(fit).observe(ch);
+    if (window.matchMedia) { var pm = matchMedia('print'); if (pm.addEventListener) pm.addEventListener('change', fit); }
+  }
+}
+/* FD Calculator: mirrors calcmath.fd_calc. TERMS is the 8 companies from fd_companies.yaml (calcmath.fd_terms), plus
+   each company page's link. Changing the company rebuilds the Scheme and Interest Paid lists, and converts the tenure
+   between months and days when the card's unit changes. */
+/* Fixed deposit core: mirrors calcmath.fd_* (formulas in .scratch/fd-site/issues/08-fd-calculator.md). Shared by the
+   FD Calculator, the company-page drawer and the explorer's Amount column. Dates are UTC Date objects. */
+var FD_MON = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+var FD_PER_YEAR = {monthly: 12, quarterly: 4, 'half-yearly': 2, yearly: 1};
+function fdIso(s) { var p = s.split('-'); return new Date(Date.UTC(+p[0], +p[1] - 1, +p[2])); }
+function fdFmt(d) { return d.getUTCDate() + ' ' + FD_MON[d.getUTCMonth()] + ' ' + d.getUTCFullYear(); }
+function fdDate(y, m, d) { return new Date(Date.UTC(y, m, d)); }
+function fdDays(a, b) { return Math.round((b.getTime() - a.getTime()) / 86400000); }
+function fdRnd(x) { return Math.floor(x + 0.5); }
+function fdRound2(x) { return Math.floor(x * 100 + 0.5) / 100; }
+function fdLeap(y) { return y % 4 === 0 && (y % 100 !== 0 || y % 400 === 0); }
+function fdAddMonths(d, n) {
+  var t = d.getUTCMonth() + n, y = d.getUTCFullYear() + Math.floor(t / 12), m = ((t % 12) + 12) % 12;
+  var last = new Date(Date.UTC(y, m + 1, 0)).getUTCDate();
+  return fdDate(y, m, Math.min(d.getUTCDate(), last));
+}
+function fdMin(a, b) { return a.getTime() <= b.getTime() ? a : b; }
+/* Simple interest on P at rate% for the days in [a, b); with 'actual' a day in a leap year counts 1/366. */
+function fdSimple(P, rate, a, b, dc) {
+  if (dc === '365') return P * rate / 100 * fdDays(a, b) / 365;
+  var tot = 0, d = a;
+  while (d < b) {
+    var e = fdMin(b, fdDate(d.getUTCFullYear() + 1, 0, 1));
+    tot += P * rate / 100 * fdDays(d, e) / (fdLeap(d.getUTCFullYear()) ? 366 : 365);
+    d = e;
+  }
+  return tot;
+}
+/* The banks' way: interest for [a, b) in calendar-month parts, each rounded to the paisa. */
+function fdParts(P, rate, a, b) {
+  var tot = 0, d = a;
+  while (d < b) {
+    var e = fdMin(b, fdDate(d.getUTCFullYear(), d.getUTCMonth() + 1, 1));
+    tot += fdRound2(P * rate / 100 * fdDays(d, e) / (fdLeap(d.getUTCFullYear()) ? 366 : 365));
+    d = e;
+  }
+  return tot;
+}
+function fdEnd(start, unit, v) { return unit === 'm' ? fdAddMonths(start, v) : new Date(start.getTime() + v * 86400000); }
+/* [maturity amount (unrounded), maturity date] by the company's method (see calcmath.fd_cumulative). */
+function fdCumulative(sc, P, rate, start, unit, v, mrate) {
+  var end = fdEnd(start, unit, v), r = rate / 100, m = sc.method;
+  if (m === 'bank-quarterly') {
+    if (fdDays(start, end) <= (sc.simple_upto_days || 0)) return [P + fdRnd(fdParts(P, rate, start, end)), end];
+    var bal = P, q = start, k = 1;
+    while (true) {
+      var e = fdMin(fdAddMonths(start, 3 * k), end);
+      bal += fdRnd(fdParts(bal, rate, q, e));
+      if (e.getTime() === end.getTime()) return [bal, end];
+      q = e; k++;
+    }
+  }
+  if (m === 'years-months') {
+    if (unit === 'm') { var y = Math.floor(v / 12), rest = v % 12; return [P * Math.pow(1 + r, y) * (1 + r * rest / 12), end]; }
+    var y2 = Math.floor(v / 365), rest2 = v % 365;
+    return [P * Math.pow(1 + r, y2) * (1 + r * rest2 / 365), end];
+  }
+  var t = unit === 'm' ? v / 12 : v / 365;
+  if (m === 'monthly-rests') return [P * Math.pow(1 + mrate / 1200, t * 12), end];
+  return [P * Math.pow(1 + r, t), end];
+}
+function fdDueDates(rule, start, end, n) {
+  var out = [], k, d;
+  if (rule === 'anniversary') {
+    k = 1;
+    while (fdAddMonths(start, 12 / n * k) < end) { out.push(fdAddMonths(start, 12 / n * k)); k++; }
+  } else if (rule === 'month-end') {
+    var y = start.getUTCFullYear(), mo = start.getUTCMonth();
+    while (true) {
+      d = fdDate(y, mo + 1, 0);
+      if (d >= end) break;
+      if (d > start) out.push(d);
+      if (mo === 11) { y++; mo = 0; } else mo++;
+    }
+  } else {
+    for (var yy = start.getUTCFullYear(); yy <= end.getUTCFullYear(); yy++) {
+      rule.forEach(function (md) {
+        var x = fdDate(yy, +md.slice(0, 2) - 1, +md.slice(3));
+        if (x > start && x < end) out.push(x);
+      });
+    }
+  }
+  out.push(end);
+  return out;
+}
+/* [[date, days, interest (rupees), unrounded]] for a payout plan (see calcmath.fd_schedule). */
+function fdSchedule(sc, P, rate, start, end, payout) {
+  var n = FD_PER_YEAR[payout], dues = fdDueDates(sc.pay_on[payout], start, end, n);
+  if (sc.merge_within && dues.length > 1 && fdDays(start, dues[0]) <= sc.merge_within) dues = dues.slice(1);
+  var rows = [], prev = start, lo = start;
+  dues.forEach(function (d, k) {
+    var hi = sc.inclusive && k < dues.length - 1 ? new Date(d.getTime() + 86400000) : d, amt;
+    if (fdAddMonths(prev, 12).getTime() === d.getTime()) amt = P * rate / 100;
+    else if (sc.amounts === 'fixed' && fdAddMonths(prev, 12 / n).getTime() === d.getTime()) amt = P * rate / 100 / n;
+    else if (sc.method === 'bank-quarterly') amt = fdParts(P, rate, lo, hi);
+    else amt = fdSimple(P, rate, lo, hi, String(sc.day_count));
+    rows.push([d, fdDays(lo, hi), fdRnd(amt), amt]);
+    prev = d; lo = hi;
+  });
+  return rows;
+}
+function fdSpan(r) {
+  var t = r.months !== undefined ? r.months : r.days;
+  return [r.months !== undefined ? 'm' : 'd', Array.isArray(t) ? t[0] : t, Array.isArray(t) ? t[1] : t, Array.isArray(t)];
+}
+function fdRowAt(rows, unit, v) {
+  var i, s;
+  for (i = 0; i < rows.length; i++) { s = fdSpan(rows[i]); if (s[0] === unit && !s[3] && s[1] === v) return rows[i]; }
+  for (i = 0; i < rows.length; i++) { s = fdSpan(rows[i]); if (s[0] === unit && s[3] && s[1] <= v && v <= s[2]) return rows[i]; }
+  return null;
+}
+/* [rate, notes] for any tenure inside a card row, with the senior and women extras applied as the card does. */
+function fdRate(co, s, p, unit, v, payout, senior, women) {
+  var group = co.groups[p] || co.groups['default'], rows = s.rates[group] || s.rates.general;
+  var row = fdRowAt(rows, unit, v), rate = row[payout], notes = [], yearly = null, e;
+  var months = unit === 'm' ? v : v * 12 / 365;
+  var sp = s.privileges.filter(function (x) { return x.type === 'senior'; })[0];
+  if (senior && sp && sp.profiles.indexOf(p) >= 0 && group === 'general') {
+    if (sp.grid) {
+      var srow = fdRowAt(s.rates[sp.grid], unit, v);
+      rate = srow[payout]; yearly = srow.yearly === undefined ? null : srow.yearly;
+      notes.push('includes the senior citizen rate');
+    } else {
+      e = sp.extra;
+      if (sp.by) sp.by.forEach(function (b) { if (months >= b[0]) e = b[1]; });
+      if (sp.basis === 'quarterly') {
+        var q = row.quarterly + e;
+        rate = payout === 'monthly' ? 12 * (Math.pow(1 + q / 400, 1 / 3) - 1) * 100 : q;
+      } else rate = rate + e;
+      notes.push('includes +' + e.toFixed(2) + '% for senior citizens');
+    }
+  }
+  var wp = s.privileges.filter(function (x) { return x.type === 'women'; })[0];
+  if (women && wp && wp.profiles.indexOf(p) >= 0 && months >= (wp.from_months || 0)) {
+    e = wp.extra;
+    if (wp.basis === 'yearly') {
+      var y = (yearly !== null ? yearly : row.yearly) + e, n = FD_PER_YEAR[payout] || 1;
+      rate = payout === 'cumulative' || payout === 'yearly' ? y : n * (Math.pow(1 + y / 100, 1 / n) - 1) * 100;
+    } else rate = rate + e;
+    notes.push('includes +' + e.toFixed(2) + '% for women depositors');
+  }
+  return [fdRound2(rate), notes];
+}
+function fdOpen(s, p) { return !s.norates && (s.only.length ? s.only.indexOf(p) >= 0 : s.not.indexOf(p) < 0); }
+function fdPlanId(unit, v) {
+  var std = {365: 12, 548: 18, 730: 24, 1095: 36, 1460: 48, 1825: 60};
+  return unit === 'd' && std[v] ? std[v] + 'm' : v + unit;
+}
+function fdTarget(sc, target, rate, start, unit, ten, mrate, mn, step) {
+  var f = fdCumulative(sc, 1000000, rate, start, unit, ten, mrate)[0] / 1000000;
+  var P = Math.max(mn, Math.ceil(target / f / step) * step);
+  while (P - step >= mn && fdRnd(fdCumulative(sc, P - step, rate, start, unit, ten, mrate)[0]) >= target) P -= step;
+  while (fdRnd(fdCumulative(sc, P, rate, start, unit, ten, mrate)[0]) < target) P += step;
+  return P;
+}
+var TERMS = {"companies": [{"bank": false, "contact": ["government", "ajp", "local-authority", "llp"], "groups": {"aop": "trusts", "boi": "trusts", "default": "general", "trust": "trusts"}, "offered": ["individual", "minor", "nri", "nri-minor", "proprietorship", "company", "huf", "aop", "boi", "firm", "trust"], "schedule": {"amounts": "days", "day_count": "actual", "inclusive": true, "method": "fractional", "pay_on": {"half-yearly": ["03-31", "09-30"], "monthly": "month-end", "quarterly": ["03-31", "06-30", "09-30", "12-31"], "yearly": ["03-31"]}}, "series": [{"card_amount": 15000, "id": "regular", "max_card": 30000000, "min": 15000, "multiple": null, "name": "Bajaj Finance Fixed Deposit", "norates": false, "not": [], "only": [], "payouts": ["cumulative", "monthly", "quarterly", "half-yearly", "yearly"], "privileges": [{"grid": "senior", "profiles": ["individual", "nri"], "type": "senior"}], "rates": {"general": [{"cumulative": 6.6, "half-yearly": 6.49, "maturity": 15990, "monthly": 6.41, "months": [12, 17], "quarterly": 6.44, "yearly": 6.6, "yield": 6.6}, {"cumulative": 6.85, "half-yearly": 6.74, "maturity": 16567, "monthly": 6.64, "months": [18, 30], "quarterly": 6.68, "yearly": 6.85, "yield": 7.01}, {"cumulative": 7.4, "half-yearly": 7.27, "maturity": 18038, "monthly": 7.16, "months": [31, 60], "quarterly": 7.2, "yearly": 7.4, "yield": 7.87}], "senior": [{"cumulative": 6.95, "half-yearly": 6.83, "maturity": 16043, "monthly": 6.74, "months": [12, 17], "quarterly": 6.78, "yearly": 6.95, "yield": 6.95}, {"cumulative": 7.2, "half-yearly": 7.08, "maturity": 16649, "monthly": 6.97, "months": [18, 30], "quarterly": 7.01, "yearly": 7.2, "yield": 7.37}, {"cumulative": 7.75, "half-yearly": 7.61, "maturity": 18190, "monthly": 7.49, "months": [31, 60], "quarterly": 7.53, "yearly": 7.75, "yield": 8.26}], "trusts": [{"cumulative": 6.8, "half-yearly": 6.69, "maturity": 16020, "monthly": 6.6, "months": [12, 23], "quarterly": 6.63, "yearly": 6.8, "yield": 6.8}, {"cumulative": 7.1, "half-yearly": 6.98, "maturity": 17206, "monthly": 6.88, "months": [24, 35], "quarterly": 6.92, "yearly": 7.1, "yield": 7.35}, {"cumulative": 7.05, "half-yearly": 6.93, "maturity": 18401, "monthly": 6.83, "months": [36, 60], "quarterly": 6.87, "yearly": 7.05, "yield": 7.56}]}, "unit": "m", "wef": "1 May 2026"}], "short": "Bajaj Finance", "slug": "bajaj-finance"}, {"bank": false, "contact": ["government", "ajp", "local-authority", "llp"], "groups": {"default": "general"}, "offered": ["individual", "minor", "nri", "nri-minor", "proprietorship", "company", "huf", "aop", "boi", "firm", "trust"], "schedule": {"amounts": "days", "day_count": "actual", "method": "monthly-rests", "pay_on": {"half-yearly": "anniversary", "monthly": "anniversary", "quarterly": "anniversary", "yearly": "anniversary"}}, "series": [{"card_amount": 5000, "id": "unnati", "max_card": 100000000, "min": 5000, "multiple": 1000, "name": "Shriram Unnati Fixed Deposit", "norates": false, "not": [], "only": [], "payouts": ["cumulative", "monthly", "quarterly", "half-yearly", "yearly"], "privileges": [{"grid": "senior", "profiles": ["individual", "nri"], "type": "senior"}, {"basis": "yearly", "extra": 0.05, "profiles": ["individual", "nri"], "type": "women"}], "rates": {"general": [{"cumulative": 6.85, "half-yearly": 6.74, "maturity": 5342, "monthly": 6.64, "months": 12, "quarterly": 6.68, "yearly": 6.85, "yield": 6.85}, {"cumulative": 7.05, "half-yearly": 6.93, "maturity": 5537, "monthly": 6.83, "months": [18, 23], "quarterly": 6.87, "yearly": 7.05, "yield": 7.17}, {"cumulative": 7.1, "half-yearly": 6.98, "maturity": 5735, "monthly": 6.88, "months": [24, 35], "quarterly": 6.92, "yearly": 7.1, "yield": 7.35}, {"cumulative": 7.5, "half-yearly": 7.36, "maturity": 6210, "monthly": 7.25, "months": [36, 60], "quarterly": 7.3, "yearly": 7.5, "yield": 8.07}], "senior": [{"cumulative": 7.35, "half-yearly": 7.22, "maturity": 5367, "monthly": 7.11, "months": 12, "quarterly": 7.16, "yearly": 7.35, "yield": 7.35}, {"cumulative": 7.55, "half-yearly": 7.41, "maturity": 5576, "monthly": 7.3, "months": [18, 23], "quarterly": 7.35, "yearly": 7.55, "yield": 7.69}, {"cumulative": 7.6, "half-yearly": 7.46, "maturity": 5789, "monthly": 7.35, "months": [24, 35], "quarterly": 7.39, "yearly": 7.6, "yield": 7.89}, {"cumulative": 8.0, "half-yearly": 7.85, "maturity": 6298, "monthly": 7.72, "months": [36, 60], "quarterly": 7.77, "yearly": 8.0, "yield": 8.66}]}, "unit": "m", "wef": "2 Jul 2026"}], "short": "Shriram Finance", "slug": "shriram-finance"}, {"bank": false, "contact": ["nri-minor"], "groups": {"default": "general"}, "offered": ["individual", "minor", "nri", "proprietorship", "company", "huf", "aop", "boi", "firm", "trust", "llp"], "schedule": {"amounts": "days", "day_count": "actual", "method": "fractional", "pay_on": {"half-yearly": ["03-31", "09-30"], "monthly": "month-end", "quarterly": ["03-31", "06-30", "09-30", "12-31"], "yearly": ["03-31"]}}, "series": [{"card_amount": 5000, "id": "regular", "max_card": 50000000, "min": {"cumulative": 5000, "half-yearly": 25000, "monthly": 50000, "quarterly": 50000, "yearly": 25000}, "multiple": 1000, "name": "Mahindra Finance Fixed Deposit", "norates": false, "not": [], "only": [], "payouts": ["cumulative", "monthly", "quarterly", "half-yearly", "yearly"], "privileges": [{"basis": "add", "by": [[12, 0.25], [36, 0.35]], "profiles": ["individual", "nri"], "type": "senior"}, {"basis": "add", "extra": 0.05, "from_months": 36, "profiles": ["individual", "nri"], "type": "women"}], "rates": {"general": [{"cumulative": 6.6, "half-yearly": 6.5, "maturity": 5330, "monthly": 6.4, "months": 12, "quarterly": 6.45, "yearly": 6.6, "yield": 6.6}, {"cumulative": 6.6, "half-yearly": 6.5, "maturity": 5503, "monthly": 6.4, "months": 18, "quarterly": 6.45, "yearly": 6.6, "yield": 6.71}, {"cumulative": 6.85, "half-yearly": 6.75, "maturity": 5708, "monthly": 6.65, "months": 24, "quarterly": 6.7, "yearly": 6.85, "yield": 7.08}, {"cumulative": 6.85, "half-yearly": 6.75, "maturity": 5901, "monthly": 6.65, "months": 30, "quarterly": 6.7, "yearly": 6.85, "yield": 7.21}, {"cumulative": 7.4, "half-yearly": 7.25, "maturity": 6194, "monthly": 7.15, "months": 36, "quarterly": 7.2, "yearly": 7.4, "yield": 7.96}, {"cumulative": 7.4, "half-yearly": 7.25, "maturity": 6419, "monthly": 7.15, "months": 42, "quarterly": 7.2, "yearly": 7.4, "yield": 8.11}, {"cumulative": 7.45, "half-yearly": 7.3, "maturity": 6665, "monthly": 7.2, "months": 48, "quarterly": 7.25, "yearly": 7.45, "yield": 8.32}, {"cumulative": 7.45, "half-yearly": 7.3, "maturity": 7161, "monthly": 7.2, "months": 60, "quarterly": 7.25, "yearly": 7.45, "yield": 8.65}]}, "unit": "m", "wef": "22 May 2026"}], "short": "Mahindra Finance", "slug": "mahindra-finance"}, {"bank": false, "contact": [], "groups": {"default": "general"}, "offered": ["individual", "minor", "nri", "proprietorship", "company", "huf", "aop", "boi", "firm", "trust", "llp"], "schedule": {"amounts": "days", "day_count": "365", "inclusive": true, "merge_within": 20, "method": "years-months", "pay_on": {"monthly": "month-end", "quarterly": ["03-31", "06-30", "09-30", "12-31"], "yearly": ["03-31"]}}, "series": [{"card_amount": 10000, "id": "regular", "max_card": 29999999, "min": {"cumulative": 10000, "monthly": 40000, "quarterly": 20000, "yearly": 10000}, "multiple": null, "name": "ICICI Home Finance Fixed Deposit", "norates": false, "not": [], "only": [], "payouts": ["cumulative", "monthly", "quarterly", "yearly"], "privileges": [{"basis": "add", "extra": 0.35, "profiles": ["individual", "nri"], "type": "senior"}], "rates": {"general": [{"cumulative": 6.85, "maturity": 10685, "monthly": 6.6, "months": [12, 23], "quarterly": 6.65, "yearly": 6.85, "yield": 6.75}, {"cumulative": 6.95, "maturity": 11438, "monthly": 6.7, "months": [24, 35], "quarterly": 6.75, "yearly": 6.95, "yield": 7.08}, {"cumulative": 7.1, "maturity": 12285, "monthly": 6.85, "months": [36, 47], "quarterly": 6.9, "yearly": 7.1, "yield": 7.39}, {"cumulative": 7.3, "maturity": 12573, "monthly": 7.05, "months": 39, "quarterly": 7.1, "special": true, "yearly": 7.3, "yield": 7.92}, {"cumulative": 7.35, "maturity": 13047, "monthly": 7.1, "months": 45, "quarterly": 7.15, "special": true, "yearly": 7.35, "yield": 8.13}, {"cumulative": 7.2, "maturity": 13206, "monthly": 6.95, "months": [48, 60], "quarterly": 7.0, "yearly": 7.2, "yield": 7.77}]}, "unit": "m", "wef": "6 Jul 2026"}], "short": "ICICI Home Finance", "slug": "icici-home-finance"}, {"bank": false, "contact": [], "groups": {"default": "general"}, "offered": ["individual", "minor", "nri", "proprietorship", "company", "huf", "aop", "boi", "government", "ajp", "local-authority", "firm", "trust", "llp"], "schedule": {"amounts": "days", "day_count": "actual", "method": "years-months", "pay_on": {"monthly": ["01-01", "02-01", "03-31", "05-01", "06-01", "07-01", "08-01", "09-01", "10-01", "11-01", "12-01"], "quarterly": ["01-01", "03-31", "07-01", "10-01"], "yearly": ["03-31"]}}, "series": [{"card_amount": 20000, "id": "sanchay", "max_card": 30000000, "min": {"cumulative": 20000, "monthly": 200000, "quarterly": 200000, "yearly": 20000}, "multiple": {"cumulative": 1000, "monthly": 10000, "quarterly": 10000, "yearly": 1000}, "name": "Sanchay Public Deposit", "norates": false, "not": ["company", "local-authority"], "only": [], "payouts": ["cumulative", "monthly", "quarterly", "yearly"], "privileges": [{"basis": "add", "extra": 0.25, "profiles": ["individual", "nri"], "type": "senior"}], "rates": {"general": [{"cumulative": 6.7, "maturity": 21340, "monthly": 6.5, "months": 12, "quarterly": 6.55, "yearly": 6.7, "yield": 6.7}, {"cumulative": 6.75, "maturity": 21710, "monthly": 6.55, "months": 15, "quarterly": 6.6, "yearly": 6.75, "yield": 6.84}, {"cumulative": 6.85, "maturity": 22102, "monthly": 6.65, "months": 18, "quarterly": 6.65, "yearly": 6.85, "yield": 7.01}, {"cumulative": 6.95, "maturity": 22877, "monthly": 6.75, "months": 24, "quarterly": 6.75, "yearly": 6.95, "yield": 7.19}, {"cumulative": 7.2, "maturity": 24639, "monthly": 6.95, "months": 36, "quarterly": 7.0, "yearly": 7.2, "yield": 7.73}, {"cumulative": 7.35, "maturity": 28513, "monthly": 7.1, "months": 60, "quarterly": 7.15, "yearly": 7.35, "yield": 8.51}]}, "unit": "m", "wef": "1 Sep 2026"}, {"card_amount": 20000, "id": "green", "max_card": 30000000, "min": {"cumulative": 20000, "monthly": 200000, "yearly": 20000}, "multiple": {"cumulative": 1000, "monthly": 10000, "yearly": 1000}, "name": "Green Deposit", "norates": false, "not": [], "only": ["individual"], "payouts": ["cumulative", "monthly", "yearly"], "privileges": [{"basis": "add", "extra": 0.25, "profiles": ["individual"], "type": "senior"}], "rates": {"general": [{"cumulative": 6.6, "maturity": 21320, "monthly": 6.4, "months": 12, "yearly": 6.6, "yield": 6.6}, {"cumulative": 6.75, "maturity": 22071, "monthly": 6.55, "months": 18, "yearly": 6.75, "yield": 6.9}, {"cumulative": 6.85, "maturity": 22834, "monthly": 6.65, "months": 24, "yearly": 6.85, "yield": 7.08}, {"cumulative": 7.1, "maturity": 24570, "monthly": 6.85, "months": 36, "yearly": 7.1, "yield": 7.62}, {"cumulative": 7.25, "maturity": 28380, "monthly": 7.0, "months": 60, "yearly": 7.25, "yield": 8.38}]}, "unit": "m", "wef": "1 Sep 2026"}, {"id": "corporate", "name": "Corporate Deposit", "norates": true, "not": [], "only": ["company", "local-authority"]}], "short": "LIC Housing Finance", "slug": "lic-housing-finance"}, {"bank": false, "contact": ["ajp"], "groups": {"default": "general"}, "offered": ["individual", "minor", "nri", "proprietorship", "company", "huf", "aop", "boi", "firm", "trust", "llp"], "schedule": {"amounts": "days", "day_count": "365", "inclusive": true, "merge_within": 7, "method": "years-months", "pay_on": {"half-yearly": ["03-31", "09-30"], "monthly": "month-end", "quarterly": ["03-31", "06-30", "09-30", "12-31"], "yearly": ["03-31"]}}, "series": [{"card_amount": 25000, "id": "regular", "max_card": 50000000, "min": 25000, "multiple": null, "name": "PNB Housing Finance Fixed Deposit", "norates": false, "not": [], "only": [], "payouts": ["cumulative", "monthly", "quarterly", "half-yearly", "yearly"], "privileges": [{"basis": "add", "extra": 0.25, "profiles": ["individual", "nri"], "type": "senior"}], "rates": {"general": [{"cumulative": 6.7, "half-yearly": 6.59, "maturity": 26675, "monthly": 6.5, "months": [12, 23], "quarterly": 6.54, "yearly": 6.7, "yield": 6.7}, {"cumulative": 6.85, "half-yearly": 6.73, "maturity": 28542, "monthly": 6.64, "months": [24, 35], "quarterly": 6.68, "yearly": 6.85, "yield": 7.08}, {"cumulative": 7.1, "half-yearly": 6.98, "maturity": 30712, "monthly": 6.88, "months": [36, 47], "quarterly": 6.92, "yearly": 7.1, "yield": 7.62}, {"cumulative": 7.1, "half-yearly": 6.98, "maturity": 32893, "monthly": 6.88, "months": [48, 59], "quarterly": 6.92, "yearly": 7.1, "yield": 7.89}, {"cumulative": 7.25, "half-yearly": 7.12, "maturity": 35475, "monthly": 7.02, "months": 60, "quarterly": 7.06, "yearly": 7.25, "yield": 8.38}]}, "unit": "m", "wef": "23 Jun 2026"}], "short": "PNB Housing Finance", "slug": "pnb-housing-finance"}, {"bank": true, "contact": ["nri-minor"], "groups": {"default": "general"}, "offered": ["individual", "minor", "nri", "proprietorship", "company", "huf", "aop", "boi", "firm", "trust", "llp"], "schedule": {"amounts": "days", "day_count": "actual", "method": "bank-quarterly", "pay_on": {"monthly": "anniversary", "quarterly": "anniversary"}}, "series": [{"card_amount": 5000, "id": "regular", "max_card": 29999999, "min": 5000, "multiple": null, "name": "HDFC Bank Fixed Deposit", "norates": false, "not": [], "only": [], "payouts": ["cumulative", "monthly", "quarterly"], "privileges": [{"basis": "quarterly", "extra": 0.5, "profiles": ["individual"], "type": "senior"}], "rates": {"general": [{"cumulative": 6.25, "maturity": 5320, "monthly": 6.22, "months": [12, 14], "quarterly": 6.25, "yield": 6.4}, {"cumulative": 6.35, "maturity": 5410, "monthly": 6.32, "months": [15, 17], "quarterly": 6.35, "yield": 6.55}, {"cumulative": 6.45, "maturity": 5504, "monthly": 6.42, "months": [18, 36], "quarterly": 6.45, "yield": 6.72}, {"cumulative": 6.5, "label": "36 months 1 day to 60 months", "maturity": 6068, "monthly": 6.47, "months": [37, 60], "quarterly": 6.5, "yield": 7.11}, {"cumulative": 6.15, "label": "60 months 1 day to 120 months", "maturity": 6785, "monthly": 6.12, "months": [61, 120], "quarterly": 6.15, "yield": 7.14}]}, "unit": "m", "wef": "19 May 2026"}], "short": "HDFC Bank", "slug": "hdfc-bank"}, {"bank": true, "contact": ["huf", "aop", "boi", "government", "ajp", "local-authority", "llp"], "groups": {"default": "general"}, "offered": ["individual", "minor", "proprietorship", "company", "firm", "trust"], "schedule": {"amounts": "fixed", "day_count": "actual", "method": "bank-quarterly", "pay_on": {"monthly": "anniversary", "quarterly": "anniversary"}, "simple_upto_days": 180}, "series": [{"card_amount": 1000, "id": "regular", "max_card": 29999999, "min": 1000, "multiple": null, "name": "Utkarsh Small Finance Bank Fixed Deposit", "norates": false, "not": [], "only": [], "payouts": ["cumulative", "monthly", "quarterly"], "privileges": [{"grid": "senior", "profiles": ["individual"], "type": "senior"}], "rates": {"general": [{"cumulative": 4.0, "days": [7, 45], "maturity": 1001, "monthly": 3.99, "quarterly": 4.0, "yield": 3.98}, {"cumulative": 4.5, "days": [46, 90], "maturity": 1006, "monthly": 4.48, "quarterly": 4.5, "yield": 4.49}, {"cumulative": 5.0, "days": [91, 180], "maturity": 1012, "monthly": 4.98, "quarterly": 5.0, "yield": 5.0}, {"cumulative": 6.0, "days": [181, 370], "maturity": 1029, "monthly": 5.97, "quarterly": 6.0, "yield": 6.04}, {"cumulative": 7.25, "days": [371, 665], "maturity": 1074, "monthly": 7.21, "quarterly": 7.25, "yield": 7.45}, {"cumulative": 8.1, "days": 666, "maturity": 1153, "monthly": 8.05, "quarterly": 8.1, "special": true, "yield": 8.64}, {"cumulative": 7.25, "days": [667, 729], "label": "667 days to 2 years (729 days)", "maturity": 1136, "monthly": 7.21, "quarterly": 7.25, "yield": 7.68}, {"cumulative": 7.5, "days": [730, 1095], "label": "2 years to 3 years", "maturity": 1156, "monthly": 7.45, "quarterly": 7.5, "yield": 8.01}, {"cumulative": 7.25, "days": [1096, 1460], "label": "Above 3 years to less than 4 years", "maturity": 1234, "monthly": 7.21, "quarterly": 7.25, "yield": 8.02}, {"cumulative": 7.0, "days": [1461, 1826], "label": "4 years to 5 years", "maturity": 1311, "monthly": 6.96, "quarterly": 7.0, "yield": 8.0}, {"cumulative": 6.75, "days": [1827, 3652], "label": "Above 5 years to 10 years", "maturity": 1387, "monthly": 6.71, "quarterly": 6.75, "yield": 7.95}], "senior": [{"cumulative": 4.5, "days": [7, 45], "maturity": 1001, "monthly": 4.48, "quarterly": 4.5, "yield": 4.48}, {"cumulative": 5.0, "days": [46, 90], "maturity": 1006, "monthly": 4.98, "quarterly": 5.0, "yield": 4.98}, {"cumulative": 5.5, "days": [91, 180], "maturity": 1013, "monthly": 5.47, "quarterly": 5.5, "yield": 5.5}, {"cumulative": 6.5, "days": [181, 370], "maturity": 1032, "monthly": 6.47, "quarterly": 6.5, "yield": 6.55}, {"cumulative": 7.75, "days": [371, 665], "maturity": 1079, "monthly": 7.7, "quarterly": 7.75, "yield": 7.98}, {"cumulative": 8.25, "days": 666, "maturity": 1156, "monthly": 8.19, "quarterly": 8.25, "special": true, "yield": 8.81}, {"cumulative": 7.75, "days": [667, 729], "label": "667 days to 2 years (729 days)", "maturity": 1126, "monthly": 7.7, "quarterly": 7.75, "yield": 8.24}, {"cumulative": 8.0, "days": [730, 1095], "label": "2 years to 3 years", "maturity": 1166, "monthly": 7.95, "quarterly": 8.0, "yield": 8.58}, {"cumulative": 7.75, "days": [1096, 1460], "label": "Above 3 years to less than 4 years", "maturity": 1251, "monthly": 7.7, "quarterly": 7.75, "yield": 8.63}, {"cumulative": 7.5, "days": [1461, 1826], "label": "4 years to 5 years", "maturity": 1336, "monthly": 7.45, "quarterly": 7.5, "yield": 8.65}, {"cumulative": 7.25, "days": [1827, 3652], "label": "Above 5 years to 10 years", "maturity": 1420, "monthly": 7.21, "quarterly": 7.25, "yield": 8.65}]}, "unit": "d", "wef": "5 May 2026"}], "short": "Utkarsh Small Finance Bank", "slug": "utkarsh-small-finance-bank"}], "links": {"bajaj-finance": "../../fixed-deposits/bajaj-finance/index.html", "hdfc-bank": "../../fixed-deposits/hdfc-bank/index.html", "icici-home-finance": "../../fixed-deposits/icici-home-finance/index.html", "lic-housing-finance": "../../fixed-deposits/lic-housing-finance/index.html", "mahindra-finance": "../../fixed-deposits/mahindra-finance/index.html", "pnb-housing-finance": "../../fixed-deposits/pnb-housing-finance/index.html", "shriram-finance": "../../fixed-deposits/shriram-finance/index.html", "utkarsh-small-finance-bank": "../../fixed-deposits/utkarsh-small-finance-bank/index.html"}, "profiles": [["individual", "Individual"], ["minor", "Minor (Through a Guardian)"], ["nri", "NRI"], ["nri-minor", "NRI Minor"], ["huf", "HUF"], ["huf-nri", "NRI HUF"], ["proprietorship", "Sole Proprietorship"], ["firm", "Partnership Firm"], ["llp", "LLP"], ["company", "Company"], ["trust", "Trust"], ["aop", "Association of Persons (AOP)"], ["boi", "Body of Individuals (BOI)"], ["government", "Government Agency"], ["local-authority", "Local Authority"], ["ajp", "Artificial Juridical Person"]], "tax_bank": "Interest is taxable. Tax is deducted at 10% once interest from the bank exceeds \u20b950,000 in a financial year (\u20b91,00,000 for senior citizens; 20% without PAN). If your tax is nil, you can submit Form 121, which replaced Forms 15G and 15H.", "tax_company": "Interest is taxable. Tax is deducted at 10% once interest from the company exceeds \u20b910,000 in a financial year (20% without PAN). If your tax is nil, you can submit Form 121, which replaced Forms 15G and 15H.", "tax_nri": "For NRIs, tax is deducted at 30% plus cess on NRO and company FD interest; NRE interest is tax-free. NRIs cannot submit Form 121.", "today": "2026-10-16"};
+var FD_LABEL = {cumulative: 'cumulative option', monthly: 'monthly payout', quarterly: 'quarterly payout', 'half-yearly': 'half-yearly payout', yearly: 'yearly payout'};
+var FD_EVERY = {monthly: 'a Month', quarterly: 'a Quarter', 'half-yearly': 'a Half-Year', yearly: 'a Year'};
+var FD_PAY_NAME = {cumulative: 'Cumulative (at Maturity)', monthly: 'Monthly', quarterly: 'Quarterly', 'half-yearly': 'Half-Yearly', yearly: 'Yearly'};
+var FD_METHOD = {
+  'fractional': "Interest compounds yearly, as the company's card works it out.",
+  'years-months': 'Interest compounds yearly for whole years, with simple interest for the months after.',
+  'monthly-rests': "Interest compounds monthly at the monthly-payout rate, as the company's card works it out.",
+  'bank-quarterly': 'Interest compounds every quarter, counted day by day.'
+};
+
+function fdCalc(v) {
+  var t = TERMS, labels = {}, notes = [];
+  t.profiles.forEach(function (x) { labels[x[0]] = x[1]; });
+  var co = t.companies.filter(function (c) { return c.slug === v.co; })[0] || t.companies[0];
+  var p = labels[v.as] ? v.as : 'individual', lab = labels[p];
+  if (co.offered.indexOf(p) < 0) {
+    notes.push((co.contact.indexOf(p) >= 0 ? 'Contact us to check whether ' + co.short + ' can take a deposit from ' + lab + ' investors.'
+               : co.short + ' does not take fixed deposits from ' + lab + ' investors through MoneyHoney.') + ' Showing the rates for an Individual.');
+    p = 'individual'; lab = 'Individual';
+  }
+  var ok = co.series.filter(function (s) { return fdOpen(s, p); });
+  if (!ok.length) {
+    var closed = co.series.filter(function (s) { return s.only.length ? s.only.indexOf(p) >= 0 : s.not.indexOf(p) < 0; })[0];
+    notes.push('Contact us for the rate of the ' + closed.name + ' for ' + lab + ' investors. Showing the rates for an Individual.');
+    p = 'individual'; lab = 'Individual';
+    ok = co.series.filter(function (s) { return fdOpen(s, p); });
+  }
+  var s = ok.filter(function (x) { return x.id === v.series; })[0];
+  if (!s) {
+    var asked = co.series.filter(function (x) { return x.id === v.series; })[0];
+    if (asked) notes.push('The ' + asked.name + ' is not open to ' + lab + ' investors: showing the ' + ok[0].name + '.');
+    s = ok[0];
+  }
+  var unit = s.unit, sc = co.schedule, word = unit === 'm' ? 'month' : 'day';
+  var group = co.groups[p] || co.groups['default'], seen = {}, valid = [];
+  (s.rates[group] || s.rates.general).forEach(function (r) {
+    var sp = fdSpan(r);
+    for (var x = sp[1]; x <= sp[2]; x++) if (!seen[x]) { seen[x] = 1; valid.push(x); }
+  });
+  valid.sort(function (a, b) { return a - b; });
+  var capped = (p === 'nri' || p === 'nri-minor') && !co.bank;
+  if (capped) valid = valid.filter(function (x) { return (unit === 'm' ? x : x * 12 / 365) <= 36; });
+  var ten = Math.floor(v.ten);
+  if (valid.indexOf(ten) < 0) {
+    var near = valid[0];
+    valid.forEach(function (x) { if (Math.abs(x - ten) < Math.abs(near - ten)) near = x; });
+    notes.push('There is no ' + ten + '-' + word + ' plan' + (capped ? ' for NRIs (12 to 36 months)' : '') + ': worked out for ' + near + ' ' + word + 's.');
+    ten = near;
+  }
+  var pay = v.pay;
+  if (s.payouts.indexOf(pay) < 0) {
+    if (FD_LABEL[pay]) notes.push('There is no ' + FD_LABEL[pay] + ' on this plan: showing ' + FD_LABEL[s.payouts[0]] + '.');
+    pay = s.payouts[0];
+  }
+  if (v.mode === 'target' && pay !== 'cumulative') { notes.push('A target amount works with the cumulative option, so that is shown.'); pay = 'cumulative'; }
+  var simple = sc.simple_upto_days;
+  if (pay !== 'cumulative' && unit === 'd' && simple && ten <= simple) {
+    notes.push('For ' + simple + ' days or less, interest is paid at maturity, so the cumulative option is shown.');
+    pay = 'cumulative';
+  }
+  var sen = v.senior === 'yes', wom = v.women === 'yes';
+  var rr = fdRate(co, s, p, unit, ten, pay, sen, wom), rate = rr[0], rn = rr[1];
+  if (sen && !rn.some(function (n) { return n.indexOf('senior') >= 0; })) notes.push('No senior citizen rate applies to ' + lab + ' investors on this plan.');
+  if (wom && !rn.some(function (n) { return n.indexOf('women') >= 0; })) notes.push('No extra for women depositors applies on this plan.');
+  var mrate = sc.method === 'monthly-rests' ? fdRate(co, s, p, unit, ten, 'monthly', sen, wom)[0] : null;
+  var mn = typeof s.min === 'object' ? s.min[pay] : s.min;
+  var mult = (s.multiple && typeof s.multiple === 'object' ? s.multiple[pay] : s.multiple) || 0;
+  var today = fdIso(t.today), askedStart = fdIso(v.start), start = askedStart < today ? today : askedStart;
+  if (start.getTime() !== askedStart.getTime()) notes.push('The deposit date is moved to ' + fdFmt(start) + ': it cannot be earlier than today.');
+  var target = Math.floor(v.target), P;
+  if (v.mode === 'target') P = fdTarget(sc, target, rate, start, unit, ten, mrate, mn, mult || 1);
+  else {
+    P = Math.floor(v.amt);
+    if (P < mn) { P = mn; notes.push('The minimum for the ' + FD_LABEL[pay] + ' is ' + inr(mn) + ': worked out for ' + inr(P) + '.'); }
+    else if (mult && P % mult) { P = Math.max(mn, P - P % mult); notes.push('Deposits are in multiples of ' + inr(mult) + ': worked out for ' + inr(P) + '.'); }
+  }
+  if (s.max_card && P > s.max_card) notes.push('This card is for deposits up to ' + inr(s.max_card) + '; a larger deposit may get a different rate.');
+  var end = fdEnd(start, unit, ten), days = fdDays(start, end);
+  var tlabel = unit === 'm' ? dur(ten) : ten + ' Days';
+  var name = co.short + (co.series.length === 1 ? '' : ' ' + s.name);
+  notes.push('Interest rate ' + rate.toFixed(2) + '% p.a., ' + FD_LABEL[pay] + ', for ' + lab + ' investors' + (rn.length ? '; ' + rn.join('; ') : '') +
+             '. Rates w.e.f. ' + s.wef + '.');
+  var rows, stats, head, I;
+  if (pay === 'cumulative') {
+    var A = fdRnd(fdCumulative(sc, P, rate, start, unit, ten, mrate)[0]);
+    I = A - P;
+    rows = [['1', fdFmt(end), String(days), inr(I), inr(P), inr(A)]];
+    stats = [rate.toFixed(2) + '%', inr(I), inr(A), fdFmt(end)];
+    head = name + ': ' + inr(P) + ' for ' + tlabel;
+    notes.push(FD_METHOD[sc.method] + (simple ? ' Deposits of ' + simple + ' days or less earn simple interest.' : ''));
+    if (v.mode === 'target') notes.push('To reach ' + inr(target) + ' at maturity, deposit ' + inr(P) + ': it grows to ' + inr(A) + '.');
+  } else {
+    var sched = fdSchedule(sc, P, rate, start, end, pay), per = fdRnd(P * rate / 100 / FD_PER_YEAR[pay]), last = sched.length - 1;
+    I = sched.reduce(function (a, r) { return a + r[2]; }, 0);
+    rows = sched.map(function (r, k) { return [String(k + 1), fdFmt(r[0]), String(r[1]), inr(r[2]), inr(k === last ? P : 0), inr(r[2] + (k === last ? P : 0))]; });
+    stats = [rate.toFixed(2) + '%', inr(I), inr(P + sched[last][2]), fdFmt(end)];
+    head = name + ': ' + inr(per) + ' ' + FD_EVERY[pay] + ' for ' + tlabel;
+    notes.push('A full period pays about ' + inr(per) + '; each payment counts the actual days in its period, and the ' + inr(P) + ' is repaid on ' + fdFmt(end) + '.');
+  }
+  notes.push(co.bank ? t.tax_bank : t.tax_company);
+  if (p === 'nri' || p === 'nri-minor') notes.push(t.tax_nri);
+  return {head: head, stats: stats, rows: rows, bars: [], note: notes.join(' '),
+          fix: {co: co.slug, series: s.id, pay: pay, unit: unit, plan: fdPlanId(unit, ten) + '-' + pay, as: p}};
+}
+
+/* The form follows the company: its schemes, its payouts, its tenure unit, and the link to its page. */
+var fdLast = {co: null, unit: null};
+function fdOptions(sel, list, value) {
+  sel.innerHTML = list.map(function (o) { return '<option value="' + o[0] + '">' + o[1] + '</option>'; }).join('');
+  sel.value = value;
+}
+function fdUnitOf(v) {
+  var co = TERMS.companies.filter(function (c) { return c.slug === v.co; })[0] || TERMS.companies[0];
+  var s = co.series.filter(function (x) { return x.id === v.series && !x.norates; })[0] || co.series.filter(function (x) { return !x.norates; })[0];
+  return s.unit;
+}
+function compute(v) {
+  var unit = fdUnitOf(v);
+  if (fdLast.unit && unit !== fdLast.unit) {
+    v.ten = unit === 'd' ? Math.round(v.ten * 365 / 12) : Math.max(1, Math.round(v.ten * 12 / 365));
+    $('ten').value = v.ten;
+  }
+  var r = fdCalc(v), f = r.fix, co = TERMS.companies.filter(function (c) { return c.slug === f.co; })[0];
+  var s = co.series.filter(function (x) { return x.id === f.series; })[0];
+  if (fdLast.co !== f.co) fdOptions($('series'), co.series.map(function (x) { return [x.id, x.name]; }), f.series);
+  else $('series').value = f.series;
+  fdOptions($('pay'), s.payouts.map(function (x) { return [x, FD_PAY_NAME[x]]; }), f.pay);
+  var lbl = document.querySelector('label[for="ten"]');
+  if (lbl) lbl.textContent = f.unit === 'm' ? 'Tenure (Months)' : 'Tenure (Days)';
+  var a = $('fdPlan');
+  if (a) {
+    a.href = TERMS.links[f.co] + '?plan=' + f.plan + '&as=' + f.as + (v.senior === 'yes' ? '&senior=1' : '') + (v.women === 'yes' ? '&women=1' : '');
+    a.textContent = 'See this plan on the ' + co.short + ' page';
+  }
+  fdLast = {co: f.co, unit: f.unit};
+  return r;
+}
+
+/* Pre-fill from a company page's "Open in FD Calculator" link: #co=…&series=…&ten=36&pay=monthly&amt=…&as=…&senior=yes */
+function applyHash() {
+  if (!location.hash) return;
+  var kv = {};
+  location.hash.slice(1).split('&').forEach(function (x) { var p = x.split('='); kv[decodeURIComponent(p[0])] = decodeURIComponent(p[1] || ''); });
+  ['co', 'series', 'pay', 'as', 'senior', 'women', 'mode', 'ten', 'amt', 'target', 'start'].forEach(function (k) {
+    var el = document.getElementById(k);
+    if (el && kv[k] !== undefined) {
+      if (el.tagName === 'SELECT' && !el.querySelector('option[value="' + kv[k] + '"]')) {
+        var o = document.createElement('option'); o.value = kv[k]; o.textContent = kv[k]; el.appendChild(o);
+      }
+      el.value = kv[k];
+    }
+  });
+  fdLast.unit = null;
+  render(compute(read()));
+}
+window.addEventListener('hashchange', applyHash);
+setTimeout(applyHash, 0);
+boot(compute);
+})();
+</script>
+</div></div></main>
+<section aria-labelledby="sr-sun-h" class="sr-sun"><div class="sr-wrap"><h2 id="sr-sun-h">Ready to turn the numbers into a plan?</h2><p>Start with the goal, and we will show the fund categories that fit it.</p><div class="sr-sun__cta"><a class="btn btn-primary" href="../../get-started/index.html?intent=goal">Get Started</a><a class="sr-more" href="tel:+917738032704">Or call +91 77380 32704 <svg aria-hidden="true" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a></div></div><svg aria-hidden="true" class="sr-sun__art" focusable="false" preserveaspectratio="xMidYMax slice" viewbox="0 0 1440 240"><circle cx="720" cy="250" fill="#FF8A50" fill-opacity=".30" r="230"></circle><circle cx="720" cy="250" fill="#FF4A00" r="168"></circle><path d="M0 170c160-34 300-34 460-6s300 30 460 4 340-36 520-4v76H0z" fill="#2E3D99"></path><path d="M0 196c200-26 380-24 560 0s360 22 540 0 240-18 340-8v52H0z" fill="#16205B"></path><path d="M0 220c240-14 480-14 720 0s480 14 720 0v20H0z" fill="#0C1240"></path></svg></section><footer class="sr-foot" data-nosnippet=""><div class="sr-wrap"><div class="sr-foot__top"><div><a aria-label="MoneyHoney home" class="sr-logo" href="../../index.html" tabindex="-1"><svg aria-label="MoneyHoney" fill="none" height="20" role="img" viewbox="0 0 139 20" width="139" xmlns="http://www.w3.org/2000/svg">
+<path d="M1 10C1 15.2842 5.12632 19.6211 10.3474 20C10.3474 18.4632 9.46316 17.0316 8.07368 16.3579C5.67368 15.2211 4.01053 12.8 4.01053 9.97895C4.01053 7.51579 5.27368 5.36842 7.18947 4.08421V7.64211C7.18947 9.36842 8.6 10.7789 10.3474 10.7789V0C5.12632 0.4 1 4.73684 1 10Z" fill="#FF4A00"></path>
+<path d="M21.2318 10C21.2318 15.2842 17.1054 19.6211 11.8844 20C11.8844 18.4632 12.7686 17.0316 14.1581 16.3579C16.5581 15.2211 18.2212 12.8 18.2212 9.97895C18.2212 7.51579 16.9581 5.36842 15.0212 4.08421V7.64211C15.0212 9.36842 13.6107 10.7789 11.8633 10.7789V0C17.0844 0.4 21.2107 4.73684 21.2107 10H21.2318Z" fill="#FF4A00"></path>
+<path d="M13.4418 14.0201C13.4418 15.3043 12.4103 16.3359 11.126 16.3359C9.84184 16.3359 8.81026 15.3043 8.81026 14.0201C8.81026 12.7359 9.84184 11.7043 11.126 11.7043C12.4103 11.7043 13.4418 12.7359 13.4418 14.0201Z" fill="#16205B"></path>
+<path d="M27.6319 3.41083H29.5477C30.1582 3.41083 30.7056 3.72662 31.0214 4.23188L33.6951 8.52662L36.3687 4.23188C36.6845 3.72662 37.253 3.41083 37.8424 3.41083H39.7582V15.474H38.5161C37.7372 15.474 37.1056 14.8424 37.1056 14.0635V7.6003L33.6951 12.7582H33.6319L30.2424 7.66346V14.0845C30.2424 14.8635 29.6108 15.495 28.8319 15.495H27.6319V3.43188V3.41083Z" fill="#16205B"></path>
+<path d="M49.0839 10.905V10.8629C49.0839 9.49451 48.0944 8.31556 46.6418 8.31556C45.1892 8.31556 44.2207 9.47345 44.2207 10.8419V10.884C44.2207 12.2524 45.2102 13.4313 46.6628 13.4313C48.1155 13.4313 49.0839 12.2735 49.0839 10.905ZM41.6102 10.905V10.8629C41.6102 8.21029 43.7576 6.06293 46.6628 6.06293C49.5681 6.06293 51.6734 8.18924 51.6734 10.8419V10.884C51.6734 13.5366 49.526 15.684 46.6207 15.684C43.7155 15.684 41.6102 13.5577 41.6102 10.905Z" fill="#16205B"></path>
+<path d="M53.2529 6.25173H55.0003C55.5055 6.25173 55.9055 6.65173 55.9055 7.13594V7.557C56.5161 6.77805 57.295 6.08331 58.6213 6.08331C60.6213 6.08331 61.7792 7.38858 61.7792 9.51489V15.4938H60.3897C59.695 15.4938 59.1476 14.9465 59.1476 14.2517V10.3359C59.1476 9.09384 58.5582 8.46226 57.5476 8.46226C56.5371 8.46226 55.9055 9.09384 55.9055 10.3359V14.2517C55.9055 14.9254 55.3371 15.4938 54.6634 15.4938H53.274V6.25173H53.2529Z" fill="#16205B"></path>
+<path d="M69.8203 10.1471C69.673 8.96819 68.9782 8.18924 67.8624 8.18924C66.7467 8.18924 66.0519 8.96819 65.8414 10.1471H69.8203ZM63.273 10.905V10.8629C63.273 8.23135 65.1677 6.06293 67.8624 6.06293C70.9782 6.06293 72.3888 8.46293 72.3888 11.0735C72.3888 11.284 72.3888 11.5156 72.3467 11.7682H65.8624C66.1151 12.9471 66.9572 13.5787 68.1361 13.5787C68.8309 13.5787 69.3782 13.4103 69.9256 13.0103C70.2203 12.7998 70.6203 12.8419 70.873 13.0735L71.8835 13.9577C71.0203 15.0313 69.7572 15.684 68.073 15.684C65.273 15.684 63.2098 13.7471 63.2098 10.905H63.273Z" fill="#16205B"></path>
+<path d="M80.8733 6.2522H82.4312L78.8523 15.7048C78.1365 17.5785 77.3786 18.2943 75.7996 18.2943C74.8523 18.2943 74.1365 18.0627 73.4628 17.6627L74.2417 16.0206C74.3049 15.8943 74.4523 15.8311 74.5786 15.8943C74.8733 16.0417 75.2102 16.1259 75.4628 16.1259C75.9049 16.1259 76.1575 15.9785 76.3891 15.5154L72.747 6.2522H74.2839C75.0417 6.2522 75.6944 6.73641 75.926 7.43114L77.6523 12.5469L79.3154 7.36799C79.526 6.6943 80.1575 6.2522 80.8523 6.2522H80.8733Z" fill="#16205B"></path>
+<path d="M84.4945 3.41083H85.6735C86.4945 3.41083 87.1682 4.06346 87.1682 4.88451V8.18977H92.0945V4.88451C92.0945 4.06346 92.7682 3.41083 93.5893 3.41083H94.7682V15.474H93.6314C92.7682 15.474 92.0945 14.7792 92.0945 13.9371V10.6319H87.1682V13.9371C87.1682 14.7792 86.4735 15.474 85.6314 15.474H84.4945V3.41083Z" fill="#FF4A00"></path>
+<path d="M104.073 10.905V10.8629C104.073 9.49451 103.083 8.31556 101.631 8.31556C100.178 8.31556 99.2098 9.47345 99.2098 10.8419V10.884C99.2098 12.2524 100.199 13.4313 101.652 13.4313C103.105 13.4313 104.073 12.2735 104.073 10.905ZM96.6203 10.905V10.8629C96.6203 8.21029 98.7677 6.06293 101.673 6.06293C104.578 6.06293 106.683 8.18924 106.683 10.8419V10.884C106.683 13.5366 104.536 15.684 101.631 15.684C98.7256 15.684 96.6203 13.5577 96.6203 10.905Z" fill="#FF4A00"></path>
+<path d="M135.863 6.2522H137.421L133.842 15.7048C133.126 17.5785 132.368 18.2943 130.789 18.2943C129.842 18.2943 129.126 18.0627 128.452 17.6627L129.231 16.0206C129.294 15.8943 129.442 15.8311 129.589 15.8943C129.884 16.0417 130.199 16.1259 130.473 16.1259C130.915 16.1259 131.168 15.9785 131.399 15.5154L127.757 6.2522H129.294C130.052 6.2522 130.705 6.73641 130.936 7.43114L132.663 12.5469L134.326 7.36799C134.536 6.6943 135.168 6.2522 135.863 6.2522Z" fill="#FF4A00"></path>
+<path d="M108.243 6.25173H109.99C110.495 6.25173 110.895 6.65173 110.895 7.13594V7.557C111.506 6.77805 112.285 6.08331 113.611 6.08331C115.611 6.08331 116.769 7.38858 116.769 9.51489V15.4938H115.379C114.685 15.4938 114.137 14.9465 114.137 14.2517V10.3359C114.137 9.09384 113.548 8.46226 112.537 8.46226C111.527 8.46226 110.895 9.09384 110.895 10.3359V14.2517C110.895 14.9254 110.327 15.4938 109.653 15.4938H108.264V6.25173H108.243Z" fill="#FF4A00"></path>
+<path d="M124.895 10.1471C124.747 8.96819 124.053 8.18924 122.937 8.18924C121.821 8.18924 121.126 8.96819 120.916 10.1471H124.895ZM118.326 10.905V10.8629C118.326 8.23135 120.221 6.06293 122.916 6.06293C126.032 6.06293 127.442 8.46293 127.442 11.0735C127.442 11.284 127.442 11.5156 127.4 11.7682H120.916C121.168 12.9471 122.01 13.5787 123.189 13.5787C123.884 13.5787 124.432 13.4103 124.979 13.0103C125.274 12.7998 125.674 12.8419 125.926 13.0735L126.937 13.9577C126.074 15.0313 124.81 15.684 123.126 15.684C120.326 15.684 118.263 13.7471 118.263 10.905H118.326Z" fill="#FF4A00"></path>
+</svg></a><p class="sr-foot__id">Money Honey Financial Services Private Limited · AMFI Registered Mutual Fund Distributor &amp; SIF Distributor · ARN-60930, valid till 6 May 2028</p></div><nav aria-label="Footer" class="sr-foot__cols"><div><h3>Invest</h3><ul><li><a href="../../mutual-funds/index.html">Mutual Funds</a></li><li><a href="../../mutual-funds/explore/index.html">Explore Funds</a></li><li><a href="../../mutual-funds/screens/index.html">Fund Screens</a></li><li><a href="../../mutual-funds/screener/index.html">Screener</a></li><li><a href="../../sif/index.html">SIF</a></li><li><a href="../../gift-city-funds/index.html">GIFT City Funds</a></li><li><a href="../../mutual-funds/nfo/index.html">New Fund Offers</a></li></ul></div><div><h3>Save</h3><ul><li><a href="../../fixed-deposits/index.html">Fixed Deposits</a></li><li><a href="../../fixed-deposits/bank-fd-rates/index.html">Compare FD Rates</a></li><li><a href="../../bonds/ncd/index.html">NCD IPOs</a></li><li><a href="../../bonds/rbi-bonds/index.html">RBI Bonds</a></li><li><a href="../../bonds/capital-gain-bonds/index.html">Capital Gain Bonds</a></li></ul></div><div><h3>Plan</h3><ul><li><a href="../../solutions/index.html">Solutions</a></li><li><a href="../../solutions/retirement/index.html">Retirement</a></li><li><a href="../../solutions/child-education/index.html">Child Education</a></li><li><a href="../../solutions/sip/index.html">SIP</a></li><li><a href="../../solutions/tax-saving/index.html">Tax Saving</a></li><li><a href="../../calculators/index.html">Calculators</a></li></ul></div><div><h3>Learn</h3><ul><li><a href="../../blog/index.html">Blog</a></li><li><a href="../../videos/index.html">Videos and Posts</a></li><li><a href="../../mutual-funds/market-outlook/index.html">Market Outlook</a></li><li><a href="../../mutual-funds/dividends/index.html">Dividends (IDCW)</a></li><li><a href="../../methodology/index.html">Methodology</a></li></ul></div><div><h3>Company</h3><ul><li><a href="../../about/index.html">About</a></li><li><a href="../../contact/index.html">Contact</a></li><li><a href="https://ba.moneyhoney.co.in/">Business Associates</a></li><li><a href="../../mutual-funds/amc/index.html">Fund Houses We Distribute</a></li><li><a href="../../site-map/index.html">Site Map</a></li></ul></div><div><h3>Disclosures</h3><ul><li><a href="../../disclaimer/index.html">Disclaimer</a></li><li><a href="../../commission-disclosure/index.html">Commission Disclosure</a></li><li><a href="../../contact/index.html#grievance-redressal">Grievance Redressal</a></li><li><a href="https://smartodr.in/">SMART ODR</a></li></ul></div></nav></div><section aria-labelledby="sr-disc-h" class="sr-disc"><h2 class="sr-disc__h" id="sr-disc-h">Important MoneyHoney Disclosures</h2><p class="sr-disc__lead">About Risk</p><p>Mutual Fund investments are subject to market risks, read all scheme related documents carefully.</p><p>Investments in Specialized Investment Fund involves relatively higher risk including potential loss of capital, liquidity risk and market volatility. Please read all investment strategy related documents carefully before making the investment decision.</p></section><p class="sr-foot__legal"><span>MoneyHoney is a mutual fund distributor, not a SEBI-registered investment adviser.</span><a href="../../disclaimer/index.html">Disclaimer</a><a href="../../commission-disclosure/index.html">Commission Disclosure</a><a href="../../site-map/index.html">Site Map</a></p></div></footer>
+</body>
+</html>

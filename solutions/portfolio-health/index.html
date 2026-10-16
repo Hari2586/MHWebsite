@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+
+<html lang="en-IN">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>Mutual Fund Portfolio Health: What to Check | MoneyHoney</title>
+<meta content="28% of Indian mutual fund investors struggle to manage multiple investments (SEBI, 2025). What a portfolio health check looks at, from overlap to nominees." name="description"/>
+<link href="https://example.com/solutions/portfolio-health/" rel="canonical"/>
+<meta content="website" property="og:type"/>
+<meta content="MoneyHoney" property="og:site_name"/>
+<meta content="en_IN" property="og:locale"/>
+<meta content="Mutual Fund Portfolio Health: What to Check | MoneyHoney" property="og:title"/>
+<meta content="28% of Indian mutual fund investors struggle to manage multiple investments (SEBI, 2025). What a portfolio health check looks at, from overlap to nominees." property="og:description"/>
+<meta content="https://example.com/solutions/portfolio-health/" property="og:url"/>
+<meta content="https://example.com/assets/og/solution.png" property="og:image"/>
+<meta content="1200" property="og:image:width"/>
+<meta content="630" property="og:image:height"/>
+<meta content="MoneyHoney: Solutions" property="og:image:alt"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://example.com/"}, {"@type": "ListItem", "position": 2, "name": "Solutions", "item": "https://example.com/solutions/"}, {"@type": "ListItem", "position": 3, "name": "Portfolio Health", "item": "https://example.com/solutions/portfolio-health/"}]}, {"@type": "WebPage", "name": "Mutual Fund Portfolio Health: What to Check", "url": "https://example.com/solutions/portfolio-health/", "dateModified": "2026-10-13", "isPartOf": {"@id": "https://example.com/#website"}, "publisher": {"@id": "https://example.com/#organization"}}, {"@type": "Organization", "@id": "https://example.com/#organization", "name": "MoneyHoney", "url": "https://example.com/", "description": "AMFI Registered Mutual Fund Distributor & SIF Distributor, ARN-60930"}]}</script>
+<link href="../../assets/mh.css" rel="stylesheet"/><meta content="noindex, nofollow" name="robots"/><link href="../../assets/sunrise/sunrise.css" rel="stylesheet"/><script defer="" src="../../assets/sunrise/sunrise.js"></script>
+<script defer="" src="../../assets/mh.js"></script>
+<style>
+/* design/mh.css styles the Solutions pages (body.page-solution, its variant-* layout and sol-* icon). These are the parts
+   added since the design samples (5 Oct 2026), which it does not style. */
+/* Beyond Fixed Deposits: one card per option at every width, each option's facts as labelled rows in the same order */
+.compare-table{font-size:var(--text-sm)}
+.compare-table thead{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0)}
+.compare-table,.compare-table tbody,.compare-table tr,.compare-table th,.compare-table td{display:block;width:100%}
+.compare-table tr{padding:var(--space-4);border-bottom:1px solid var(--color-border-subtle)}
+.compare-table tbody tr:last-child{border-bottom:0}
+.compare-table tbody th{padding:0 0 var(--space-2);border:0;font-size:var(--text-md);font-weight:var(--font-weight-semibold);text-transform:none;letter-spacing:0;color:var(--color-text-deep);background:none}
+.compare-table td{display:grid;grid-template-columns:minmax(0,1fr);gap:var(--space-1);padding:var(--space-2) 0;border:0}
+.compare-table td::before{content:attr(data-label);color:var(--color-text-cool);font-size:var(--text-xs);font-weight:var(--font-weight-medium)}
+.compare-table td .ref{white-space:nowrap}
+@media (min-width:561px){.compare-table td{grid-template-columns:180px minmax(0,1fr);gap:var(--space-4)}}
+/* Know Yourself: tap-to-choose answers, real radio buttons and check boxes drawn as chips, with a tick when chosen */
+.vb-rail .chk-form{margin-top:var(--space-4)}
+.qn{border:0;padding:0;margin:0 0 var(--space-4);min-width:0}
+.qn legend{padding:0;margin-bottom:var(--space-2);font-weight:var(--font-weight-medium);color:var(--color-text-deep)}
+.opts{display:flex;flex-wrap:wrap;gap:var(--space-2)}
+.opt{position:relative;display:inline-flex}
+.opt input{position:absolute;opacity:0;width:1px;height:1px;margin:0}
+.opt span{display:inline-flex;align-items:center;gap:var(--space-1);min-height:44px;padding:0 var(--space-3);border:1px solid var(--color-border-soft);border-radius:var(--radius-pill);background:var(--color-surface-page);color:var(--color-text-strong);font-size:var(--text-sm);font-weight:var(--font-weight-medium);cursor:pointer}
+.opt span:hover{border-color:var(--color-brand)}
+.opt .tick{display:none;flex-shrink:0}
+.opt input:checked+span{background:var(--color-brand-tint);border-color:var(--color-brand);color:var(--color-brand)}
+.opt input:checked+span .tick{display:inline}
+.opt input:focus-visible+span{box-shadow:var(--shadow-focus)}
+.chk-rows .status{margin-right:var(--space-2)}
+/* a long rail (Portfolio Health's sample report, Know Yourself's ten questions) scrolls with the page; one panel per check */
+.vb-rail.vb-rail--static{position:static;max-height:none;overflow:visible}
+.sp{border-top:1px solid var(--color-border-soft);margin-top:var(--space-4);padding-top:var(--space-4)}
+.sp-tag{margin:0}
+.sp h3{margin:var(--space-2) 0 var(--space-3)}
+.sp-why,.sp-foot{font-size:var(--text-sm);color:var(--color-text-strong);margin:var(--space-3) 0 0}
+.sp-foot{margin-top:var(--space-4)}
+.sp-kv{margin:var(--space-3) 0 0}
+.sp-kv dt{font-size:var(--text-sm);color:var(--color-text-cool);margin-top:var(--space-2)}
+.sp-kv dd{margin:0;font-weight:var(--font-weight-medium);color:var(--color-text-deep)}
+.sp-alerts{list-style:none;padding:0;margin:0;display:grid;gap:var(--space-2)}
+.sp-alerts li{display:flex;flex-wrap:wrap;align-items:center;gap:var(--space-2);font-size:var(--text-sm);color:var(--color-text-deep)}
+/* its charts are drawn 260px wide (SAMPLE_W): up to 1.4 times that in a wide panel, as the story's, so labels stay near 17px */
+.sp .schart{max-width:364px}
+/* the mix and benchmark colours in the story charts */
+.mix{stroke:var(--color-surface-page);stroke-width:1}
+.mix-1{fill:var(--chart-1)}.mix-2{fill:var(--chart-2)}.mix-3{fill:var(--chart-3)}.mix-4{fill:var(--chart-4)}
+.legend i.mix-1{background:var(--chart-1)}.legend i.mix-2{background:var(--chart-2)}.legend i.mix-3{background:var(--chart-3)}.legend i.mix-4{background:var(--chart-4)}
+.chbar.bm{fill:var(--chart-benchmark)}
+.legend .sw-bm{background:var(--chart-benchmark)}
+.track{fill:var(--color-fill)}
+/* Print Your Checklist (Know Yourself): only the result */
+@media print{
+  body.print-chk>:not(main),body.print-chk .page-head,body.print-chk .vb-head,body.print-chk .gapbar,body.print-chk .vb-main,
+  body.print-chk .vb-rail>:not(.chk),body.print-chk .chk-links{display:none}
+  body.print-chk .vb-rail{border:0;padding:0;box-shadow:none}
+}
+</style>
+</head>
+<body class="page-solution variant-stress sol-portfolio-health">
+<header class="sr-header"><div class="sr-aud"><nav aria-label="Audience" class="sr-wrap"><a aria-current="true" href="../../index.html">Investors</a><a href="../../solutions/nri/index.html">NRIs</a><a href="https://ba.moneyhoney.co.in/">Business Associates</a></nav></div><div class="sr-head"><div class="sr-wrap sr-head__row"><a aria-label="MoneyHoney home" class="sr-logo" href="../../index.html"><svg aria-label="MoneyHoney" fill="none" height="20" role="img" viewbox="0 0 139 20" width="139" xmlns="http://www.w3.org/2000/svg">
+<path d="M1 10C1 15.2842 5.12632 19.6211 10.3474 20C10.3474 18.4632 9.46316 17.0316 8.07368 16.3579C5.67368 15.2211 4.01053 12.8 4.01053 9.97895C4.01053 7.51579 5.27368 5.36842 7.18947 4.08421V7.64211C7.18947 9.36842 8.6 10.7789 10.3474 10.7789V0C5.12632 0.4 1 4.73684 1 10Z" fill="#FF4A00"></path>
+<path d="M21.2318 10C21.2318 15.2842 17.1054 19.6211 11.8844 20C11.8844 18.4632 12.7686 17.0316 14.1581 16.3579C16.5581 15.2211 18.2212 12.8 18.2212 9.97895C18.2212 7.51579 16.9581 5.36842 15.0212 4.08421V7.64211C15.0212 9.36842 13.6107 10.7789 11.8633 10.7789V0C17.0844 0.4 21.2107 4.73684 21.2107 10H21.2318Z" fill="#FF4A00"></path>
+<path d="M13.4418 14.0201C13.4418 15.3043 12.4103 16.3359 11.126 16.3359C9.84184 16.3359 8.81026 15.3043 8.81026 14.0201C8.81026 12.7359 9.84184 11.7043 11.126 11.7043C12.4103 11.7043 13.4418 12.7359 13.4418 14.0201Z" fill="#16205B"></path>
+<path d="M27.6319 3.41083H29.5477C30.1582 3.41083 30.7056 3.72662 31.0214 4.23188L33.6951 8.52662L36.3687 4.23188C36.6845 3.72662 37.253 3.41083 37.8424 3.41083H39.7582V15.474H38.5161C37.7372 15.474 37.1056 14.8424 37.1056 14.0635V7.6003L33.6951 12.7582H33.6319L30.2424 7.66346V14.0845C30.2424 14.8635 29.6108 15.495 28.8319 15.495H27.6319V3.43188V3.41083Z" fill="#16205B"></path>
+<path d="M49.0839 10.905V10.8629C49.0839 9.49451 48.0944 8.31556 46.6418 8.31556C45.1892 8.31556 44.2207 9.47345 44.2207 10.8419V10.884C44.2207 12.2524 45.2102 13.4313 46.6628 13.4313C48.1155 13.4313 49.0839 12.2735 49.0839 10.905ZM41.6102 10.905V10.8629C41.6102 8.21029 43.7576 6.06293 46.6628 6.06293C49.5681 6.06293 51.6734 8.18924 51.6734 10.8419V10.884C51.6734 13.5366 49.526 15.684 46.6207 15.684C43.7155 15.684 41.6102 13.5577 41.6102 10.905Z" fill="#16205B"></path>
+<path d="M53.2529 6.25173H55.0003C55.5055 6.25173 55.9055 6.65173 55.9055 7.13594V7.557C56.5161 6.77805 57.295 6.08331 58.6213 6.08331C60.6213 6.08331 61.7792 7.38858 61.7792 9.51489V15.4938H60.3897C59.695 15.4938 59.1476 14.9465 59.1476 14.2517V10.3359C59.1476 9.09384 58.5582 8.46226 57.5476 8.46226C56.5371 8.46226 55.9055 9.09384 55.9055 10.3359V14.2517C55.9055 14.9254 55.3371 15.4938 54.6634 15.4938H53.274V6.25173H53.2529Z" fill="#16205B"></path>
+<path d="M69.8203 10.1471C69.673 8.96819 68.9782 8.18924 67.8624 8.18924C66.7467 8.18924 66.0519 8.96819 65.8414 10.1471H69.8203ZM63.273 10.905V10.8629C63.273 8.23135 65.1677 6.06293 67.8624 6.06293C70.9782 6.06293 72.3888 8.46293 72.3888 11.0735C72.3888 11.284 72.3888 11.5156 72.3467 11.7682H65.8624C66.1151 12.9471 66.9572 13.5787 68.1361 13.5787C68.8309 13.5787 69.3782 13.4103 69.9256 13.0103C70.2203 12.7998 70.6203 12.8419 70.873 13.0735L71.8835 13.9577C71.0203 15.0313 69.7572 15.684 68.073 15.684C65.273 15.684 63.2098 13.7471 63.2098 10.905H63.273Z" fill="#16205B"></path>
+<path d="M80.8733 6.2522H82.4312L78.8523 15.7048C78.1365 17.5785 77.3786 18.2943 75.7996 18.2943C74.8523 18.2943 74.1365 18.0627 73.4628 17.6627L74.2417 16.0206C74.3049 15.8943 74.4523 15.8311 74.5786 15.8943C74.8733 16.0417 75.2102 16.1259 75.4628 16.1259C75.9049 16.1259 76.1575 15.9785 76.3891 15.5154L72.747 6.2522H74.2839C75.0417 6.2522 75.6944 6.73641 75.926 7.43114L77.6523 12.5469L79.3154 7.36799C79.526 6.6943 80.1575 6.2522 80.8523 6.2522H80.8733Z" fill="#16205B"></path>
+<path d="M84.4945 3.41083H85.6735C86.4945 3.41083 87.1682 4.06346 87.1682 4.88451V8.18977H92.0945V4.88451C92.0945 4.06346 92.7682 3.41083 93.5893 3.41083H94.7682V15.474H93.6314C92.7682 15.474 92.0945 14.7792 92.0945 13.9371V10.6319H87.1682V13.9371C87.1682 14.7792 86.4735 15.474 85.6314 15.474H84.4945V3.41083Z" fill="#FF4A00"></path>
+<path d="M104.073 10.905V10.8629C104.073 9.49451 103.083 8.31556 101.631 8.31556C100.178 8.31556 99.2098 9.47345 99.2098 10.8419V10.884C99.2098 12.2524 100.199 13.4313 101.652 13.4313C103.105 13.4313 104.073 12.2735 104.073 10.905ZM96.6203 10.905V10.8629C96.6203 8.21029 98.7677 6.06293 101.673 6.06293C104.578 6.06293 106.683 8.18924 106.683 10.8419V10.884C106.683 13.5366 104.536 15.684 101.631 15.684C98.7256 15.684 96.6203 13.5577 96.6203 10.905Z" fill="#FF4A00"></path>
+<path d="M135.863 6.2522H137.421L133.842 15.7048C133.126 17.5785 132.368 18.2943 130.789 18.2943C129.842 18.2943 129.126 18.0627 128.452 17.6627L129.231 16.0206C129.294 15.8943 129.442 15.8311 129.589 15.8943C129.884 16.0417 130.199 16.1259 130.473 16.1259C130.915 16.1259 131.168 15.9785 131.399 15.5154L127.757 6.2522H129.294C130.052 6.2522 130.705 6.73641 130.936 7.43114L132.663 12.5469L134.326 7.36799C134.536 6.6943 135.168 6.2522 135.863 6.2522Z" fill="#FF4A00"></path>
+<path d="M108.243 6.25173H109.99C110.495 6.25173 110.895 6.65173 110.895 7.13594V7.557C111.506 6.77805 112.285 6.08331 113.611 6.08331C115.611 6.08331 116.769 7.38858 116.769 9.51489V15.4938H115.379C114.685 15.4938 114.137 14.9465 114.137 14.2517V10.3359C114.137 9.09384 113.548 8.46226 112.537 8.46226C111.527 8.46226 110.895 9.09384 110.895 10.3359V14.2517C110.895 14.9254 110.327 15.4938 109.653 15.4938H108.264V6.25173H108.243Z" fill="#FF4A00"></path>
+<path d="M124.895 10.1471C124.747 8.96819 124.053 8.18924 122.937 8.18924C121.821 8.18924 121.126 8.96819 120.916 10.1471H124.895ZM118.326 10.905V10.8629C118.326 8.23135 120.221 6.06293 122.916 6.06293C126.032 6.06293 127.442 8.46293 127.442 11.0735C127.442 11.284 127.442 11.5156 127.4 11.7682H120.916C121.168 12.9471 122.01 13.5787 123.189 13.5787C123.884 13.5787 124.432 13.4103 124.979 13.0103C125.274 12.7998 125.674 12.8419 125.926 13.0735L126.937 13.9577C126.074 15.0313 124.81 15.684 123.126 15.684C120.326 15.684 118.263 13.7471 118.263 10.905H118.326Z" fill="#FF4A00"></path>
+</svg></a><nav aria-label="Main" class="sr-nav"><div class="sr-nav__item"><button aria-controls="mega-invest" aria-expanded="false" class="sr-nav__top" type="button">Invest <svg aria-hidden="true" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><path d="m6 9 6 6 6-6"></path></svg></button><div class="sr-mega" id="mega-invest"><div class="sr-mega__col"><p class="sr-mega__h">Mutual funds</p><a class="sr-mega__link" href="../../mutual-funds/index.html"><b>Mutual Funds</b><span>All 1,774 open schemes by category</span></a><a class="sr-mega__link" href="../../mutual-funds/explore/index.html"><b>Explore Funds</b><span>Filter by category, cost and risk</span></a><a class="sr-mega__link" href="../../mutual-funds/screens/index.html"><b>Fund Screens</b><span>Ready-made lists, each with its rule</span></a><a class="sr-mega__link" href="../../mutual-funds/screener/index.html"><b>Screener</b><span>Every scheme on one table</span></a><a class="sr-mega__link" href="../../mutual-funds/amc/index.html"><b>Fund Houses</b><span>The 49 fund houses we distribute</span></a></div><div class="sr-mega__col"><p class="sr-mega__h">Beyond mutual funds</p><a class="sr-mega__link" href="../../sif/index.html"><b>SIF</b><span>Specialised Investment Funds, from ₹10,00,000</span></a><a class="sr-mega__link" href="../../gift-city-funds/index.html"><b>GIFT City Funds</b><span>Dollar funds for NRIs and residents</span></a><a class="sr-mega__link" href="../../mutual-funds/nfo/index.html"><b>New Fund Offers</b><span>Open, upcoming and recently closed</span></a><a class="sr-mega__link" href="../../mutual-funds/dividends/index.html"><b>Dividends (IDCW)</b><span>Record dates and history</span></a></div><div class="sr-mega__promo"><b>Not sure where to start?</b><p>Six questions on your goals, your debts and your nerve.</p><a class="sr-more" href="../../solutions/know-yourself/index.html">Know Yourself <svg aria-hidden="true" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a></div></div></div><div class="sr-nav__item"><button aria-controls="mega-save" aria-expanded="false" class="sr-nav__top" type="button">Save <svg aria-hidden="true" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><path d="m6 9 6 6 6-6"></path></svg></button><div class="sr-mega" id="mega-save"><div class="sr-mega__col"><p class="sr-mega__h">Fixed deposits</p><a class="sr-mega__link" href="../../fixed-deposits/index.html"><b>Fixed Deposits</b><span>FDs from banks, housing finance companies and NBFCs</span></a><a class="sr-mega__link" href="../../fixed-deposits/bank-fd-rates/index.html"><b>Compare FD Rates</b><span>Bank FD rates side by side</span></a><a class="sr-mega__link" href="../../fixed-deposits/explore/index.html"><b>FD Explorer</b><span>Filter by tenure, payout and rating</span></a><a class="sr-mega__link" href="../../fixed-deposits/guide/index.html"><b>FD Guide</b><span>Payouts, tax, early withdrawal</span></a></div><div class="sr-mega__col"><p class="sr-mega__h">Bonds</p><a class="sr-mega__link" href="../../bonds/index.html"><b>Bonds &amp; NCDs</b><span>Every bond we offer</span></a><a class="sr-mega__link" href="../../bonds/ncd/index.html"><b>NCD IPOs</b><span>Open public issues, series and ratings</span></a><a class="sr-mega__link" href="../../bonds/rbi-bonds/index.html"><b>RBI Floating Rate Bonds</b><span>Government of India, reset every six months</span></a><a class="sr-mega__link" href="../../bonds/capital-gain-bonds/index.html"><b>Capital Gain Bonds</b><span>REC, PFC and IRFC series</span></a></div><div class="sr-mega__promo"><b>Most of your savings in FDs?</b><p>See what else could sit beside them, and what it would change.</p><a class="sr-more" href="../../solutions/beyond-fixed-deposits/index.html">Beyond Fixed Deposits <svg aria-hidden="true" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a></div></div></div><div class="sr-nav__item"><button aria-controls="mega-plan" aria-current="page" aria-expanded="false" class="sr-nav__top" type="button">Plan <svg aria-hidden="true" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><path d="m6 9 6 6 6-6"></path></svg></button><div class="sr-mega" id="mega-plan"><div class="sr-mega__col"><p class="sr-mega__h">Goals</p><a class="sr-mega__link" href="../../solutions/retirement/index.html"><b>Retirement</b><span>How much you need, and how to draw it</span></a><a class="sr-mega__link" href="../../solutions/child-education/index.html"><b>Child Education</b><span>What school and college will cost</span></a><a class="sr-mega__link" href="../../solutions/sip/index.html"><b>SIP</b><span>How much to invest each month</span></a><a class="sr-mega__link" href="../../solutions/wealth/index.html"><b>Building Wealth</b><span>A plan for money you will not touch</span></a><a class="sr-mega__link" href="../../solutions/women/index.html"><b>Women and Money</b><span>Plans that fit career breaks</span></a></div><div class="sr-mega__col"><p class="sr-mega__h">Money checks</p><a class="sr-mega__link" href="../../solutions/emergency-fund/index.html"><b>Emergency Fund</b><span>Could you pay your bills for 6 months?</span></a><a class="sr-mega__link" href="../../solutions/tax-saving/index.html"><b>Tax Saving (ELSS)</b><span>Does ELSS still save you tax?</span></a><a class="sr-mega__link" href="../../solutions/portfolio-health/index.html"><b>Portfolio Health</b><span>Is your money in the right places?</span></a><a class="sr-mega__link" href="../../solutions/nri/index.html"><b>NRI Investing</b><span>Investing in India from abroad</span></a><a class="sr-mega__link" href="../../solutions/index.html"><b>All Solutions</b><span>17 goals and checks</span></a></div><div class="sr-mega__promo"><b>Run the numbers</b><p>SIP, retirement, FD, tax regime, XIRR and 20 more calculators.</p><a class="sr-more" href="../../calculators/index.html">All Calculators <svg aria-hidden="true" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a></div></div></div><div class="sr-nav__item"><button aria-controls="mega-learn" aria-expanded="false" class="sr-nav__top" type="button">Learn <svg aria-hidden="true" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><path d="m6 9 6 6 6-6"></path></svg></button><div class="sr-mega" id="mega-learn"><div class="sr-mega__col"><p class="sr-mega__h">Read and watch</p><a class="sr-mega__link" href="../../blog/index.html"><b>Blog</b><span>Plain explainers and founder notes</span></a><a class="sr-mega__link" href="../../videos/index.html"><b>Videos and Posts</b><span>Market updates on video</span></a><a class="sr-mega__link" href="../../mutual-funds/market-outlook/index.html"><b>Market Outlook</b><span>A fund house's monthly view</span></a><a class="sr-mega__link" href="../../methodology/index.html"><b>Methodology</b><span>Where our figures come from</span></a></div><div class="sr-mega__col"><p class="sr-mega__h">Guides</p><a class="sr-mega__link" href="../../fixed-deposits/guide/index.html"><b>FD Guide</b><span>How fixed deposits work</span></a><a class="sr-mega__link" href="../../bonds/ncd/guide/index.html"><b>NCD Guide</b><span>Ratings, risks and how to apply</span></a><a class="sr-mega__link" href="../../bonds/capital-gain-bonds/guide/index.html"><b>Capital Gain Bond Guide</b><span>Who can claim, and the time limit</span></a><a class="sr-mega__link" href="../../bonds/rbi-bonds/guide/index.html"><b>RBI Bond Guide</b><span>How the rate is set</span></a></div><div class="sr-mega__promo"><b>The power of compounding in SIPs</b><p>How small monthly amounts turn into long-term wealth.</p><a class="sr-more" href="../../blog/power-of-compounding-in-sip-mutual-funds/index.html">Read the Post <svg aria-hidden="true" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a></div></div></div><div class="sr-nav__item"><a class="sr-nav__top" href="../../contact/index.html">Talk to Us</a></div></nav><div class="sr-head__end"><a class="sr-signin" href="https://inv.moneyhoney.co.in/#/investor-login">Sign In</a><a class="btn btn-primary" href="../../get-started/index.html">Get Started</a></div><details class="sr-mnav"><summary aria-label="Menu"><svg aria-hidden="true" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"></path></svg></summary><div class="sr-mnav__panel"><details><summary>Invest</summary><a href="../../mutual-funds/index.html">Mutual Funds</a><a href="../../mutual-funds/explore/index.html">Explore Funds</a><a href="../../mutual-funds/screens/index.html">Fund Screens</a><a href="../../mutual-funds/screener/index.html">Screener</a><a href="../../mutual-funds/amc/index.html">Fund Houses</a><a href="../../sif/index.html">SIF</a><a href="../../gift-city-funds/index.html">GIFT City Funds</a><a href="../../mutual-funds/nfo/index.html">New Fund Offers</a><a href="../../mutual-funds/dividends/index.html">Dividends (IDCW)</a></details><details><summary>Save</summary><a href="../../fixed-deposits/index.html">Fixed Deposits</a><a href="../../fixed-deposits/bank-fd-rates/index.html">Compare FD Rates</a><a href="../../fixed-deposits/explore/index.html">FD Explorer</a><a href="../../fixed-deposits/guide/index.html">FD Guide</a><a href="../../bonds/index.html">Bonds &amp; NCDs</a><a href="../../bonds/ncd/index.html">NCD IPOs</a><a href="../../bonds/rbi-bonds/index.html">RBI Floating Rate Bonds</a><a href="../../bonds/capital-gain-bonds/index.html">Capital Gain Bonds</a></details><details><summary>Plan</summary><a href="../../solutions/retirement/index.html">Retirement</a><a href="../../solutions/child-education/index.html">Child Education</a><a href="../../solutions/sip/index.html">SIP</a><a href="../../solutions/wealth/index.html">Building Wealth</a><a href="../../solutions/women/index.html">Women and Money</a><a href="../../solutions/emergency-fund/index.html">Emergency Fund</a><a href="../../solutions/tax-saving/index.html">Tax Saving (ELSS)</a><a href="../../solutions/portfolio-health/index.html">Portfolio Health</a><a href="../../solutions/nri/index.html">NRI Investing</a><a href="../../solutions/index.html">All Solutions</a></details><details><summary>Learn</summary><a href="../../blog/index.html">Blog</a><a href="../../videos/index.html">Videos and Posts</a><a href="../../mutual-funds/market-outlook/index.html">Market Outlook</a><a href="../../methodology/index.html">Methodology</a><a href="../../fixed-deposits/guide/index.html">FD Guide</a><a href="../../bonds/ncd/guide/index.html">NCD Guide</a><a href="../../bonds/capital-gain-bonds/guide/index.html">Capital Gain Bond Guide</a><a href="../../bonds/rbi-bonds/guide/index.html">RBI Bond Guide</a></details><details><summary>Talk to Us</summary><a href="../../contact/index.html">Contact</a><a href="tel:+917738032704">Call +91 77380 32704</a><a href="https://wa.me/917738032704">WhatsApp Us</a></details><div class="sr-mnav__cta"><a class="btn btn-secondary" href="https://inv.moneyhoney.co.in/#/investor-login">Sign In</a></div></div></details></div></div></header>
+<main class="sr-main" id="main"><section class="sr-hero sr-world-sunrise"><div class="sr-wrap sr-hero__grid"><div class="sr-hero__copy"><div class="page-head stack-sm">
+<nav aria-label="Breadcrumb" class="breadcrumb">
+<a href="../../index.html">Home</a>
+<svg aria-hidden="true" fill="none" height="12" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24" width="12"><path d="m9 18 6-6-6-6"></path></svg>
+<a href="../index.html">Solutions</a>
+<svg aria-hidden="true" fill="none" height="12" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24" width="12"><path d="m9 18 6-6-6-6"></path></svg>
+<span aria-current="page">Portfolio Health</span>
+</nav>
+<h1>Mutual Fund Portfolio Health: What to Check</h1>
+<p class="sq">Do you know what's really inside your funds?</p>
+</div></div><div class="sr-hero__art sr-hero__illus"><svg aria-hidden="true" focusable="false" viewbox="0 0 420 320"><circle cx="210" cy="168" fill="#3A4796" fill-opacity="0.07" r="146"></circle><circle cx="210" cy="190" fill="#FF4A00" r="86"></circle><circle cx="210" cy="190" fill="#C93A00" fill-opacity=".22" r="112"></circle><path d="M40 250c60-40 120-40 180-10s120 20 160-6v86H40z" fill="#8C95C9"></path><path d="M40 272c70-26 150-26 220-4s90 10 120 0v52H40z" fill="#3A4796"></path><path d="M206 320c-6-24 30-34 18-56-8-14-30-16-22-34" fill="none" stroke="#FFFFFF" stroke-dasharray="1 14" stroke-linecap="round" stroke-width="7"></path></svg></div></div></section><div class="sr-body"><div class="container sr-content" id="sr-content">
+
+<div class="vb">
+<div class="vb-head">
+<section aria-label="The Problem in One Figure" class="headline">
+<p aria-hidden="true" class="hl-fig"><span data-count="28">28</span>%</p>
+<p class="hl-text">Of Indian mutual fund and ETF investors, 28% say they have trouble managing multiple investments.</p>
+<p class="hl-src">Source: SEBI, Investor Survey 2025, Table 9.3.<a aria-label="Source 1" class="ref" href="#src-1">[1]</a></p>
+<p class="hl-means">Funds overlap, mixes drift, schemes change and nominees go missing, so what you already hold needs a regular look. The Portfolio Health report on the investor platform takes that look for your account.</p>
+</section>
+<div class="cta">
+<a class="btn btn-primary" href="https://inv.moneyhoney.co.in/#/investor-login">Sign In to Check Your Portfolio</a>
+<a class="btn btn-secondary" href="https://inv.moneyhoney.co.in/#/registration">Create Account</a>
+<a class="btn btn-ghost" href="../../contact/index.html">Speak to Us</a>
+</div>
+</div>
+<aside aria-labelledby="stand" class="vb-rail vb-rail--static" id="where-you-stand">
+<h2 id="stand">What the Portfolio Health Report Checks</h2>
+<p class="note">A sample report for an invented investor with six funds, Fund A to Fund F, and two goals. Every holding and figure in it is invented.</p>
+<section aria-labelledby="sp1" class="sp">
+<p class="sp-tag"><span class="badge">Sample Report: Invented Holdings</span></p>
+<h3 id="sp1">Asset Mix and Category Spread</h3>
+<svg aria-label="Sample asset mix: Equity: 71%; Debt: 14%; Hybrid: 9%; Gold: 6%" class="schart" height="20" role="img" viewbox="0 0 260 20" width="260"><rect class="mix mix-1" height="20" width="184.6" x="0.0" y="0"></rect><rect class="mix mix-2" height="20" width="36.4" x="184.6" y="0"></rect><rect class="mix mix-3" height="20" width="23.4" x="221.0" y="0"></rect><rect class="mix mix-4" height="20" width="15.6" x="244.4" y="0"></rect></svg><div class="legend"><span><i class="sw mix-1"></i>Equity 71%</span><span><i class="sw mix-2"></i>Debt 14%</span><span><i class="sw mix-3"></i>Hybrid 9%</span><span><i class="sw mix-4"></i>Gold 6%</span></div><dl class="sp-kv"><dt>Equity against the 60% you set</dt><dd>11 points higher</dd><dt>Categories held</dt><dd>Flexi Cap (2 funds), Large Cap, Mid Cap, Short Duration and a gold fund</dd></dl>
+<p class="sp-why">Markets move a mix without you doing anything. The report sets yours beside the mix you meant to hold; the <a href="../asset-allocation/index.html">Asset Allocation</a> page shows how far a mix can drift.</p>
+</section><section aria-labelledby="sp2" class="sp">
+<p class="sp-tag"><span class="badge">Sample Report: Invented Holdings</span></p>
+<h3 id="sp2">Overlap and Concentration</h3>
+<dl class="sp-kv"><dt>Fund A and Fund B</dt><dd>14 of their 20 largest holdings are the same</dd><dt>Largest fund house</dt><dd>48% of the portfolio</dd><dt>Largest single fund</dt><dd>Fund A, 31%</dd></dl>
+<p class="sp-why">SEBI requires a large cap fund to keep at least 80% in large companies, and lets a flexi cap fund put its at least 65% in equity into companies of any size, so funds in different categories can own many of the same shares.<a aria-label="Source 7" class="ref" href="#src-7">[7]</a></p>
+</section><section aria-labelledby="sp3" class="sp">
+<p class="sp-tag"><span class="badge">Sample Report: Invented Holdings</span></p>
+<h3 id="sp3">Each Fund Against Its Benchmark</h3>
+<svg aria-label="Sample returns against benchmarks: Fund A: 13.8%, its benchmark 14.6%; Fund C: 16.2%, its benchmark 15.1%; Fund E: 7.1%, its benchmark 7.4%" class="schart" height="192" role="img" viewbox="0 0 260 192" width="260"><text x="2" y="14">Fund A</text><rect class="chbar" height="14" rx="2" width="183.4" x="0" y="22"></rect><text class="val" x="189.4" y="33">13.8%</text><rect class="chbar bm" height="14" rx="2" width="194.0" x="0" y="40"></rect><text class="val" x="200.0" y="51">14.6%</text><text x="2" y="78">Fund C</text><rect class="chbar" height="14" rx="2" width="215.3" x="0" y="86"></rect><text class="val" x="221.3" y="97">16.2%</text><rect class="chbar bm" height="14" rx="2" width="200.7" x="0" y="104"></rect><text class="val" x="206.7" y="115">15.1%</text><text x="2" y="142">Fund E</text><rect class="chbar" height="14" rx="2" width="94.4" x="0" y="150"></rect><text class="val" x="100.4" y="161">7.1%</text><rect class="chbar bm" height="14" rx="2" width="98.3" x="0" y="168"></rect><text class="val" x="104.3" y="179">7.4%</text></svg><div class="legend"><span><i class="sw mix-1"></i>The fund</span><span><i class="sw sw-bm"></i>Its benchmark</span></div><p class="note">Yearly returns over the same 3 years, before tax. Invented figures.</p>
+<p class="sp-why">Fund houses must publish each scheme's returns beside its benchmark's on AMFI's website, over 1, 3, 5 and 10 years and since launch.<a aria-label="Source 7" class="ref" href="#src-7">[7]</a> The report shows the comparison; what you do about it is your decision, and you can speak to us for help.</p>
+</section><section aria-labelledby="sp4" class="sp">
+<p class="sp-tag"><span class="badge">Sample Report: Invented Holdings</span></p>
+<h3 id="sp4">Nominee and KYC</h3>
+<ul class="sp-alerts"><li><span class="status status-warning">No Nominee</span><span>2 of your 6 folios</span></li><li><span class="status status-success">KYC Validated</span><span>on your PAN</span></li></ul>
+<p class="sp-why">From 1 Sep 2026 you can name up to 3 nominees on a mutual fund folio, and a new folio in one name needs a nomination or a signed choice not to nominate.<a aria-label="Source 6" class="ref" href="#src-6">[6]</a> A KYC status of On-Hold or Rejected, for example because a mobile number or email is not validated or PAN is not linked with Aadhaar, has to be fixed before you can transact. Registered KYC lets you keep transacting with the mutual funds you already hold.<a aria-label="Source 8" class="ref" href="#src-8">[8]</a></p>
+</section><section aria-labelledby="sp5" class="sp">
+<p class="sp-tag"><span class="badge">Sample Report: Invented Holdings</span></p>
+<h3 id="sp5">Scheme Changes</h3>
+<ul class="sp-alerts"><li><span class="status status-info">Riskometer Changed</span><span>Fund C, from High to Very High</span></li><li><span class="status status-info">New Fund Manager</span><span>Fund D</span></li></ul>
+<p class="sp-why">Fund houses review each scheme's riskometer level every month, and tell its investors by email or SMS when the level changes.<a aria-label="Source 7" class="ref" href="#src-7">[7]</a> When a scheme changes a fundamental attribute, such as its type or what it invests in, the fund house must give notice, and its investors get at least 30 days in which they may leave.<a aria-label="Source 7" class="ref" href="#src-7">[7]</a></p>
+</section><section aria-labelledby="sp6" class="sp">
+<p class="sp-tag"><span class="badge">Sample Report: Invented Holdings</span></p>
+<h3 id="sp6">Goal Tracking</h3>
+<svg aria-label="Sample goal progress: Home down payment, 4 years away: 62% of the way; Child's college, 12 years away: 18% of the way" class="schart" height="92" role="img" viewbox="0 0 260 92" width="260"><text x="2" y="14">Home down payment, 4 years away: 62%</text><rect class="track" height="12" rx="2" width="260" x="0" y="22"></rect><rect class="chbar" height="12" rx="2" width="161.2" x="0" y="22"></rect><text x="2" y="60">Child's college, 12 years away: 18%</text><rect class="track" height="12" rx="2" width="260" x="0" y="68"></rect><rect class="chbar" height="12" rx="2" width="46.8" x="0" y="68"></rect></svg>
+<p class="sp-why">A goal falls behind quietly when the instalments stop. 40% of investors had made no fresh investment in the past year, most often because of poor performance.<a aria-label="Source 1" class="ref" href="#src-1">[1]</a></p>
+</section>
+<p class="sp-foot">After you sign in, the report reads the funds you hold through MoneyHoney. To add funds bought elsewhere, import a Consolidated Account Statement from CAMS, KFintech or MF Central.</p><p class="sp-foot">You read the report yourself. Nobody contacts you about it unless you ask, through Speak to Us in the report.</p>
+</aside>
+<div class="vb-main">
+<section aria-labelledby="why" class="story" data-story="">
+<h2 id="why">Why Portfolios Need a Regular Check</h2>
+<ol class="steps">
+<li class="step"><h3>What Investors Find Hard After They Invest</h3><p>Asked what they found hard after investing, mutual fund and ETF investors most often named returns lower than they had hoped (41%) and not knowing whether to stay invested or exit (38%). 28% found managing several investments hard, and 23% tracking how they were doing.<a aria-label="Source 1" class="ref" href="#src-1">[1]</a></p>
+<figure class="step-fig"><svg aria-label="Challenges mutual fund and ETF investors faced after investing, percent, 2025: Returns lower than they had hoped: 41%; Unsure whether to stay or exit: 38%; Managing several investments: 28%; Understanding statements: 26%; Tracking performance: 23%; High fees and charges: 19%" class="schart" height="300" role="img" viewbox="0 0 300 300" width="300"><text x="2" y="14">Returns lower than they had hoped</text><rect class="chbar" height="16" rx="2" width="266.2" x="0" y="22"></rect><text class="val" x="272.2" y="35">41%</text><text x="2" y="64">Unsure whether to stay or exit</text><rect class="chbar" height="16" rx="2" width="246.7" x="0" y="72"></rect><text class="val" x="252.7" y="85">38%</text><text x="2" y="114">Managing several investments</text><rect class="chbar" height="16" rx="2" width="181.8" x="0" y="122"></rect><text class="val" x="187.8" y="135">28%</text><text x="2" y="164">Understanding statements</text><rect class="chbar" height="16" rx="2" width="168.8" x="0" y="172"></rect><text class="val" x="174.8" y="185">26%</text><text x="2" y="214">Tracking performance</text><rect class="chbar" height="16" rx="2" width="149.3" x="0" y="222"></rect><text class="val" x="155.3" y="235">23%</text><text x="2" y="264">High fees and charges</text><rect class="chbar" height="16" rx="2" width="123.4" x="0" y="272"></rect><text class="val" x="129.4" y="285">19%</text></svg><figcaption>Challenges mutual fund and ETF investors faced after investing, 2025 (13,862 investors; more than one answer allowed). Source: SEBI Investor Survey 2025, 2025 survey.<a aria-label="Source 1" class="ref" href="#src-1">[1]</a></figcaption></figure></li>
+<li class="step"><h3>More Folios Than Investors</h3><p>Mutual fund folios rose from 9.79 crore in March 2021 to 27.39 crore in March 2026, while the number of investors rose from 2.3 crore to 6.1 crore. That is about 4.5 folios for each investor.<a aria-label="Source 2" class="ref" href="#src-2">[2]</a><a aria-label="Source 3" class="ref" href="#src-3">[3]</a></p>
+<figure class="step-fig"><svg aria-label="Mutual fund folios at the end of each March, crore: Mar 2021: 9.79; Mar 2022: 12.95; Mar 2023: 14.57; Mar 2024: 17.79; Mar 2025: 23.45; Mar 2026: 27.39" class="schart" height="194" role="img" viewbox="0 0 300 194" width="300"><line class="axis" x1="0" x2="300" y1="154" y2="154"></line><rect class="cbar" height="41.5" rx="2" width="31.0" x="9.5" y="112.5"></rect><text class="val" text-anchor="middle" x="25.0" y="106.5">9.79</text><text text-anchor="start" x="2.0" y="171">Mar 2021</text><rect class="cbar" height="54.9" rx="2" width="31.0" x="59.5" y="99.1"></rect><text class="val" text-anchor="middle" x="75.0" y="93.1">12.95</text><text text-anchor="middle" x="75.0" y="187">Mar 2022</text><rect class="cbar" height="61.7" rx="2" width="31.0" x="109.5" y="92.3"></rect><text class="val" text-anchor="middle" x="125.0" y="86.3">14.57</text><text text-anchor="middle" x="125.0" y="171">Mar 2023</text><rect class="cbar" height="75.4" rx="2" width="31.0" x="159.5" y="78.6"></rect><text class="val" text-anchor="middle" x="175.0" y="72.6">17.79</text><text text-anchor="middle" x="175.0" y="187">Mar 2024</text><rect class="cbar" height="99.4" rx="2" width="31.0" x="209.5" y="54.6"></rect><text class="val" text-anchor="middle" x="225.0" y="48.6">23.45</text><text text-anchor="middle" x="225.0" y="171">Mar 2025</text><rect class="cbar" height="116.1" rx="2" width="31.0" x="259.5" y="37.9"></rect><text class="val" text-anchor="middle" x="275.0" y="31.9">27.39</text><text text-anchor="end" x="298.0" y="187">Mar 2026</text></svg><figcaption>Mutual fund folios at the end of each March, crore. Worked out by us: 27.39 crore folios ÷ 6.14 crore unique investors (AMFI's count for March 2026) = 4.46. Folios also belong to companies and other investors, so the ratio is a little high. Source: AMFI Annual Report Fiscal 2026; AMFI Factbook 2026, March 2021 to March 2026.<a aria-label="Source 2" class="ref" href="#src-2">[2]</a><a aria-label="Source 3" class="ref" href="#src-3">[3]</a></figcaption></figure></li>
+<li class="step"><h3>More Investors Now Buy Direct</h3><p>Direct plans held 45.1% of mutual fund assets in March 2026, up from 43.4% in March 2021. Among retail investors the direct share rose from 21.4% to 36.7%. Whichever plan you hold, what you hold still needs a regular look.<a aria-label="Source 3" class="ref" href="#src-3">[3]</a></p>
+<figure class="step-fig"><svg aria-label="Direct plans' share of mutual fund assets, by investor, percent, March 2021 and March 2026: All assets, Mar 2021: 43.4%; All assets, Mar 2026: 45.1%; Retail, Mar 2021: 21.4%; Retail, Mar 2026: 36.7%; HNI, Mar 2021: 28.8%; HNI, Mar 2026: 35.1%; NRI, Mar 2021: 19.4%; NRI, Mar 2026: 27.3%" class="schart" height="400" role="img" viewbox="0 0 300 400" width="300"><text x="2" y="14">All assets, Mar 2021</text><rect class="chbar" height="16" rx="2" width="245.7" x="0" y="22"></rect><text class="val" x="251.7" y="35">43.4%</text><text x="2" y="64">All assets, Mar 2026</text><rect class="chbar" height="16" rx="2" width="255.3" x="0" y="72"></rect><text class="val" x="261.3" y="85">45.1%</text><text x="2" y="114">Retail, Mar 2021</text><rect class="chbar" height="16" rx="2" width="121.1" x="0" y="122"></rect><text class="val" x="127.1" y="135">21.4%</text><text x="2" y="164">Retail, Mar 2026</text><rect class="chbar" height="16" rx="2" width="207.7" x="0" y="172"></rect><text class="val" x="213.7" y="185">36.7%</text><text x="2" y="214">HNI, Mar 2021</text><rect class="chbar" height="16" rx="2" width="163.0" x="0" y="222"></rect><text class="val" x="169.0" y="235">28.8%</text><text x="2" y="264">HNI, Mar 2026</text><rect class="chbar" height="16" rx="2" width="198.7" x="0" y="272"></rect><text class="val" x="204.7" y="285">35.1%</text><text x="2" y="314">NRI, Mar 2021</text><rect class="chbar" height="16" rx="2" width="109.8" x="0" y="322"></rect><text class="val" x="115.8" y="335">19.4%</text><text x="2" y="364">NRI, Mar 2026</text><rect class="chbar" height="16" rx="2" width="154.5" x="0" y="372"></rect><text class="val" x="160.5" y="385">27.3%</text></svg><figcaption>Direct plans' share of mutual fund assets, by investor, March 2021 and March 2026. Source: AMFI Factbook 2026, March 2021 and March 2026.<a aria-label="Source 3" class="ref" href="#src-3">[3]</a></figcaption></figure></li>
+<li class="step"><h3>Money Left Unclaimed Keeps Growing</h3><p>Unclaimed mutual fund money came to ₹3,811 Crores at the end of March 2026, ₹1,122 Crores of it redemptions and ₹2,689 Crores income payouts (IDCW). The unclaimed payouts rose 15.7% in a year.<a aria-label="Source 4" class="ref" href="#src-4">[4]</a></p>
+<figure class="step-fig"><svg aria-label="Unclaimed mutual fund amounts at the end of March, rupees in crores: Redemptions, Mar 2025: ₹1,128 Crores; Redemptions, Mar 2026: ₹1,122 Crores; Income payouts (IDCW), Mar 2025: ₹2,324 Crores; Income payouts (IDCW), Mar 2026: ₹2,689 Crores" class="schart" height="200" role="img" viewbox="0 0 300 200" width="300"><text x="2" y="14">Redemptions, Mar 2025</text><rect class="chbar" height="16" rx="2" width="85.4" x="0" y="22"></rect><text class="val" x="91.4" y="35">₹1,128 Crores</text><text x="2" y="64">Redemptions, Mar 2026</text><rect class="chbar" height="16" rx="2" width="85.0" x="0" y="72"></rect><text class="val" x="91.0" y="85">₹1,122 Crores</text><text x="2" y="114">Income payouts (IDCW), Mar 2025</text><rect class="chbar" height="16" rx="2" width="176.0" x="0" y="122"></rect><text class="val" x="182.0" y="135">₹2,324 Crores</text><text x="2" y="164">Income payouts (IDCW), Mar 2026</text><rect class="chbar" height="16" rx="2" width="203.6" x="0" y="172"></rect><text class="val" x="209.6" y="185">₹2,689 Crores</text></svg><figcaption>Unclaimed mutual fund amounts at the end of each financial year. Worked out by us: ₹1,122 Crores + ₹2,689 Crores = ₹3,811 Crores. Source: SEBI Annual Report 2025-26, 31 Mar 2025 and 31 Mar 2026.<a aria-label="Source 4" class="ref" href="#src-4">[4]</a></figcaption></figure></li>
+<li class="step"><h3>About 1 in 7 Folios Had No Nominee</h3><p>When SEBI last counted, 14.18% of mutual fund folios held in one name had no nominee. 8.09% had neither a nominee nor a choice not to nominate, and 6.09% had chosen not to.<a aria-label="Source 5" class="ref" href="#src-5">[5]</a></p>
+<figure class="step-fig"><svg aria-label="Mutual fund folios held in one name, by nomination, percent: Nominee recorded: 85.82%; Chose not to nominate: 6.09%; Neither: 8.09%" class="schart" height="150" role="img" viewbox="0 0 300 150" width="300"><text x="2" y="14">Nominee recorded</text><rect class="chbar" height="16" rx="2" width="247.9" x="0" y="22"></rect><text class="val" x="253.9" y="35">85.82%</text><text x="2" y="64">Chose not to nominate</text><rect class="chbar" height="16" rx="2" width="17.6" x="0" y="72"></rect><text class="val" x="23.6" y="85">6.09%</text><text x="2" y="114">Neither</text><rect class="chbar" height="16" rx="2" width="23.4" x="0" y="122"></rect><text class="val" x="29.4" y="135">8.09%</text></svg><figcaption>Mutual fund folios held in one name, by nomination, as SEBI published them on 2 Feb 2024. Worked out by us: 8.09% (no nomination and no opt-out) + 6.09% (opted out) = 14.18%. Source: SEBI paper on nominations, published 2 Feb 2024 (no data date given).<a aria-label="Source 5" class="ref" href="#src-5">[5]</a></figcaption></figure></li>
+</ol>
+<p class="story-end">Many folios each, money left unclaimed and folios without a nominee: each is put right by looking at what you already hold.</p>
+</section>
+<section aria-labelledby="close">
+<h2 id="close">How to Review Your Mutual Fund Portfolio</h2>
+<ol class="close-steps">
+<li><b>Gather everything in one place.</b> A Consolidated Account Statement (CAS) lists your mutual fund holdings across fund houses. It is issued for each month by the 15th of the next and for each half-year by the 21st, and the half-yearly one shows, for each scheme, the commission paid to your distributor in rupees.<a aria-label="Source 7" class="ref" href="#src-7">[7]</a></li>
+<li><b>Check the mix.</b> Add up what is in equity, debt, hybrid and gold, and set it beside the mix you meant to hold. The <a href="../../calculators/asset-allocation/index.html">Asset Allocation Calculator</a> shows how far it has moved.</li>
+<li><b>Look for overlap.</b> Two funds that own many of the same shares add less than they seem to; the report shows how much yours share.</li>
+<li><b>Compare each fund with its own benchmark,</b> over the same period, rather than with whichever fund did well last year.</li>
+<li><b>Check nominees and KYC.</b> Name nominees on every folio, and fix a KYC status that reads On-Hold or Rejected before you need to sell. Your fund house's or registrar's website shows the status.</li>
+<li><b>Read what has changed.</b> A change in a scheme's category, what it invests in or its riskometer level can change whether it still fits your goal; the report lists each one.</li>
+<li><b>Check each goal.</b> Is each goal's money on track, and does it still suit the time left? The goal pages work out the monthly amount again.</li>
+<li><b>Decide, then act.</b> Write down what you will change and why. Before you sell or move money, check the exit load and the tax: the <a href="../../calculators/capital-gains-tax/index.html">Capital Gains Tax Calculator</a> works out the tax on a gain.</li>
+</ol>
+</section>
+<section aria-labelledby="products">
+<h2 id="products">Tools on This Site for Your Own Check</h2>
+<p>The report reads your holdings after you sign in. These pages of this site let you check parts of a portfolio yourself.</p>
+<div class="pcards"><div class="card pcard">
+<p class="pspan">Look up each fund</p>
+<h3>Explore Funds</h3>
+<p>Find each fund you hold: its category, riskometer level, fund manager and returns over 1, 3 and 5 years.</p>
+<a href="../../mutual-funds/explore/index.html">Open Explore Funds</a>
+</div><div class="card pcard">
+<p class="pspan">Your own return</p>
+<h3>XIRR Calculator</h3>
+<p>Work out the yearly return on your own SIPs and withdrawals, from their dates and amounts.</p>
+<a href="../../calculators/xirr/index.html">Open the XIRR Calculator</a>
+</div><div class="card pcard">
+<p class="pspan">Your mix</p>
+<h3>Asset Allocation Calculator</h3>
+<p>Set your equity share beside a target, and see how far it drifts over the years.</p>
+<a href="../../calculators/asset-allocation/index.html">Open the Asset Allocation Calculator</a>
+</div><div class="card pcard">
+<p class="pspan">Before you sell or move money</p>
+<h3>Capital Gains Tax Calculator</h3>
+<p>See the tax on a gain before you sell or move money between funds.</p>
+<a href="../../calculators/capital-gains-tax/index.html">Open the Capital Gains Tax Calculator</a>
+</div>
+</div>
+</section>
+<section aria-labelledby="faq" class="faq">
+<h2 id="faq">Portfolio Questions People Ask</h2>
+<details><summary>How many mutual funds should I have?</summary><p>There is no right number, and we do not suggest one. What matters is that each fund does a job the others do not. SEBI requires a large cap fund to keep at least 80% in large companies, and lets a flexi cap fund put its at least 65% in equity into companies of any size, so funds in different categories can own many of the same shares.<a aria-label="Source 7" class="ref" href="#src-7">[7]</a></p></details>
+<details><summary>Are 5 or 7 mutual funds too many?</summary><p>Not by the count alone. Five funds in five different categories can be easier to follow than three that own the same shares. The report's overlap check shows how much your funds share.</p></details>
+<details><summary>How often should I review my mutual fund portfolio?</summary><p>Once a year is a common rhythm, and again after a large change in your life or your goals. Looking much more often tempts you to react to short-term moves.</p></details>
+<details><summary>What is mutual fund portfolio overlap?</summary><p>The share of your money that sits in the same companies through different funds. Two funds that own many of the same shares rise and fall together, so they spread your money less than two names suggest.</p></details>
+<details><summary>How can I see all my mutual funds in one place?</summary><p>A Consolidated Account Statement (CAS) lists your mutual fund holdings across fund houses. It is issued for each month by the 15th of the next and for each half-year by the 21st, and the half-yearly one shows, for each scheme, the commission paid to your distributor in rupees.<a aria-label="Source 7" class="ref" href="#src-7">[7]</a> After you sign in, you can import a CAS from CAMS, KFintech or MF Central to add funds bought elsewhere to the report.</p></details>
+<details><summary>How many nominees can I add to a folio?</summary><p>From 1 Sep 2026 you can name up to 3 nominees on a mutual fund folio, and a new folio in one name needs a nomination or a signed choice not to nominate.<a aria-label="Source 6" class="ref" href="#src-6">[6]</a></p></details>
+<details><summary>When should I exit a mutual fund?</summary><p>Look at three things: whether you need the money for the goal now, whether the fund still fits the goal (a change in its category or what it invests in can alter that), and whether your mix has moved far from what you meant. Before you sell, check the exit load and the tax. The decision is yours; speak to us if you want help.</p></details>
+<details><summary>Is the Portfolio Health report a separate service?</summary><p>No. It is a feature of your account on the investor platform. It shows what you hold, and nobody contacts you about it unless you ask, through Speak to Us in the report.</p></details>
+</section>
+<section aria-labelledby="read-and-share">
+<h2 id="read-and-share">Read and Share</h2>
+<p class="note">Official documents, linked to their publishers. We do not host copies.</p>
+<ul class="pdfs">
+<li class="pdf">
+<div class="pdf-main">
+<a class="pdf-title" href="https://www.amfiindia.com/investor/become-mf-distributor?zoneName=nomination" rel="noopener" target="_blank">Format for providing Nomination for Demat Account and MF Folios<span class="vh"> (opens in a new tab)</span></a>
+<p class="pdf-meta">AMFI · Effective from 1 Sep 2026 (file of 4 Sep 2026) · 3 pages, 0.66 MB · English · Opens the publisher’s page</p>
+<p class="pdf-note">The form for up to 3 nominees, in use from 1 Sep 2026. A new folio in one name needs it, or a signed declaration not to nominate.</p>
+</div>
+<div class="pdf-act">
+<a class="btn btn-secondary" href="https://wa.me/?text=Format%20for%20providing%20Nomination%20for%20Demat%20Account%20and%20MF%20Folios%20%28AMFI%29%3A%20https%3A%2F%2Fwww.amfiindia.com%2Finvestor%2Fbecome-mf-distributor%3FzoneName%3Dnomination" rel="noopener" target="_blank"><svg aria-hidden="true" fill="none" height="16" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24" width="16"><circle cx="18" cy="5" r="3"></circle><circle cx="6" cy="12" r="3"></circle><circle cx="18" cy="19" r="3"></circle><path d="m8.6 13.5 6.8 4M15.4 6.5l-6.8 4"></path></svg>Share on WhatsApp<span class="vh"> (opens in a new tab)</span></a>
+<button class="btn btn-ghost" data-copy="https://www.amfiindia.com/investor/become-mf-distributor?zoneName=nomination" hidden="" type="button">Copy Link</button>
+</div>
+</li>
+<li class="pdf">
+<div class="pdf-main">
+<a class="pdf-title" href="https://www.amfiindia.com/Themes/Theme1/downloads/KYC-Infographic.pdf" rel="noopener" target="_blank">Mutual Fund KYC Aasaan Hai!<span class="vh"> (opens in a new tab)</span></a>
+<p class="pdf-meta">AMFI · No date printed (file of 3 May 2024) · 1 pages, 0.67 MB · English</p>
+<p class="pdf-note">A picture without text to copy: how to check your KYC status, and what Validated, Registered, On-Hold and Rejected mean.</p>
+</div>
+<div class="pdf-act">
+<a class="btn btn-secondary" href="https://wa.me/?text=Mutual%20Fund%20KYC%20Aasaan%20Hai%21%20%28AMFI%29%3A%20https%3A%2F%2Fwww.amfiindia.com%2FThemes%2FTheme1%2Fdownloads%2FKYC-Infographic.pdf" rel="noopener" target="_blank"><svg aria-hidden="true" fill="none" height="16" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24" width="16"><circle cx="18" cy="5" r="3"></circle><circle cx="6" cy="12" r="3"></circle><circle cx="18" cy="19" r="3"></circle><path d="m8.6 13.5 6.8 4M15.4 6.5l-6.8 4"></path></svg>Share on WhatsApp<span class="vh"> (opens in a new tab)</span></a>
+<button class="btn btn-ghost" data-copy="https://www.amfiindia.com/Themes/Theme1/downloads/KYC-Infographic.pdf" hidden="" type="button">Copy Link</button>
+</div>
+</li>
+<li class="pdf">
+<div class="pdf-main">
+<a class="pdf-title" href="https://www.amfiindia.com/articles/sop-and-faqs-unclaimed-amount" rel="noopener" target="_blank">FAQs on Unclaimed Mutual Funds<span class="vh"> (opens in a new tab)</span></a>
+<p class="pdf-meta">AMFI · No date printed (file of 1 Oct 2025) · 4 pages, 0.3 MB · English; Hindi (0.62 MB) · Opens the publisher’s page</p>
+<p class="pdf-note">Written before SCORES 2.0. Income payouts are now called IDCW.</p>
+</div>
+<div class="pdf-act">
+<a class="btn btn-secondary" href="https://wa.me/?text=FAQs%20on%20Unclaimed%20Mutual%20Funds%20%28AMFI%29%3A%20https%3A%2F%2Fwww.amfiindia.com%2Farticles%2Fsop-and-faqs-unclaimed-amount" rel="noopener" target="_blank"><svg aria-hidden="true" fill="none" height="16" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24" width="16"><circle cx="18" cy="5" r="3"></circle><circle cx="6" cy="12" r="3"></circle><circle cx="18" cy="19" r="3"></circle><path d="m8.6 13.5 6.8 4M15.4 6.5l-6.8 4"></path></svg>Share on WhatsApp<span class="vh"> (opens in a new tab)</span></a>
+<button class="btn btn-ghost" data-copy="https://www.amfiindia.com/articles/sop-and-faqs-unclaimed-amount" hidden="" type="button">Copy Link</button>
+</div>
+</li>
+<li class="pdf">
+<div class="pdf-main">
+<a class="pdf-title" href="https://investor.sebi.gov.in/pdf/reference-material/ppt/SCORES%20PPT%20Final.pdf" rel="noopener" target="_blank">SCORES “SEBI Complaints Redressal System”<span class="vh"> (opens in a new tab)</span></a>
+<p class="pdf-meta">SEBI · As on August 1, 2025 (slide 2) · 24 pages, 2.1 MB · English</p>
+<p class="pdf-note">How to complain to SEBI about a fund house or an intermediary; complaints are to be resolved within 21 calendar days.</p>
+</div>
+<div class="pdf-act">
+<a class="btn btn-secondary" href="https://wa.me/?text=SCORES%20%E2%80%9CSEBI%20Complaints%20Redressal%20System%E2%80%9D%20%28SEBI%29%3A%20https%3A%2F%2Finvestor.sebi.gov.in%2Fpdf%2Freference-material%2Fppt%2FSCORES%2520PPT%2520Final.pdf" rel="noopener" target="_blank"><svg aria-hidden="true" fill="none" height="16" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24" width="16"><circle cx="18" cy="5" r="3"></circle><circle cx="6" cy="12" r="3"></circle><circle cx="18" cy="19" r="3"></circle><path d="m8.6 13.5 6.8 4M15.4 6.5l-6.8 4"></path></svg>Share on WhatsApp<span class="vh"> (opens in a new tab)</span></a>
+<button class="btn btn-ghost" data-copy="https://investor.sebi.gov.in/pdf/reference-material/ppt/SCORES%20PPT%20Final.pdf" hidden="" type="button">Copy Link</button>
+</div>
+</li>
+</ul>
+<p aria-live="polite" class="vh" id="copied"></p>
+</section>
+<section aria-labelledby="related">
+<h2 id="related">Related Solutions</h2>
+<div class="linkgrid"><a class="card sol-asset-allocation" href="../asset-allocation/index.html">Asset Allocation<span class="card__meta">Is too much of your money in one place?</span></a><a class="card sol-financial-planning" href="../financial-planning/index.html">Financial Planning<span class="card__meta">Do you know what your money needs to do, and when?</span></a><a class="card sol-sip" href="../sip/index.html">SIP<span class="card__meta">How much should your SIP be, and will you keep it going when markets fall?</span></a></div>
+</section>
+<section aria-labelledby="next-step" class="nextstep">
+<h2 id="next-step">Your Next Step</h2>
+<p>Sign in to see the report for your own holdings, create an account if you do not have one, or speak to us.</p>
+<div class="cta">
+<a class="btn btn-primary" href="https://inv.moneyhoney.co.in/#/investor-login">Sign In to Check Your Portfolio</a>
+<a class="btn btn-secondary" href="https://inv.moneyhoney.co.in/#/registration">Create Account</a>
+<a class="btn btn-ghost" href="../../contact/index.html">Speak to Us</a>
+</div>
+</section>
+<section aria-labelledby="sources" class="sources">
+<h2 id="sources">Sources</h2>
+<ol>
+<li id="src-1">SEBI, Investor Survey 2025, Main Report, Table 9.3, p.60; p.66. 20 Jan 2026. <a href="https://www.sebi.gov.in/sebi_data/commondocs/jan-2026/Investor%20Survey%202025%20Main%20Report.pdf" rel="noopener" target="_blank">sebi.gov.in<span class="vh"> (opens in a new tab)</span></a></li>
+<li id="src-2">AMFI, with Crisil Intelligence, Annual Report Fiscal 2026, Annual folio count trend, p.6. 5 Jun 2026. <a href="https://www.amfiindia.com/uploads/Annualreport_Mar26_efae8818ff.pdf" rel="noopener" target="_blank">amfiindia.com<span class="vh"> (opens in a new tab)</span></a></li>
+<li id="src-3">AMFI and Crisil Intelligence, AMFI Factbook 2026, foreword; unique investors, p.13; direct and regular plans, pp.17–18. Aug 2026. <a href="https://www.amfiindia.com/uploads/AMFI_Factbook2026_14b34a6447.pdf" rel="noopener" target="_blank">amfiindia.com<span class="vh"> (opens in a new tab)</span></a></li>
+<li id="src-4">SEBI, Annual Report 2025-26, Chapter 5, Table 5.13, Quantum of Unclaimed Amount, p.90. 6 Aug 2026. <a href="https://www.sebi.gov.in/reports-and-statistics/publications/aug-2026/Chapter%2005.pdf" rel="noopener" target="_blank">sebi.gov.in<span class="vh"> (opens in a new tab)</span></a></li>
+<li id="src-5">SEBI, Consultation Paper to Revise and Revamp Nomination Facilities in the Indian Securities Market, Table I, p.5. 2 Feb 2024. <a href="https://www.sebi.gov.in/sebi_data/attachdocs/feb-2024/1706871308765.pdf" rel="noopener" target="_blank">sebi.gov.in<span class="vh"> (opens in a new tab)</span></a></li>
+<li id="src-6">SEBI, Ease of doing investments – Modified Norms for Nomination in Demat Accounts and Mutual Fund Folios, SEBI/HO/OIAE/OIAE_IAD-3/P/CIR/2026/12676, paras 4 to 15. 29 May 2026. <a href="https://www.sebi.gov.in/legal/circulars/may-2026/ease-of-doing-investments-modified-norms-for-nomination-in-demat-accounts-and-mutual-fund-folios_101703.html" rel="noopener" target="_blank">sebi.gov.in<span class="vh"> (opens in a new tab)</span></a></li>
+<li id="src-7">SEBI, Master Circular for Mutual Funds, paras 1.2.2, 1.9.1, 3.4, 3.8.1, 6.9.1, 6.16.1 and 15.7.4. 20 Mar 2026. <a href="https://www.sebi.gov.in/sebi_data/attachdocs/mar-2026/1774024028162.pdf" rel="noopener" target="_blank">sebi.gov.in<span class="vh"> (opens in a new tab)</span></a></li>
+<li id="src-8">AMFI, Mutual Fund KYC Aasaan Hai! (what each KYC status means), single page. file of 3 May 2024. <a href="https://www.amfiindia.com/Themes/Theme1/downloads/KYC-Infographic.pdf" rel="noopener" target="_blank">amfiindia.com<span class="vh"> (opens in a new tab)</span></a></li>
+</ol>
+</section>
+</div>
+</div>
+<script>
+(function () {
+var motion = !(window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches) && 'IntersectionObserver' in window;
+function $(id) { return document.getElementById(id); }
+function inr(v) { var n = Math.floor(Math.abs(v) + 0.5); return (v < 0 && n ? '-' : '') + '₹' + n.toLocaleString('en-IN'); }
+function num(s) { s = String(s).replace(/[^0-9.]/g, ''); return s.replace(/\./g, '') ? parseFloat(s) : 0; }
+// Mirrors: the same values pages/solutions.py mirror() renders at build time, from the calculator's current result
+var STAT = /^([sx])(\d+)(?:@(\w+)([+-]\d+(?:\.\d+)?))?$/, FIELD = /^([vr])(\w+?)([+-]\d+(?:\.\d+)?)?$/, WHEN = /^(\w+)(?:-(\w+))?>(\d+(?:\.\d+)?)$/;
+// The page's years: one span ("rage-age", "yrs") or several goals ("y1:g1|y2:g2"), each counted while its cost is above 0
+var yparts = (document.querySelector('[data-years]') || { dataset: { years: '' } }).dataset.years.split('|').map(function (p) {
+  var q = p.split(':'); return { y: q[0].split('-'), gate: q[1] };
+});
+function yof(p, v) { return p.y.length > 1 ? Math.max(1, v[p.y[0]] - v[p.y[1]]) : v[p.y[0]]; }
+function years(v) { return yof(yparts[0], v); }
+function goals(v) { var out = []; yparts.forEach(function (p, i) { if (!p.gate || v[p.gate] > 0) out.push([i + 1, yof(p, v)]); }); return out; }
+function badge(ns) { return ns.length === 1 ? 'Goal ' + ns[0] : 'Goals ' + ns.slice(0, -1).join(', ') + ' and ' + ns[ns.length - 1]; }
+function value(spec, r, v) {
+  var m = STAT.exec(spec);
+  if (m) {
+    var k = +m[2];
+    if (!m[3]) return r.stats[k];
+    var over = {};
+    over[m[3]] = v[m[3]] + parseFloat(m[4]);
+    var r2 = window.mhCalc(over);
+    if (m[1] === 's') return r2.stats[k];
+    var a = num(r2.stats[k]), b = num(r.stats[k]);
+    return b ? (a / b).toFixed(1) : '–';
+  }
+  m = FIELD.exec(spec);
+  if (m && typeof v[m[2]] === 'string') return v[m[2]];   // a check's answer, as chosen
+  if (m) { var x = v[m[2]] + parseFloat(m[3] || 0); return m[1] === 'r' ? inr(x) : String(x); }
+  return spec === 'y' ? String(years(v)) : '';
+}
+function holds(s, v) { var m = WHEN.exec(s); return m ? v[m[1]] - (m[2] ? v[m[2]] : 0) > parseFloat(m[3]) : true; }
+document.addEventListener('mh-calc', function (e) {
+  var r = e.detail, v = window.mhRead(), gs = goals(v), multi = yparts.length > 1, fit = null, first = null;
+  document.querySelectorAll('[data-m]').forEach(function (el) { el.textContent = value(el.dataset.m, r, v); });
+  document.querySelectorAll('[data-when]').forEach(function (el) { el.hidden = !holds(el.dataset.when, v); });
+  // the marked products: a row or card whose years hold a goal's, or a card whose result condition holds (data-stat);
+  // See Funds That Fit goes to the first marked one, or the first of them when none is
+  document.querySelectorAll('.lit-item').forEach(function (el) {
+    var hit = el.dataset.stat ? (String(r.stats[+el.dataset.stat]) === el.dataset.is ? [1] : [])
+      : gs.filter(function (g) { return g[1] >= +el.dataset.lo && g[1] < +el.dataset.hi; }).map(function (g) { return g[0]; });
+    el.classList.toggle('lit', hit.length > 0);
+    if (multi && hit.length) el.querySelector('.lit-badge').textContent = badge(hit);
+    if (first === null) first = el.dataset.href;
+    if (hit.length && fit === null) fit = el.dataset.href;
+  });
+  fit = fit || first;
+  if (fit) document.querySelectorAll('[data-fit]').forEach(function (a) { a.href = fit; });
+});
+// The headline figure counts up once, and each story chart draws in once, as they come into view
+if (motion) {
+  document.querySelectorAll('[data-count]').forEach(function (el) {
+    var end = parseFloat(el.dataset.count), dec = (el.dataset.count.split('.')[1] || '').length;
+    el.textContent = (0).toFixed(dec);
+    var io = new IntersectionObserver(function (es) {
+      if (!es[0].isIntersecting) return;
+      io.disconnect();
+      var t0 = performance.now();
+      (function tick(t) { var k = Math.min(1, (t - t0) / 900); el.textContent = (end * (1 - Math.pow(1 - k, 3))).toFixed(dec); if (k < 1) requestAnimationFrame(tick); })(t0);
+    });
+    io.observe(el);
+  });
+  var story = document.querySelector('[data-story]');
+  if (story) {
+    story.classList.add('story--anim');
+    var io2 = new IntersectionObserver(function (es) {
+      es.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add('seen'); io2.unobserve(e.target); } });
+    }, { threshold: 0.35 });
+    story.querySelectorAll('.step-fig').forEach(function (f) { io2.observe(f); });
+  }
+}
+// Copy Link (shown only where the browser can copy)
+if (navigator.clipboard) document.querySelectorAll('[data-copy]').forEach(function (b) {
+  b.hidden = false;
+  b.addEventListener('click', function () {
+    navigator.clipboard.writeText(b.dataset.copy).then(function () { b.textContent = 'Link Copied'; $('copied').textContent = 'Link copied'; },
+      function () { b.textContent = 'Copy Failed'; });
+  });
+});
+})();
+</script>
+</div></div></main>
+<section aria-labelledby="sr-sun-h" class="sr-sun"><div class="sr-wrap"><h2 id="sr-sun-h">Ready to plan for it?</h2><p>Start with a SIP that fits the number you just worked out.</p><div class="sr-sun__cta"><a class="btn btn-primary" href="../../get-started/index.html?intent=goal">Get Started</a><a class="sr-more" href="tel:+917738032704">Or call +91 77380 32704 <svg aria-hidden="true" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a></div></div><svg aria-hidden="true" class="sr-sun__art" focusable="false" preserveaspectratio="xMidYMax slice" viewbox="0 0 1440 240"><circle cx="720" cy="250" fill="#FF8A50" fill-opacity=".30" r="230"></circle><circle cx="720" cy="250" fill="#FF4A00" r="168"></circle><path d="M0 170c160-34 300-34 460-6s300 30 460 4 340-36 520-4v76H0z" fill="#2E3D99"></path><path d="M0 196c200-26 380-24 560 0s360 22 540 0 240-18 340-8v52H0z" fill="#16205B"></path><path d="M0 220c240-14 480-14 720 0s480 14 720 0v20H0z" fill="#0C1240"></path></svg></section><footer class="sr-foot" data-nosnippet=""><div class="sr-wrap"><div class="sr-foot__top"><div><a aria-label="MoneyHoney home" class="sr-logo" href="../../index.html" tabindex="-1"><svg aria-label="MoneyHoney" fill="none" height="20" role="img" viewbox="0 0 139 20" width="139" xmlns="http://www.w3.org/2000/svg">
+<path d="M1 10C1 15.2842 5.12632 19.6211 10.3474 20C10.3474 18.4632 9.46316 17.0316 8.07368 16.3579C5.67368 15.2211 4.01053 12.8 4.01053 9.97895C4.01053 7.51579 5.27368 5.36842 7.18947 4.08421V7.64211C7.18947 9.36842 8.6 10.7789 10.3474 10.7789V0C5.12632 0.4 1 4.73684 1 10Z" fill="#FF4A00"></path>
+<path d="M21.2318 10C21.2318 15.2842 17.1054 19.6211 11.8844 20C11.8844 18.4632 12.7686 17.0316 14.1581 16.3579C16.5581 15.2211 18.2212 12.8 18.2212 9.97895C18.2212 7.51579 16.9581 5.36842 15.0212 4.08421V7.64211C15.0212 9.36842 13.6107 10.7789 11.8633 10.7789V0C17.0844 0.4 21.2107 4.73684 21.2107 10H21.2318Z" fill="#FF4A00"></path>
+<path d="M13.4418 14.0201C13.4418 15.3043 12.4103 16.3359 11.126 16.3359C9.84184 16.3359 8.81026 15.3043 8.81026 14.0201C8.81026 12.7359 9.84184 11.7043 11.126 11.7043C12.4103 11.7043 13.4418 12.7359 13.4418 14.0201Z" fill="#16205B"></path>
+<path d="M27.6319 3.41083H29.5477C30.1582 3.41083 30.7056 3.72662 31.0214 4.23188L33.6951 8.52662L36.3687 4.23188C36.6845 3.72662 37.253 3.41083 37.8424 3.41083H39.7582V15.474H38.5161C37.7372 15.474 37.1056 14.8424 37.1056 14.0635V7.6003L33.6951 12.7582H33.6319L30.2424 7.66346V14.0845C30.2424 14.8635 29.6108 15.495 28.8319 15.495H27.6319V3.43188V3.41083Z" fill="#16205B"></path>
+<path d="M49.0839 10.905V10.8629C49.0839 9.49451 48.0944 8.31556 46.6418 8.31556C45.1892 8.31556 44.2207 9.47345 44.2207 10.8419V10.884C44.2207 12.2524 45.2102 13.4313 46.6628 13.4313C48.1155 13.4313 49.0839 12.2735 49.0839 10.905ZM41.6102 10.905V10.8629C41.6102 8.21029 43.7576 6.06293 46.6628 6.06293C49.5681 6.06293 51.6734 8.18924 51.6734 10.8419V10.884C51.6734 13.5366 49.526 15.684 46.6207 15.684C43.7155 15.684 41.6102 13.5577 41.6102 10.905Z" fill="#16205B"></path>
+<path d="M53.2529 6.25173H55.0003C55.5055 6.25173 55.9055 6.65173 55.9055 7.13594V7.557C56.5161 6.77805 57.295 6.08331 58.6213 6.08331C60.6213 6.08331 61.7792 7.38858 61.7792 9.51489V15.4938H60.3897C59.695 15.4938 59.1476 14.9465 59.1476 14.2517V10.3359C59.1476 9.09384 58.5582 8.46226 57.5476 8.46226C56.5371 8.46226 55.9055 9.09384 55.9055 10.3359V14.2517C55.9055 14.9254 55.3371 15.4938 54.6634 15.4938H53.274V6.25173H53.2529Z" fill="#16205B"></path>
+<path d="M69.8203 10.1471C69.673 8.96819 68.9782 8.18924 67.8624 8.18924C66.7467 8.18924 66.0519 8.96819 65.8414 10.1471H69.8203ZM63.273 10.905V10.8629C63.273 8.23135 65.1677 6.06293 67.8624 6.06293C70.9782 6.06293 72.3888 8.46293 72.3888 11.0735C72.3888 11.284 72.3888 11.5156 72.3467 11.7682H65.8624C66.1151 12.9471 66.9572 13.5787 68.1361 13.5787C68.8309 13.5787 69.3782 13.4103 69.9256 13.0103C70.2203 12.7998 70.6203 12.8419 70.873 13.0735L71.8835 13.9577C71.0203 15.0313 69.7572 15.684 68.073 15.684C65.273 15.684 63.2098 13.7471 63.2098 10.905H63.273Z" fill="#16205B"></path>
+<path d="M80.8733 6.2522H82.4312L78.8523 15.7048C78.1365 17.5785 77.3786 18.2943 75.7996 18.2943C74.8523 18.2943 74.1365 18.0627 73.4628 17.6627L74.2417 16.0206C74.3049 15.8943 74.4523 15.8311 74.5786 15.8943C74.8733 16.0417 75.2102 16.1259 75.4628 16.1259C75.9049 16.1259 76.1575 15.9785 76.3891 15.5154L72.747 6.2522H74.2839C75.0417 6.2522 75.6944 6.73641 75.926 7.43114L77.6523 12.5469L79.3154 7.36799C79.526 6.6943 80.1575 6.2522 80.8523 6.2522H80.8733Z" fill="#16205B"></path>
+<path d="M84.4945 3.41083H85.6735C86.4945 3.41083 87.1682 4.06346 87.1682 4.88451V8.18977H92.0945V4.88451C92.0945 4.06346 92.7682 3.41083 93.5893 3.41083H94.7682V15.474H93.6314C92.7682 15.474 92.0945 14.7792 92.0945 13.9371V10.6319H87.1682V13.9371C87.1682 14.7792 86.4735 15.474 85.6314 15.474H84.4945V3.41083Z" fill="#FF4A00"></path>
+<path d="M104.073 10.905V10.8629C104.073 9.49451 103.083 8.31556 101.631 8.31556C100.178 8.31556 99.2098 9.47345 99.2098 10.8419V10.884C99.2098 12.2524 100.199 13.4313 101.652 13.4313C103.105 13.4313 104.073 12.2735 104.073 10.905ZM96.6203 10.905V10.8629C96.6203 8.21029 98.7677 6.06293 101.673 6.06293C104.578 6.06293 106.683 8.18924 106.683 10.8419V10.884C106.683 13.5366 104.536 15.684 101.631 15.684C98.7256 15.684 96.6203 13.5577 96.6203 10.905Z" fill="#FF4A00"></path>
+<path d="M135.863 6.2522H137.421L133.842 15.7048C133.126 17.5785 132.368 18.2943 130.789 18.2943C129.842 18.2943 129.126 18.0627 128.452 17.6627L129.231 16.0206C129.294 15.8943 129.442 15.8311 129.589 15.8943C129.884 16.0417 130.199 16.1259 130.473 16.1259C130.915 16.1259 131.168 15.9785 131.399 15.5154L127.757 6.2522H129.294C130.052 6.2522 130.705 6.73641 130.936 7.43114L132.663 12.5469L134.326 7.36799C134.536 6.6943 135.168 6.2522 135.863 6.2522Z" fill="#FF4A00"></path>
+<path d="M108.243 6.25173H109.99C110.495 6.25173 110.895 6.65173 110.895 7.13594V7.557C111.506 6.77805 112.285 6.08331 113.611 6.08331C115.611 6.08331 116.769 7.38858 116.769 9.51489V15.4938H115.379C114.685 15.4938 114.137 14.9465 114.137 14.2517V10.3359C114.137 9.09384 113.548 8.46226 112.537 8.46226C111.527 8.46226 110.895 9.09384 110.895 10.3359V14.2517C110.895 14.9254 110.327 15.4938 109.653 15.4938H108.264V6.25173H108.243Z" fill="#FF4A00"></path>
+<path d="M124.895 10.1471C124.747 8.96819 124.053 8.18924 122.937 8.18924C121.821 8.18924 121.126 8.96819 120.916 10.1471H124.895ZM118.326 10.905V10.8629C118.326 8.23135 120.221 6.06293 122.916 6.06293C126.032 6.06293 127.442 8.46293 127.442 11.0735C127.442 11.284 127.442 11.5156 127.4 11.7682H120.916C121.168 12.9471 122.01 13.5787 123.189 13.5787C123.884 13.5787 124.432 13.4103 124.979 13.0103C125.274 12.7998 125.674 12.8419 125.926 13.0735L126.937 13.9577C126.074 15.0313 124.81 15.684 123.126 15.684C120.326 15.684 118.263 13.7471 118.263 10.905H118.326Z" fill="#FF4A00"></path>
+</svg></a><p class="sr-foot__id">Money Honey Financial Services Private Limited · AMFI Registered Mutual Fund Distributor &amp; SIF Distributor · ARN-60930, valid till 6 May 2028</p></div><nav aria-label="Footer" class="sr-foot__cols"><div><h3>Invest</h3><ul><li><a href="../../mutual-funds/index.html">Mutual Funds</a></li><li><a href="../../mutual-funds/explore/index.html">Explore Funds</a></li><li><a href="../../mutual-funds/screens/index.html">Fund Screens</a></li><li><a href="../../mutual-funds/screener/index.html">Screener</a></li><li><a href="../../sif/index.html">SIF</a></li><li><a href="../../gift-city-funds/index.html">GIFT City Funds</a></li><li><a href="../../mutual-funds/nfo/index.html">New Fund Offers</a></li></ul></div><div><h3>Save</h3><ul><li><a href="../../fixed-deposits/index.html">Fixed Deposits</a></li><li><a href="../../fixed-deposits/bank-fd-rates/index.html">Compare FD Rates</a></li><li><a href="../../bonds/ncd/index.html">NCD IPOs</a></li><li><a href="../../bonds/rbi-bonds/index.html">RBI Bonds</a></li><li><a href="../../bonds/capital-gain-bonds/index.html">Capital Gain Bonds</a></li></ul></div><div><h3>Plan</h3><ul><li><a href="../../solutions/index.html">Solutions</a></li><li><a href="../../solutions/retirement/index.html">Retirement</a></li><li><a href="../../solutions/child-education/index.html">Child Education</a></li><li><a href="../../solutions/sip/index.html">SIP</a></li><li><a href="../../solutions/tax-saving/index.html">Tax Saving</a></li><li><a href="../../calculators/index.html">Calculators</a></li></ul></div><div><h3>Learn</h3><ul><li><a href="../../blog/index.html">Blog</a></li><li><a href="../../videos/index.html">Videos and Posts</a></li><li><a href="../../mutual-funds/market-outlook/index.html">Market Outlook</a></li><li><a href="../../mutual-funds/dividends/index.html">Dividends (IDCW)</a></li><li><a href="../../methodology/index.html">Methodology</a></li></ul></div><div><h3>Company</h3><ul><li><a href="../../about/index.html">About</a></li><li><a href="../../contact/index.html">Contact</a></li><li><a href="https://ba.moneyhoney.co.in/">Business Associates</a></li><li><a href="../../mutual-funds/amc/index.html">Fund Houses We Distribute</a></li><li><a href="../../site-map/index.html">Site Map</a></li></ul></div><div><h3>Disclosures</h3><ul><li><a href="../../disclaimer/index.html">Disclaimer</a></li><li><a href="../../commission-disclosure/index.html">Commission Disclosure</a></li><li><a href="../../contact/index.html#grievance-redressal">Grievance Redressal</a></li><li><a href="https://smartodr.in/">SMART ODR</a></li></ul></div></nav></div><section aria-labelledby="sr-disc-h" class="sr-disc"><h2 class="sr-disc__h" id="sr-disc-h">Important MoneyHoney Disclosures</h2><p class="sr-disc__lead">About Risk</p><p>Mutual Fund investments are subject to market risks, read all scheme related documents carefully.</p><p>Investments in Specialized Investment Fund involves relatively higher risk including potential loss of capital, liquidity risk and market volatility. Please read all investment strategy related documents carefully before making the investment decision.</p></section><p class="sr-foot__legal"><span>MoneyHoney is a mutual fund distributor, not a SEBI-registered investment adviser.</span><a href="../../disclaimer/index.html">Disclaimer</a><a href="../../commission-disclosure/index.html">Commission Disclosure</a><a href="../../site-map/index.html">Site Map</a></p></div></footer>
+</body>
+</html>

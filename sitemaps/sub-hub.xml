@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://example.com/mutual-funds/theme/</loc><lastmod>2026-10-11</lastmod></url>
+  <url><loc>https://example.com/mutual-funds/theme/factor/</loc><lastmod>2026-10-11</lastmod></url>
+  <url><loc>https://example.com/mutual-funds/index-funds/</loc><lastmod>2026-10-11</lastmod></url>
+  <url><loc>https://example.com/mutual-funds/target-maturity/</loc><lastmod>2026-10-11</lastmod></url>
+  <url><loc>https://example.com/mutual-funds/debt-index/</loc><lastmod>2026-10-11</lastmod></url>
+  <url><loc>https://example.com/mutual-funds/international/</loc><lastmod>2026-10-11</lastmod></url>
+  <url><loc>https://example.com/mutual-funds/gold-silver/</loc><lastmod>2026-10-11</lastmod></url>
+  <url><loc>https://example.com/mutual-funds/fund-of-funds/</loc><lastmod>2026-10-11</lastmod></url>
+</urlset>

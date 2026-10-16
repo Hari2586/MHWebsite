@@ -1,0 +1,1132 @@
+<!DOCTYPE html>
+
+<html lang="en-IN">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>GIFT City Fund Explorer: Every Fund A to Z | MoneyHoney</title>
+<meta content="All 129 GIFT City funds of 26 Indian fund houses' GIFT City arms, A to Z: type, direction, minimum, who may invest and status, as on 10 Oct 2026." name="description"/>
+<link href="https://example.com/gift-city-funds/explore/" rel="canonical"/>
+<meta content="website" property="og:type"/>
+<meta content="MoneyHoney" property="og:site_name"/>
+<meta content="en_IN" property="og:locale"/>
+<meta content="GIFT City Fund Explorer: Every Fund A to Z | MoneyHoney" property="og:title"/>
+<meta content="All 129 GIFT City funds of 26 Indian fund houses' GIFT City arms, A to Z: type, direction, minimum, who may invest and status, as on 10 Oct 2026." property="og:description"/>
+<meta content="https://example.com/gift-city-funds/explore/" property="og:url"/>
+<meta content="https://example.com/assets/og/gift-city.png" property="og:image"/>
+<meta content="1200" property="og:image:width"/>
+<meta content="630" property="og:image:height"/>
+<meta content="MoneyHoney: GIFT City Funds" property="og:image:alt"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://example.com/"}, {"@type": "ListItem", "position": 2, "name": "GIFT City Funds", "item": "https://example.com/gift-city-funds/"}, {"@type": "ListItem", "position": 3, "name": "GIFT City Fund Explorer", "item": "https://example.com/gift-city-funds/explore/"}]}, {"@type": "WebPage", "name": "GIFT City Fund Explorer", "url": "https://example.com/gift-city-funds/explore/", "dateModified": "2026-10-12", "isPartOf": {"@id": "https://example.com/#website"}, "publisher": {"@id": "https://example.com/#organization"}}, {"@type": "Organization", "@id": "https://example.com/#organization", "name": "MoneyHoney", "url": "https://example.com/", "description": "AMFI Registered Mutual Fund Distributor & SIF Distributor, ARN-60930"}]}</script>
+<link href="../../assets/mh.css" rel="stylesheet"/><meta content="noindex, nofollow" name="robots"/><link href="../../assets/sunrise/sunrise.css" rel="stylesheet"/><script defer="" src="../../assets/sunrise/sunrise.js"></script>
+<script defer="" src="../../assets/mh.js"></script>
+<style>
+/* The GIFT City section (issues/08 and 09 prototypes, design-system tokens only) */
+.gc-page [hidden]{display:none}
+.gc-page .lede{font-size:var(--text-md);color:var(--color-text-strong);max-width:72ch}
+.gc-page p,.gc-page li{max-width:80ch}
+.gc-sec{margin-top:var(--space-12)}
+.gc-sec>h2{margin:0 0 var(--space-4)}
+.gc-sec h2[id],.gc-sec[id]{scroll-margin-top:var(--space-20)}
+.gc-sec>p{margin:0 0 var(--space-3)}
+/* the type cards: one row fills the width; six go three across (3 + 3); four go four across where they fit, else two
+   (never three and one alone) */
+.gc-grid{display:grid;gap:var(--space-4);grid-template-columns:repeat(auto-fit,minmax(min(260px,100%),1fr))}
+.gc-grid:has(>:last-child:nth-child(6)){grid-template-columns:repeat(auto-fill,minmax(min(100%,max(260px,calc((100% - 2 * var(--space-4)) / 3))),1fr))}
+@media (max-width:1151px){.gc-grid:has(>:last-child:nth-child(4)){grid-template-columns:repeat(auto-fill,minmax(min(100%,max(260px,calc(50% - var(--space-2)))),1fr))}}
+.gc-grid2{display:grid;gap:var(--space-4);grid-template-columns:repeat(auto-fit,minmax(280px,1fr))}
+.gc-card{padding:var(--space-5)}
+.gc-card h3{margin:0 0 var(--space-2)}
+.gc-card p{margin:0 0 var(--space-2)}
+.gc-card>h2:first-child{margin-top:0}
+.gc-n{font-size:var(--text-sm);color:var(--color-text-cool)}
+.gc-kv{display:grid;grid-template-columns:1fr;gap:var(--space-1);margin:var(--space-3) 0}
+.gc-kv dt{font-size:var(--text-sm);color:var(--color-text-cool)}
+.gc-kv dd{margin:0 0 var(--space-2)}
+.gc-points{margin:var(--space-3) 0;padding-left:var(--space-5)}
+.gc-points li{margin-bottom:var(--space-2)}
+.gc-two{display:grid;gap:var(--space-8);grid-template-columns:minmax(0,1fr);margin-top:var(--space-4)}
+@media (min-width:960px){.gc-two{grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);align-items:start}}
+.gc-two .lede:first-child{margin-top:0}
+.gc-q{display:block;margin:var(--space-4) 0 var(--space-2);font-weight:var(--font-weight-medium);color:var(--color-text-deep)}
+.gc-seg{display:flex;flex-wrap:wrap;gap:var(--space-2)}
+.gc-seg button{min-height:44px;padding:0 var(--space-4);border:1px solid var(--color-border-soft);border-radius:var(--radius-btn);background:var(--color-surface-page);color:var(--color-text-strong);font:inherit;cursor:pointer}
+.gc-seg button:hover{border-color:var(--color-brand)}
+.gc-seg button[aria-pressed="true"]{border-color:var(--color-brand);background:var(--color-brand-tint);color:var(--color-brand);font-weight:var(--font-weight-medium)}
+.gc-sits{display:grid;gap:var(--space-4);margin-top:var(--space-4)}
+.gc-sit{padding:var(--space-4);border:1px solid var(--color-border-soft);border-radius:var(--radius-card);background:var(--color-surface-app)}
+.gc-sit p{margin:0 0 var(--space-2)}
+.gc-sit ul{margin:0 0 var(--space-4);padding-left:var(--space-5)}
+.gc-chooser .btn,.gc-talk .btn,.gc-more .btn{min-height:44px}
+.gc-filters{display:grid;gap:var(--space-4);grid-template-columns:minmax(0,1fr);margin:0 0 var(--space-4)}
+@media (min-width:760px){.gc-filters{grid-template-columns:auto minmax(0,1fr);align-items:end}}
+.gc-filters .gc-q{margin-top:0}
+.gc-filters .select{min-width:220px;font-size:16px}
+.gc-narrow .alert{margin:0 0 var(--space-3)}
+.gc-countline{margin:var(--space-2) 0 var(--space-3)}
+.gc-list{list-style:none;margin:0;padding:0;display:grid;gap:var(--space-3)}
+.gc-page .gc-fund{padding:var(--space-3) var(--space-4) var(--space-4);border:1px solid var(--color-border-soft);border-radius:var(--radius-card);max-width:none}
+.gc-name{display:inline-flex;align-items:center;min-height:44px;font-weight:var(--font-weight-medium)}
+/* a fund's name is its row's link (as a table's name link): not underlined until hover */
+a.gc-name{text-decoration:none}
+a.gc-name:hover{text-decoration:underline;text-underline-offset:3px}
+.gc-meta{font-size:var(--text-sm);color:var(--color-text-cool);margin:0}
+.gc-run{font-size:var(--text-sm);margin:var(--space-1) 0 0}
+.gc-badges{display:flex;flex-wrap:wrap;gap:var(--space-2);margin:var(--space-2) 0}
+.gc-badges .badge{height:auto;min-height:20px;padding-block:2px;white-space:normal}
+.gc-unknown{background:var(--color-warning-bg);color:var(--color-warning-text)}
+.gc-warn{font-size:var(--text-sm);color:var(--color-warning-text);margin:var(--space-1) 0 0}
+.gc-more{margin-top:var(--space-3);padding:var(--space-4);border:1px dashed var(--color-border-medium);border-radius:var(--radius-card)}
+.gc-more p{margin:0 0 var(--space-3)}
+.gc-barred,.gc-notlisted{margin:var(--space-3) 0 0}
+.gc-rows tbody th[scope="row"]{background:var(--color-surface-page);font-size:var(--text-sm);font-weight:var(--font-weight-medium);color:var(--color-text-deep);min-width:140px;vertical-align:top}
+.gc-rows td{vertical-align:top}
+@media (max-width:767px){
+  .gc-rows tbody th[scope="row"]{display:block;padding:0 0 var(--space-2);border:0;font-size:var(--text-base)}
+  .gc-rows td{display:block;padding:var(--space-2) 0}
+  .gc-rows td::before{display:block;margin-bottom:var(--space-1)}
+}
+/* the routes table's as-on date is its first head, which phones hide: repeat it above the table there */
+.gc-asof-m{display:none;font-size:var(--text-sm);color:var(--color-text-cool);margin:0 0 var(--space-2)}
+@media (max-width:767px){.gc-asof-m{display:block}}
+/* phones: the routes table's points as folds (points()), the table from 768px */
+.gc-pts{display:none}
+@media (max-width:767px){
+  .gc-routes-t{display:none}
+  .gc-pts{display:block;border:1px solid var(--color-border-soft);border-radius:var(--radius-card)}
+  .gc-pt{border-bottom:1px solid var(--color-border-subtle)}
+  .gc-pt:last-child{border-bottom:0}
+  .gc-pt.fold{margin:0;padding:0 var(--space-4);border-top:0}
+  .gc-pt>summary{padding-block:var(--space-1)}
+  details.gc-pt[open]>summary{margin-bottom:0}
+  .gc-pt dl{margin:0;padding:0 0 var(--space-4)}
+  .gc-pt dt{font-size:var(--text-sm);color:var(--color-text-cool);margin-top:var(--space-3)}
+  .gc-pt dt:first-child{margin-top:0}
+  .gc-pt dd{margin:var(--space-1) 0 0}
+}
+.gc-after{margin-top:var(--space-4)}
+.gc-after p{margin:0 0 var(--space-3)}
+.gc-order{font-size:var(--text-sm);color:var(--color-text-cool);margin:var(--space-3) 0 0}
+.gc-links{display:flex;flex-wrap:wrap;gap:var(--space-4);margin:var(--space-3) 0 0}
+.gc-links a{display:inline-flex;align-items:center;min-height:44px;font-weight:var(--font-weight-medium)}
+.gc-big{display:block;padding:var(--space-5);color:var(--color-text-strong);text-decoration:none}
+.gc-big:hover{border-color:var(--color-brand);text-decoration:none}
+.gc-big-name{display:block;font-size:var(--text-lg);font-weight:var(--font-weight-medium);color:var(--color-brand);margin-bottom:var(--space-2)}
+.gc-plist{margin:var(--space-3) 0 0;padding-left:var(--space-5)}
+.gc-plist li{margin-bottom:var(--space-2)}
+.gc-plist a{display:inline-flex;align-items:center;min-height:44px}
+.gc-amc{margin-top:var(--space-12)}
+.gc-amc .lede{margin-bottom:var(--space-4)}
+.gc-amc .gc-fine{margin-top:var(--space-4)}
+.gc-mgr{columns:2 280px;column-gap:var(--space-8);padding-left:var(--space-5);margin:var(--space-3) 0 0}
+.gc-mgr li{break-inside:avoid;margin-bottom:var(--space-2)}
+/* a fund house's private funds: the kit's fold (its chevron shows that it opens), kept to reading width */
+.gc-amc-private.fold{max-width:72ch}
+.gc-talk .gc-btns{display:flex;flex-wrap:wrap;gap:var(--space-3);margin-top:var(--space-4)}
+.gc-talk .btn svg{margin-right:var(--space-2)}
+.gc-move{margin:0}
+.gc-move a{font-weight:var(--font-weight-medium)}
+.gc-fine p{margin:0 0 var(--space-3);font-size:var(--text-sm);color:var(--color-text-strong)}
+.gc-calc .calc{margin-top:var(--space-4)}
+details.gc-numbers{margin-top:0}
+@media (max-width:860px){.gc-calc .res{order:-1}}
+/* wider screens: the fields in columns above the result, so the result and the routes sit together below them */
+@media (min-width:861px){.gc-calc .calc{grid-template-columns:minmax(0,1fr)}
+  .gc-calc .calcform{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:0 var(--space-6);align-items:start}}
+.gc-calc .res h3{margin:0 0 var(--space-3)}
+</style><style>
+.gx-side{display:grid;gap:var(--space-6);grid-template-columns:minmax(0,1fr);margin-top:var(--space-6)}
+@media (min-width:1024px){.gx-side{grid-template-columns:280px minmax(0,1fr)}.gx-railwrap{position:sticky;top:var(--space-6);align-self:start}}
+@media (min-width:1280px){.gx-railwrap{top:calc(var(--nav-height) + var(--space-4))}}
+.gx-filters>summary{min-height:44px;display:inline-flex;align-items:center;gap:var(--space-2);padding:0 var(--space-4);border:1px solid var(--color-border-soft);border-radius:var(--radius-btn);cursor:pointer;font-weight:var(--font-weight-medium)}
+.gx-filters>summary::-webkit-details-marker{display:none}
+.gx-filters>summary:hover{border-color:var(--color-brand)}
+/* its chevron turns when the fold opens, as the kit's folds do */
+.gx-chev{width:16px;height:16px;transition:transform var(--duration-med) var(--ease-premium)}
+.gx-filters[open]>summary .gx-chev{transform:rotate(180deg)}
+.gx-rail{display:grid;gap:var(--space-4);margin-top:var(--space-4)}
+.gx-rail .gc-q{margin:0 0 var(--space-2)}
+.gx-rail .select,.gx-rail .input{width:100%;font-size:16px;min-height:44px}
+.gx-rail .gc-seg button{flex:1 1 auto}
+.gx-clear{justify-self:start;min-height:44px}
+.gx-top{display:flex;flex-wrap:wrap;gap:var(--space-3);align-items:end;margin:0 0 var(--space-2)}
+.gx-top .gc-q{margin:0 0 var(--space-2)}
+.gx-top .select{min-width:200px;font-size:16px;min-height:44px}
+.gx-out{margin:0 0 var(--space-3)}
+.gx-none{margin:var(--space-3) 0}
+</style>
+</head>
+<body>
+<header class="sr-header"><div class="sr-aud"><nav aria-label="Audience" class="sr-wrap"><a aria-current="true" href="../../index.html">Investors</a><a href="../../solutions/nri/index.html">NRIs</a><a href="https://ba.moneyhoney.co.in/">Business Associates</a></nav></div><div class="sr-head"><div class="sr-wrap sr-head__row"><a aria-label="MoneyHoney home" class="sr-logo" href="../../index.html"><svg aria-label="MoneyHoney" fill="none" height="20" role="img" viewbox="0 0 139 20" width="139" xmlns="http://www.w3.org/2000/svg">
+<path d="M1 10C1 15.2842 5.12632 19.6211 10.3474 20C10.3474 18.4632 9.46316 17.0316 8.07368 16.3579C5.67368 15.2211 4.01053 12.8 4.01053 9.97895C4.01053 7.51579 5.27368 5.36842 7.18947 4.08421V7.64211C7.18947 9.36842 8.6 10.7789 10.3474 10.7789V0C5.12632 0.4 1 4.73684 1 10Z" fill="#FF4A00"></path>
+<path d="M21.2318 10C21.2318 15.2842 17.1054 19.6211 11.8844 20C11.8844 18.4632 12.7686 17.0316 14.1581 16.3579C16.5581 15.2211 18.2212 12.8 18.2212 9.97895C18.2212 7.51579 16.9581 5.36842 15.0212 4.08421V7.64211C15.0212 9.36842 13.6107 10.7789 11.8633 10.7789V0C17.0844 0.4 21.2107 4.73684 21.2107 10H21.2318Z" fill="#FF4A00"></path>
+<path d="M13.4418 14.0201C13.4418 15.3043 12.4103 16.3359 11.126 16.3359C9.84184 16.3359 8.81026 15.3043 8.81026 14.0201C8.81026 12.7359 9.84184 11.7043 11.126 11.7043C12.4103 11.7043 13.4418 12.7359 13.4418 14.0201Z" fill="#16205B"></path>
+<path d="M27.6319 3.41083H29.5477C30.1582 3.41083 30.7056 3.72662 31.0214 4.23188L33.6951 8.52662L36.3687 4.23188C36.6845 3.72662 37.253 3.41083 37.8424 3.41083H39.7582V15.474H38.5161C37.7372 15.474 37.1056 14.8424 37.1056 14.0635V7.6003L33.6951 12.7582H33.6319L30.2424 7.66346V14.0845C30.2424 14.8635 29.6108 15.495 28.8319 15.495H27.6319V3.43188V3.41083Z" fill="#16205B"></path>
+<path d="M49.0839 10.905V10.8629C49.0839 9.49451 48.0944 8.31556 46.6418 8.31556C45.1892 8.31556 44.2207 9.47345 44.2207 10.8419V10.884C44.2207 12.2524 45.2102 13.4313 46.6628 13.4313C48.1155 13.4313 49.0839 12.2735 49.0839 10.905ZM41.6102 10.905V10.8629C41.6102 8.21029 43.7576 6.06293 46.6628 6.06293C49.5681 6.06293 51.6734 8.18924 51.6734 10.8419V10.884C51.6734 13.5366 49.526 15.684 46.6207 15.684C43.7155 15.684 41.6102 13.5577 41.6102 10.905Z" fill="#16205B"></path>
+<path d="M53.2529 6.25173H55.0003C55.5055 6.25173 55.9055 6.65173 55.9055 7.13594V7.557C56.5161 6.77805 57.295 6.08331 58.6213 6.08331C60.6213 6.08331 61.7792 7.38858 61.7792 9.51489V15.4938H60.3897C59.695 15.4938 59.1476 14.9465 59.1476 14.2517V10.3359C59.1476 9.09384 58.5582 8.46226 57.5476 8.46226C56.5371 8.46226 55.9055 9.09384 55.9055 10.3359V14.2517C55.9055 14.9254 55.3371 15.4938 54.6634 15.4938H53.274V6.25173H53.2529Z" fill="#16205B"></path>
+<path d="M69.8203 10.1471C69.673 8.96819 68.9782 8.18924 67.8624 8.18924C66.7467 8.18924 66.0519 8.96819 65.8414 10.1471H69.8203ZM63.273 10.905V10.8629C63.273 8.23135 65.1677 6.06293 67.8624 6.06293C70.9782 6.06293 72.3888 8.46293 72.3888 11.0735C72.3888 11.284 72.3888 11.5156 72.3467 11.7682H65.8624C66.1151 12.9471 66.9572 13.5787 68.1361 13.5787C68.8309 13.5787 69.3782 13.4103 69.9256 13.0103C70.2203 12.7998 70.6203 12.8419 70.873 13.0735L71.8835 13.9577C71.0203 15.0313 69.7572 15.684 68.073 15.684C65.273 15.684 63.2098 13.7471 63.2098 10.905H63.273Z" fill="#16205B"></path>
+<path d="M80.8733 6.2522H82.4312L78.8523 15.7048C78.1365 17.5785 77.3786 18.2943 75.7996 18.2943C74.8523 18.2943 74.1365 18.0627 73.4628 17.6627L74.2417 16.0206C74.3049 15.8943 74.4523 15.8311 74.5786 15.8943C74.8733 16.0417 75.2102 16.1259 75.4628 16.1259C75.9049 16.1259 76.1575 15.9785 76.3891 15.5154L72.747 6.2522H74.2839C75.0417 6.2522 75.6944 6.73641 75.926 7.43114L77.6523 12.5469L79.3154 7.36799C79.526 6.6943 80.1575 6.2522 80.8523 6.2522H80.8733Z" fill="#16205B"></path>
+<path d="M84.4945 3.41083H85.6735C86.4945 3.41083 87.1682 4.06346 87.1682 4.88451V8.18977H92.0945V4.88451C92.0945 4.06346 92.7682 3.41083 93.5893 3.41083H94.7682V15.474H93.6314C92.7682 15.474 92.0945 14.7792 92.0945 13.9371V10.6319H87.1682V13.9371C87.1682 14.7792 86.4735 15.474 85.6314 15.474H84.4945V3.41083Z" fill="#FF4A00"></path>
+<path d="M104.073 10.905V10.8629C104.073 9.49451 103.083 8.31556 101.631 8.31556C100.178 8.31556 99.2098 9.47345 99.2098 10.8419V10.884C99.2098 12.2524 100.199 13.4313 101.652 13.4313C103.105 13.4313 104.073 12.2735 104.073 10.905ZM96.6203 10.905V10.8629C96.6203 8.21029 98.7677 6.06293 101.673 6.06293C104.578 6.06293 106.683 8.18924 106.683 10.8419V10.884C106.683 13.5366 104.536 15.684 101.631 15.684C98.7256 15.684 96.6203 13.5577 96.6203 10.905Z" fill="#FF4A00"></path>
+<path d="M135.863 6.2522H137.421L133.842 15.7048C133.126 17.5785 132.368 18.2943 130.789 18.2943C129.842 18.2943 129.126 18.0627 128.452 17.6627L129.231 16.0206C129.294 15.8943 129.442 15.8311 129.589 15.8943C129.884 16.0417 130.199 16.1259 130.473 16.1259C130.915 16.1259 131.168 15.9785 131.399 15.5154L127.757 6.2522H129.294C130.052 6.2522 130.705 6.73641 130.936 7.43114L132.663 12.5469L134.326 7.36799C134.536 6.6943 135.168 6.2522 135.863 6.2522Z" fill="#FF4A00"></path>
+<path d="M108.243 6.25173H109.99C110.495 6.25173 110.895 6.65173 110.895 7.13594V7.557C111.506 6.77805 112.285 6.08331 113.611 6.08331C115.611 6.08331 116.769 7.38858 116.769 9.51489V15.4938H115.379C114.685 15.4938 114.137 14.9465 114.137 14.2517V10.3359C114.137 9.09384 113.548 8.46226 112.537 8.46226C111.527 8.46226 110.895 9.09384 110.895 10.3359V14.2517C110.895 14.9254 110.327 15.4938 109.653 15.4938H108.264V6.25173H108.243Z" fill="#FF4A00"></path>
+<path d="M124.895 10.1471C124.747 8.96819 124.053 8.18924 122.937 8.18924C121.821 8.18924 121.126 8.96819 120.916 10.1471H124.895ZM118.326 10.905V10.8629C118.326 8.23135 120.221 6.06293 122.916 6.06293C126.032 6.06293 127.442 8.46293 127.442 11.0735C127.442 11.284 127.442 11.5156 127.4 11.7682H120.916C121.168 12.9471 122.01 13.5787 123.189 13.5787C123.884 13.5787 124.432 13.4103 124.979 13.0103C125.274 12.7998 125.674 12.8419 125.926 13.0735L126.937 13.9577C126.074 15.0313 124.81 15.684 123.126 15.684C120.326 15.684 118.263 13.7471 118.263 10.905H118.326Z" fill="#FF4A00"></path>
+</svg></a><nav aria-label="Main" class="sr-nav"><div class="sr-nav__item"><button aria-controls="mega-invest" aria-current="page" aria-expanded="false" class="sr-nav__top" type="button">Invest <svg aria-hidden="true" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><path d="m6 9 6 6 6-6"></path></svg></button><div class="sr-mega" id="mega-invest"><div class="sr-mega__col"><p class="sr-mega__h">Mutual funds</p><a class="sr-mega__link" href="../../mutual-funds/index.html"><b>Mutual Funds</b><span>All 1,774 open schemes by category</span></a><a class="sr-mega__link" href="../../mutual-funds/explore/index.html"><b>Explore Funds</b><span>Filter by category, cost and risk</span></a><a class="sr-mega__link" href="../../mutual-funds/screens/index.html"><b>Fund Screens</b><span>Ready-made lists, each with its rule</span></a><a class="sr-mega__link" href="../../mutual-funds/screener/index.html"><b>Screener</b><span>Every scheme on one table</span></a><a class="sr-mega__link" href="../../mutual-funds/amc/index.html"><b>Fund Houses</b><span>The 49 fund houses we distribute</span></a></div><div class="sr-mega__col"><p class="sr-mega__h">Beyond mutual funds</p><a class="sr-mega__link" href="../../sif/index.html"><b>SIF</b><span>Specialised Investment Funds, from ₹10,00,000</span></a><a class="sr-mega__link" href="../../gift-city-funds/index.html"><b>GIFT City Funds</b><span>Dollar funds for NRIs and residents</span></a><a class="sr-mega__link" href="../../mutual-funds/nfo/index.html"><b>New Fund Offers</b><span>Open, upcoming and recently closed</span></a><a class="sr-mega__link" href="../../mutual-funds/dividends/index.html"><b>Dividends (IDCW)</b><span>Record dates and history</span></a></div><div class="sr-mega__promo"><b>Not sure where to start?</b><p>Six questions on your goals, your debts and your nerve.</p><a class="sr-more" href="../../solutions/know-yourself/index.html">Know Yourself <svg aria-hidden="true" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a></div></div></div><div class="sr-nav__item"><button aria-controls="mega-save" aria-expanded="false" class="sr-nav__top" type="button">Save <svg aria-hidden="true" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><path d="m6 9 6 6 6-6"></path></svg></button><div class="sr-mega" id="mega-save"><div class="sr-mega__col"><p class="sr-mega__h">Fixed deposits</p><a class="sr-mega__link" href="../../fixed-deposits/index.html"><b>Fixed Deposits</b><span>FDs from banks, housing finance companies and NBFCs</span></a><a class="sr-mega__link" href="../../fixed-deposits/bank-fd-rates/index.html"><b>Compare FD Rates</b><span>Bank FD rates side by side</span></a><a class="sr-mega__link" href="../../fixed-deposits/explore/index.html"><b>FD Explorer</b><span>Filter by tenure, payout and rating</span></a><a class="sr-mega__link" href="../../fixed-deposits/guide/index.html"><b>FD Guide</b><span>Payouts, tax, early withdrawal</span></a></div><div class="sr-mega__col"><p class="sr-mega__h">Bonds</p><a class="sr-mega__link" href="../../bonds/index.html"><b>Bonds &amp; NCDs</b><span>Every bond we offer</span></a><a class="sr-mega__link" href="../../bonds/ncd/index.html"><b>NCD IPOs</b><span>Open public issues, series and ratings</span></a><a class="sr-mega__link" href="../../bonds/rbi-bonds/index.html"><b>RBI Floating Rate Bonds</b><span>Government of India, reset every six months</span></a><a class="sr-mega__link" href="../../bonds/capital-gain-bonds/index.html"><b>Capital Gain Bonds</b><span>REC, PFC and IRFC series</span></a></div><div class="sr-mega__promo"><b>Most of your savings in FDs?</b><p>See what else could sit beside them, and what it would change.</p><a class="sr-more" href="../../solutions/beyond-fixed-deposits/index.html">Beyond Fixed Deposits <svg aria-hidden="true" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a></div></div></div><div class="sr-nav__item"><button aria-controls="mega-plan" aria-expanded="false" class="sr-nav__top" type="button">Plan <svg aria-hidden="true" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><path d="m6 9 6 6 6-6"></path></svg></button><div class="sr-mega" id="mega-plan"><div class="sr-mega__col"><p class="sr-mega__h">Goals</p><a class="sr-mega__link" href="../../solutions/retirement/index.html"><b>Retirement</b><span>How much you need, and how to draw it</span></a><a class="sr-mega__link" href="../../solutions/child-education/index.html"><b>Child Education</b><span>What school and college will cost</span></a><a class="sr-mega__link" href="../../solutions/sip/index.html"><b>SIP</b><span>How much to invest each month</span></a><a class="sr-mega__link" href="../../solutions/wealth/index.html"><b>Building Wealth</b><span>A plan for money you will not touch</span></a><a class="sr-mega__link" href="../../solutions/women/index.html"><b>Women and Money</b><span>Plans that fit career breaks</span></a></div><div class="sr-mega__col"><p class="sr-mega__h">Money checks</p><a class="sr-mega__link" href="../../solutions/emergency-fund/index.html"><b>Emergency Fund</b><span>Could you pay your bills for 6 months?</span></a><a class="sr-mega__link" href="../../solutions/tax-saving/index.html"><b>Tax Saving (ELSS)</b><span>Does ELSS still save you tax?</span></a><a class="sr-mega__link" href="../../solutions/portfolio-health/index.html"><b>Portfolio Health</b><span>Is your money in the right places?</span></a><a class="sr-mega__link" href="../../solutions/nri/index.html"><b>NRI Investing</b><span>Investing in India from abroad</span></a><a class="sr-mega__link" href="../../solutions/index.html"><b>All Solutions</b><span>17 goals and checks</span></a></div><div class="sr-mega__promo"><b>Run the numbers</b><p>SIP, retirement, FD, tax regime, XIRR and 20 more calculators.</p><a class="sr-more" href="../../calculators/index.html">All Calculators <svg aria-hidden="true" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a></div></div></div><div class="sr-nav__item"><button aria-controls="mega-learn" aria-expanded="false" class="sr-nav__top" type="button">Learn <svg aria-hidden="true" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><path d="m6 9 6 6 6-6"></path></svg></button><div class="sr-mega" id="mega-learn"><div class="sr-mega__col"><p class="sr-mega__h">Read and watch</p><a class="sr-mega__link" href="../../blog/index.html"><b>Blog</b><span>Plain explainers and founder notes</span></a><a class="sr-mega__link" href="../../videos/index.html"><b>Videos and Posts</b><span>Market updates on video</span></a><a class="sr-mega__link" href="../../mutual-funds/market-outlook/index.html"><b>Market Outlook</b><span>A fund house's monthly view</span></a><a class="sr-mega__link" href="../../methodology/index.html"><b>Methodology</b><span>Where our figures come from</span></a></div><div class="sr-mega__col"><p class="sr-mega__h">Guides</p><a class="sr-mega__link" href="../../fixed-deposits/guide/index.html"><b>FD Guide</b><span>How fixed deposits work</span></a><a class="sr-mega__link" href="../../bonds/ncd/guide/index.html"><b>NCD Guide</b><span>Ratings, risks and how to apply</span></a><a class="sr-mega__link" href="../../bonds/capital-gain-bonds/guide/index.html"><b>Capital Gain Bond Guide</b><span>Who can claim, and the time limit</span></a><a class="sr-mega__link" href="../../bonds/rbi-bonds/guide/index.html"><b>RBI Bond Guide</b><span>How the rate is set</span></a></div><div class="sr-mega__promo"><b>The power of compounding in SIPs</b><p>How small monthly amounts turn into long-term wealth.</p><a class="sr-more" href="../../blog/power-of-compounding-in-sip-mutual-funds/index.html">Read the Post <svg aria-hidden="true" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a></div></div></div><div class="sr-nav__item"><a class="sr-nav__top" href="../../contact/index.html">Talk to Us</a></div></nav><div class="sr-head__end"><a class="sr-signin" href="https://inv.moneyhoney.co.in/#/investor-login">Sign In</a><a class="btn btn-primary" href="../../get-started/index.html">Get Started</a></div><details class="sr-mnav"><summary aria-label="Menu"><svg aria-hidden="true" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"></path></svg></summary><div class="sr-mnav__panel"><details><summary>Invest</summary><a href="../../mutual-funds/index.html">Mutual Funds</a><a href="../../mutual-funds/explore/index.html">Explore Funds</a><a href="../../mutual-funds/screens/index.html">Fund Screens</a><a href="../../mutual-funds/screener/index.html">Screener</a><a href="../../mutual-funds/amc/index.html">Fund Houses</a><a href="../../sif/index.html">SIF</a><a href="../../gift-city-funds/index.html">GIFT City Funds</a><a href="../../mutual-funds/nfo/index.html">New Fund Offers</a><a href="../../mutual-funds/dividends/index.html">Dividends (IDCW)</a></details><details><summary>Save</summary><a href="../../fixed-deposits/index.html">Fixed Deposits</a><a href="../../fixed-deposits/bank-fd-rates/index.html">Compare FD Rates</a><a href="../../fixed-deposits/explore/index.html">FD Explorer</a><a href="../../fixed-deposits/guide/index.html">FD Guide</a><a href="../../bonds/index.html">Bonds &amp; NCDs</a><a href="../../bonds/ncd/index.html">NCD IPOs</a><a href="../../bonds/rbi-bonds/index.html">RBI Floating Rate Bonds</a><a href="../../bonds/capital-gain-bonds/index.html">Capital Gain Bonds</a></details><details><summary>Plan</summary><a href="../../solutions/retirement/index.html">Retirement</a><a href="../../solutions/child-education/index.html">Child Education</a><a href="../../solutions/sip/index.html">SIP</a><a href="../../solutions/wealth/index.html">Building Wealth</a><a href="../../solutions/women/index.html">Women and Money</a><a href="../../solutions/emergency-fund/index.html">Emergency Fund</a><a href="../../solutions/tax-saving/index.html">Tax Saving (ELSS)</a><a href="../../solutions/portfolio-health/index.html">Portfolio Health</a><a href="../../solutions/nri/index.html">NRI Investing</a><a href="../../solutions/index.html">All Solutions</a></details><details><summary>Learn</summary><a href="../../blog/index.html">Blog</a><a href="../../videos/index.html">Videos and Posts</a><a href="../../mutual-funds/market-outlook/index.html">Market Outlook</a><a href="../../methodology/index.html">Methodology</a><a href="../../fixed-deposits/guide/index.html">FD Guide</a><a href="../../bonds/ncd/guide/index.html">NCD Guide</a><a href="../../bonds/capital-gain-bonds/guide/index.html">Capital Gain Bond Guide</a><a href="../../bonds/rbi-bonds/guide/index.html">RBI Bond Guide</a></details><details><summary>Talk to Us</summary><a href="../../contact/index.html">Contact</a><a href="tel:+917738032704">Call +91 77380 32704</a><a href="https://wa.me/917738032704">WhatsApp Us</a></details><div class="sr-mnav__cta"><a class="btn btn-secondary" href="https://inv.moneyhoney.co.in/#/investor-login">Sign In</a></div></div></details></div></div></header>
+<main class="sr-main" id="main"><section class="sr-hero sr-world-navy sr-on-dark"><div class="sr-wrap sr-hero__grid"><div class="sr-hero__copy"><div class="page-head stack-sm">
+<nav aria-label="Breadcrumb" class="breadcrumb">
+<a href="../../index.html">Home</a>
+<svg aria-hidden="true" fill="none" height="12" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24" width="12"><path d="m9 18 6-6-6-6"></path></svg>
+<a href="../index.html">GIFT City Funds</a>
+<svg aria-hidden="true" fill="none" height="12" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24" width="12"><path d="m9 18 6-6-6-6"></path></svg>
+<span aria-current="page">GIFT City Fund Explorer</span>
+</nav>
+<h1>GIFT City Fund Explorer</h1>
+</div></div><div class="sr-hero__art sr-hero__illus"><svg aria-hidden="true" focusable="false" viewbox="0 0 420 320"><circle cx="210" cy="168" fill="#FFFFFF" fill-opacity="0.08" r="146"></circle><circle cx="210" cy="160" fill="#8C95C9" r="96"></circle><path d="M122 140c30 14 58 6 80-8s44-20 92-2M118 186c40-10 66 6 96 12s50-2 84-18" fill="none" stroke="#FFFFFF" stroke-opacity=".7" stroke-width="4"></path><ellipse cx="210" cy="160" fill="none" rx="96" ry="34" stroke="#FFFFFF" stroke-opacity=".6" stroke-width="3"></ellipse><ellipse cx="210" cy="160" fill="none" rx="40" ry="96" stroke="#FFFFFF" stroke-opacity=".6" stroke-width="3"></ellipse><path d="M80 236c40-70 220-70 260 0" fill="none" stroke="#FF4A00" stroke-linecap="round" stroke-width="10"></path><path d="M120 236v-22M170 236v-38M250 236v-38M300 236v-22" stroke="#FF4A00" stroke-linecap="round" stroke-width="6"></path><rect fill="#FFFFFF" fill-opacity=".45" height="10" rx="5" width="300" x="60" y="236"></rect></svg></div></div></section><div class="sr-body"><div class="container sr-content" id="sr-content">
+
+<div class="gc-page">
+<p class="lede">Every GIFT City fund launched by the GIFT City arms of Indian fund houses: 129 funds as on 10 Oct 2026, 40 with a page of their own. Start with who is investing. No NAV or returns are shown; each fund links to its fund house's own pages.</p>
+<div class="gx-side">
+<div class="gx-railwrap" data-js="" hidden="">
+<details class="gx-filters" data-filters=""><summary>Filters<svg aria-hidden="true" class="gx-chev" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><path d="M6 9l6 6 6-6"></path></svg></summary>
+<div class="gx-rail">
+<div><label class="gc-q" for="gxSit">Who is investing?</label><select class="select" data-x="sit" id="gxSit"><option value="all">All Funds</option><option value="res">Resident Investing Abroad</option><option value="nri-in">NRI Investing in India</option><option value="nri-ab">NRI Investing Abroad</option></select></div>
+<div class="gx-country" hidden=""><div><label class="gc-q" for="gxCountry">Where do you live?</label><select class="select" data-x="country" id="gxCountry"><option value="other">Other or not saying</option><option value="us">United States</option><option value="ca">Canada</option><option value="ae">UAE</option><option value="sg">Singapore</option><option value="uk">United Kingdom</option></select></div></div>
+<div><p class="gc-q" id="gxAmtL">How much are you investing?</p><div aria-labelledby="gxAmtL" class="gc-seg" role="group"><button aria-pressed="false" data-amt="low" type="button">Under USD 150,000</button><button aria-pressed="false" data-amt="high" type="button">USD 150,000 or more</button></div></div>
+<div><label class="gc-q" for="gxQ">Search funds</label><input autocomplete="off" class="input" data-x="q" id="gxQ" type="search"/></div>
+<div><label class="gc-q" for="gxDir">Invests</label><select class="select" data-x="dir" id="gxDir"><option value="any">In India or Outside</option><option value="india">In India</option><option value="outside_india">Outside India</option></select></div>
+<div><label class="gc-q" for="gxHouse">Fund House</label><select class="select" data-x="house" id="gxHouse"><option value="any">All Fund Houses</option><option value="360 ONE">360 ONE</option><option value="Aditya Birla Sun Life">Aditya Birla Sun Life</option><option value="Angel One">Angel One</option><option value="Axis">Axis</option><option value="Bandhan">Bandhan</option><option value="Baroda BNP Paribas">Baroda BNP Paribas</option><option value="DSP">DSP</option><option value="Edelweiss">Edelweiss</option><option value="Franklin Templeton">Franklin Templeton</option><option value="HDFC">HDFC</option><option value="ICICI Prudential">ICICI Prudential</option><option value="ITI">ITI</option><option value="Jio BlackRock">Jio BlackRock</option><option value="Kotak Mahindra">Kotak Mahindra</option><option value="Mirae Asset">Mirae Asset</option><option value="Motilal Oswal">Motilal Oswal</option><option value="Nippon India">Nippon India</option><option value="NJ">NJ</option><option value="PPFAS">PPFAS</option><option value="SBI">SBI</option><option value="Sundaram">Sundaram</option><option value="Tata">Tata</option><option value="The Wealth Company">The Wealth Company</option><option value="Unifi">Unifi</option><option value="UTI">UTI</option><option value="WhiteOak Capital">WhiteOak Capital</option></select></div>
+<div><label class="gc-q" for="gxKind">Type</label><select class="select" data-x="kind" id="gxKind"><option value="any">All Types</option><option value="retail">GIFT City Mutual Fund</option><option value="private">GIFT City Private Fund (AIF)</option></select></div>
+<div><label class="gc-q" for="gxMin">Minimum Up To</label><select class="select" data-x="min" id="gxMin"><option value="any">Any Minimum</option><option value="1000">USD 1,000</option><option value="5000">USD 5,000</option><option value="10000">USD 10,000</option><option value="150000">USD 150,000</option></select></div>
+<div><label class="gc-q" for="gxCur">Currency</label><select class="select" data-x="cur" id="gxCur"><option value="any">Any Currency</option><option value="usd">US Dollars</option></select></div>
+<button class="btn btn-secondary gx-clear" type="button">Clear All</button>
+</div></details>
+</div>
+<div class="gx-results">
+<div class="gx-top" data-js="" hidden=""><div><label class="gc-q" for="gxSort">Sort</label><select class="select" data-x="sort" id="gxSort"><option value="az">A to Z</option><option value="min">Minimum</option><option value="launch">Launch Date</option></select></div></div>
+<p class="gc-countline"><strong class="gx-n">129 funds</strong> <span class="gc-n">As on 10 Oct 2026</span></p>
+<p class="alert alert-info" data-cnote="us ca" hidden="">Your own country's tax on these funds is not covered here. Ask a tax adviser where you live.</p>
+<p class="alert alert-info" data-cnote="ae sg" hidden="">Living in the UAE or Singapore? On its wording, your tax treaty may let only your country tax gains on Indian mutual fund units. The text is not fully clear, so ask a tax adviser.</p>
+<p class="gc-n gx-out" hidden=""></p>
+<ul class="gc-list gx-list"><li class="gc-fund" data-ca="Not stated" data-cur="none" data-dir="none" data-house="360 ONE" data-kind="private" data-launch="0" data-min="150000" data-nri="Not stated" data-private="1" data-q="360 one bharat growth fund 360 one mutual fund 360 one" data-res="Not stated" data-us="Not stated">
+<span class="gc-name">360 ONE Bharat Growth Fund</span>
+<p class="gc-meta">360 ONE · GIFT City private fund (AIF Category III) · Direction not stated by the fund house · Currency not stated by the fund house · Minimum USD 150,000+ or accredited</p>
+<p class="gc-run">Run by 360 ONE Portfolio Managers Limited (IFSC Branch), part of the 360 ONE group</p>
+<div class="gc-badges"><span class="badge gc-unknown">Status not published; ask us</span><span class="badge badge-neutral">Residents: Not stated</span><span class="badge badge-neutral">NRIs: Not stated</span><span class="badge">Private fund: USD 150,000+ or accredited</span></div>
+<p class="gc-meta">No page on our site: the fund house publishes too little. <a href="#talk">Ask us</a></p>
+<p class="gc-warn" hidden=""></p>
+</li><li class="gc-fund" data-ca="Not stated" data-cur="none" data-dir="none" data-house="360 ONE" data-kind="private" data-launch="0" data-min="150000" data-nri="Not stated" data-private="1" data-q="360 one dynamic equity allocator fund gift feeder 360 one mutual fund 360 one" data-res="Not stated" data-us="Not stated">
+<span class="gc-name">360 One Dynamic Equity Allocator Fund Gift Feeder</span>
+<p class="gc-meta">360 ONE · GIFT City private fund (AIF Category III) · Direction not stated by the fund house · Currency not stated by the fund house · Minimum USD 150,000+ or accredited</p>
+<p class="gc-run">Run by 360 ONE Portfolio Managers Limited (IFSC Branch), part of the 360 ONE group</p>
+<div class="gc-badges"><span class="badge gc-unknown">Status not published; ask us</span><span class="badge badge-neutral">Residents: Not stated</span><span class="badge badge-neutral">NRIs: Not stated</span><span class="badge">Private fund: USD 150,000+ or accredited</span></div>
+<p class="gc-meta">No page on our site: the fund house publishes too little. <a href="#talk">Ask us</a></p>
+<p class="gc-warn" hidden=""></p>
+</li><li class="gc-fund" data-ca="Not stated" data-cur="none" data-dir="none" data-house="360 ONE" data-kind="private" data-launch="0" data-min="150000" data-nri="Not stated" data-private="1" data-q="360 one emerging opportunities fund 360 one mutual fund 360 one" data-res="Not stated" data-us="Not stated">
+<span class="gc-name">360 ONE Emerging Opportunities Fund</span>
+<p class="gc-meta">360 ONE · GIFT City private fund (AIF Category II) · Direction not stated by the fund house · Currency not stated by the fund house · Minimum USD 150,000+ or accredited</p>
+<p class="gc-run">Run by 360 ONE Portfolio Managers Limited (IFSC Branch), part of the 360 ONE group</p>
+<div class="gc-badges"><span class="badge gc-unknown">Status not published; ask us</span><span class="badge badge-neutral">Residents: Not stated</span><span class="badge badge-neutral">NRIs: Not stated</span><span class="badge">Private fund: USD 150,000+ or accredited</span></div>
+<p class="gc-meta">No page on our site: the fund house publishes too little. <a href="#talk">Ask us</a></p>
+<p class="gc-warn" hidden=""></p>
+</li><li class="gc-fund" data-ca="Not stated" data-cur="none" data-dir="none" data-house="360 ONE" data-kind="private" data-launch="0" data-min="150000" data-nri="Not stated" data-private="1" data-q="360 one equity opportunities fund 360 one mutual fund 360 one" data-res="Not stated" data-us="Not stated">
+<span class="gc-name">360 ONE Equity Opportunities Fund</span>
+<p class="gc-meta">360 ONE · GIFT City private fund (AIF Category III) · Direction not stated by the fund house · Currency not stated by the fund house · Minimum USD 150,000+ or accredited</p>
+<p class="gc-run">Run by 360 ONE Portfolio Managers Limited (IFSC Branch), part of the 360 ONE group</p>
+<div class="gc-badges"><span class="badge gc-unknown">Status not published; ask us</span><span class="badge badge-neutral">Residents: Not stated</span><span class="badge badge-neutral">NRIs: Not stated</span><span class="badge">Private fund: USD 150,000+ or accredited</span></div>
+<p class="gc-meta">No page on our site: the fund house publishes too little. <a href="#talk">Ask us</a></p>
+<p class="gc-warn" hidden=""></p>
+</li><li class="gc-fund" data-ca="Not stated" data-cur="none" data-dir="none" data-house="360 ONE" data-kind="private" data-launch="0" data-min="150000" data-nri="Not stated" data-private="1" data-q="360 one global real assets fund 360 one mutual fund 360 one" data-res="Not stated" data-us="Not stated">
+<span class="gc-name">360 ONE Global Real Assets Fund</span>
+<p class="gc-meta">360 ONE · GIFT City private fund (AIF Category II) · Direction not stated by the fund house · Currency not stated by the fund house · Minimum USD 150,000+ or accredited</p>
+<p class="gc-run">Run by 360 ONE Portfolio Managers Limited (IFSC Branch), part of the 360 ONE group</p>
+<div class="gc-badges"><span class="badge gc-unknown">Status not published; ask us</span><span class="badge badge-neutral">Residents: Not stated</span><span class="badge badge-neutral">NRIs: Not stated</span><span class="badge">Private fund: USD 150,000+ or accredited</span></div>
+<p class="gc-meta">No page on our site: the fund house publishes too little. <a href="#talk">Ask us</a></p>
+<p class="gc-warn" hidden=""></p>
+</li><li class="gc-fund" data-ca="Not stated" data-cur="none" data-dir="none" data-house="360 ONE" data-kind="private" data-launch="0" data-min="150000" data-nri="Not stated" data-private="1" data-q="360 one india growth fund 360 one mutual fund 360 one" data-res="Not stated" data-us="Not stated">
+<span class="gc-name">360 ONE India Growth Fund</span>
+<p class="gc-meta">360 ONE · GIFT City private fund (AIF Category III) · Direction not stated by the fund house · Currency not stated by the fund house · Minimum USD 150,000+ or accredited</p>
+<p class="gc-run">Run by 360 ONE Portfolio Managers Limited (IFSC Branch), part of the 360 ONE group</p>
+<div class="gc-badges"><span class="badge gc-unknown">Status not published; ask us</span><span class="badge badge-neutral">Residents: Not stated</span><span class="badge badge-neutral">NRIs: Not stated</span><span class="badge">Private fund: USD 150,000+ or accredited</span></div>
+<p class="gc-meta">No page on our site: the fund house publishes too little. <a href="#talk">Ask us</a></p>
+<p class="gc-warn" hidden=""></p>
+</li><li class="gc-fund" data-ca="Not stated" data-cur="none" data-dir="none" data-house="360 ONE" data-kind="private" data-launch="0" data-min="150000" data-nri="Not stated" data-private="1" data-q="360 one international opportunities fund gift feeder 360 one mutual fund 360 one" data-res="Not stated" data-us="Not stated">
+<span class="gc-name">360 One International Opportunities Fund GIFT Feeder</span>
+<p class="gc-meta">360 ONE · GIFT City private fund (AIF Category II) · Direction not stated by the fund house · Currency not stated by the fund house · Minimum USD 150,000+ or accredited</p>
+<p class="gc-run">Run by 360 ONE Portfolio Managers Limited (IFSC Branch), part of the 360 ONE group</p>
+<div class="gc-badges"><span class="badge gc-unknown">Status not published; ask us</span><span class="badge badge-neutral">Residents: Not stated</span><span class="badge badge-neutral">NRIs: Not stated</span><span class="badge">Private fund: USD 150,000+ or accredited</span></div>
+<p class="gc-meta">No page on our site: the fund house publishes too little. <a href="#talk">Ask us</a></p>
+<p class="gc-warn" hidden=""></p>
+</li><li class="gc-fund" data-ca="Not stated" data-cur="none" data-dir="none" data-house="360 ONE" data-kind="private" data-launch="0" data-min="150000" data-nri="Not stated" data-private="1" data-q="360 one new perspective fund 360 one mutual fund 360 one" data-res="Not stated" data-us="Not stated">
+<span class="gc-name">360 ONE New Perspective Fund</span>
+<p class="gc-meta">360 ONE · GIFT City private fund (AIF Category III) · Direction not stated by the fund house · Currency not stated by the fund house · Minimum USD 150,000+ or accredited</p>
+<p class="gc-run">Run by 360 ONE Portfolio Managers Limited (IFSC Branch), part of the 360 ONE group</p>
+<div class="gc-badges"><span class="badge gc-unknown">Status not published; ask us</span><span class="badge badge-neutral">Residents: Not stated</span><span class="badge badge-neutral">NRIs: Not stated</span><span class="badge">Private fund: USD 150,000+ or accredited</span></div>
+<p class="gc-meta">No page on our site: the fund house publishes too little. <a href="#talk">Ask us</a></p>
+<p class="gc-warn" hidden=""></p>
+</li><li class="gc-fund" data-ca="Not stated" data-cur="usd" data-dir="outside_india" data-house="Aditya Birla Sun Life" data-kind="private" data-launch="20250416" data-min="150000" data-nri="Open" data-private="1" data-q="absl global bluechip equity fund (ifsc) aditya birla sun life mutual fund aditya birla sun life" data-res="Open" data-us="Not stated">
+<a class="gc-name" href="../fund/absl-global-bluechip-equity-fund-ifsc/index.html">ABSL Global Bluechip Equity Fund (IFSC)</a>
+<p class="gc-meta">Aditya Birla Sun Life · GIFT City private fund (AIF Category III) · Equity · Invests outside India · US dollars · Minimum USD 150,000+ or accredited</p>
+<div class="gc-badges"><span class="badge">Closed to new money</span><span class="badge badge-neutral">Residents: Open</span><span class="badge badge-neutral">NRIs: Open</span><span class="badge">Private fund: USD 150,000+ or accredited</span></div>
+<p class="gc-warn" hidden=""></p>
+</li><li class="gc-fund" data-ca="Not stated" data-cur="none" data-dir="outside_india" data-house="Aditya Birla Sun Life" data-kind="private" data-launch="0" data-min="150000" data-nri="Open" data-private="1" data-q="absl global emerging market equity fund (ifsc) aditya birla sun life mutual fund aditya birla sun life" data-res="Open" data-us="Not stated">
+<a class="gc-name" href="../fund/absl-global-emerging-market-equity-fund-ifsc/index.html">ABSL Global Emerging Market Equity Fund (IFSC)</a>
+<p class="gc-meta">Aditya Birla Sun Life · GIFT City private fund (AIF Category II) · Equity · Invests outside India · Currency not stated by the fund house · Minimum USD 150,000+ or accredited</p>
+<div class="gc-badges"><span class="badge">Closed to new money</span><span class="badge badge-neutral">Residents: Open</span><span class="badge badge-neutral">NRIs: Open</span><span class="badge">Private fund: USD 150,000+ or accredited</span></div>
+<p class="gc-warn" hidden=""></p>
+</li><li class="gc-fund" data-ca="Not stated" data-cur="none" data-dir="outside_india" data-house="Aditya Birla Sun Life" data-kind="private" data-launch="0" data-min="150000" data-nri="Open" data-private="1" data-q="absl index linked fund (ifsc) aditya birla sun life mutual fund aditya birla sun life" data-res="Open" data-us="Not stated">
+<a class="gc-name" href="../fund/absl-index-linked-fund-ifsc/index.html">ABSL Index Linked Fund (IFSC)</a>
+<p class="gc-meta">Aditya Birla Sun Life · GIFT City private fund (AIF Category III) · Other · Invests outside India · Currency not stated by the fund house · Minimum USD 150,000+ or accredited</p>
+<div class="gc-badges"><span class="badge">Closed to new money</span><span class="badge badge-neutral">Residents: Open</span><span class="badge badge-neutral">NRIs: Open</span><span class="badge">Private fund: USD 150,000+ or accredited</span></div>
+<p class="gc-warn" hidden=""></p>
+</li><li class="gc-fund" data-ca="Not stated" data-cur="usd" data-dir="india" data-house="Aditya Birla Sun Life" data-kind="private" data-launch="0" data-min="150000" data-nri="Open" data-private="1" data-q="absl india flexicap fund (ifsc) aditya birla sun life mutual fund aditya birla sun life" data-res="Not open" data-us="Not stated">
+<a class="gc-name" href="../fund/absl-india-flexicap-fund-ifsc/index.html">ABSL India Flexicap Fund (IFSC)</a>
+<p class="gc-meta">Aditya Birla Sun Life · GIFT City private fund (AIF Category III) · Equity · Invests in India · US dollars · Minimum USD 150,000+ or accredited</p>
+<div class="gc-badges"><span class="badge">Open</span><span class="badge badge-neutral">Residents: Not open</span><span class="badge badge-neutral">NRIs: Open</span><span class="badge">Private fund: USD 150,000+ or accredited</span></div>
+<p class="gc-warn" hidden=""></p>
+</li><li class="gc-fund" data-ca="Not stated" data-cur="none" data-dir="india" data-house="Aditya Birla Sun Life" data-kind="private" data-launch="0" data-min="150000" data-nri="Open" data-private="1" data-q="absl msci india fund (ifsc) aditya birla sun life mutual fund aditya birla sun life" data-res="Not open" data-us="Not stated">
+<a class="gc-name" href="../fund/absl-msci-india-fund-ifsc/index.html">ABSL MSCI India Fund (IFSC)</a>
+<p class="gc-meta">Aditya Birla Sun Life · GIFT City private fund (AIF Category III) · Equity · Invests in India · Currency not stated by the fund house · Minimum USD 150,000+ or accredited</p>
+<div class="gc-badges"><span class="badge">Open</span><span class="badge badge-neutral">Residents: Not open</span><span class="badge badge-neutral">NRIs: Open</span><span class="badge">Private fund: USD 150,000+ or accredited</span></div>
+<p class="gc-warn" hidden=""></p>
+</li><li class="gc-fund" data-ca="Not stated" data-cur="none" data-dir="none" data-house="WhiteOak Capital" data-kind="private" data-launch="0" data-min="150000" data-nri="Not stated" data-private="1" data-q="ashoka whiteoak capital india opportunities gift fund whiteoak capital mutual fund whiteoak capital" data-res="Not stated" data-us="Not stated">
+<a class="gc-name" href="https://www.whiteoakindia.com/Gift-City/" rel="noopener" target="_blank">Ashoka WhiteOak Capital India Opportunities GIFT Fund<span class="sr-only"> (fund house's page, opens in a new tab)</span></a>
+<p class="gc-meta">WhiteOak Capital · GIFT City private fund (AIF Category II) · Direction not stated by the fund house · Currency not stated by the fund house · Minimum USD 150,000+ or accredited</p>
+<p class="gc-run">Run by Ashoka Whiteoak Capital Management (GIFT) LLP, part of the WhiteOak Capital group</p>
+<div class="gc-badges"><span class="badge gc-unknown">Status not published; ask us</span><span class="badge badge-neutral">Residents: Not stated</span><span class="badge badge-neutral">NRIs: Not stated</span><span class="badge">Private fund: USD 150,000+ or accredited</span></div>
+<p class="gc-meta">No page on our site: the fund house publishes too little. <a href="#talk">Ask us</a></p>
+<p class="gc-warn" hidden=""></p>
+</li><li class="gc-fund" data-ca="Not stated" data-cur="none" data-dir="none" data-house="WhiteOak Capital" data-kind="private" data-launch="0" data-min="150000" data-nri="Not stated" data-private="1" data-q="ashoka whiteoak global emerging markets ex india gift fund whiteoak capital mutual fund whiteoak capital" data-res="Not stated" data-us="Not stated">
+<a class="gc-name" href="https://www.whiteoakindia.com/Gift-City/" rel="noopener" target="_blank">Ashoka Whiteoak Global Emerging Markets Ex India Gift Fund<span class="sr-only"> (fund house's page, opens in a new tab)</span></a>
+<p class="gc-meta">WhiteOak Capital · GIFT City private fund (AIF Category III) · Direction not stated by the fund house · Currency not stated by the fund house · Minimum USD 150,000+ or accredited</p>
+<p class="gc-run">Run by Ashoka Whiteoak Capital Management (GIFT) LLP, part of the WhiteOak Capital group</p>
+<div class="gc-badges"><span class="badge gc-unknown">Status not published; ask us</span><span class="badge badge-neutral">Residents: Not stated</span><span class="badge badge-neutral">NRIs: Not stated</span><span class="badge">Private fund: USD 150,000+ or accredited</span></div>
+<p class="gc-meta">No page on our site: the fund house publishes too little. <a href="#talk">Ask us</a></p>
+<p class="gc-warn" hidden=""></p>
+</li><li class="gc-fund" data-ca="Not stated" data-cur="none" data-dir="india" data-house="WhiteOak Capital" data-kind="private" data-launch="0" data-min="150000" data-nri="Not stated" data-private="1" data-q="ashoka whiteoak india multi cap gift fund whiteoak capital mutual fund whiteoak capital" data-res="Not stated" data-us="Not stated">
+<a class="gc-name" href="https://www.whiteoakindia.com/Gift-City/ucits.php" rel="noopener" target="_blank">Ashoka WhiteOak India Multi Cap GIFT Fund<span class="sr-only"> (fund house's page, opens in a new tab)</span></a>
+<p class="gc-meta">WhiteOak Capital · GIFT City private fund (AIF Category III) · Equity · Invests in India · Currency not stated by the fund house · Minimum USD 150,000+ or accredited</p>
+<p class="gc-run">Run by Ashoka Whiteoak Capital Management (GIFT) LLP, part of the WhiteOak Capital group</p>
+<div class="gc-badges"><span class="badge gc-unknown">Status not published; ask us</span><span class="badge badge-neutral">Residents: Not stated</span><span class="badge badge-neutral">NRIs: Not stated</span><span class="badge">Private fund: USD 150,000+ or accredited</span></div>
+<p class="gc-meta">No page on our site: the fund house publishes too little. <a href="#talk">Ask us</a></p>
+<p class="gc-warn" hidden=""></p>
+</li><li class="gc-fund" data-ca="Not stated" data-cur="none" data-dir="none" data-house="Axis" data-kind="private" data-launch="0" data-min="150000" data-nri="Not stated" data-private="1" data-q="axis global dynamic income fund axis mutual fund axis" data-res="Not stated" data-us="Not stated">
+<span class="gc-name">Axis Global Dynamic Income Fund</span>
+<p class="gc-meta">Axis · GIFT City private fund (AIF Category III) · Direction not stated by the fund house · Currency not stated by the fund house · Minimum USD 150,000+ or accredited</p>
+<div class="gc-badges"><span class="badge gc-unknown">Status not published; ask us</span><span class="badge badge-neutral">Residents: Not stated</span><span class="badge badge-neutral">NRIs: Not stated</span><span class="badge">Private fund: USD 150,000+ or accredited</span></div>
+<p class="gc-meta">No page on our site: the fund house publishes too little. <a href="#talk">Ask us</a></p>
+<p class="gc-warn" hidden=""></p>
+</li><li class="gc-fund" data-ca="Not stated" data-cur="none" data-dir="india" data-house="Axis" data-kind="private" data-launch="0" data-min="150000" data-nri="Not stated" data-private="1" data-q="axis india multicap fund axis mutual fund axis" data-res="Not stated" data-us="Not stated">
+<span class="gc-name">Axis India Multicap Fund</span>
+<p class="gc-meta">Axis · GIFT City private fund (AIF Category III) · Equity · Invests in India · Currency not stated by the fund house · Minimum USD 150,000+ or accredited</p>
+<div class="gc-badges"><span class="badge gc-unknown">Status not published; ask us</span><span class="badge badge-neutral">Residents: Not stated</span><span class="badge badge-neutral">NRIs: Not stated</span><span class="badge">Private fund: USD 150,000+ or accredited</span></div>
+<p class="gc-meta">No page on our site: the fund house publishes too little. <a href="#talk">Ask us</a></p>
+<p class="gc-warn" hidden=""></p>
+</li><li class="gc-fund" data-ca="Not open" data-cur="usd" data-dir="india" data-house="Bandhan" data-kind="private" data-launch="0" data-min="150000" data-nri="Open" data-private="1" data-q="bandhan india government securities fund (ifsc) bandhan mutual fund bandhan" data-res="Not open" data-us="Not stated">
+<a class="gc-name" href="../fund/bandhan-india-government-securities-fund-ifsc/index.html">Bandhan India Government Securities Fund (IFSC)</a>
+<p class="gc-meta">Bandhan · GIFT City private fund (AIF Category III) · Debt · Invests in India · US dollars · Minimum USD 150,000+ or accredited</p>
+<div class="gc-badges"><span class="badge gc-unknown">Status not published; ask us</span><span class="badge badge-neutral">Residents: Not open</span><span class="badge badge-neutral">NRIs: Open</span><span class="badge">Private fund: USD 150,000+ or accredited</span></div>
+<p class="gc-warn" hidden=""></p>
+</li><li class="gc-fund" data-ca="Not open" data-cur="usd" data-dir="india" data-house="Bandhan" data-kind="private" data-launch="20250915" data-min="150000" data-nri="Open" data-private="1" data-q="bandhan india large and mid-cap fund (ifsc) bandhan mutual fund bandhan" data-res="Not open" data-us="Open">
+<a class="gc-name" href="../fund/bandhan-india-large-and-mid-cap-fund-ifsc/index.html">Bandhan India Large and Mid-Cap Fund (IFSC)</a>
+<p class="gc-meta">Bandhan · GIFT City private fund (AIF Category III) · Equity · Invests in India · US dollars · Minimum USD 150,000+ or accredited</p>
+<div class="gc-badges"><span class="badge">Open</span><span class="badge badge-neutral">Residents: Not open</span><span class="badge badge-neutral">NRIs: Open</span><span class="badge">Private fund: USD 150,000+ or accredited</span></div>
+<p class="gc-warn" hidden=""></p>
+</li><li class="gc-fund" data-ca="Not open" data-cur="usd" data-dir="india" data-house="Bandhan" data-kind="private" data-launch="20260102" data-min="150000" data-nri="Open" data-private="1" data-q="bandhan india small cap fund (ifsc) bandhan mutual fund bandhan" data-res="Not open" data-us="Open">
+<a class="gc-name" href="../fund/bandhan-india-small-cap-fund-ifsc/index.html">Bandhan India Small Cap Fund (IFSC)</a>
+<p class="gc-meta">Bandhan · GIFT City private fund (AIF Category III) · Equity · Invests in India · US dollars · Minimum USD 150,000+ or accredited</p>
+<div class="gc-badges"><span class="badge">Open</span><span class="badge badge-neutral">Residents: Not open</span><span class="badge badge-neutral">NRIs: Open</span><span class="badge">Private fund: USD 150,000+ or accredited</span></div>
+<p class="gc-warn" hidden=""></p>
+</li><li class="gc-fund" data-ca="Not stated" data-cur="none" data-dir="none" data-house="Baroda BNP Paribas" data-kind="retail" data-launch="0" data-min="1000000000" data-nri="Not stated" data-private="0" data-q="baroda bnp paribas gift multicap fund baroda bnp paribas mutual fund baroda bnp paribas" data-res="Not stated" data-us="Not stated">
+<a class="gc-name" href="https://www.barodabnpparibasmf.in/gift-city" rel="noopener" target="_blank">Baroda BNP Paribas Gift Multicap Fund<span class="sr-only"> (fund house's page, opens in a new tab)</span></a>
+<p class="gc-meta">Baroda BNP Paribas · GIFT City mutual fund · Direction not stated by the fund house · Currency not stated by the fund house · Minimum not stated by the fund house</p>
+<div class="gc-badges"><span class="badge gc-unknown">Status not published; ask us</span><span class="badge badge-neutral">Residents: Not stated</span><span class="badge badge-neutral">NRIs: Not stated</span></div>
+<p class="gc-meta">No page on our site: the fund house publishes too little. <a href="#talk">Ask us</a></p>
+<p class="gc-warn" hidden=""></p>
+</li><li class="gc-fund" data-ca="Not open" data-cur="usd" data-dir="outside_india" data-house="Baroda BNP Paribas" data-kind="private" data-launch="20260310" data-min="150000" data-nri="Not stated" data-private="1" data-q="baroda bnp paribas gift us small cap fund baroda bnp paribas mutual fund baroda bnp paribas" data-res="Open" data-us="Not open">
+<a class="gc-name" href="../fund/baroda-bnp-paribas-gift-us-small-cap-fund/index.html">Baroda BNP Paribas Gift US Small Cap Fund</a>
+<p class="gc-meta">Baroda BNP Paribas · GIFT City private fund (AIF Category III) · Equity · Invests outside India · US dollars · Minimum USD 150,000+ or accredited</p>
+<div class="gc-badges"><span class="badge">Open</span><span class="badge badge-neutral">Residents: Open</span><span class="badge badge-neutral">NRIs: Not stated</span><span class="badge">Private fund: USD 150,000+ or accredited</span></div>
+<p class="gc-warn" hidden=""></p>
+</li><li class="gc-fund" data-ca="Not stated" data-cur="none" data-dir="none" data-house="Edelweiss" data-kind="private" data-launch="0" data-min="150000" data-nri="Not stated" data-private="1" data-q="discovery ii offshore fund edelweiss mutual fund edelweiss" data-res="Not stated" data-us="Not stated">
+<a class="gc-name" href="https://www.eaaa.in/gift-city/" rel="noopener" target="_blank">Discovery II Offshore Fund<span class="sr-only"> (fund house's page, opens in a new tab)</span></a>
+<p class="gc-meta">Edelweiss · GIFT City private fund (AIF Category II) · Direction not stated by the fund house · Currency not stated by the fund house · Minimum USD 150,000+ or accredited</p>
+<p class="gc-run">Run by EAAA India Alternatives Limited (IFSC Branch), part of the Edelweiss group</p>
+<div class="gc-badges"><span class="badge gc-unknown">Status not published; ask us</span><span class="badge badge-neutral">Residents: Not stated</span><span class="badge badge-neutral">NRIs: Not stated</span><span class="badge">Private fund: USD 150,000+ or accredited</span></div>
+<p class="gc-meta">No page on our site: the fund house publishes too little. <a href="#talk">Ask us</a></p>
+<p class="gc-warn" hidden=""></p>
+</li><li class="gc-fund" data-ca="Not open" data-cur="usd" data-dir="outside_india" data-house="DSP" data-kind="retail" data-launch="20250918" data-min="5000" data-nri="Not stated" data-private="0" data-q="dsp global equity fund dsp mutual fund dsp" data-res="Open" data-us="Not open">
+<a class="gc-name" href="../fund/dsp-global-equity-fund/index.html">DSP Global Equity Fund</a>
+<p class="gc-meta">DSP · GIFT City mutual fund · Equity · Invests outside India · US dollars · Minimum USD 5,000</p>
+<div class="gc-badges"><span class="badge">Open</span><span class="badge badge-neutral">Residents: Open</span><span class="badge badge-neutral">NRIs: Not stated</span></div>
+<p class="gc-warn" hidden=""></p>
+</li><li class="gc-fund" data-ca="Not stated" data-cur="none" data-dir="none" data-house="DSP" data-kind="private" data-launch="0" data-min="150000" data-nri="Not stated" data-private="1" data-q="dsp ifsc msci india etf fund dsp mutual fund dsp" data-res="Not stated" data-us="Not stated">
+<a class="gc-name" href="https://giftcity.dspim.com/" rel="noopener" target="_blank">DSP IFSC MSCI INDIA ETF FUND<span class="sr-only"> (fund house's page, opens in a new tab)</span></a>
+<p class="gc-meta">DSP · GIFT City private fund (AIF Category III) · Direction not stated by the fund house · Currency not stated by the fund house · Minimum USD 150,000+ or accredited</p>
+<div class="gc-badges"><span class="badge gc-unknown">Status not published; ask us</span><span class="badge badge-neutral">Residents: Not stated</span><span class="badge badge-neutral">NRIs: Not stated</span><span class="badge">Private fund: USD 150,000+ or accredited</span></div>
+<p class="gc-meta">No page on our site: the fund house publishes too little. <a href="#talk">Ask us</a></p>
+<p class="gc-warn" hidden=""></p>
+</li><li class="gc-fund" data-ca="Not stated" data-cur="none" data-dir="india" data-house="DSP" data-kind="private" data-launch="0" data-min="150000" data-nri="Open" data-private="1" data-q="dsp india absolute return fund dsp mutual fund dsp" data-res="Not stated" data-us="Not stated">
+<a class="gc-name" href="../fund/dsp-india-absolute-return-fund/index.html">DSP India Absolute Return Fund</a>
+<p class="gc-meta">DSP · GIFT City private fund (AIF Category III) · Equity · Invests in India · Currency not stated by the fund house · Minimum USD 150,000+ or accredited</p>
+<div class="gc-badges"><span class="badge gc-unknown">Status not published; ask us</span><span class="badge badge-neutral">Residents: Not stated</span><span class="badge badge-neutral">NRIs: Open</span><span class="badge">Private fund: USD 150,000+ or accredited</span></div>
+<p class="gc-warn" hidden=""></p>
+</li><li class="gc-fund" data-ca="Not stated" data-cur="none" data-dir="none" data-house="DSP" data-kind="private" data-launch="0" data-min="150000" data-nri="Not stated" data-private="1" data-q="dsp india core equity fund dsp mutual fund dsp" data-res="Not stated" data-us="Not stated">
+<a class="gc-name" href="https://giftcity.dspim.com/" rel="noopener" target="_blank">DSP India Core Equity Fund<span class="sr-only"> (fund house's page, opens in a new tab)</span></a>
+<p class="gc-meta">DSP · GIFT City private fund (AIF Category III) · Direction not stated by the fund house · Currency not stated by the fund house · Minimum USD 150,000+ or accredited</p>
+<div class="gc-badges"><span class="badge gc-unknown">Status not published; ask us</span><span class="badge badge-neutral">Residents: Not stated</span><span class="badge badge-neutral">NRIs: Not stated</span><span class="badge">Private fund: USD 150,000+ or accredited</span></div>
+<p class="gc-meta">No page on our site: the fund house publishes too little. <a href="#talk">Ask us</a></p>
+<p class="gc-warn" hidden=""></p>
+</li><li class="gc-fund" data-ca="Not stated" data-cur="none" data-dir="india" data-house="DSP" data-kind="private" data-launch="0" data-min="150000" data-nri="Open" data-private="1" data-q="dsp india equity opps fund dsp mutual fund dsp" data-res="Not stated" data-us="Not stated">
+<a class="gc-name" href="../fund/dsp-india-equity-opportunities-fund/index.html">DSP India Equity Opps Fund</a>
+<p class="gc-meta">DSP · GIFT City private fund (AIF Category III) · Equity · Invests in India · Currency not stated by the fund house · Minimum USD 150,000+ or accredited</p>
+<div class="gc-badges"><span class="badge gc-unknown">Status not published; ask us</span><span class="badge badge-neutral">Residents: Not stated</span><span class="badge badge-neutral">NRIs: Open</span><span class="badge">Private fund: USD 150,000+ or accredited</span></div>
+<p class="gc-warn" hidden=""></p>
+</li><li class="gc-fund" data-ca="Not stated" data-cur="none" data-dir="india" data-house="DSP" data-kind="private" data-launch="0" data-min="150000" data-nri="Open" data-private="1" data-q="dsp india fund ifsc dsp mutual fund dsp" data-res="Not stated" data-us="Not stated">
+<a class="gc-name" href="../fund/dsp-india-fund-ifsc/index.html">DSP India Fund IFSC</a>
+<p class="gc-meta">DSP · GIFT City private fund (AIF Category III) · Equity · Invests in India · Currency not stated by the fund house · Minimum USD 150,000+ or accredited</p>
+<div class="gc-badges"><span class="badge">Open</span><span class="badge badge-neutral">Residents: Not stated</span><span class="badge badge-neutral">NRIs: Open</span><span class="badge">Private fund: USD 150,000+ or accredited</span></div>
+<p class="gc-warn" hidden=""></p>
+</li><li class="gc-fund" data-ca="Not stated" data-cur="none" data-dir="none" data-house="DSP" data-kind="private" data-launch="0" data-min="150000" data-nri="Not stated" data-private="1" data-q="dsp india strategic bond fund dsp mutual fund dsp" data-res="Not stated" data-us="Not stated">
+<a class="gc-name" href="https://giftcity.dspim.com/" rel="noopener" target="_blank">DSP India Strategic Bond Fund<span class="sr-only"> (fund house's page, opens in a new tab)</span></a>
+<p class="gc-meta">DSP · GIFT City private fund (AIF Category III) · Direction not stated by the fund house · Currency not stated by the fund house · Minimum USD 150,000+ or accredited</p>
+<div class="gc-badges"><span class="badge gc-unknown">Status not published; ask us</span><span class="badge badge-neutral">Residents: Not stated</span><span class="badge badge-neutral">NRIs: Not stated</span><span class="badge">Private fund: USD 150,000+ or accredited</span></div>
+<p class="gc-meta">No page on our site: the fund house publishes too little. <a href="#talk">Ask us</a></p>
+<p class="gc-warn" hidden=""></p>
+</li><li class="gc-fund" data-ca="Not stated" data-cur="none" data-dir="india" data-house="DSP" data-kind="private" data-launch="0" data-min="150000" data-nri="Not stated" data-private="1" data-q="dsp india t.i.g.e.r fund dsp mutual fund dsp" data-res="Not stated" data-us="Not stated">
+<a class="gc-name" href="https://giftcity.dspim.com/" rel="noopener" target="_blank">DSP India T.I.G.E.R Fund<span class="sr-only"> (fund house's page, opens in a new tab)</span></a>
+<p class="gc-meta">DSP · GIFT City private fund (AIF Category III) · Equity · Invests in India · Currency not stated by the fund house · Minimum USD 150,000+ or accredited</p>
+<div class="gc-badges"><span class="badge gc-unknown">Status not published; ask us</span><span class="badge badge-neutral">Residents: Not stated</span><span class="badge badge-neutral">NRIs: Not stated</span><span class="badge">Private fund: USD 150,000+ or accredited</span></div>
+<p class="gc-meta">No page on our site: the fund house publishes too little. <a href="#talk">Ask us</a></p>
+<p class="gc-warn" hidden=""></p>
+</li><li class="gc-fund" data-ca="Not stated" data-cur="none" data-dir="none" data-house="DSP" data-kind="private" data-launch="0" data-min="150000" data-nri="Not stated" data-private="1" data-q="dsp pre-ipo fund dsp mutual fund dsp" data-res="Not stated" data-us="Not stated">
+<a class="gc-name" href="https://giftcity.dspim.com/" rel="noopener" target="_blank">DSP Pre-Ipo Fund<span class="sr-only"> (fund house's page, opens in a new tab)</span></a>
+<p class="gc-meta">DSP · GIFT City private fund (AIF Category II) · Direction not stated by the fund house · Currency not stated by the fund house · Minimum USD 150,000+ or accredited</p>
+<div class="gc-badges"><span class="badge gc-unknown">Status not published; ask us</span><span class="badge badge-neutral">Residents: Not stated</span><span class="badge badge-neutral">NRIs: Not stated</span><span class="badge">Private fund: USD 150,000+ or accredited</span></div>
+<p class="gc-meta">No page on our site: the fund house publishes too little. <a href="#talk">Ask us</a></p>
+<p class="gc-warn" hidden=""></p>
+</li><li class="gc-fund" data-ca="Not stated" data-cur="none" data-dir="none" data-house="Edelweiss" data-kind="private" data-launch="0" data-min="150000" data-nri="Not stated" data-private="1" data-q="ea real estate llp edelweiss mutual fund edelweiss" data-res="Not stated" data-us="Not stated">
+<a class="gc-name" href="https://www.eaaa.in/gift-city/" rel="noopener" target="_blank">EA Real Estate LLP<span class="sr-only"> (fund house's page, opens in a new tab)</span></a>
+<p class="gc-meta">Edelweiss · GIFT City private fund (AIF Category III) · Direction not stated by the fund house · Currency not stated by the fund house · Minimum USD 150,000+ or accredited</p>
+<p class="gc-run">Run by EAAA India Alternatives Limited (IFSC Branch), part of the Edelweiss group</p>
+<div class="gc-badges"><span class="badge gc-unknown">Status not published; ask us</span><span class="badge badge-neutral">Residents: Not stated</span><span class="badge badge-neutral">NRIs: Not stated</span><span class="badge">Private fund: USD 150,000+ or accredited</span></div>
+<p class="gc-meta">No page on our site: the fund house publishes too little. <a href="#talk">Ask us</a></p>
+<p class="gc-warn" hidden=""></p>
+</li><li class="gc-fund" data-ca="Not stated" data-cur="usd" data-dir="outside_india" data-house="Edelweiss" data-kind="retail" data-launch="20260310" data-min="10000" data-nri="Open" data-private="0" data-q="edelweiss greater china equity fund edelweiss mutual fund edelweiss" data-res="Open" data-us="Open">
+<a class="gc-name" href="../fund/edelweiss-greater-china-equity-fund/index.html">Edelweiss Greater China Equity Fund</a>
+<p class="gc-meta">Edelweiss · GIFT City mutual fund · Equity · Invests outside India · US dollars · Minimum USD 10,000</p>
+<div class="gc-badges"><span class="badge">Open</span><span class="badge badge-neutral">Residents: Open</span><span class="badge badge-neutral">NRIs: Open</span></div>
+<p class="gc-warn" hidden=""></p>
+</li><li class="gc-fund" data-ca="Not stated" data-cur="usd" data-dir="india" data-house="Edelweiss" data-kind="private" data-launch="20251120" data-min="150000" data-nri="Open" data-private="1" data-q="edelweiss india multimanager equity fund – series i edelweiss mutual fund edelweiss" data-res="Not stated" data-us="Not stated">
+<a class="gc-name" href="../fund/edelweiss-india-multimanager-equity-fund-series-i/index.html">Edelweiss India Multimanager Equity Fund – Series I</a>
+<p class="gc-meta">Edelweiss · GIFT City private fund (AIF Category III) · Equity · Invests in India · US dollars · Minimum USD 150,000+ or accredited</p>
+<div class="gc-badges"><span class="badge">Open</span><span class="badge badge-neutral">Residents: Not stated</span><span class="badge badge-neutral">NRIs: Open</span><span class="badge">Private fund: USD 150,000+ or accredited</span></div>
+<p class="gc-warn" hidden=""></p>
+</li><li class="gc-fund" data-ca="Not stated" data-cur="usd" data-dir="india" data-house="Edelweiss" data-kind="retail" data-launch="0" data-min="25000" data-nri="Open" data-private="0" data-q="edelweiss india opportunities fund edelweiss mutual fund edelweiss" data-res="Not stated" data-us="Not stated">
+<a class="gc-name" href="../fund/edelweiss-india-opportunities-fund/index.html">Edelweiss India Opportunities Fund</a>
+<p class="gc-meta">Edelweiss · GIFT City mutual fund · Equity · Invests in India · US dollars · Minimum USD 25,000</p>
+<div class="gc-badges"><span class="badge gc-unknown">Status not published; ask us</span><span class="badge badge-neutral">Residents: Not stated</span><span class="badge badge-neutral">NRIs: Open</span></div>
+<p class="gc-warn" hidden=""></p>
+</li><li class="gc-fund" data-ca="Not stated" data-cur="none" data-dir="none" data-house="Edelweiss" data-kind="retail" data-launch="0" data-min="1000000000" data-nri="Not stated" data-private="0" data-q="edelweiss us technology equity fund edelweiss mutual fund edelweiss" data-res="Not stated" data-us="Not stated">
+<a class="gc-name" href="https://www.edelweissmf.com/gift-city" rel="noopener" target="_blank">Edelweiss US Technology Equity Fund<span class="sr-only"> (fund house's page, opens in a new tab)</span></a>
+<p class="gc-meta">Edelweiss · GIFT City mutual fund · Direction not stated by the fund house · Currency not stated by the fund house · Minimum not stated by the fund house</p>
+<div class="gc-badges"><span class="badge gc-unknown">Status not published; ask us</span><span class="badge badge-neutral">Residents: Not stated</span><span class="badge badge-neutral">NRIs: Not stated</span></div>
+<p class="gc-meta">No page on our site: the fund house publishes too little. <a href="#talk">Ask us</a></p>
+<p class="gc-warn" hidden=""></p>
+</li><li class="gc-fund" data-ca="Not stated" data-cur="none" data-dir="none" data-house="Edelweiss" data-kind="private" data-launch="0" data-min="150000" data-nri="Not stated" data-private="1" data-q="eh fund ifsc llp edelweiss mutual fund edelweiss" data-res="Not stated" data-us="Not stated">
+<a class="gc-name" href="https://www.eaaa.in/gift-city/" rel="noopener" target="_blank">EH Fund IFSC LLP<span class="sr-only"> (fund house's page, opens in a new tab)</span></a>
+<p class="gc-meta">Edelweiss · GIFT City private fund (AIF Category III) · Direction not stated by the fund house · Currency not stated by the fund house · Minimum USD 150,000+ or accredited</p>
+<p class="gc-run">Run by EAAA India Alternatives Limited (IFSC Branch), part of the Edelweiss group</p>
+<div class="gc-badges"><span class="badge gc-unknown">Status not published; ask us</span><span class="badge badge-neutral">Residents: Not stated</span><span class="badge badge-neutral">NRIs: Not stated</span><span class="badge">Private fund: USD 150,000+ or accredited</span></div>
+<p class="gc-meta">No page on our site: the fund house publishes too little. <a href="#talk">Ask us</a></p>
+<p class="gc-warn" hidden=""></p>
+</li><li class="gc-fund" data-ca="Not stated" data-cur="none" data-dir="none" data-house="Edelweiss" data-kind="private" data-launch="0" data-min="150000" data-nri="Not stated" data-private="1" data-q="eisaf ii ifsc llp edelweiss mutual fund edelweiss" data-res="Not stated" data-us="Not stated">
+<a class="gc-name" href="https://www.eaaa.in/gift-city/" rel="noopener" target="_blank">EISAF II IFSC LLP<span class="sr-only"> (fund house's page, opens in a new tab)</span></a>
+<p class="gc-meta">Edelweiss · GIFT City private fund (AIF Category III) · Direction not stated by the fund house · Currency not stated by the fund house · Minimum USD 150,000+ or accredited</p>
+<p class="gc-run">Run by EAAA India Alternatives Limited (IFSC Branch), part of the Edelweiss group</p>
+<div class="gc-badges"><span class="badge gc-unknown">Status not published; ask us</span><span class="badge badge-neutral">Residents: Not stated</span><span class="badge badge-neutral">NRIs: Not stated</span><span class="badge">Private fund: USD 150,000+ or accredited</span></div>
+<p class="gc-meta">No page on our site: the fund house publishes too little. <a href="#talk">Ask us</a></p>
+<p class="gc-warn" hidden=""></p>
+</li><li class="gc-fund" data-ca="Not stated" data-cur="none" data-dir="none" data-house="Edelweiss" data-kind="private" data-launch="0" data-min="150000" data-nri="Not stated" data-private="1" data-q="es special asset ifsc llp edelweiss mutual fund edelweiss" data-res="Not stated" data-us="Not stated">
+<a class="gc-name" href="https://www.eaaa.in/gift-city/" rel="noopener" target="_blank">ES Special Asset IFSC LLP<span class="sr-only"> (fund house's page, opens in a new tab)</span></a>
+<p class="gc-meta">Edelweiss · GIFT City private fund (AIF Category III) · Direction not stated by the fund house · Currency not stated by the fund house · Minimum USD 150,000+ or accredited</p>
+<p class="gc-run">Run by EAAA India Alternatives Limited (IFSC Branch), part of the Edelweiss group</p>
+<div class="gc-badges"><span class="badge gc-unknown">Status not published; ask us</span><span class="badge badge-neutral">Residents: Not stated</span><span class="badge badge-neutral">NRIs: Not stated</span><span class="badge">Private fund: USD 150,000+ or accredited</span></div>
+<p class="gc-meta">No page on our site: the fund house publishes too little. <a href="#talk">Ask us</a></p>
+<p class="gc-warn" hidden=""></p>
+</li><li class="gc-fund" data-ca="Not stated" data-cur="none" data-dir="none" data-house="Edelweiss" data-kind="private" data-launch="0" data-min="150000" data-nri="Not stated" data-private="1" data-q="esof iii fund ifsc llp edelweiss mutual fund edelweiss" data-res="Not stated" data-us="Not stated">
+<a class="gc-name" href="https://www.eaaa.in/gift-city/" rel="noopener" target="_blank">ESOF III Fund IFSC LLP<span class="sr-only"> (fund house's page, opens in a new tab)</span></a>
+<p class="gc-meta">Edelweiss · GIFT City private fund (AIF Category III) · Direction not stated by the fund house · Currency not stated by the fund house · Minimum USD 150,000+ or accredited</p>
+<p class="gc-run">Run by EAAA India Alternatives Limited (IFSC Branch), part of the Edelweiss group</p>
+<div class="gc-badges"><span class="badge gc-unknown">Status not published; ask us</span><span class="badge badge-neutral">Residents: Not stated</span><span class="badge badge-neutral">NRIs: Not stated</span><span class="badge">Private fund: USD 150,000+ or accredited</span></div>
+<p class="gc-meta">No page on our site: the fund house publishes too little. <a href="#talk">Ask us</a></p>
+<p class="gc-warn" hidden=""></p>
+</li><li class="gc-fund" data-ca="Not stated" data-cur="none" data-dir="none" data-house="Edelweiss" data-kind="private" data-launch="0" data-min="150000" data-nri="Not stated" data-private="1" data-q="esof iv euro ifsc trust edelweiss mutual fund edelweiss" data-res="Not stated" data-us="Not stated">
+<a class="gc-name" href="https://www.eaaa.in/gift-city/" rel="noopener" target="_blank">ESOF IV EURO IFSC Trust<span class="sr-only"> (fund house's page, opens in a new tab)</span></a>
+<p class="gc-meta">Edelweiss · GIFT City private fund (AIF Category III) · Direction not stated by the fund house · Currency not stated by the fund house · Minimum USD 150,000+ or accredited</p>
+<p class="gc-run">Run by EAAA India Alternatives Limited (IFSC Branch), part of the Edelweiss group</p>
+<div class="gc-badges"><span class="badge gc-unknown">Status not published; ask us</span><span class="badge badge-neutral">Residents: Not stated</span><span class="badge badge-neutral">NRIs: Not stated</span><span class="badge">Private fund: USD 150,000+ or accredited</span></div>
+<p class="gc-meta">No page on our site: the fund house publishes too little. <a href="#talk">Ask us</a></p>
+<p class="gc-warn" hidden=""></p>
+</li><li class="gc-fund" data-ca="Not stated" data-cur="none" data-dir="none" data-house="Edelweiss" data-kind="private" data-launch="0" data-min="150000" data-nri="Not stated" data-private="1" data-q="esof iv usd ifsc trust edelweiss mutual fund edelweiss" data-res="Not stated" data-us="Not stated">
+<a class="gc-name" href="https://www.eaaa.in/gift-city/" rel="noopener" target="_blank">ESOF IV USD IFSC Trust<span class="sr-only"> (fund house's page, opens in a new tab)</span></a>
+<p class="gc-meta">Edelweiss · GIFT City private fund (AIF Category III) · Direction not stated by the fund house · Currency not stated by the fund house · Minimum USD 150,000+ or accredited</p>
+<p class="gc-run">Run by EAAA India Alternatives Limited (IFSC Branch), part of the Edelweiss group</p>
+<div class="gc-badges"><span class="badge gc-unknown">Status not published; ask us</span><span class="badge badge-neutral">Residents: Not stated</span><span class="badge badge-neutral">NRIs: Not stated</span><span class="badge">Private fund: USD 150,000+ or accredited</span></div>
+<p class="gc-meta">No page on our site: the fund house publishes too little. <a href="#talk">Ask us</a></p>
+<p class="gc-warn" hidden=""></p>
+</li><li class="gc-fund" data-ca="Not stated" data-cur="none" data-dir="none" data-house="Edelweiss" data-kind="private" data-launch="0" data-min="150000" data-nri="Not stated" data-private="1" data-q="ewon special asset fund ifsc llp edelweiss mutual fund edelweiss" data-res="Not stated" data-us="Not stated">
+<a class="gc-name" href="https://www.eaaa.in/gift-city/" rel="noopener" target="_blank">EWON Special Asset Fund IFSC LLP<span class="sr-only"> (fund house's page, opens in a new tab)</span></a>
+<p class="gc-meta">Edelweiss · GIFT City private fund (AIF Category III) · Direction not stated by the fund house · Currency not stated by the fund house · Minimum USD 150,000+ or accredited</p>
+<p class="gc-run">Run by EAAA India Alternatives Limited (IFSC Branch), part of the Edelweiss group</p>
+<div class="gc-badges"><span class="badge gc-unknown">Status not published; ask us</span><span class="badge badge-neutral">Residents: Not stated</span><span class="badge badge-neutral">NRIs: Not stated</span><span class="badge">Private fund: USD 150,000+ or accredited</span></div>
+<p class="gc-meta">No page on our site: the fund house publishes too little. <a href="#talk">Ask us</a></p>
+<p class="gc-warn" hidden=""></p>
+</li><li class="gc-fund" data-ca="Not stated" data-cur="none" data-dir="none" data-house="Franklin Templeton" data-kind="private" data-launch="0" data-min="150000" data-nri="Not stated" data-private="1" data-q="franklin india opportunities ifsc fund of funds franklin templeton mutual fund franklin templeton" data-res="Not stated" data-us="Not stated">
+<span class="gc-name">Franklin India Opportunities IFSC Fund of Funds</span>
+<p class="gc-meta">Franklin Templeton · GIFT City private fund (AIF Category III) · Direction not stated by the fund house · Currency not stated by the fund house · Minimum USD 150,000+ or accredited</p>
+<p class="gc-run">Run by Franklin Templeton Asset Management (IFSC) Private Limited, part of the Franklin Templeton group</p>
+<div class="gc-badges"><span class="badge gc-unknown">Status not published; ask us</span><span class="badge badge-neutral">Residents: Not stated</span><span class="badge badge-neutral">NRIs: Not stated</span><span class="badge">Private fund: USD 150,000+ or accredited</span></div>
+<p class="gc-meta">No page on our site: the fund house publishes too little. <a href="#talk">Ask us</a></p>
+<p class="gc-warn" hidden=""></p>
+</li><li class="gc-fund" data-ca="Not stated" data-cur="none" data-dir="none" data-house="360 ONE" data-kind="private" data-launch="0" data-min="150000" data-nri="Not stated" data-private="1" data-q="global q fund 360 one mutual fund 360 one" data-res="Not stated" data-us="Not stated">
+<span class="gc-name">Global Q Fund</span>
+<p class="gc-meta">360 ONE · GIFT City private fund (AIF Category III) · Direction not stated by the fund house · Currency not stated by the fund house · Minimum USD 150,000+ or accredited</p>
+<p class="gc-run">Run by 360 ONE Portfolio Managers Limited (IFSC Branch), part of the 360 ONE group</p>
+<div class="gc-badges"><span class="badge gc-unknown">Status not published; ask us</span><span class="badge badge-neutral">Residents: Not stated</span><span class="badge badge-neutral">NRIs: Not stated</span><span class="badge">Private fund: USD 150,000+ or accredited</span></div>
+<p class="gc-meta">No page on our site: the fund house publishes too little. <a href="#talk">Ask us</a></p>
+<p class="gc-warn" hidden=""></p>
+</li><li class="gc-fund" data-ca="Not stated" data-cur="none" data-dir="india" data-house="HDFC" data-kind="private" data-launch="0" data-min="150000" data-nri="Not stated" data-private="1" data-q="hdfc capital dream fund of funds – 2 hdfc mutual fund hdfc" data-res="Not stated" data-us="Not stated">
+<a class="gc-name" href="https://www.hdfccapital.com/" rel="noopener" target="_blank">HDFC Capital Dream Fund of Funds – 2<span class="sr-only"> (fund house's page, opens in a new tab)</span></a>
+<p class="gc-meta">HDFC · GIFT City private fund (AIF Category II) · Real estate · Invests in India · Currency not stated by the fund house · Minimum USD 150,000+ or accredited</p>
+<p class="gc-run">Run by HDFC Capital Advisors Limited (IFSC Branch), part of the HDFC group</p>
+<div class="gc-badges"><span class="badge gc-unknown">Status not published; ask us</span><span class="badge badge-neutral">Residents: Not stated</span><span class="badge badge-neutral">NRIs: Not stated</span><span class="badge">Private fund: USD 150,000+ or accredited</span></div>
+<p class="gc-meta">No page on our site: the fund house publishes too little. <a href="#talk">Ask us</a></p>
+<p class="gc-warn" hidden=""></p>
+</li><li class="gc-fund" data-ca="Not stated" data-cur="none" data-dir="india" data-house="HDFC" data-kind="private" data-launch="0" data-min="150000" data-nri="Not stated" data-private="1" data-q="hdfc capital fund of funds -3 hdfc mutual fund hdfc" data-res="Not stated" data-us="Not stated">
+<a class="gc-name" href="https://www.hdfccapital.com/" rel="noopener" target="_blank">HDFC Capital Fund of Funds -3<span class="sr-only"> (fund house's page, opens in a new tab)</span></a>
+<p class="gc-meta">HDFC · GIFT City private fund (AIF Category II) · Real estate · Invests in India · Currency not stated by the fund house · Minimum USD 150,000+ or accredited</p>
+<p class="gc-run">Run by HDFC Capital Advisors Limited (IFSC Branch), part of the HDFC group</p>
+<div class="gc-badges"><span class="badge gc-unknown">Status not published; ask us</span><span class="badge badge-neutral">Residents: Not stated</span><span class="badge badge-neutral">NRIs: Not stated</span><span class="badge">Private fund: USD 150,000+ or accredited</span></div>
+<p class="gc-meta">No page on our site: the fund house publishes too little. <a href="#talk">Ask us</a></p>
+<p class="gc-warn" hidden=""></p>
+</li><li class="gc-fund" data-ca="Not stated" data-cur="none" data-dir="india" data-house="HDFC" data-kind="private" data-launch="0" data-min="150000" data-nri="Not stated" data-private="1" data-q="hdfc capital fund of funds -3 scheme 2 hdfc mutual fund hdfc" data-res="Not stated" data-us="Not stated">
+<a class="gc-name" href="https://www.hdfccapital.com/" rel="noopener" target="_blank">HDFC Capital Fund of Funds -3 Scheme 2<span class="sr-only"> (fund house's page, opens in a new tab)</span></a>
+<p class="gc-meta">HDFC · GIFT City private fund (AIF Category II) · Real estate · Invests in India · Currency not stated by the fund house · Minimum USD 150,000+ or accredited</p>
+<p class="gc-run">Run by HDFC Capital Advisors Limited (IFSC Branch), part of the HDFC group</p>
+<div class="gc-badges"><span class="badge gc-unknown">Status not published; ask us</span><span class="badge badge-neutral">Residents: Not stated</span><span class="badge badge-neutral">NRIs: Not stated</span><span class="badge">Private fund: USD 150,000+ or accredited</span></div>
+<p class="gc-meta">No page on our site: the fund house publishes too little. <a href="#talk">Ask us</a></p>
+<p class="gc-warn" hidden=""></p>
+</li><li class="gc-fund" data-ca="Not stated" data-cur="none" data-dir="india" data-house="HDFC" data-kind="private" data-launch="0" data-min="150000" data-nri="Not stated" data-private="1" data-q="hdfc capital opportunities real estate fund-2 hdfc mutual fund hdfc" data-res="Not stated" data-us="Not stated">
+<a class="gc-name" href="https://www.hdfccapital.com/" rel="noopener" target="_blank">HDFC Capital Opportunities Real Estate Fund-2<span class="sr-only"> (fund house's page, opens in a new tab)</span></a>
+<p class="gc-meta">HDFC · GIFT City private fund (AIF Category II) · Real estate · Invests in India · Currency not stated by the fund house · Minimum USD 150,000+ or accredited</p>
+<p class="gc-run">Run by HDFC Capital Advisors Limited (IFSC Branch), part of the HDFC group</p>
+<div class="gc-badges"><span class="badge gc-unknown">Status not published; ask us</span><span class="badge badge-neutral">Residents: Not stated</span><span class="badge badge-neutral">NRIs: Not stated</span><span class="badge">Private fund: USD 150,000+ or accredited</span></div>
+<p class="gc-meta">No page on our site: the fund house publishes too little. <a href="#talk">Ask us</a></p>
+<p class="gc-warn" hidden=""></p>
+</li><li class="gc-fund" data-ca="Not stated" data-cur="usd" data-dir="india" data-house="HDFC" data-kind="private" data-launch="20241104" data-min="150000" data-nri="Open" data-private="1" data-q="hdfc india balanced advantage fund hdfc mutual fund hdfc" data-res="Not open" data-us="Open">
+<a class="gc-name" href="../fund/hdfc-india-balanced-advantage-fund/index.html">HDFC India Balanced Advantage Fund</a>
+<p class="gc-meta">HDFC · GIFT City private fund (AIF Category III) · Hybrid · Invests in India · US dollars · Minimum USD 150,000+ or accredited</p>
+<div class="gc-badges"><span class="badge">Open</span><span class="badge badge-neutral">Residents: Not open</span><span class="badge badge-neutral">NRIs: Open</span><span class="badge">Private fund: USD 150,000+ or accredited</span></div>
+<p class="gc-warn" hidden=""></p>
+</li><li class="gc-fund" data-ca="Not stated" data-cur="usd" data-dir="india" data-house="HDFC" data-kind="private" data-launch="20260901" data-min="150000" data-nri="Open" data-private="1" data-q="hdfc india diversified equity fof hdfc mutual fund hdfc" data-res="Not open" data-us="Open">
+<a class="gc-name" href="../fund/hdfc-india-diversified-equity-fof/index.html">HDFC India Diversified Equity FOF</a>
+<p class="gc-meta">HDFC · GIFT City private fund (AIF Category III) · Equity · Invests in India · US dollars · Minimum USD 150,000+ or accredited</p>
+<div class="gc-badges"><span class="badge">Open</span><span class="badge badge-neutral">Residents: Not open</span><span class="badge badge-neutral">NRIs: Open</span><span class="badge">Private fund: USD 150,000+ or accredited</span></div>
+<p class="gc-warn" hidden=""></p>
+</li><li class="gc-fund" data-ca="Not stated" data-cur="none" data-dir="none" data-house="HDFC" data-kind="private" data-launch="0" data-min="150000" data-nri="Not stated" data-private="1" data-q="hdfc india equity savings fund hdfc mutual fund hdfc" data-res="Not stated" data-us="Not stated">
+<a class="gc-name" href="https://www.hdfcinternational.com/" rel="noopener" target="_blank">HDFC India Equity Savings Fund<span class="sr-only"> (fund house's page, opens in a new tab)</span></a>
+<p class="gc-meta">HDFC · GIFT City private fund (AIF Category III) · Direction not stated by the fund house · Currency not stated by the fund house · Minimum USD 150,000+ or accredited</p>
+<div class="gc-badges"><span class="badge gc-unknown">Status not published; ask us</span><span class="badge badge-neutral">Residents: Not stated</span><span class="badge badge-neutral">NRIs: Not stated</span><span class="badge">Private fund: USD 150,000+ or accredited</span></div>
+<p class="gc-meta">No page on our site: the fund house publishes too little. <a href="#talk">Ask us</a></p>
+<p class="gc-warn" hidden=""></p>
+</li><li class="gc-fund" data-ca="Not stated" data-cur="usd" data-dir="india" data-house="HDFC" data-kind="private" data-launch="20241104" data-min="150000" data-nri="Open" data-private="1" data-q="hdfc india flexi cap fund hdfc mutual fund hdfc" data-res="Not open" data-us="Open">
+<a class="gc-name" href="../fund/hdfc-india-flexi-cap-fund/index.html">HDFC India Flexi Cap Fund</a>
+<p class="gc-meta">HDFC · GIFT City private fund (AIF Category III) · Equity · Invests in India · US dollars · Minimum USD 150,000+ or accredited</p>
+<div class="gc-badges"><span class="badge">Open</span><span class="badge badge-neutral">Residents: Not open</span><span class="badge badge-neutral">NRIs: Open</span><span class="badge">Private fund: USD 150,000+ or accredited</span></div>
+<p class="gc-warn" hidden=""></p>
+</li><li class="gc-fund" data-ca="Not stated" data-cur="usd" data-dir="india" data-house="HDFC" data-kind="private" data-launch="20241111" data-min="150000" data-nri="Open" data-private="1" data-q="hdfc india mid-cap opportunities fund hdfc mutual fund hdfc" data-res="Not open" data-us="Open">
+<a class="gc-name" href="../fund/hdfc-india-mid-cap-opportunities-fund/index.html">HDFC India Mid-Cap Opportunities Fund</a>
+<p class="gc-meta">HDFC · GIFT City private fund (AIF Category III) · Equity · Invests in India · US dollars · Minimum USD 150,000+ or accredited</p>
+<div class="gc-badges"><span class="badge">Open</span><span class="badge badge-neutral">Residents: Not open</span><span class="badge badge-neutral">NRIs: Open</span><span class="badge">Private fund: USD 150,000+ or accredited</span></div>
+<p class="gc-warn" hidden=""></p>
+</li><li class="gc-fund" data-ca="Not stated" data-cur="usd" data-dir="india" data-house="HDFC" data-kind="private" data-launch="20250716" data-min="150000" data-nri="Open" data-private="1" data-q="hdfc india nifty 50 fund hdfc mutual fund hdfc" data-res="Not open" data-us="Open">
+<a class="gc-name" href="../fund/hdfc-india-nifty-50-fund/index.html">HDFC India NIFTY 50 Fund</a>
+<p class="gc-meta">HDFC · GIFT City private fund (AIF Category III) · Equity · Invests in India · US dollars · Minimum USD 150,000+ or accredited</p>
+<div class="gc-badges"><span class="badge">Open</span><span class="badge badge-neutral">Residents: Not open</span><span class="badge badge-neutral">NRIs: Open</span><span class="badge">Private fund: USD 150,000+ or accredited</span></div>
+<p class="gc-warn" hidden=""></p>
+</li><li class="gc-fund" data-ca="Not stated" data-cur="usd" data-dir="india" data-house="HDFC" data-kind="private" data-launch="20250529" data-min="150000" data-nri="Open" data-private="1" data-q="hdfc india small cap fund hdfc mutual fund hdfc" data-res="Not open" data-us="Open">
+<a class="gc-name" href="../fund/hdfc-india-small-cap-fund/index.html">HDFC India Small Cap Fund</a>
+<p class="gc-meta">HDFC · GIFT City private fund (AIF Category III) · Equity · Invests in India · US dollars · Minimum USD 150,000+ or accredited</p>
+<div class="gc-badges"><span class="badge">Open</span><span class="badge badge-neutral">Residents: Not open</span><span class="badge badge-neutral">NRIs: Open</span><span class="badge">Private fund: USD 150,000+ or accredited</span></div>
+<p class="gc-warn" hidden=""></p>
+</li><li class="gc-fund" data-ca="Not open" data-cur="usd" data-dir="outside_india" data-house="HDFC" data-kind="retail" data-launch="20260827" data-min="5000" data-nri="Open" data-private="0" data-q="hdfc international – developed markets equity fund hdfc mutual fund hdfc" data-res="Open" data-us="Not open">
+<a class="gc-name" href="../fund/hdfc-international-developed-markets-equity-fund/index.html">HDFC International – Developed Markets Equity Fund</a>
+<p class="gc-meta">HDFC · GIFT City mutual fund · Equity · Invests outside India · US dollars · Minimum USD 5,000</p>
+<div class="gc-badges"><span class="badge">Open</span><span class="badge badge-neutral">Residents: Open</span><span class="badge badge-neutral">NRIs: Open</span></div>
+<p class="gc-warn" hidden=""></p>
+</li><li class="gc-fund" data-ca="Not open" data-cur="usd" data-dir="outside_india" data-house="HDFC" data-kind="retail" data-launch="20260827" data-min="5000" data-nri="Open" data-private="0" data-q="hdfc international – emerging markets equity fund hdfc mutual fund hdfc" data-res="Open" data-us="Not open">
+<a class="gc-name" href="../fund/hdfc-international-emerging-markets-equity-fund/index.html">HDFC International – Emerging Markets Equity Fund</a>
+<p class="gc-meta">HDFC · GIFT City mutual fund · Equity · Invests outside India · US dollars · Minimum USD 5,000</p>
+<div class="gc-badges"><span class="badge">Open</span><span class="badge badge-neutral">Residents: Open</span><span class="badge badge-neutral">NRIs: Open</span></div>
+<p class="gc-warn" hidden=""></p>
+</li><li class="gc-fund" data-ca="Not stated" data-cur="none" data-dir="outside_india" data-house="HDFC" data-kind="retail" data-launch="0" data-min="1000000000" data-nri="Not stated" data-private="0" data-q="hdfc international – global equity fund hdfc mutual fund hdfc" data-res="Open" data-us="Not stated">
+<a class="gc-name" href="https://www.hdfcinternational.com/" rel="noopener" target="_blank">HDFC International – Global Equity Fund<span class="sr-only"> (fund house's page, opens in a new tab)</span></a>
+<p class="gc-meta">HDFC · GIFT City mutual fund · Invests outside India · Currency not stated by the fund house · Minimum not stated by the fund house</p>
+<div class="gc-badges"><span class="badge">Upcoming</span><span class="badge badge-neutral">Residents: Open</span><span class="badge badge-neutral">NRIs: Not stated</span></div>
+<p class="gc-meta">No page on our site: the fund house publishes too little. <a href="#talk">Ask us</a></p>
+<p class="gc-warn" hidden=""></p>
+</li><li class="gc-fund" data-ca="Not stated" data-cur="none" data-dir="none" data-house="HDFC" data-kind="private" data-launch="0" data-min="150000" data-nri="Not stated" data-private="1" data-q="hdfc international-income fund i hdfc mutual fund hdfc" data-res="Not stated" data-us="Not stated">
+<a class="gc-name" href="https://www.hdfcinternational.com/" rel="noopener" target="_blank">HDFC International-Income Fund I<span class="sr-only"> (fund house's page, opens in a new tab)</span></a>
+<p class="gc-meta">HDFC · GIFT City private fund (AIF Category II) · Direction not stated by the fund house · Currency not stated by the fund house · Minimum USD 150,000+ or accredited</p>
+<div class="gc-badges"><span class="badge">Upcoming</span><span class="badge badge-neutral">Residents: Not stated</span><span class="badge badge-neutral">NRIs: Not stated</span><span class="badge">Private fund: USD 150,000+ or accredited</span></div>
+<p class="gc-meta">No page on our site: the fund house publishes too little. <a href="#talk">Ask us</a></p>
+<p class="gc-warn" hidden=""></p>
+</li><li class="gc-fund" data-ca="Not stated" data-cur="none" data-dir="none" data-house="Motilal Oswal" data-kind="private" data-launch="0" data-min="150000" data-nri="Not stated" data-private="1" data-q="ibef gift spv 3 motilal oswal mutual fund motilal oswal" data-res="Not stated" data-us="Not stated">
+<a class="gc-name" href="https://www.motilaloswalmf.com/gift-city" rel="noopener" target="_blank">IBEF GIFT SPV 3<span class="sr-only"> (fund house's page, opens in a new tab)</span></a>
+<p class="gc-meta">Motilal Oswal · GIFT City private fund (AIF Category II) · Direction not stated by the fund house · Currency not stated by the fund house · Minimum USD 150,000+ or accredited</p>
+<p class="gc-run">Run by a company the fund house does not name, part of the Motilal Oswal group</p>
+<div class="gc-badges"><span class="badge gc-unknown">Status not published; ask us</span><span class="badge badge-neutral">Residents: Not stated</span><span class="badge badge-neutral">NRIs: Not stated</span><span class="badge">Private fund: USD 150,000+ or accredited</span></div>
+<p class="gc-meta">No page on our site: the fund house publishes too little. <a href="#talk">Ask us</a></p>
+<p class="gc-warn" hidden=""></p>
+</li><li class="gc-fund" data-ca="Not stated" data-cur="none" data-dir="none" data-house="Motilal Oswal" data-kind="private" data-launch="0" data-min="150000" data-nri="Not stated" data-private="1" data-q="ibef gift spv 4 motilal oswal mutual fund motilal oswal" data-res="Not stated" data-us="Not stated">
+<a class="gc-name" href="https://www.motilaloswalmf.com/gift-city" rel="noopener" target="_blank">IBEF GIFT SPV 4<span class="sr-only"> (fund house's page, opens in a new tab)</span></a>
+<p class="gc-meta">Motilal Oswal · GIFT City private fund (AIF Category II) · Direction not stated by the fund house · Currency not stated by the fund house · Minimum USD 150,000+ or accredited</p>
+<p class="gc-run">Run by a company the fund house does not name, part of the Motilal Oswal group</p>
+<div class="gc-badges"><span class="badge gc-unknown">Status not published; ask us</span><span class="badge badge-neutral">Residents: Not stated</span><span class="badge badge-neutral">NRIs: Not stated</span><span class="badge">Private fund: USD 150,000+ or accredited</span></div>
+<p class="gc-meta">No page on our site: the fund house publishes too little. <a href="#talk">Ask us</a></p>
+<p class="gc-warn" hidden=""></p>
+</li><li class="gc-fund" data-ca="Not stated" data-cur="none" data-dir="none" data-house="Motilal Oswal" data-kind="private" data-launch="0" data-min="150000" data-nri="Not stated" data-private="1" data-q="ibef iv hk investments fund motilal oswal mutual fund motilal oswal" data-res="Not stated" data-us="Not stated">
+<a class="gc-name" href="https://www.motilaloswalmf.com/gift-city" rel="noopener" target="_blank">IBEF IV HK Investments Fund<span class="sr-only"> (fund house's page, opens in a new tab)</span></a>
+<p class="gc-meta">Motilal Oswal · GIFT City private fund (AIF Category II) · Direction not stated by the fund house · Currency not stated by the fund house · Minimum USD 150,000+ or accredited</p>
+<p class="gc-run">Run by a company the fund house does not name, part of the Motilal Oswal group</p>
+<div class="gc-badges"><span class="badge gc-unknown">Status not published; ask us</span><span class="badge badge-neutral">Residents: Not stated</span><span class="badge badge-neutral">NRIs: Not stated</span><span class="badge">Private fund: USD 150,000+ or accredited</span></div>
+<p class="gc-meta">No page on our site: the fund house publishes too little. <a href="#talk">Ask us</a></p>
+<p class="gc-warn" hidden=""></p>
+</li><li class="gc-fund" data-ca="Not stated" data-cur="none" data-dir="none" data-house="Motilal Oswal" data-kind="private" data-launch="0" data-min="150000" data-nri="Not stated" data-private="1" data-q="ibef iv ls investments fund motilal oswal mutual fund motilal oswal" data-res="Not stated" data-us="Not stated">
+<a class="gc-name" href="https://www.motilaloswalmf.com/gift-city" rel="noopener" target="_blank">IBEF IV LS Investments Fund<span class="sr-only"> (fund house's page, opens in a new tab)</span></a>
+<p class="gc-meta">Motilal Oswal · GIFT City private fund (AIF Category II) · Direction not stated by the fund house · Currency not stated by the fund house · Minimum USD 150,000+ or accredited</p>
+<p class="gc-run">Run by a company the fund house does not name, part of the Motilal Oswal group</p>
+<div class="gc-badges"><span class="badge gc-unknown">Status not published; ask us</span><span class="badge badge-neutral">Residents: Not stated</span><span class="badge badge-neutral">NRIs: Not stated</span><span class="badge">Private fund: USD 150,000+ or accredited</span></div>
+<p class="gc-meta">No page on our site: the fund house publishes too little. <a href="#talk">Ask us</a></p>
+<p class="gc-warn" hidden=""></p>
+</li><li class="gc-fund" data-ca="Not stated" data-cur="none" data-dir="india" data-house="ICICI Prudential" data-kind="private" data-launch="0" data-min="150000" data-nri="Not stated" data-private="1" data-q="icici prudential smart navigator fund (ifsc) icici prudential mutual fund icici prudential" data-res="Not stated" data-us="Not stated">
+<span class="gc-name">ICICI Prudential Smart Navigator Fund (IFSC)</span>
+<p class="gc-meta">ICICI Prudential · GIFT City private fund (AIF Category III) · Invests in India · Currency not stated by the fund house · Minimum USD 150,000+ or accredited</p>
+<div class="gc-badges"><span class="badge gc-unknown">Status not published; ask us</span><span class="badge badge-neutral">Residents: Not stated</span><span class="badge badge-neutral">NRIs: Not stated</span><span class="badge">Private fund: USD 150,000+ or accredited</span></div>
+<p class="gc-meta">No page on our site: the fund house publishes too little. <a href="#talk">Ask us</a></p>
+<p class="gc-warn" hidden=""></p>
+</li><li class="gc-fund" data-ca="Not stated" data-cur="none" data-dir="none" data-house="Edelweiss" data-kind="private" data-launch="0" data-min="150000" data-nri="Not stated" data-private="1" data-q="ie india special asset fund iii ifsc llp edelweiss mutual fund edelweiss" data-res="Not stated" data-us="Not stated">
+<a class="gc-name" href="https://www.eaaa.in/gift-city/" rel="noopener" target="_blank">IE India Special Asset Fund III IFSC LLP<span class="sr-only"> (fund house's page, opens in a new tab)</span></a>
+<p class="gc-meta">Edelweiss · GIFT City private fund (AIF Category III) · Direction not stated by the fund house · Currency not stated by the fund house · Minimum USD 150,000+ or accredited</p>
+<p class="gc-run">Run by EAAA India Alternatives Limited (IFSC Branch), part of the Edelweiss group</p>
+<div class="gc-badges"><span class="badge gc-unknown">Status not published; ask us</span><span class="badge badge-neutral">Residents: Not stated</span><span class="badge badge-neutral">NRIs: Not stated</span><span class="badge">Private fund: USD 150,000+ or accredited</span></div>
+<p class="gc-meta">No page on our site: the fund house publishes too little. <a href="#talk">Ask us</a></p>
+<p class="gc-warn" hidden=""></p>
+</li><li class="gc-fund" data-ca="Not stated" data-cur="none" data-dir="none" data-house="Motilal Oswal" data-kind="private" data-launch="0" data-min="150000" data-nri="Not stated" data-private="1" data-q="india business excellence fund iv g motilal oswal mutual fund motilal oswal" data-res="Not stated" data-us="Not stated">
+<a class="gc-name" href="https://www.motilaloswalmf.com/gift-city" rel="noopener" target="_blank">India BUSINESS EXCELLENCE FUND IV G<span class="sr-only"> (fund house's page, opens in a new tab)</span></a>
+<p class="gc-meta">Motilal Oswal · GIFT City private fund (AIF Category II) · Direction not stated by the fund house · Currency not stated by the fund house · Minimum USD 150,000+ or accredited</p>
+<p class="gc-run">Run by a company the fund house does not name, part of the Motilal Oswal group</p>
+<div class="gc-badges"><span class="badge gc-unknown">Status not published; ask us</span><span class="badge badge-neutral">Residents: Not stated</span><span class="badge badge-neutral">NRIs: Not stated</span><span class="badge">Private fund: USD 150,000+ or accredited</span></div>
+<p class="gc-meta">No page on our site: the fund house publishes too little. <a href="#talk">Ask us</a></p>
+<p class="gc-warn" hidden=""></p>
+</li><li class="gc-fund" data-ca="Not stated" data-cur="none" data-dir="none" data-house="Motilal Oswal" data-kind="private" data-launch="0" data-min="150000" data-nri="Not stated" data-private="1" data-q="india business excellence fund v g motilal oswal mutual fund motilal oswal" data-res="Not stated" data-us="Not stated">
+<a class="gc-name" href="https://www.motilaloswalmf.com/gift-city" rel="noopener" target="_blank">India Business Excellence Fund V G<span class="sr-only"> (fund house's page, opens in a new tab)</span></a>
+<p class="gc-meta">Motilal Oswal · GIFT City private fund (AIF Category II) · Direction not stated by the fund house · Currency not stated by the fund house · Minimum USD 150,000+ or accredited</p>
+<p class="gc-run">Run by a company the fund house does not name, part of the Motilal Oswal group</p>
+<div class="gc-badges"><span class="badge gc-unknown">Status not published; ask us</span><span class="badge badge-neutral">Residents: Not stated</span><span class="badge badge-neutral">NRIs: Not stated</span><span class="badge">Private fund: USD 150,000+ or accredited</span></div>
+<p class="gc-meta">No page on our site: the fund house publishes too little. <a href="#talk">Ask us</a></p>
+<p class="gc-warn" hidden=""></p>
+</li><li class="gc-fund" data-ca="Not stated" data-cur="none" data-dir="india" data-house="Motilal Oswal" data-kind="private" data-launch="0" data-min="150000" data-nri="Not stated" data-private="1" data-q="india credit excellence fund - ig motilal oswal mutual fund motilal oswal" data-res="Not stated" data-us="Not stated">
+<a class="gc-name" href="https://www.motilaloswalmf.com/gift-city" rel="noopener" target="_blank">India Credit Excellence Fund - IG<span class="sr-only"> (fund house's page, opens in a new tab)</span></a>
+<p class="gc-meta">Motilal Oswal · GIFT City private fund (AIF Category III) · Private credit · Invests in India · Currency not stated by the fund house · Minimum USD 150,000+ or accredited</p>
+<p class="gc-run">Run by a company the fund house does not name, part of the Motilal Oswal group</p>
+<div class="gc-badges"><span class="badge gc-unknown">Status not published; ask us</span><span class="badge badge-neutral">Residents: Not stated</span><span class="badge badge-neutral">NRIs: Not stated</span><span class="badge">Private fund: USD 150,000+ or accredited</span></div>
+<p class="gc-meta">No page on our site: the fund house publishes too little. <a href="#talk">Ask us</a></p>
+<p class="gc-warn" hidden=""></p>
+</li><li class="gc-fund" data-ca="Not stated" data-cur="none" data-dir="none" data-house="Edelweiss" data-kind="private" data-launch="0" data-min="150000" data-nri="Not stated" data-private="1" data-q="india energy transition fund ifsc trust edelweiss mutual fund edelweiss" data-res="Not stated" data-us="Not stated">
+<a class="gc-name" href="https://www.eaaa.in/gift-city/" rel="noopener" target="_blank">India Energy Transition Fund IFSC Trust<span class="sr-only"> (fund house's page, opens in a new tab)</span></a>
+<p class="gc-meta">Edelweiss · GIFT City private fund (AIF Category III) · Direction not stated by the fund house · Currency not stated by the fund house · Minimum USD 150,000+ or accredited</p>
+<p class="gc-run">Run by EAAA India Alternatives Limited (IFSC Branch), part of the Edelweiss group</p>
+<div class="gc-badges"><span class="badge gc-unknown">Status not published; ask us</span><span class="badge badge-neutral">Residents: Not stated</span><span class="badge badge-neutral">NRIs: Not stated</span><span class="badge">Private fund: USD 150,000+ or accredited</span></div>
+<p class="gc-meta">No page on our site: the fund house publishes too little. <a href="#talk">Ask us</a></p>
+<p class="gc-warn" hidden=""></p>
+</li><li class="gc-fund" data-ca="Not stated" data-cur="none" data-dir="india" data-house="Aditya Birla Sun Life" data-kind="private" data-launch="0" data-min="150000" data-nri="Open" data-private="1" data-q="india esg engagement fund (ifsc) aditya birla sun life mutual fund aditya birla sun life" data-res="Not open" data-us="Not stated">
+<a class="gc-name" href="../fund/absl-india-esg-engagement-fund-ifsc/index.html">India ESG Engagement Fund (IFSC)</a>
+<p class="gc-meta">Aditya Birla Sun Life · GIFT City private fund (AIF Category III) · Equity · Invests in India · Currency not stated by the fund house · Minimum USD 150,000+ or accredited</p>
+<div class="gc-badges"><span class="badge">Open</span><span class="badge badge-neutral">Residents: Not open</span><span class="badge badge-neutral">NRIs: Open</span><span class="badge">Private fund: USD 150,000+ or accredited</span></div>
+<p class="gc-warn" hidden=""></p>
+</li><li class="gc-fund" data-ca="Not stated" data-cur="none" data-dir="none" data-house="Motilal Oswal" data-kind="private" data-launch="0" data-min="150000" data-nri="Not stated" data-private="1" data-q="india realty excellence fund vig motilal oswal mutual fund motilal oswal" data-res="Not stated" data-us="Not stated">
+<a class="gc-name" href="https://www.motilaloswalmf.com/gift-city" rel="noopener" target="_blank">India Realty Excellence Fund VIG<span class="sr-only"> (fund house's page, opens in a new tab)</span></a>
+<p class="gc-meta">Motilal Oswal · GIFT City private fund (AIF Category II) · Real estate · Direction not stated by the fund house · Currency not stated by the fund house · Minimum USD 150,000+ or accredited</p>
+<p class="gc-run">Run by a company the fund house does not name, part of the Motilal Oswal group</p>
+<div class="gc-badges"><span class="badge gc-unknown">Status not published; ask us</span><span class="badge badge-neutral">Residents: Not stated</span><span class="badge badge-neutral">NRIs: Not stated</span><span class="badge">Private fund: USD 150,000+ or accredited</span></div>
+<p class="gc-meta">No page on our site: the fund house publishes too little. <a href="#talk">Ask us</a></p>
+<p class="gc-warn" hidden=""></p>
+</li><li class="gc-fund" data-ca="Not stated" data-cur="none" data-dir="outside_india" data-house="Angel One" data-kind="private" data-launch="0" data-min="150000" data-nri="Not stated" data-private="1" data-q="ionic global asset allocation fund angel one mutual fund angel one" data-res="Not stated" data-us="Not stated">
+<a class="gc-name" href="https://ionic.in/exclusives" rel="noopener" target="_blank">Ionic Global Asset Allocation Fund<span class="sr-only"> (fund house's page, opens in a new tab)</span></a>
+<p class="gc-meta">Angel One · GIFT City private fund (AIF Category III) · Multi-asset · Invests outside India · Currency not stated by the fund house · Minimum USD 150,000+ or accredited</p>
+<p class="gc-run">Run by Angel One Investment Managers &amp; Advisors Private Limited (IFSC Branch), part of the Angel One group</p>
+<div class="gc-badges"><span class="badge">Open</span><span class="badge badge-neutral">Residents: Not stated</span><span class="badge badge-neutral">NRIs: Not stated</span><span class="badge">Private fund: USD 150,000+ or accredited</span></div>
+<p class="gc-meta">No page on our site: the fund house publishes too little. <a href="#talk">Ask us</a></p>
+<p class="gc-warn" hidden=""></p>
+</li><li class="gc-fund" data-ca="Not stated" data-cur="none" data-dir="outside_india" data-house="Angel One" data-kind="private" data-launch="0" data-min="150000" data-nri="Not stated" data-private="1" data-q="ionic global innovation fund angel one mutual fund angel one" data-res="Not stated" data-us="Not stated">
+<a class="gc-name" href="https://ionic.in/exclusives" rel="noopener" target="_blank">Ionic Global Innovation Fund<span class="sr-only"> (fund house's page, opens in a new tab)</span></a>
+<p class="gc-meta">Angel One · GIFT City private fund (AIF Category III) · Equity · Invests outside India · Currency not stated by the fund house · Minimum USD 150,000+ or accredited</p>
+<p class="gc-run">Run by Angel One Investment Managers &amp; Advisors Private Limited (IFSC Branch), part of the Angel One group</p>
+<div class="gc-badges"><span class="badge">Open</span><span class="badge badge-neutral">Residents: Not stated</span><span class="badge badge-neutral">NRIs: Not stated</span><span class="badge">Private fund: USD 150,000+ or accredited</span></div>
+<p class="gc-meta">No page on our site: the fund house publishes too little. <a href="#talk">Ask us</a></p>
+<p class="gc-warn" hidden=""></p>
+</li><li class="gc-fund" data-ca="Not stated" data-cur="usd" data-dir="outside_india" data-house="Angel One" data-kind="private" data-launch="0" data-min="150000" data-nri="Not stated" data-private="1" data-q="ionic global macro gift fund angel one mutual fund angel one" data-res="Not stated" data-us="Not stated">
+<a class="gc-name" href="https://ionic.in/exclusives" rel="noopener" target="_blank">Ionic Global Macro GIFT Fund<span class="sr-only"> (fund house's page, opens in a new tab)</span></a>
+<p class="gc-meta">Angel One · GIFT City private fund (AIF Category III) · Multi-asset · Invests outside India · US dollars · Minimum USD 150,000+ or accredited</p>
+<p class="gc-run">Run by Angel One Investment Managers &amp; Advisors Private Limited (IFSC Branch), part of the Angel One group</p>
+<div class="gc-badges"><span class="badge">Open</span><span class="badge badge-neutral">Residents: Not stated</span><span class="badge badge-neutral">NRIs: Not stated</span><span class="badge">Private fund: USD 150,000+ or accredited</span></div>
+<p class="gc-meta">No page on our site: the fund house publishes too little. <a href="#talk">Ask us</a></p>
+<p class="gc-warn" hidden=""></p>
+</li><li class="gc-fund" data-ca="Not stated" data-cur="none" data-dir="none" data-house="ITI" data-kind="private" data-launch="0" data-min="150000" data-nri="Not stated" data-private="1" data-q="iti long-short equity offshore fund (ifsc) iti mutual fund iti" data-res="Not stated" data-us="Not stated">
+<span class="gc-name">ITI Long-Short Equity Offshore Fund (IFSC)</span>
+<p class="gc-meta">ITI · GIFT City private fund (AIF Category III) · Direction not stated by the fund house · Currency not stated by the fund house · Minimum USD 150,000+ or accredited</p>
+<p class="gc-run">Run by The Investment Trust of India Limited (IFSC Branch), part of the ITI group</p>
+<div class="gc-badges"><span class="badge gc-unknown">Status not published; ask us</span><span class="badge badge-neutral">Residents: Not stated</span><span class="badge badge-neutral">NRIs: Not stated</span><span class="badge">Private fund: USD 150,000+ or accredited</span></div>
+<p class="gc-meta">No page on our site: the fund house publishes too little. <a href="#talk">Ask us</a></p>
+<p class="gc-warn" hidden=""></p>
+</li><li class="gc-fund" data-ca="Not stated" data-cur="none" data-dir="none" data-house="Edelweiss" data-kind="private" data-launch="0" data-min="150000" data-nri="Not stated" data-private="1" data-q="iyp ii ifsc llp edelweiss mutual fund edelweiss" data-res="Not stated" data-us="Not stated">
+<a class="gc-name" href="https://www.eaaa.in/gift-city/" rel="noopener" target="_blank">IYP II IFSC LLP<span class="sr-only"> (fund house's page, opens in a new tab)</span></a>
+<p class="gc-meta">Edelweiss · GIFT City private fund (AIF Category III) · Direction not stated by the fund house · Currency not stated by the fund house · Minimum USD 150,000+ or accredited</p>
+<p class="gc-run">Run by EAAA India Alternatives Limited (IFSC Branch), part of the Edelweiss group</p>
+<div class="gc-badges"><span class="badge gc-unknown">Status not published; ask us</span><span class="badge badge-neutral">Residents: Not stated</span><span class="badge badge-neutral">NRIs: Not stated</span><span class="badge">Private fund: USD 150,000+ or accredited</span></div>
+<p class="gc-meta">No page on our site: the fund house publishes too little. <a href="#talk">Ask us</a></p>
+<p class="gc-warn" hidden=""></p>
+</li><li class="gc-fund" data-ca="Not stated" data-cur="none" data-dir="none" data-house="Jio BlackRock" data-kind="retail" data-launch="0" data-min="1000000000" data-nri="Not stated" data-private="0" data-q="jioblackrock advantage world equity fund (ifsc) jio blackrock mutual fund jio blackrock" data-res="Not stated" data-us="Not stated">
+<span class="gc-name">JioBlackRock Advantage World Equity Fund (IFSC)</span>
+<p class="gc-meta">Jio BlackRock · GIFT City mutual fund · Direction not stated by the fund house · Currency not stated by the fund house · Minimum not stated by the fund house</p>
+<p class="gc-run">Run by Jio BlackRock International AMC (IFSC) Private Limited, part of the Jio BlackRock group</p>
+<div class="gc-badges"><span class="badge gc-unknown">Status not published; ask us</span><span class="badge badge-neutral">Residents: Not stated</span><span class="badge badge-neutral">NRIs: Not stated</span></div>
+<p class="gc-meta">No page on our site: the fund house publishes too little. <a href="#talk">Ask us</a></p>
+<p class="gc-warn" hidden=""></p>
+</li><li class="gc-fund" data-ca="Not stated" data-cur="usd" data-dir="india" data-house="Kotak Mahindra" data-kind="private" data-launch="20230201" data-min="150000" data-nri="Not stated" data-private="1" data-q="kotak data centre fund ifsc kotak mahindra mutual fund kotak mahindra" data-res="Not stated" data-us="Not stated">
+<a class="gc-name" href="https://www.kotakalternateasset.com/data-center-fund/" rel="noopener" target="_blank">Kotak Data Centre Fund IFSC<span class="sr-only"> (fund house's page, opens in a new tab)</span></a>
+<p class="gc-meta">Kotak Mahindra · GIFT City private fund (AIF Category II) · Private equity · Invests in India · US dollars · Minimum USD 150,000+ or accredited</p>
+<p class="gc-run">Run by Kotak Alternate Asset Managers Limited (IFSC Branch), part of the Kotak Mahindra group</p>
+<div class="gc-badges"><span class="badge gc-unknown">Status not published; ask us</span><span class="badge badge-neutral">Residents: Not stated</span><span class="badge badge-neutral">NRIs: Not stated</span><span class="badge">Private fund: USD 150,000+ or accredited</span></div>
+<p class="gc-meta">No page on our site: the fund house publishes too little. <a href="#talk">Ask us</a></p>
+<p class="gc-warn" hidden=""></p>
+</li><li class="gc-fund" data-ca="Not open" data-cur="usd" data-dir="outside_india" data-house="Kotak Mahindra" data-kind="retail" data-launch="20261012" data-min="5000" data-nri="Not open" data-private="0" data-q="kotak global access fund kotak mahindra mutual fund kotak mahindra" data-res="Open" data-us="Not open">
+<a class="gc-name" href="../fund/kotak-global-access-fund/index.html">Kotak Global Access Fund</a>
+<p class="gc-meta">Kotak Mahindra · GIFT City mutual fund · Equity · Invests outside India · US dollars · Minimum USD 5,000</p>
+<div class="gc-badges"><span class="badge">Upcoming</span><span class="badge badge-neutral">Residents: Open</span><span class="badge badge-neutral">NRIs: Not open</span></div>
+<p class="gc-warn" hidden=""></p>
+</li><li class="gc-fund" data-ca="Not stated" data-cur="none" data-dir="india" data-house="Kotak Mahindra" data-kind="private" data-launch="20250506" data-min="150000" data-nri="Not stated" data-private="1" data-q="kotak iconic india equity feeder fund kotak mahindra mutual fund kotak mahindra" data-res="Not stated" data-us="Open">
+<a class="gc-name" href="https://www.kotakalternateasset.com/" rel="noopener" target="_blank">Kotak Iconic India Equity Feeder Fund<span class="sr-only"> (fund house's page, opens in a new tab)</span></a>
+<p class="gc-meta">Kotak Mahindra · GIFT City private fund (AIF Category III) · Equity · Invests in India · Currency not stated by the fund house · Minimum USD 150,000+ or accredited</p>
+<p class="gc-run">Run by Kotak Alternate Asset Managers Limited (IFSC Branch), part of the Kotak Mahindra group</p>
+<div class="gc-badges"><span class="badge">Open</span><span class="badge badge-neutral">Residents: Not stated</span><span class="badge badge-neutral">NRIs: Not stated</span><span class="badge">Private fund: USD 150,000+ or accredited</span></div>
+<p class="gc-meta">No page on our site: the fund house publishes too little. <a href="#talk">Ask us</a></p>
+<p class="gc-warn" hidden=""></p>
+</li><li class="gc-fund" data-ca="Not stated" data-cur="none" data-dir="india" data-house="Kotak Mahindra" data-kind="private" data-launch="0" data-min="150000" data-nri="Not stated" data-private="1" data-q="kotak india commercial real estate fund ifsc kotak mahindra mutual fund kotak mahindra" data-res="Not stated" data-us="Not stated">
+<a class="gc-name" href="https://www.kotakalternateasset.com/" rel="noopener" target="_blank">Kotak India Commercial Real Estate Fund IFSC<span class="sr-only"> (fund house's page, opens in a new tab)</span></a>
+<p class="gc-meta">Kotak Mahindra · GIFT City private fund (AIF Category II) · Real estate · Invests in India · Currency not stated by the fund house · Minimum USD 150,000+ or accredited</p>
+<p class="gc-run">Run by Kotak Alternate Asset Managers Limited (IFSC Branch), part of the Kotak Mahindra group</p>
+<div class="gc-badges"><span class="badge gc-unknown">Status not published; ask us</span><span class="badge badge-neutral">Residents: Not stated</span><span class="badge badge-neutral">NRIs: Not stated</span><span class="badge">Private fund: USD 150,000+ or accredited</span></div>
+<p class="gc-meta">No page on our site: the fund house publishes too little. <a href="#talk">Ask us</a></p>
+<p class="gc-warn" hidden=""></p>
+</li><li class="gc-fund" data-ca="Not stated" data-cur="none" data-dir="india" data-house="Kotak Mahindra" data-kind="private" data-launch="0" data-min="150000" data-nri="Not stated" data-private="1" data-q="kotak india emerging equity fund of fund ifsc kotak mahindra mutual fund kotak mahindra" data-res="Not stated" data-us="Not stated">
+<a class="gc-name" href="https://www.kotakalternateasset.com/" rel="noopener" target="_blank">Kotak India Emerging Equity Fund of Fund IFSC<span class="sr-only"> (fund house's page, opens in a new tab)</span></a>
+<p class="gc-meta">Kotak Mahindra · GIFT City private fund (AIF Category III) · Equity · Invests in India · Currency not stated by the fund house · Minimum USD 150,000+ or accredited</p>
+<p class="gc-run">Run by Kotak Alternate Asset Managers Limited (IFSC Branch), part of the Kotak Mahindra group</p>
+<div class="gc-badges"><span class="badge gc-unknown">Status not published; ask us</span><span class="badge badge-neutral">Residents: Not stated</span><span class="badge badge-neutral">NRIs: Not stated</span><span class="badge">Private fund: USD 150,000+ or accredited</span></div>
+<p class="gc-meta">No page on our site: the fund house publishes too little. <a href="#talk">Ask us</a></p>
+<p class="gc-warn" hidden=""></p>
+</li><li class="gc-fund" data-ca="Not stated" data-cur="none" data-dir="india" data-house="Kotak Mahindra" data-kind="private" data-launch="0" data-min="150000" data-nri="Not stated" data-private="1" data-q="kotak india equity fund of fund ifsc kotak mahindra mutual fund kotak mahindra" data-res="Not stated" data-us="Not stated">
+<a class="gc-name" href="https://www.kotakalternateasset.com/" rel="noopener" target="_blank">Kotak India Equity Fund of Fund IFSC<span class="sr-only"> (fund house's page, opens in a new tab)</span></a>
+<p class="gc-meta">Kotak Mahindra · GIFT City private fund (AIF Category III) · Equity · Invests in India · Currency not stated by the fund house · Minimum USD 150,000+ or accredited</p>
+<p class="gc-run">Run by Kotak Alternate Asset Managers Limited (IFSC Branch), part of the Kotak Mahindra group</p>
+<div class="gc-badges"><span class="badge gc-unknown">Status not published; ask us</span><span class="badge badge-neutral">Residents: Not stated</span><span class="badge badge-neutral">NRIs: Not stated</span><span class="badge">Private fund: USD 150,000+ or accredited</span></div>
+<p class="gc-meta">No page on our site: the fund house publishes too little. <a href="#talk">Ask us</a></p>
+<p class="gc-warn" hidden=""></p>
+</li><li class="gc-fund" data-ca="Not stated" data-cur="none" data-dir="india" data-house="Kotak Mahindra" data-kind="private" data-launch="0" data-min="150000" data-nri="Not stated" data-private="1" data-q="kotak india flexicap fund ifsc kotak mahindra mutual fund kotak mahindra" data-res="Not stated" data-us="Not stated">
+<a class="gc-name" href="https://giftcity.kotakmf.com/" rel="noopener" target="_blank">Kotak India Flexicap Fund IFSC<span class="sr-only"> (fund house's page, opens in a new tab)</span></a>
+<p class="gc-meta">Kotak Mahindra · GIFT City private fund (AIF Category III) · Equity · Invests in India · Currency not stated by the fund house · Minimum USD 150,000+ or accredited</p>
+<div class="gc-badges"><span class="badge gc-unknown">Status not published; ask us</span><span class="badge badge-neutral">Residents: Not stated</span><span class="badge badge-neutral">NRIs: Not stated</span><span class="badge">Private fund: USD 150,000+ or accredited</span></div>
+<p class="gc-meta">No page on our site: the fund house publishes too little. <a href="#talk">Ask us</a></p>
+<p class="gc-warn" hidden=""></p>
+</li><li class="gc-fund" data-ca="Not stated" data-cur="none" data-dir="india" data-house="Kotak Mahindra" data-kind="private" data-launch="0" data-min="150000" data-nri="Not stated" data-private="1" data-q="kotak india large &amp; midcap fund ifsc kotak mahindra mutual fund kotak mahindra" data-res="Not stated" data-us="Not stated">
+<a class="gc-name" href="https://giftcity.kotakmf.com/" rel="noopener" target="_blank">Kotak India Large &amp; Midcap Fund IFSC<span class="sr-only"> (fund house's page, opens in a new tab)</span></a>
+<p class="gc-meta">Kotak Mahindra · GIFT City private fund (AIF Category III) · Equity · Invests in India · Currency not stated by the fund house · Minimum USD 150,000+ or accredited</p>
+<div class="gc-badges"><span class="badge gc-unknown">Status not published; ask us</span><span class="badge badge-neutral">Residents: Not stated</span><span class="badge badge-neutral">NRIs: Not stated</span><span class="badge">Private fund: USD 150,000+ or accredited</span></div>
+<p class="gc-meta">No page on our site: the fund house publishes too little. <a href="#talk">Ask us</a></p>
+<p class="gc-warn" hidden=""></p>
+</li><li class="gc-fund" data-ca="Not stated" data-cur="none" data-dir="india" data-house="Kotak Mahindra" data-kind="private" data-launch="0" data-min="150000" data-nri="Not stated" data-private="1" data-q="kotak india midcap fund ifsc kotak mahindra mutual fund kotak mahindra" data-res="Not stated" data-us="Not stated">
+<a class="gc-name" href="https://giftcity.kotakmf.com/" rel="noopener" target="_blank">Kotak India Midcap Fund IFSC<span class="sr-only"> (fund house's page, opens in a new tab)</span></a>
+<p class="gc-meta">Kotak Mahindra · GIFT City private fund (AIF Category III) · Equity · Invests in India · Currency not stated by the fund house · Minimum USD 150,000+ or accredited</p>
+<div class="gc-badges"><span class="badge gc-unknown">Status not published; ask us</span><span class="badge badge-neutral">Residents: Not stated</span><span class="badge badge-neutral">NRIs: Not stated</span><span class="badge">Private fund: USD 150,000+ or accredited</span></div>
+<p class="gc-meta">No page on our site: the fund house publishes too little. <a href="#talk">Ask us</a></p>
+<p class="gc-warn" hidden=""></p>
+</li><li class="gc-fund" data-ca="Not stated" data-cur="none" data-dir="india" data-house="Kotak Mahindra" data-kind="private" data-launch="0" data-min="150000" data-nri="Not stated" data-private="1" data-q="kotak msci india etf fund ifsc kotak mahindra mutual fund kotak mahindra" data-res="Not stated" data-us="Open">
+<a class="gc-name" href="https://www.kotakalternateasset.com/" rel="noopener" target="_blank">Kotak MSCI India ETF Fund IFSC<span class="sr-only"> (fund house's page, opens in a new tab)</span></a>
+<p class="gc-meta">Kotak Mahindra · GIFT City private fund (AIF Category III) · Equity · Invests in India · Currency not stated by the fund house · Minimum USD 150,000+ or accredited</p>
+<p class="gc-run">Run by Kotak Alternate Asset Managers Limited (IFSC Branch), part of the Kotak Mahindra group</p>
+<div class="gc-badges"><span class="badge gc-unknown">Status not published; ask us</span><span class="badge badge-neutral">Residents: Not stated</span><span class="badge badge-neutral">NRIs: Not stated</span><span class="badge">Private fund: USD 150,000+ or accredited</span></div>
+<p class="gc-meta">No page on our site: the fund house publishes too little. <a href="#talk">Ask us</a></p>
+<p class="gc-warn" hidden=""></p>
+</li><li class="gc-fund" data-ca="Not stated" data-cur="usd" data-dir="india" data-house="Kotak Mahindra" data-kind="private" data-launch="0" data-min="150000" data-nri="Not stated" data-private="1" data-q="kotak performing re credit strategy fund ii ifsc kotak mahindra mutual fund kotak mahindra" data-res="Not stated" data-us="Not stated">
+<a class="gc-name" href="https://www.kotakalternateasset.com/" rel="noopener" target="_blank">Kotak Performing RE Credit Strategy Fund II IFSC<span class="sr-only"> (fund house's page, opens in a new tab)</span></a>
+<p class="gc-meta">Kotak Mahindra · GIFT City private fund (AIF Category II) · Private credit · Invests in India · US dollars · Minimum USD 150,000+ or accredited</p>
+<p class="gc-run">Run by Kotak Alternate Asset Managers Limited (IFSC Branch), part of the Kotak Mahindra group</p>
+<div class="gc-badges"><span class="badge gc-unknown">Status not published; ask us</span><span class="badge badge-neutral">Residents: Not stated</span><span class="badge badge-neutral">NRIs: Not stated</span><span class="badge">Private fund: USD 150,000+ or accredited</span></div>
+<p class="gc-meta">No page on our site: the fund house publishes too little. <a href="#talk">Ask us</a></p>
+<p class="gc-warn" hidden=""></p>
+</li><li class="gc-fund" data-ca="Not stated" data-cur="usd" data-dir="india" data-house="Kotak Mahindra" data-kind="private" data-launch="0" data-min="150000" data-nri="Not stated" data-private="1" data-q="kotak real estate fund x-ifsc kotak mahindra mutual fund kotak mahindra" data-res="Not stated" data-us="Not stated">
+<a class="gc-name" href="https://www.kotakalternateasset.com/" rel="noopener" target="_blank">Kotak Real Estate Fund X-IFSC<span class="sr-only"> (fund house's page, opens in a new tab)</span></a>
+<p class="gc-meta">Kotak Mahindra · GIFT City private fund (AIF Category II) · Real estate · Invests in India · US dollars · Minimum USD 150,000+ or accredited</p>
+<p class="gc-run">Run by Kotak Alternate Asset Managers Limited (IFSC Branch), part of the Kotak Mahindra group</p>
+<div class="gc-badges"><span class="badge gc-unknown">Status not published; ask us</span><span class="badge badge-neutral">Residents: Not stated</span><span class="badge badge-neutral">NRIs: Not stated</span><span class="badge">Private fund: USD 150,000+ or accredited</span></div>
+<p class="gc-meta">No page on our site: the fund house publishes too little. <a href="#talk">Ask us</a></p>
+<p class="gc-warn" hidden=""></p>
+</li><li class="gc-fund" data-ca="Not stated" data-cur="none" data-dir="india" data-house="Kotak Mahindra" data-kind="private" data-launch="0" data-min="150000" data-nri="Not stated" data-private="1" data-q="kotak real estate fund xii - ifsc ii kotak mahindra mutual fund kotak mahindra" data-res="Not stated" data-us="Not stated">
+<a class="gc-name" href="https://www.kotakalternateasset.com/" rel="noopener" target="_blank">Kotak Real Estate Fund XII - IFSC II<span class="sr-only"> (fund house's page, opens in a new tab)</span></a>
+<p class="gc-meta">Kotak Mahindra · GIFT City private fund (AIF Category II) · Real estate · Invests in India · Currency not stated by the fund house · Minimum USD 150,000+ or accredited</p>
+<p class="gc-run">Run by Kotak Alternate Asset Managers Limited (IFSC Branch), part of the Kotak Mahindra group</p>
+<div class="gc-badges"><span class="badge gc-unknown">Status not published; ask us</span><span class="badge badge-neutral">Residents: Not stated</span><span class="badge badge-neutral">NRIs: Not stated</span><span class="badge">Private fund: USD 150,000+ or accredited</span></div>
+<p class="gc-meta">No page on our site: the fund house publishes too little. <a href="#talk">Ask us</a></p>
+<p class="gc-warn" hidden=""></p>
+</li><li class="gc-fund" data-ca="Not stated" data-cur="usd" data-dir="india" data-house="Kotak Mahindra" data-kind="private" data-launch="0" data-min="150000" data-nri="Not stated" data-private="1" data-q="kotak real estate fund xii ifsc i kotak mahindra mutual fund kotak mahindra" data-res="Not stated" data-us="Not stated">
+<a class="gc-name" href="https://www.kotakalternateasset.com/" rel="noopener" target="_blank">Kotak Real Estate Fund XII IFSC I<span class="sr-only"> (fund house's page, opens in a new tab)</span></a>
+<p class="gc-meta">Kotak Mahindra · GIFT City private fund (AIF Category II) · Real estate · Invests in India · US dollars · Minimum USD 150,000+ or accredited</p>
+<p class="gc-run">Run by Kotak Alternate Asset Managers Limited (IFSC Branch), part of the Kotak Mahindra group</p>
+<div class="gc-badges"><span class="badge gc-unknown">Status not published; ask us</span><span class="badge badge-neutral">Residents: Not stated</span><span class="badge badge-neutral">NRIs: Not stated</span><span class="badge">Private fund: USD 150,000+ or accredited</span></div>
+<p class="gc-meta">No page on our site: the fund house publishes too little. <a href="#talk">Ask us</a></p>
+<p class="gc-warn" hidden=""></p>
+</li><li class="gc-fund" data-ca="Not stated" data-cur="none" data-dir="india" data-house="Kotak Mahindra" data-kind="private" data-launch="0" data-min="150000" data-nri="Not stated" data-private="1" data-q="kotak real estate fund xiii ifsc kotak mahindra mutual fund kotak mahindra" data-res="Not stated" data-us="Not stated">
+<a class="gc-name" href="https://www.kotakalternateasset.com/" rel="noopener" target="_blank">Kotak Real Estate Fund XIII IFSC<span class="sr-only"> (fund house's page, opens in a new tab)</span></a>
+<p class="gc-meta">Kotak Mahindra · GIFT City private fund (AIF Category III) · Real estate · Invests in India · Currency not stated by the fund house · Minimum USD 150,000+ or accredited</p>
+<p class="gc-run">Run by Kotak Alternate Asset Managers Limited (IFSC Branch), part of the Kotak Mahindra group</p>
+<div class="gc-badges"><span class="badge gc-unknown">Status not published; ask us</span><span class="badge badge-neutral">Residents: Not stated</span><span class="badge badge-neutral">NRIs: Not stated</span><span class="badge">Private fund: USD 150,000+ or accredited</span></div>
+<p class="gc-meta">No page on our site: the fund house publishes too little. <a href="#talk">Ask us</a></p>
+<p class="gc-warn" hidden=""></p>
+</li><li class="gc-fund" data-ca="Not stated" data-cur="none" data-dir="india" data-house="Kotak Mahindra" data-kind="private" data-launch="0" data-min="150000" data-nri="Not stated" data-private="1" data-q="kotak real estate investment fund - ifsc kotak mahindra mutual fund kotak mahindra" data-res="Not stated" data-us="Not stated">
+<a class="gc-name" href="https://www.kotakalternateasset.com/" rel="noopener" target="_blank">Kotak Real Estate Investment Fund - IFSC<span class="sr-only"> (fund house's page, opens in a new tab)</span></a>
+<p class="gc-meta">Kotak Mahindra · GIFT City private fund (AIF Category II) · Real estate · Invests in India · Currency not stated by the fund house · Minimum USD 150,000+ or accredited</p>
+<p class="gc-run">Run by Kotak Alternate Asset Managers Limited (IFSC Branch), part of the Kotak Mahindra group</p>
+<div class="gc-badges"><span class="badge gc-unknown">Status not published; ask us</span><span class="badge badge-neutral">Residents: Not stated</span><span class="badge badge-neutral">NRIs: Not stated</span><span class="badge">Private fund: USD 150,000+ or accredited</span></div>
+<p class="gc-meta">No page on our site: the fund house publishes too little. <a href="#talk">Ask us</a></p>
+<p class="gc-warn" hidden=""></p>
+</li><li class="gc-fund" data-ca="Not stated" data-cur="usd" data-dir="india" data-house="Kotak Mahindra" data-kind="private" data-launch="0" data-min="150000" data-nri="Not stated" data-private="1" data-q="kotak real estate investment fund ii ifsc kotak mahindra mutual fund kotak mahindra" data-res="Not stated" data-us="Not stated">
+<a class="gc-name" href="https://www.kotakalternateasset.com/" rel="noopener" target="_blank">Kotak Real Estate Investment Fund II IFSC<span class="sr-only"> (fund house's page, opens in a new tab)</span></a>
+<p class="gc-meta">Kotak Mahindra · GIFT City private fund (AIF Category II) · Real estate · Invests in India · US dollars · Minimum USD 150,000+ or accredited</p>
+<p class="gc-run">Run by Kotak Alternate Asset Managers Limited (IFSC Branch), part of the Kotak Mahindra group</p>
+<div class="gc-badges"><span class="badge gc-unknown">Status not published; ask us</span><span class="badge badge-neutral">Residents: Not stated</span><span class="badge badge-neutral">NRIs: Not stated</span><span class="badge">Private fund: USD 150,000+ or accredited</span></div>
+<p class="gc-meta">No page on our site: the fund house publishes too little. <a href="#talk">Ask us</a></p>
+<p class="gc-warn" hidden=""></p>
+</li><li class="gc-fund" data-ca="Not stated" data-cur="usd" data-dir="india" data-house="Kotak Mahindra" data-kind="private" data-launch="20230328" data-min="150000" data-nri="Not stated" data-private="1" data-q="kotak strategic situations fund ii ifsc kotak mahindra mutual fund kotak mahindra" data-res="Not stated" data-us="Not stated">
+<a class="gc-name" href="https://www.kotakalternateasset.com/strategic-situations-fund/" rel="noopener" target="_blank">Kotak Strategic Situations Fund II IFSC<span class="sr-only"> (fund house's page, opens in a new tab)</span></a>
+<p class="gc-meta">Kotak Mahindra · GIFT City private fund (AIF Category II) · Private credit · Invests in India · US dollars · Minimum USD 150,000+ or accredited</p>
+<p class="gc-run">Run by Kotak Alternate Asset Managers Limited (IFSC Branch), part of the Kotak Mahindra group</p>
+<div class="gc-badges"><span class="badge gc-unknown">Status not published; ask us</span><span class="badge badge-neutral">Residents: Not stated</span><span class="badge badge-neutral">NRIs: Not stated</span><span class="badge">Private fund: USD 150,000+ or accredited</span></div>
+<p class="gc-meta">No page on our site: the fund house publishes too little. <a href="#talk">Ask us</a></p>
+<p class="gc-warn" hidden=""></p>
+</li><li class="gc-fund" data-ca="Not stated" data-cur="none" data-dir="none" data-house="Kotak Mahindra" data-kind="private" data-launch="0" data-min="150000" data-nri="Not stated" data-private="1" data-q="kotak strategic solutions fund iii ifsc kotak mahindra mutual fund kotak mahindra" data-res="Not stated" data-us="Not stated">
+<a class="gc-name" href="https://www.kotakalternateasset.com/" rel="noopener" target="_blank">Kotak Strategic Solutions Fund III IFSC<span class="sr-only"> (fund house's page, opens in a new tab)</span></a>
+<p class="gc-meta">Kotak Mahindra · GIFT City private fund (AIF Category II) · Direction not stated by the fund house · Currency not stated by the fund house · Minimum USD 150,000+ or accredited</p>
+<p class="gc-run">Run by Kotak Alternate Asset Managers Limited (IFSC Branch), part of the Kotak Mahindra group</p>
+<div class="gc-badges"><span class="badge gc-unknown">Status not published; ask us</span><span class="badge badge-neutral">Residents: Not stated</span><span class="badge badge-neutral">NRIs: Not stated</span><span class="badge">Private fund: USD 150,000+ or accredited</span></div>
+<p class="gc-meta">No page on our site: the fund house publishes too little. <a href="#talk">Ask us</a></p>
+<p class="gc-warn" hidden=""></p>
+</li><li class="gc-fund" data-ca="Not stated" data-cur="usd" data-dir="outside_india" data-house="Mirae Asset" data-kind="private" data-launch="0" data-min="151000" data-nri="Open" data-private="1" data-q="mirae asset global advantage fund mirae asset mutual fund mirae asset" data-res="Not open" data-us="Not stated">
+<a class="gc-name" href="../fund/mirae-asset-global-advantage-fund/index.html">Mirae Asset Global Advantage Fund</a>
+<p class="gc-meta">Mirae Asset · GIFT City private fund (AIF Category III) · Equity · Invests outside India · US dollars · Minimum USD 151,000+ or accredited</p>
+<div class="gc-badges"><span class="badge">Open</span><span class="badge badge-neutral">Residents: Not open</span><span class="badge badge-neutral">NRIs: Open</span><span class="badge">Private fund: USD 150,000+ or accredited</span></div>
+<p class="gc-warn" hidden=""></p>
+</li><li class="gc-fund" data-ca="Not stated" data-cur="usd" data-dir="outside_india" data-house="Mirae Asset" data-kind="private" data-launch="20250903" data-min="151000" data-nri="Open" data-private="1" data-q="mirae asset global allocation fund mirae asset mutual fund mirae asset" data-res="Open" data-us="Not stated">
+<a class="gc-name" href="../fund/mirae-asset-global-allocation-fund/index.html">Mirae Asset Global Allocation Fund</a>
+<p class="gc-meta">Mirae Asset · GIFT City private fund (AIF Category III) · Equity · Invests outside India · US dollars · Minimum USD 151,000+ or accredited</p>
+<div class="gc-badges"><span class="badge gc-unknown">Status not published; ask us</span><span class="badge badge-neutral">Residents: Open</span><span class="badge badge-neutral">NRIs: Open</span><span class="badge">Private fund: USD 150,000+ or accredited</span></div>
+<p class="gc-warn" hidden=""></p>
+</li><li class="gc-fund" data-ca="Not open" data-cur="usd" data-dir="india" data-house="Mirae Asset" data-kind="private" data-launch="20240731" data-min="150000" data-nri="Open" data-private="1" data-q="mirae asset india equity allocation fund: ifsc, gift city mirae asset mutual fund mirae asset" data-res="Not open" data-us="Not open">
+<a class="gc-name" href="../fund/mirae-asset-india-equity-allocation-fund/index.html">Mirae Asset India Equity Allocation Fund: IFSC, GIFT City</a>
+<p class="gc-meta">Mirae Asset · GIFT City private fund (AIF Category III) · Equity · Invests in India · US dollars · Minimum USD 150,000+ or accredited</p>
+<div class="gc-badges"><span class="badge">Open</span><span class="badge badge-neutral">Residents: Not open</span><span class="badge badge-neutral">NRIs: Open</span><span class="badge">Private fund: USD 150,000+ or accredited</span></div>
+<p class="gc-warn" hidden=""></p>
+</li><li class="gc-fund" data-ca="Not stated" data-cur="usd" data-dir="india" data-house="Motilal Oswal" data-kind="private" data-launch="0" data-min="150000" data-nri="Open" data-private="1" data-q="motilal oswal alternative investment (ifsc) trust motilal oswal mutual fund motilal oswal" data-res="Not stated" data-us="Not stated">
+<a class="gc-name" href="../fund/motilal-oswal-alternative-investment-ifsc-trust/index.html">Motilal Oswal Alternative Investment (IFSC) Trust</a>
+<p class="gc-meta">Motilal Oswal · GIFT City private fund (AIF Category III) · Equity · Invests in India · US dollars · Minimum USD 150,000+ or accredited</p>
+<p class="gc-run">Run by MO Alternative IFSC Private Limited, part of the Motilal Oswal group</p>
+<div class="gc-badges"><span class="badge gc-unknown">Status not published; ask us</span><span class="badge badge-neutral">Residents: Not stated</span><span class="badge badge-neutral">NRIs: Open</span><span class="badge">Private fund: USD 150,000+ or accredited</span></div>
+<p class="gc-warn" hidden=""></p>
+</li><li class="gc-fund" data-ca="Not stated" data-cur="usd" data-dir="india" data-house="Motilal Oswal" data-kind="private" data-launch="0" data-min="150000" data-nri="Open" data-private="1" data-q="motilal oswal gift city india equity fund of funds trust motilal oswal mutual fund motilal oswal" data-res="Not stated" data-us="Not stated">
+<a class="gc-name" href="../fund/motilal-oswal-gift-city-india-equity-fund-of-funds-trust/index.html">Motilal Oswal GIFT City India Equity Fund of Funds Trust</a>
+<p class="gc-meta">Motilal Oswal · GIFT City private fund (AIF Category III) · Equity · Invests in India · US dollars · Minimum USD 150,000+ or accredited</p>
+<p class="gc-run">Run by MO Alternative IFSC Private Limited, part of the Motilal Oswal group</p>
+<div class="gc-badges"><span class="badge gc-unknown">Status not published; ask us</span><span class="badge badge-neutral">Residents: Not stated</span><span class="badge badge-neutral">NRIs: Open</span><span class="badge">Private fund: USD 150,000+ or accredited</span></div>
+<p class="gc-warn" hidden=""></p>
+</li><li class="gc-fund" data-ca="Not stated" data-cur="none" data-dir="none" data-house="Nippon India" data-kind="retail" data-launch="0" data-min="1000000000" data-nri="Not stated" data-private="0" data-q="nippon global xtrackers artificial intelligence &amp; big data etf gift nippon india mutual fund nippon india" data-res="Not stated" data-us="Not stated">
+<a class="gc-name" href="https://giftcity.nipponindiaim.com/" rel="noopener" target="_blank">Nippon Global XTrackers Artificial Intelligence &amp; Big Data ETF GIFT<span class="sr-only"> (fund house's page, opens in a new tab)</span></a>
+<p class="gc-meta">Nippon India · GIFT City mutual fund · Direction not stated by the fund house · Currency not stated by the fund house · Minimum not stated by the fund house</p>
+<div class="gc-badges"><span class="badge gc-unknown">Status not published; ask us</span><span class="badge badge-neutral">Residents: Not stated</span><span class="badge badge-neutral">NRIs: Not stated</span></div>
+<p class="gc-meta">No page on our site: the fund house publishes too little. <a href="#talk">Ask us</a></p>
+<p class="gc-warn" hidden=""></p>
+</li><li class="gc-fund" data-ca="Not stated" data-cur="none" data-dir="india" data-house="Nippon India" data-kind="private" data-launch="0" data-min="150000" data-nri="Not stated" data-private="1" data-q="nippon india digital innovation fund 2b nippon india mutual fund nippon india" data-res="Not stated" data-us="Not stated">
+<a class="gc-name" href="https://giftcity.nipponindiaim.com/" rel="noopener" target="_blank">Nippon India Digital Innovation Fund 2B<span class="sr-only"> (fund house's page, opens in a new tab)</span></a>
+<p class="gc-meta">Nippon India · GIFT City private fund (AIF Category II) · Private equity · Invests in India · Currency not stated by the fund house · Minimum USD 150,000+ or accredited</p>
+<div class="gc-badges"><span class="badge">Upcoming</span><span class="badge badge-neutral">Residents: Not stated</span><span class="badge badge-neutral">NRIs: Not stated</span><span class="badge">Private fund: USD 150,000+ or accredited</span></div>
+<p class="gc-meta">No page on our site: the fund house publishes too little. <a href="#talk">Ask us</a></p>
+<p class="gc-warn" hidden=""></p>
+</li><li class="gc-fund" data-ca="Not stated" data-cur="usd" data-dir="india" data-house="Nippon India" data-kind="private" data-launch="0" data-min="150000" data-nri="Open" data-private="1" data-q="nippon india etf nifty 50 bees gift fund nippon india mutual fund nippon india" data-res="Not open" data-us="Not stated">
+<a class="gc-name" href="../fund/nippon-india-etf-nifty-50-bees-gift/index.html">Nippon India ETF Nifty 50 Bees GIFT Fund</a>
+<p class="gc-meta">Nippon India · GIFT City private fund (AIF Category III) · Equity · Invests in India · US dollars · Minimum USD 150,000+ or accredited</p>
+<div class="gc-badges"><span class="badge">Open</span><span class="badge badge-neutral">Residents: Not open</span><span class="badge badge-neutral">NRIs: Open</span><span class="badge">Private fund: USD 150,000+ or accredited</span></div>
+<p class="gc-warn" hidden=""></p>
+</li><li class="gc-fund" data-ca="Not stated" data-cur="none" data-dir="india" data-house="Nippon India" data-kind="private" data-launch="0" data-min="150000" data-nri="Open" data-private="1" data-q="nippon india large cap fund gift nippon india mutual fund nippon india" data-res="Not open" data-us="Not stated">
+<a class="gc-name" href="../fund/nippon-india-large-cap-fund-gift/index.html">Nippon India Large Cap Fund GIFT</a>
+<p class="gc-meta">Nippon India · GIFT City private fund (AIF Category III) · Equity · Invests in India · Currency not stated by the fund house · Minimum USD 150,000+ or accredited</p>
+<div class="gc-badges"><span class="badge">Open</span><span class="badge badge-neutral">Residents: Not open</span><span class="badge badge-neutral">NRIs: Open</span><span class="badge">Private fund: USD 150,000+ or accredited</span></div>
+<p class="gc-warn" hidden=""></p>
+</li><li class="gc-fund" data-ca="Not stated" data-cur="usd" data-dir="india" data-house="Nippon India" data-kind="private" data-launch="0" data-min="150000" data-nri="Open" data-private="1" data-q="nippon india sharp equity gift fund nippon india mutual fund nippon india" data-res="Not open" data-us="Not stated">
+<a class="gc-name" href="../fund/nippon-india-sharp-equity-fund/index.html">Nippon India SHARP Equity GIFT Fund</a>
+<p class="gc-meta">Nippon India · GIFT City private fund (AIF Category III) · Equity · Invests in India · US dollars · Minimum USD 150,000+ or accredited</p>
+<div class="gc-badges"><span class="badge">Open</span><span class="badge badge-neutral">Residents: Not open</span><span class="badge badge-neutral">NRIs: Open</span><span class="badge">Private fund: USD 150,000+ or accredited</span></div>
+<p class="gc-warn" hidden=""></p>
+</li><li class="gc-fund" data-ca="Not stated" data-cur="usd" data-dir="india" data-house="NJ" data-kind="retail" data-launch="20251112" data-min="10000" data-nri="Open" data-private="0" data-q="nj india opportunities fund nj mutual fund nj" data-res="Not open" data-us="Not stated">
+<a class="gc-name" href="../fund/nj-india-opportunities-fund/index.html">NJ India Opportunities Fund</a>
+<p class="gc-meta">NJ · GIFT City mutual fund · Equity · Invests in India · US dollars · Minimum USD 10,000</p>
+<div class="gc-badges"><span class="badge">Open</span><span class="badge badge-neutral">Residents: Not open</span><span class="badge badge-neutral">NRIs: Open</span></div>
+<p class="gc-warn" hidden=""></p>
+</li><li class="gc-fund" data-ca="Not open" data-cur="usd" data-dir="outside_india" data-house="PPFAS" data-kind="retail" data-launch="20260320" data-min="500" data-nri="Not open" data-private="0" data-q="parag parikh ifsc nasdaq 100 fund of fund ppfas mutual fund ppfas" data-res="Open" data-us="Not open">
+<a class="gc-name" href="../fund/parag-parikh-ifsc-nasdaq-100-fof/index.html">Parag Parikh IFSC NASDAQ 100 Fund of Fund</a>
+<p class="gc-meta">PPFAS · GIFT City mutual fund · Equity · Invests outside India · US dollars · Minimum USD 500</p>
+<p class="gc-run">Run by PPFAS Alternate Asset Managers IFSC Private Limited, part of the PPFAS group</p>
+<div class="gc-badges"><span class="badge">Open</span><span class="badge badge-neutral">Residents: Open</span><span class="badge badge-neutral">NRIs: Not open</span></div>
+<p class="gc-warn" hidden=""></p>
+</li><li class="gc-fund" data-ca="Not open" data-cur="usd" data-dir="outside_india" data-house="PPFAS" data-kind="retail" data-launch="20260320" data-min="500" data-nri="Not open" data-private="0" data-q="parag parikh ifsc s&amp;p 500 fund of fund ppfas mutual fund ppfas" data-res="Open" data-us="Not open">
+<a class="gc-name" href="../fund/parag-parikh-ifsc-sp500-fof/index.html">Parag Parikh IFSC S&amp;P 500 Fund of Fund</a>
+<p class="gc-meta">PPFAS · GIFT City mutual fund · Equity · Invests outside India · US dollars · Minimum USD 500</p>
+<p class="gc-run">Run by PPFAS Alternate Asset Managers IFSC Private Limited, part of the PPFAS group</p>
+<div class="gc-badges"><span class="badge">Open</span><span class="badge badge-neutral">Residents: Open</span><span class="badge badge-neutral">NRIs: Not open</span></div>
+<p class="gc-warn" hidden=""></p>
+</li><li class="gc-fund" data-ca="Not stated" data-cur="usd" data-dir="india" data-house="PPFAS" data-kind="retail" data-launch="0" data-min="10000" data-nri="Open" data-private="0" data-q="parag parikh india flexi cap fund ppfas mutual fund ppfas" data-res="Not open" data-us="Not stated">
+<a class="gc-name" href="../fund/parag-parikh-india-flexi-cap-fund/index.html">Parag Parikh India Flexi Cap Fund</a>
+<p class="gc-meta">PPFAS · GIFT City mutual fund · Equity · Invests in India · US dollars · Minimum USD 10,000</p>
+<p class="gc-run">Run by PPFAS Alternate Asset Managers IFSC Private Limited, part of the PPFAS group</p>
+<div class="gc-badges"><span class="badge">Upcoming</span><span class="badge badge-neutral">Residents: Not open</span><span class="badge badge-neutral">NRIs: Open</span></div>
+<p class="gc-warn" hidden=""></p>
+</li><li class="gc-fund" data-ca="Not stated" data-cur="none" data-dir="india" data-house="PPFAS" data-kind="retail" data-launch="0" data-min="1000000000" data-nri="Not stated" data-private="0" data-q="parag parikh india large cap fund ppfas mutual fund ppfas" data-res="Not stated" data-us="Not stated">
+<a class="gc-name" href="https://gift.ppfas.com/product/inbound/parag_parikh_india_large_cap_fund/" rel="noopener" target="_blank">Parag Parikh India Large Cap Fund<span class="sr-only"> (fund house's page, opens in a new tab)</span></a>
+<p class="gc-meta">PPFAS · GIFT City mutual fund · Equity · Invests in India · Currency not stated by the fund house · Minimum not stated by the fund house</p>
+<p class="gc-run">Run by PPFAS Alternate Asset Managers IFSC Private Limited, part of the PPFAS group</p>
+<div class="gc-badges"><span class="badge">Upcoming</span><span class="badge badge-neutral">Residents: Not stated</span><span class="badge badge-neutral">NRIs: Not stated</span></div>
+<p class="gc-meta">No page on our site: the fund house publishes too little. <a href="#talk">Ask us</a></p>
+<p class="gc-warn" hidden=""></p>
+</li><li class="gc-fund" data-ca="Not stated" data-cur="usd" data-dir="india" data-house="Unifi" data-kind="private" data-launch="20240412" data-min="150000" data-nri="Not stated" data-private="1" data-q="rangoli india fund unifi mutual fund unifi" data-res="Not stated" data-us="Open">
+<a class="gc-name" href="https://unifiinvestment.com/the-rangoli-india-fund/" rel="noopener" target="_blank">Rangoli India Fund<span class="sr-only"> (fund house's page, opens in a new tab)</span></a>
+<p class="gc-meta">Unifi · GIFT City private fund (AIF Category III) · Equity · Invests in India · US dollars · Minimum USD 150,000+ or accredited</p>
+<p class="gc-run">Run by Unifi Investment Management LLP, part of the Unifi group</p>
+<div class="gc-badges"><span class="badge">Open</span><span class="badge badge-neutral">Residents: Not stated</span><span class="badge badge-neutral">NRIs: Not stated</span><span class="badge">Private fund: USD 150,000+ or accredited</span></div>
+<p class="gc-meta">No page on our site: the fund house publishes too little. <a href="#talk">Ask us</a></p>
+<p class="gc-warn" hidden=""></p>
+</li><li class="gc-fund" data-ca="Not stated" data-cur="none" data-dir="none" data-house="Motilal Oswal" data-kind="private" data-launch="0" data-min="150000" data-nri="Not stated" data-private="1" data-q="realty excellence trust vi gc motilal oswal mutual fund motilal oswal" data-res="Not stated" data-us="Not stated">
+<a class="gc-name" href="https://www.motilaloswalmf.com/gift-city" rel="noopener" target="_blank">Realty Excellence Trust VI GC<span class="sr-only"> (fund house's page, opens in a new tab)</span></a>
+<p class="gc-meta">Motilal Oswal · GIFT City private fund (AIF Category III) · Real estate · Direction not stated by the fund house · Currency not stated by the fund house · Minimum USD 150,000+ or accredited</p>
+<p class="gc-run">Run by a company the fund house does not name, part of the Motilal Oswal group</p>
+<div class="gc-badges"><span class="badge gc-unknown">Status not published; ask us</span><span class="badge badge-neutral">Residents: Not stated</span><span class="badge badge-neutral">NRIs: Not stated</span><span class="badge">Private fund: USD 150,000+ or accredited</span></div>
+<p class="gc-meta">No page on our site: the fund house publishes too little. <a href="#talk">Ask us</a></p>
+<p class="gc-warn" hidden=""></p>
+</li><li class="gc-fund" data-ca="Not stated" data-cur="none" data-dir="none" data-house="SBI" data-kind="private" data-launch="0" data-min="150000" data-nri="Not stated" data-private="1" data-q="sbi global thematic advantage fund (ifsc) sbi mutual fund sbi" data-res="Not stated" data-us="Not stated">
+<a class="gc-name" href="https://sbifunds.com/gift" rel="noopener" target="_blank">SBI Global Thematic Advantage Fund (IFSC)<span class="sr-only"> (fund house's page, opens in a new tab)</span></a>
+<p class="gc-meta">SBI · GIFT City private fund (AIF Category III) · Direction not stated by the fund house · Currency not stated by the fund house · Minimum USD 150,000+ or accredited</p>
+<div class="gc-badges"><span class="badge gc-unknown">Status not published; ask us</span><span class="badge badge-neutral">Residents: Not stated</span><span class="badge badge-neutral">NRIs: Not stated</span><span class="badge">Private fund: USD 150,000+ or accredited</span></div>
+<p class="gc-meta">No page on our site: the fund house publishes too little. <a href="#talk">Ask us</a></p>
+<p class="gc-warn" hidden=""></p>
+</li><li class="gc-fund" data-ca="Not stated" data-cur="usd" data-dir="india" data-house="SBI" data-kind="private" data-launch="20260216" data-min="150000" data-nri="Not stated" data-private="1" data-q="sbi india equity advantage fund (ifsc) sbi mutual fund sbi" data-res="Not stated" data-us="Not stated">
+<a class="gc-name" href="https://sbifunds.com/gift-aif" rel="noopener" target="_blank">SBI India Equity Advantage Fund (IFSC)<span class="sr-only"> (fund house's page, opens in a new tab)</span></a>
+<p class="gc-meta">SBI · GIFT City private fund (AIF Category III) · Equity · Invests in India · US dollars · Minimum USD 150,000+ or accredited</p>
+<div class="gc-badges"><span class="badge">Open</span><span class="badge badge-neutral">Residents: Not stated</span><span class="badge badge-neutral">NRIs: Not stated</span><span class="badge">Private fund: USD 150,000+ or accredited</span></div>
+<p class="gc-meta">No page on our site: the fund house publishes too little. <a href="#talk">Ask us</a></p>
+<p class="gc-warn" hidden=""></p>
+</li><li class="gc-fund" data-ca="Not stated" data-cur="usd" data-dir="india" data-house="SBI" data-kind="private" data-launch="20231229" data-min="150000" data-nri="Not stated" data-private="1" data-q="sbi investment opportunities fund (ifsc) sbi mutual fund sbi" data-res="Not stated" data-us="Not stated">
+<a class="gc-name" href="https://sbifunds.com/gift-aif" rel="noopener" target="_blank">SBI Investment Opportunities Fund (IFSC)<span class="sr-only"> (fund house's page, opens in a new tab)</span></a>
+<p class="gc-meta">SBI · GIFT City private fund (AIF Category III) · Equity · Invests in India · US dollars · Minimum USD 150,000+ or accredited</p>
+<div class="gc-badges"><span class="badge">Open</span><span class="badge badge-neutral">Residents: Not stated</span><span class="badge badge-neutral">NRIs: Not stated</span><span class="badge">Private fund: USD 150,000+ or accredited</span></div>
+<p class="gc-meta">No page on our site: the fund house publishes too little. <a href="#talk">Ask us</a></p>
+<p class="gc-warn" hidden=""></p>
+</li><li class="gc-fund" data-ca="Not stated" data-cur="none" data-dir="india" data-house="SBI" data-kind="private" data-launch="0" data-min="150000" data-nri="Not stated" data-private="1" data-q="sbi nifty 50 etf fund (ifsc) sbi mutual fund sbi" data-res="Not stated" data-us="Not stated">
+<a class="gc-name" href="https://sbifunds.com/gift" rel="noopener" target="_blank">SBI NIFTY 50 ETF Fund (IFSC)<span class="sr-only"> (fund house's page, opens in a new tab)</span></a>
+<p class="gc-meta">SBI · GIFT City private fund (AIF Category III) · Equity · Invests in India · Currency not stated by the fund house · Minimum USD 150,000+ or accredited</p>
+<div class="gc-badges"><span class="badge">Upcoming</span><span class="badge badge-neutral">Residents: Not stated</span><span class="badge badge-neutral">NRIs: Not stated</span><span class="badge">Private fund: USD 150,000+ or accredited</span></div>
+<p class="gc-meta">No page on our site: the fund house publishes too little. <a href="#talk">Ask us</a></p>
+<p class="gc-warn" hidden=""></p>
+</li><li class="gc-fund" data-ca="Not stated" data-cur="usd" data-dir="india" data-house="Sundaram" data-kind="retail" data-launch="20260319" data-min="5000" data-nri="Open" data-private="0" data-q="sundaram india mid cap - gift sundaram mutual fund sundaram" data-res="Not open" data-us="Not stated">
+<a class="gc-name" href="../fund/sundaram-india-mid-cap-gift/index.html">Sundaram India Mid Cap - GIFT</a>
+<p class="gc-meta">Sundaram · GIFT City mutual fund · Equity · Invests in India · US dollars · Minimum USD 5,000</p>
+<div class="gc-badges"><span class="badge">Open</span><span class="badge badge-neutral">Residents: Not open</span><span class="badge badge-neutral">NRIs: Open</span></div>
+<p class="gc-warn" hidden=""></p>
+</li><li class="gc-fund" data-ca="Not open" data-cur="usd" data-dir="india" data-house="Tata" data-kind="retail" data-launch="20251201" data-min="500" data-nri="Open" data-private="0" data-q="tata india dynamic equity fund tata mutual fund tata" data-res="Not open" data-us="Not open">
+<a class="gc-name" href="../fund/tata-india-dynamic-equity-fund/index.html">Tata India Dynamic Equity Fund</a>
+<p class="gc-meta">Tata · GIFT City mutual fund · Equity · Invests in India · US dollars · Minimum USD 500</p>
+<div class="gc-badges"><span class="badge">Open</span><span class="badge badge-neutral">Residents: Not open</span><span class="badge badge-neutral">NRIs: Open</span></div>
+<p class="gc-warn" hidden=""></p>
+</li><li class="gc-fund" data-ca="Not stated" data-cur="none" data-dir="none" data-house="The Wealth Company" data-kind="private" data-launch="0" data-min="150000" data-nri="Not stated" data-private="1" data-q="the wealth company asset management ifsc trust the wealth company mutual fund the wealth company" data-res="Not stated" data-us="Not stated">
+<span class="gc-name">The Wealth Company Asset Management IFSC Trust</span>
+<p class="gc-meta">The Wealth Company · GIFT City private fund (AIF Category II) · Direction not stated by the fund house · Currency not stated by the fund house · Minimum USD 150,000+ or accredited</p>
+<p class="gc-run">Run by Wealth Company Asset Management Private Limited (IFSC Branch), part of the The Wealth Company group</p>
+<div class="gc-badges"><span class="badge gc-unknown">Status not published; ask us</span><span class="badge badge-neutral">Residents: Not stated</span><span class="badge badge-neutral">NRIs: Not stated</span><span class="badge">Private fund: USD 150,000+ or accredited</span></div>
+<p class="gc-meta">No page on our site: the fund house publishes too little. <a href="#talk">Ask us</a></p>
+<p class="gc-warn" hidden=""></p>
+</li><li class="gc-fund" data-ca="Not stated" data-cur="none" data-dir="none" data-house="The Wealth Company" data-kind="private" data-launch="0" data-min="150000" data-nri="Not stated" data-private="1" data-q="the wealth company asset management ifsc trust-ii the wealth company mutual fund the wealth company" data-res="Not stated" data-us="Not stated">
+<span class="gc-name">The Wealth Company Asset Management IFSC Trust-II</span>
+<p class="gc-meta">The Wealth Company · GIFT City private fund (AIF Category II) · Direction not stated by the fund house · Currency not stated by the fund house · Minimum USD 150,000+ or accredited</p>
+<p class="gc-run">Run by Wealth Company Asset Management Private Limited (IFSC Branch), part of the The Wealth Company group</p>
+<div class="gc-badges"><span class="badge gc-unknown">Status not published; ask us</span><span class="badge badge-neutral">Residents: Not stated</span><span class="badge badge-neutral">NRIs: Not stated</span><span class="badge">Private fund: USD 150,000+ or accredited</span></div>
+<p class="gc-meta">No page on our site: the fund house publishes too little. <a href="#talk">Ask us</a></p>
+<p class="gc-warn" hidden=""></p>
+</li><li class="gc-fund" data-ca="Not stated" data-cur="usd" data-dir="india" data-house="The Wealth Company" data-kind="private" data-launch="20260815" data-min="150000" data-nri="Open" data-private="1" data-q="the wealth company ifsc fund of fund (fof) the wealth company mutual fund the wealth company" data-res="Not open" data-us="Not stated">
+<span class="gc-name">The Wealth Company IFSC Fund of Fund (FoF)</span>
+<p class="gc-meta">The Wealth Company · GIFT City private fund (AIF Category III) · Multi-asset · Invests in India · US dollars · Minimum USD 150,000+ or accredited</p>
+<p class="gc-run">Run by Wealth Company Asset Management Private Limited (IFSC Branch), part of the The Wealth Company group</p>
+<div class="gc-badges"><span class="badge">Open</span><span class="badge badge-neutral">Residents: Not open</span><span class="badge badge-neutral">NRIs: Open</span><span class="badge">Private fund: USD 150,000+ or accredited</span></div>
+<p class="gc-meta">No page on our site: the fund house publishes too little. <a href="#talk">Ask us</a></p>
+<p class="gc-warn" hidden=""></p>
+</li><li class="gc-fund" data-ca="Not stated" data-cur="usd" data-dir="outside_india" data-house="Unifi" data-kind="private" data-launch="20250620" data-min="150000" data-nri="Not stated" data-private="1" data-q="unifi g20 fund unifi mutual fund unifi" data-res="Not stated" data-us="Not stated">
+<a class="gc-name" href="https://unifiinvestment.com/" rel="noopener" target="_blank">Unifi G20 Fund<span class="sr-only"> (fund house's page, opens in a new tab)</span></a>
+<p class="gc-meta">Unifi · GIFT City private fund (AIF Category III) · Equity · Invests outside India · US dollars · Minimum USD 150,000+ or accredited</p>
+<p class="gc-run">Run by Unifi Investment Management LLP, part of the Unifi group</p>
+<div class="gc-badges"><span class="badge">Open</span><span class="badge badge-neutral">Residents: Not stated</span><span class="badge badge-neutral">NRIs: Not stated</span><span class="badge">Private fund: USD 150,000+ or accredited</span></div>
+<p class="gc-meta">No page on our site: the fund house publishes too little. <a href="#talk">Ask us</a></p>
+<p class="gc-warn" hidden=""></p>
+</li><li class="gc-fund" data-ca="Not stated" data-cur="usd" data-dir="india" data-house="UTI" data-kind="private" data-launch="0" data-min="150000" data-nri="Not stated" data-private="1" data-q="uti india opportunities (ifsc) fund uti mutual fund uti" data-res="Not stated" data-us="Not stated">
+<a class="gc-name" href="https://www.utialternatives.com/policies-disclosures" rel="noopener" target="_blank">UTI India Opportunities (IFSC) Fund<span class="sr-only"> (fund house's page, opens in a new tab)</span></a>
+<p class="gc-meta">UTI · GIFT City private fund (AIF Category III) · Multi-asset · Invests in India · US dollars · Minimum USD 150,000+ or accredited</p>
+<div class="gc-badges"><span class="badge gc-unknown">Status not published; ask us</span><span class="badge badge-neutral">Residents: Not stated</span><span class="badge badge-neutral">NRIs: Not stated</span><span class="badge">Private fund: USD 150,000+ or accredited</span></div>
+<p class="gc-meta">No page on our site: the fund house publishes too little. <a href="#talk">Ask us</a></p>
+<p class="gc-warn" hidden=""></p>
+</li><li class="gc-fund" data-ca="Not stated" data-cur="usd" data-dir="india" data-house="UTI" data-kind="private" data-launch="0" data-min="150000" data-nri="Not stated" data-private="1" data-q="uti india opportunities (ifsc) fund ii uti mutual fund uti" data-res="Not stated" data-us="Not stated">
+<a class="gc-name" href="https://www.utialternatives.com/policies-disclosures" rel="noopener" target="_blank">UTI India Opportunities (IFSC) Fund II<span class="sr-only"> (fund house's page, opens in a new tab)</span></a>
+<p class="gc-meta">UTI · GIFT City private fund (AIF Category III) · Private credit · Invests in India · US dollars · Minimum USD 150,000+ or accredited</p>
+<div class="gc-badges"><span class="badge gc-unknown">Status not published; ask us</span><span class="badge badge-neutral">Residents: Not stated</span><span class="badge badge-neutral">NRIs: Not stated</span><span class="badge">Private fund: USD 150,000+ or accredited</span></div>
+<p class="gc-meta">No page on our site: the fund house publishes too little. <a href="#talk">Ask us</a></p>
+<p class="gc-warn" hidden=""></p>
+</li><li class="gc-fund" data-ca="Not stated" data-cur="none" data-dir="none" data-house="UTI" data-kind="private" data-launch="0" data-min="150000" data-nri="Not stated" data-private="1" data-q="uti india opportunities (ifsc) fund iii uti mutual fund uti" data-res="Not stated" data-us="Not stated">
+<a class="gc-name" href="https://www.utialternatives.com/policies-disclosures" rel="noopener" target="_blank">UTI India Opportunities (IFSC) Fund III<span class="sr-only"> (fund house's page, opens in a new tab)</span></a>
+<p class="gc-meta">UTI · GIFT City private fund (AIF Category III) · Direction not stated by the fund house · Currency not stated by the fund house · Minimum USD 150,000+ or accredited</p>
+<div class="gc-badges"><span class="badge">Upcoming</span><span class="badge badge-neutral">Residents: Not stated</span><span class="badge badge-neutral">NRIs: Not stated</span><span class="badge">Private fund: USD 150,000+ or accredited</span></div>
+<p class="gc-meta">No page on our site: the fund house publishes too little. <a href="#talk">Ask us</a></p>
+<p class="gc-warn" hidden=""></p>
+</li></ul>
+<p class="gx-none" hidden="">No fund matches. Clear a filter to see more.</p>
+<div class="gc-more" hidden=""><p class="gc-more-txt"></p><button class="btn btn-secondary gc-show" type="button">Show Private Funds</button></div>
+</div>
+</div>
+<section class="sr-faq"><h2>Frequently Asked Questions</h2><div class="faq">
+<details><summary>Why does a fund have no page?</summary><p>We give a fund its own page only when its fund house publishes what it invests in, its minimum, who may invest, and a fund page or document. 40 of the 129 funds meet that. The rest link to their fund house's site; ask us about any of them.</p></details>
+<details><summary>What does “Status not published” mean?</summary><p>The fund house does not say whether the fund is taking new money. Many private funds publish nothing about it; ask us and we will find out from the fund house.</p></details>
+<details><summary>Why are private funds hidden at first?</summary><p>They are offered by private placement only, to accredited investors or to investors with at least USD 150,000. Choose “USD 150,000 or more” to see them.</p></details>
+<details><summary>Why are there no NAVs or returns?</summary><p>We show what each fund is and who may invest, from its fund house's documents. Each fund links to its fund house's NAV and document pages, where they are published.</p></details>
+<details><summary>How up to date is this list?</summary><p>We check it every month against IFSCA's directory and the fund houses' sites. This list is as on 10 Oct 2026.</p></details>
+</div></section>
+
+<section aria-labelledby="talk-h" class="gc-sec" id="talk"><div class="card gc-card gc-talk">
+<h2 id="talk-h">Talk to Us</h2>
+<p>Talk to us about GIFT City funds. We explain how a fund works and the routes open to you, check that it is open to you and suitable for you, as IFSCA's distributor code requires, and help with the fund house's application.</p>
+<div class="gc-btns">
+<a class="btn btn-primary" href="tel:+917738032704"><svg aria-hidden="true" fill="none" height="16" stroke="currentColor" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 16 16" width="16"><path d="M5.5 2.25H3.75a1.5 1.5 0 0 0-1.5 1.6c.5 5.4 4.5 9.4 9.9 9.9a1.5 1.5 0 0 0 1.6-1.5V10.5l-2.75-1.25-1.5 1.5a8 8 0 0 1-3.25-3.25l1.5-1.5z"></path></svg>Call +91 77380 32704</a>
+<a class="btn btn-secondary" href="https://wa.me/917738032704" rel="noopener" target="_blank"><svg aria-hidden="true" fill="none" height="16" stroke="currentColor" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 16 16" width="16"><path d="M8 2.25a5.75 5.75 0 0 0-5 8.6L2.25 13.75l2.9-.75A5.75 5.75 0 1 0 8 2.25z"></path></svg>WhatsApp Us<span class="sr-only"> (opens in a new tab)</span></a>
+<a class="btn btn-secondary" href="mailto:cs@moneyhoney.co.in"><svg aria-hidden="true" fill="none" height="16" stroke="currentColor" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 16 16" width="16"><rect height="9.5" rx="1.5" width="12.5" x="1.75" y="3.25"></rect><path d="M2.25 4.25 8 8.75l5.75-4.5"></path></svg>Email cs@moneyhoney.co.in</a>
+</div>
+</div></section>
+<section aria-labelledby="important-information" class="gc-sec gc-fine" data-block="gift-fine">
+<h2 id="important-information">Important Information</h2>
+<p>GIFT City funds are run from GIFT IFSC, Gandhinagar, by fund managers registered with the International Financial Services Centres Authority (IFSCA). They are not mutual fund schemes regulated by SEBI. SEBI's mutual fund rules, the riskometer and SEBI SCORES do not apply to them.</p><p>Money Honey Financial Services Pvt Ltd is an AMFI-registered Mutual Fund Distributor (ARN-60930). We are not registered with IFSCA. We introduce GIFT City funds of the fund managers listed on this page, who pay us a commission when you invest through us. Ask us and we will tell you how much.</p><p>This page is general information about GIFT City funds, not a recommendation or investment advice. It does not consider your goals, risk profile or tax position. Read a fund's offer document or placement memorandum before you invest.</p><p>Most GIFT City funds are in US dollars. Their value in rupees rises and falls with the exchange rate, as well as with the market.</p><p>Private funds are restricted schemes, offered by private placement only to accredited investors or to investors who invest at least USD 150,000. They are not available to everyone.</p><p>A GIFT City fund that takes residents pays tax on its own gains, and its NAV is shown after that tax. The offer documents warn that your redemption may also be taxed in your hands.</p><p>For a complaint about a fund, write first to its fund manager's complaints officer. If you are not satisfied, appeal within the fund house, then email IFSCA at grievance-redressal@ifsca.gov.in. For a complaint about our service, contact us.</p>
+<p class="gc-n">Rules and tax facts checked on 10 Oct 2026. Fund list as on 10 Oct 2026.</p>
+</section>
+<section data-block="related">
+<h2>More on GIFT City Funds</h2>
+<div class="linkgrid"><a class="card" href="../resident-investing-abroad/index.html">Resident Investing Abroad<span class="card__meta">You live in India and want to invest outside India.</span></a><a class="card" href="../nri-investing-in-india/index.html">NRI Investing in India<span class="card__meta">You live outside India (NRI or OCI) and want to invest in India.</span></a><a class="card" href="../nri-investing-abroad/index.html">NRI Investing Abroad<span class="card__meta">You live outside India (NRI or OCI) and want to invest outside India.</span></a><a class="card" href="../moving-back-to-india/index.html">Moving Back to India<span class="card__meta">You're returning to live in India.</span></a></div>
+</section>
+</div>
+<script>
+(function () {
+  var T = {"count": "{n} funds", "count_one": "1 fund", "private_more": "{n} more are private funds for investors with USD 150,000 or more, or accredited investors.", "private_more_one": "1 more is a private fund for investors with USD 150,000 or more, or accredited investors.", "barred": "{n} funds do not accept {who}, so they are not listed.", "barred_one": "1 fund does not accept {who}, so it is not listed.", "not_stated": "{who}: not stated in the fund's documents. Ask us before you invest.", "who": {"us": "US residents", "ca": "Canada residents"}, "out": {"res": "Not listed: GIFT City funds that invest in India, which none in our list opens to residents, and funds that take only non-residents.", "nri-in": "Not listed: GIFT City funds that take only residents, and funds that invest outside India (see NRI Investing Abroad).", "nri-ab": "Not listed: GIFT City funds that take only residents, and funds that invest in India (see NRI Investing in India)."}};
+  var root = document.querySelector('.gc-page'), list = root.querySelector('.gx-list');
+  var items = [].slice.call(list.querySelectorAll('.gc-fund'));
+  var D0 = {sit: 'all', country: 'other', amt: null, q: '', dir: 'any', house: 'any', kind: 'any', min: 'any', cur: 'any', sort: 'az'};
+  var st = Object.assign({}, D0);
+  var RULE = {all: function () { return true; }, res: function (d) { return d.res === 'Open'; },
+              'nri-in': function (d) { return d.nri === 'Open' && d.dir === 'india'; },
+              'nri-ab': function (d) { return d.nri === 'Open' && d.dir === 'outside_india'; }};
+  var amtB = [].slice.call(root.querySelectorAll('[data-amt]'));
+  function say(one, many, n, who) { return (n === 1 ? one : many).replace('{n}', n).replace('{who}', who || ''); }
+  function byName(a, b) { return a.dataset.q.localeCompare(b.dataset.q); }
+  function render() {
+    root.querySelectorAll('[data-x]').forEach(function (c) { if (c.value !== st[c.dataset.x]) c.value = st[c.dataset.x]; });
+    amtB.forEach(function (b) { b.setAttribute('aria-pressed', b.dataset.amt === st.amt ? 'true' : 'false'); });
+    var nri = st.sit === 'nri-in' || st.sit === 'nri-ab';
+    root.querySelector('.gx-country').hidden = !nri;
+    var c = nri ? st.country : 'other', who = T.who[c], q = st.q.trim().toLowerCase();
+    var sorted = items.slice().sort(function (a, b) {
+      if (st.sort === 'min') return (+a.dataset.min) - (+b.dataset.min) || byName(a, b);
+      if (st.sort === 'launch') return ((+b.dataset.launch || -1) - (+a.dataset.launch || -1)) || byName(a, b);
+      return byName(a, b);
+    });
+    sorted.forEach(function (it) { list.appendChild(it); });
+    var shown = 0, priv = 0, out = 0, barred = 0;
+    sorted.forEach(function (it) {
+      var d = it.dataset, on = true, w = it.querySelector('.gc-warn');
+      var rule = c === 'us' ? d.us : c === 'ca' ? d.ca : 'Open';
+      if (!RULE[st.sit](d)) { on = false; out++; }
+      if (on && rule === 'Not open') { on = false; barred++; }
+      if (on && st.dir !== 'any' && d.dir !== st.dir) on = false;
+      if (on && st.house !== 'any' && d.house !== st.house) on = false;
+      if (on && st.kind !== 'any' && d.kind !== st.kind) on = false;
+      if (on && st.min !== 'any' && +d.min > +st.min) on = false;
+      if (on && st.cur !== 'any' && d.cur !== st.cur) on = false;
+      if (on && q && d.q.indexOf(q) < 0) on = false;
+      if (on && d.private === '1' && st.amt !== 'high') { on = false; priv++; }
+      it.hidden = !on;
+      if (on) shown++;
+      w.hidden = !(on && rule === 'Not stated');
+      w.textContent = on && rule === 'Not stated' ? T.not_stated.replace('{who}', who) : '';
+    });
+    root.querySelector('.gx-n').textContent = say(T.count_one, T.count, shown);
+    var o = root.querySelector('.gx-out'), lines = [];
+    if (st.sit !== 'all' && T.out[st.sit]) lines.push(T.out[st.sit]);
+    if (barred) lines.push(say(T.barred_one, T.barred, barred, who));
+    o.hidden = !lines.length;
+    o.textContent = lines.join(' ');
+    var m = root.querySelector('.gc-more');
+    m.hidden = priv === 0;
+    m.querySelector('.gc-more-txt').textContent = say(T.private_more_one, T.private_more, priv);
+    root.querySelector('.gx-none').hidden = shown !== 0;
+    root.querySelectorAll('[data-cnote]').forEach(function (x) { x.hidden = x.dataset.cnote.split(' ').indexOf(c) < 0; });
+  }
+  root.querySelectorAll('[data-x]').forEach(function (c) {
+    c.addEventListener(c.tagName === 'INPUT' ? 'input' : 'change', function () { st[c.dataset.x] = c.value; render(); });
+  });
+  amtB.forEach(function (b) { b.addEventListener('click', function () { st.amt = b.dataset.amt; render(); }); });
+  root.querySelector('.gc-show').addEventListener('click', function () { st.amt = 'high'; render(); });
+  root.querySelector('.gx-clear').addEventListener('click', function () { st = Object.assign({}, D0); render(); });
+  root.querySelectorAll('[data-js]').forEach(function (e) { e.hidden = false; });
+  var f = root.querySelector('[data-filters]');
+  if (window.matchMedia('(min-width: 1024px)').matches) f.open = true;     /* on phones the fold starts closed */
+  window.mhGx = function (s) { Object.keys(s || {}).forEach(function (k) { st[k] = s[k]; }); render();      /* for the test */
+    return [].slice.call(list.querySelectorAll('.gc-fund:not([hidden])')).map(function (it) { return it.querySelector('.gc-name').firstChild.textContent.trim(); }); };
+  render();
+})();
+</script>
+</div></div></main>
+<section aria-labelledby="sr-sun-h" class="sr-sun"><div class="sr-wrap"><h2 id="sr-sun-h">Investing through GIFT City?</h2><p>The route depends on where you live and where you will retire. We will walk you through it.</p><div class="sr-sun__cta"><a class="btn btn-primary" href="../../contact/index.html">Talk to Us</a><a class="sr-more" href="tel:+917738032704">Or call +91 77380 32704 <svg aria-hidden="true" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a></div></div><svg aria-hidden="true" class="sr-sun__art" focusable="false" preserveaspectratio="xMidYMax slice" viewbox="0 0 1440 240"><circle cx="720" cy="250" fill="#FF8A50" fill-opacity=".30" r="230"></circle><circle cx="720" cy="250" fill="#FF4A00" r="168"></circle><path d="M0 170c160-34 300-34 460-6s300 30 460 4 340-36 520-4v76H0z" fill="#2E3D99"></path><path d="M0 196c200-26 380-24 560 0s360 22 540 0 240-18 340-8v52H0z" fill="#16205B"></path><path d="M0 220c240-14 480-14 720 0s480 14 720 0v20H0z" fill="#0C1240"></path></svg></section><footer class="sr-foot" data-nosnippet=""><div class="sr-wrap"><div class="sr-foot__top"><div><a aria-label="MoneyHoney home" class="sr-logo" href="../../index.html" tabindex="-1"><svg aria-label="MoneyHoney" fill="none" height="20" role="img" viewbox="0 0 139 20" width="139" xmlns="http://www.w3.org/2000/svg">
+<path d="M1 10C1 15.2842 5.12632 19.6211 10.3474 20C10.3474 18.4632 9.46316 17.0316 8.07368 16.3579C5.67368 15.2211 4.01053 12.8 4.01053 9.97895C4.01053 7.51579 5.27368 5.36842 7.18947 4.08421V7.64211C7.18947 9.36842 8.6 10.7789 10.3474 10.7789V0C5.12632 0.4 1 4.73684 1 10Z" fill="#FF4A00"></path>
+<path d="M21.2318 10C21.2318 15.2842 17.1054 19.6211 11.8844 20C11.8844 18.4632 12.7686 17.0316 14.1581 16.3579C16.5581 15.2211 18.2212 12.8 18.2212 9.97895C18.2212 7.51579 16.9581 5.36842 15.0212 4.08421V7.64211C15.0212 9.36842 13.6107 10.7789 11.8633 10.7789V0C17.0844 0.4 21.2107 4.73684 21.2107 10H21.2318Z" fill="#FF4A00"></path>
+<path d="M13.4418 14.0201C13.4418 15.3043 12.4103 16.3359 11.126 16.3359C9.84184 16.3359 8.81026 15.3043 8.81026 14.0201C8.81026 12.7359 9.84184 11.7043 11.126 11.7043C12.4103 11.7043 13.4418 12.7359 13.4418 14.0201Z" fill="#16205B"></path>
+<path d="M27.6319 3.41083H29.5477C30.1582 3.41083 30.7056 3.72662 31.0214 4.23188L33.6951 8.52662L36.3687 4.23188C36.6845 3.72662 37.253 3.41083 37.8424 3.41083H39.7582V15.474H38.5161C37.7372 15.474 37.1056 14.8424 37.1056 14.0635V7.6003L33.6951 12.7582H33.6319L30.2424 7.66346V14.0845C30.2424 14.8635 29.6108 15.495 28.8319 15.495H27.6319V3.43188V3.41083Z" fill="#16205B"></path>
+<path d="M49.0839 10.905V10.8629C49.0839 9.49451 48.0944 8.31556 46.6418 8.31556C45.1892 8.31556 44.2207 9.47345 44.2207 10.8419V10.884C44.2207 12.2524 45.2102 13.4313 46.6628 13.4313C48.1155 13.4313 49.0839 12.2735 49.0839 10.905ZM41.6102 10.905V10.8629C41.6102 8.21029 43.7576 6.06293 46.6628 6.06293C49.5681 6.06293 51.6734 8.18924 51.6734 10.8419V10.884C51.6734 13.5366 49.526 15.684 46.6207 15.684C43.7155 15.684 41.6102 13.5577 41.6102 10.905Z" fill="#16205B"></path>
+<path d="M53.2529 6.25173H55.0003C55.5055 6.25173 55.9055 6.65173 55.9055 7.13594V7.557C56.5161 6.77805 57.295 6.08331 58.6213 6.08331C60.6213 6.08331 61.7792 7.38858 61.7792 9.51489V15.4938H60.3897C59.695 15.4938 59.1476 14.9465 59.1476 14.2517V10.3359C59.1476 9.09384 58.5582 8.46226 57.5476 8.46226C56.5371 8.46226 55.9055 9.09384 55.9055 10.3359V14.2517C55.9055 14.9254 55.3371 15.4938 54.6634 15.4938H53.274V6.25173H53.2529Z" fill="#16205B"></path>
+<path d="M69.8203 10.1471C69.673 8.96819 68.9782 8.18924 67.8624 8.18924C66.7467 8.18924 66.0519 8.96819 65.8414 10.1471H69.8203ZM63.273 10.905V10.8629C63.273 8.23135 65.1677 6.06293 67.8624 6.06293C70.9782 6.06293 72.3888 8.46293 72.3888 11.0735C72.3888 11.284 72.3888 11.5156 72.3467 11.7682H65.8624C66.1151 12.9471 66.9572 13.5787 68.1361 13.5787C68.8309 13.5787 69.3782 13.4103 69.9256 13.0103C70.2203 12.7998 70.6203 12.8419 70.873 13.0735L71.8835 13.9577C71.0203 15.0313 69.7572 15.684 68.073 15.684C65.273 15.684 63.2098 13.7471 63.2098 10.905H63.273Z" fill="#16205B"></path>
+<path d="M80.8733 6.2522H82.4312L78.8523 15.7048C78.1365 17.5785 77.3786 18.2943 75.7996 18.2943C74.8523 18.2943 74.1365 18.0627 73.4628 17.6627L74.2417 16.0206C74.3049 15.8943 74.4523 15.8311 74.5786 15.8943C74.8733 16.0417 75.2102 16.1259 75.4628 16.1259C75.9049 16.1259 76.1575 15.9785 76.3891 15.5154L72.747 6.2522H74.2839C75.0417 6.2522 75.6944 6.73641 75.926 7.43114L77.6523 12.5469L79.3154 7.36799C79.526 6.6943 80.1575 6.2522 80.8523 6.2522H80.8733Z" fill="#16205B"></path>
+<path d="M84.4945 3.41083H85.6735C86.4945 3.41083 87.1682 4.06346 87.1682 4.88451V8.18977H92.0945V4.88451C92.0945 4.06346 92.7682 3.41083 93.5893 3.41083H94.7682V15.474H93.6314C92.7682 15.474 92.0945 14.7792 92.0945 13.9371V10.6319H87.1682V13.9371C87.1682 14.7792 86.4735 15.474 85.6314 15.474H84.4945V3.41083Z" fill="#FF4A00"></path>
+<path d="M104.073 10.905V10.8629C104.073 9.49451 103.083 8.31556 101.631 8.31556C100.178 8.31556 99.2098 9.47345 99.2098 10.8419V10.884C99.2098 12.2524 100.199 13.4313 101.652 13.4313C103.105 13.4313 104.073 12.2735 104.073 10.905ZM96.6203 10.905V10.8629C96.6203 8.21029 98.7677 6.06293 101.673 6.06293C104.578 6.06293 106.683 8.18924 106.683 10.8419V10.884C106.683 13.5366 104.536 15.684 101.631 15.684C98.7256 15.684 96.6203 13.5577 96.6203 10.905Z" fill="#FF4A00"></path>
+<path d="M135.863 6.2522H137.421L133.842 15.7048C133.126 17.5785 132.368 18.2943 130.789 18.2943C129.842 18.2943 129.126 18.0627 128.452 17.6627L129.231 16.0206C129.294 15.8943 129.442 15.8311 129.589 15.8943C129.884 16.0417 130.199 16.1259 130.473 16.1259C130.915 16.1259 131.168 15.9785 131.399 15.5154L127.757 6.2522H129.294C130.052 6.2522 130.705 6.73641 130.936 7.43114L132.663 12.5469L134.326 7.36799C134.536 6.6943 135.168 6.2522 135.863 6.2522Z" fill="#FF4A00"></path>
+<path d="M108.243 6.25173H109.99C110.495 6.25173 110.895 6.65173 110.895 7.13594V7.557C111.506 6.77805 112.285 6.08331 113.611 6.08331C115.611 6.08331 116.769 7.38858 116.769 9.51489V15.4938H115.379C114.685 15.4938 114.137 14.9465 114.137 14.2517V10.3359C114.137 9.09384 113.548 8.46226 112.537 8.46226C111.527 8.46226 110.895 9.09384 110.895 10.3359V14.2517C110.895 14.9254 110.327 15.4938 109.653 15.4938H108.264V6.25173H108.243Z" fill="#FF4A00"></path>
+<path d="M124.895 10.1471C124.747 8.96819 124.053 8.18924 122.937 8.18924C121.821 8.18924 121.126 8.96819 120.916 10.1471H124.895ZM118.326 10.905V10.8629C118.326 8.23135 120.221 6.06293 122.916 6.06293C126.032 6.06293 127.442 8.46293 127.442 11.0735C127.442 11.284 127.442 11.5156 127.4 11.7682H120.916C121.168 12.9471 122.01 13.5787 123.189 13.5787C123.884 13.5787 124.432 13.4103 124.979 13.0103C125.274 12.7998 125.674 12.8419 125.926 13.0735L126.937 13.9577C126.074 15.0313 124.81 15.684 123.126 15.684C120.326 15.684 118.263 13.7471 118.263 10.905H118.326Z" fill="#FF4A00"></path>
+</svg></a><p class="sr-foot__id">Money Honey Financial Services Private Limited · AMFI Registered Mutual Fund Distributor &amp; SIF Distributor · ARN-60930, valid till 6 May 2028</p></div><nav aria-label="Footer" class="sr-foot__cols"><div><h3>Invest</h3><ul><li><a href="../../mutual-funds/index.html">Mutual Funds</a></li><li><a href="../../mutual-funds/explore/index.html">Explore Funds</a></li><li><a href="../../mutual-funds/screens/index.html">Fund Screens</a></li><li><a href="../../mutual-funds/screener/index.html">Screener</a></li><li><a href="../../sif/index.html">SIF</a></li><li><a href="../../gift-city-funds/index.html">GIFT City Funds</a></li><li><a href="../../mutual-funds/nfo/index.html">New Fund Offers</a></li></ul></div><div><h3>Save</h3><ul><li><a href="../../fixed-deposits/index.html">Fixed Deposits</a></li><li><a href="../../fixed-deposits/bank-fd-rates/index.html">Compare FD Rates</a></li><li><a href="../../bonds/ncd/index.html">NCD IPOs</a></li><li><a href="../../bonds/rbi-bonds/index.html">RBI Bonds</a></li><li><a href="../../bonds/capital-gain-bonds/index.html">Capital Gain Bonds</a></li></ul></div><div><h3>Plan</h3><ul><li><a href="../../solutions/index.html">Solutions</a></li><li><a href="../../solutions/retirement/index.html">Retirement</a></li><li><a href="../../solutions/child-education/index.html">Child Education</a></li><li><a href="../../solutions/sip/index.html">SIP</a></li><li><a href="../../solutions/tax-saving/index.html">Tax Saving</a></li><li><a href="../../calculators/index.html">Calculators</a></li></ul></div><div><h3>Learn</h3><ul><li><a href="../../blog/index.html">Blog</a></li><li><a href="../../videos/index.html">Videos and Posts</a></li><li><a href="../../mutual-funds/market-outlook/index.html">Market Outlook</a></li><li><a href="../../mutual-funds/dividends/index.html">Dividends (IDCW)</a></li><li><a href="../../methodology/index.html">Methodology</a></li></ul></div><div><h3>Company</h3><ul><li><a href="../../about/index.html">About</a></li><li><a href="../../contact/index.html">Contact</a></li><li><a href="https://ba.moneyhoney.co.in/">Business Associates</a></li><li><a href="../../mutual-funds/amc/index.html">Fund Houses We Distribute</a></li><li><a href="../../site-map/index.html">Site Map</a></li></ul></div><div><h3>Disclosures</h3><ul><li><a href="../../disclaimer/index.html">Disclaimer</a></li><li><a href="../../commission-disclosure/index.html">Commission Disclosure</a></li><li><a href="../../contact/index.html#grievance-redressal">Grievance Redressal</a></li><li><a href="https://smartodr.in/">SMART ODR</a></li></ul></div></nav></div><section aria-labelledby="sr-disc-h" class="sr-disc"><h2 class="sr-disc__h" id="sr-disc-h">Important MoneyHoney Disclosures</h2><p class="sr-disc__lead">About Risk</p><p>Mutual Fund investments are subject to market risks, read all scheme related documents carefully.</p><p>Investments in Specialized Investment Fund involves relatively higher risk including potential loss of capital, liquidity risk and market volatility. Please read all investment strategy related documents carefully before making the investment decision.</p></section><p class="sr-foot__legal"><span>MoneyHoney is a mutual fund distributor, not a SEBI-registered investment adviser.</span><a href="../../disclaimer/index.html">Disclaimer</a><a href="../../commission-disclosure/index.html">Commission Disclosure</a><a href="../../site-map/index.html">Site Map</a></p></div></footer>
+</body>
+</html>

@@ -1,0 +1,723 @@
+<!DOCTYPE html>
+
+<html lang="en-IN">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>Explore SIF Investment Strategies | MoneyHoney</title>
+<meta content="Filter all 34 Specialised Investment Fund strategies by category, SIF, risk band, AUM and launch status, as on 31 Aug 2026. Minimum investment ₹10,00,000." name="description"/>
+<link href="https://example.com/sif/explore/" rel="canonical"/>
+<meta content="website" property="og:type"/>
+<meta content="MoneyHoney" property="og:site_name"/>
+<meta content="en_IN" property="og:locale"/>
+<meta content="Explore SIF Investment Strategies | MoneyHoney" property="og:title"/>
+<meta content="Filter all 34 Specialised Investment Fund strategies by category, SIF, risk band, AUM and launch status, as on 31 Aug 2026. Minimum investment ₹10,00,000." property="og:description"/>
+<meta content="https://example.com/sif/explore/" property="og:url"/>
+<meta content="https://example.com/assets/og/explore.png" property="og:image"/>
+<meta content="1200" property="og:image:width"/>
+<meta content="630" property="og:image:height"/>
+<meta content="MoneyHoney: Explore Funds" property="og:image:alt"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://example.com/"}, {"@type": "ListItem", "position": 2, "name": "SIF", "item": "https://example.com/sif/"}, {"@type": "ListItem", "position": 3, "name": "Explore SIF", "item": "https://example.com/sif/explore/"}]}, {"@type": "WebPage", "name": "Explore SIF Investment Strategies", "url": "https://example.com/sif/explore/", "dateModified": "2026-10-04", "isPartOf": {"@id": "https://example.com/#website"}, "publisher": {"@id": "https://example.com/#organization"}}, {"@type": "Organization", "@id": "https://example.com/#organization", "name": "MoneyHoney", "url": "https://example.com/", "description": "AMFI Registered Mutual Fund Distributor & SIF Distributor, ARN-60930"}]}</script>
+<link href="../../assets/mh.css" rel="stylesheet"/><meta content="noindex, nofollow" name="robots"/><link href="../../assets/sunrise/sunrise.css" rel="stylesheet"/><script defer="" src="../../assets/sunrise/sunrise.js"></script>
+<script defer="" src="../../assets/mh.js"></script>
+<style>
+/* Page CSS: tokens only. Class names are kept because the script builds markup with them. */
+body{background:var(--color-surface-page);color:var(--color-text-primary)}
+.up{color:var(--color-gain)}.down{color:var(--color-loss)}
+
+/* Page head */
+.head{border-bottom:1px solid var(--color-border-subtle);padding:32px 0 24px}
+.head h1{font-size:var(--text-2xl);font-weight:var(--font-weight-semibold);color:var(--color-text-deep)}
+.fundtype{display:inline-flex;padding:2px;gap:2px;margin:var(--space-3) 0 var(--space-4);background:var(--color-surface-app);border:1px solid var(--color-border-soft);border-radius:var(--radius-btn)}
+.fundtype a{display:inline-flex;align-items:center;min-height:44px;padding:0 var(--space-5);border-radius:var(--radius-xs);color:var(--color-text-cool);font-size:var(--text-sm);font-weight:var(--font-weight-medium);text-decoration:none}
+.fundtype a:hover{color:var(--color-brand)}
+.fundtype a[aria-current="page"]{background:var(--color-surface-page);color:var(--color-brand);outline:1px solid var(--color-border-soft)}
+.fundtype a:focus-visible{outline:none;box-shadow:var(--shadow-focus)}
+@media(max-width:767px){.head{padding:24px 0 20px}.head h1{font-size:var(--text-xl)}}
+.gate{margin-top:16px;max-width:960px}
+.gate b{font-weight:var(--font-weight-semibold)}
+.searchrow{display:flex;gap:12px;margin-top:20px;flex-wrap:wrap;align-items:center}
+.searchrow .search{flex:1 1 420px;min-width:0}
+.sortsel{flex:0 1 auto;width:auto;max-width:100%}
+.collections{display:flex;gap:8px;flex-wrap:wrap;margin-top:16px}
+.coll{font-size:var(--text-sm)}
+.coll.on{background:var(--color-brand-tint);border-color:var(--color-brand);color:var(--color-brand)}
+
+/* Layout */
+.layout{display:grid;grid-template-columns:272px minmax(0,1fr);gap:24px;padding:24px 0 48px;align-items:start}
+@media(max-width:900px){.layout{grid-template-columns:minmax(0,1fr)}.rail{position:static!important;max-height:none!important}}
+
+/* Facet rail */
+.rail{position:sticky;top:88px;max-height:calc(100vh - 104px);overflow:auto;background:var(--color-surface-page);border:1px solid var(--color-border-soft);border-radius:var(--radius-card)}
+.rail .fh{display:flex;justify-content:space-between;align-items:center;padding:12px 16px 8px}
+.rail .fh .clear{font-size:var(--text-xs);border:0;cursor:pointer}
+.facet{border-top:1px solid var(--color-border-subtle);padding:8px 0}
+.facet:first-child{border-top:0}
+.facet h4{font-size:var(--text-sm);font-weight:var(--font-weight-semibold);color:var(--color-text-deep);padding:8px 16px;display:flex;justify-content:space-between;align-items:center;cursor:pointer}
+.facet h4 span{display:inline-flex;color:var(--color-text-cool)}
+.facet h4 svg{width:14px;height:14px;transition:transform var(--duration-2) var(--ease-standard)}
+.facet.closed h4 svg{transform:rotate(-90deg)}
+.facet .body{padding:0 16px 8px}
+.facet.closed .body{display:none}
+.facet label{display:flex;align-items:center;gap:8px;font-size:var(--text-sm);color:var(--color-text-strong);padding:4px 0;min-height:32px;cursor:pointer}
+.facet label input{accent-color:var(--color-brand);width:16px;height:16px;flex:0 0 auto;margin:0}
+.facet .fnote{margin-top:var(--space-1);font-size:var(--text-xs);line-height:1.5;color:var(--color-text-cool)}
+.facet label .ct{margin-left:auto;font-size:var(--text-xs);color:var(--color-text-cool);font-variant-numeric:tabular-nums}
+.facet .fsearch{width:100%;height:40px;font-size:var(--text-base);color:var(--color-text-primary);background:var(--color-surface-page);border:1px solid var(--color-border-soft);border-radius:var(--radius-input);padding:0 12px;margin:4px 0 8px}
+.facet .fsearch::placeholder{color:var(--color-placeholder)}
+.facet .fsearch:focus{border-color:var(--color-brand);outline:none}
+.facet .more{font-size:var(--text-xs);font-weight:var(--font-weight-semibold);cursor:pointer;color:var(--color-brand);padding:4px 0}
+.facet.elig{background:var(--color-surface-app);border:1px solid var(--color-border-soft);border-radius:var(--radius-card);margin:0 var(--space-2) var(--space-2)}
+.facet.elig+.facet{border-top:0}
+.facet .esub{font-size:var(--text-xs);color:var(--color-text-cool);font-weight:var(--font-weight-medium);text-transform:uppercase;letter-spacing:var(--tracking-caps);margin:0 0 var(--space-1)}
+.facet .elabel{font-size:var(--text-xs);color:var(--color-text-cool);margin-bottom:var(--space-1)}
+.facet .esel{width:100%;font-size:var(--text-base)}
+.facet .cgroup{font-size:var(--text-xs);color:var(--color-text-cool);font-weight:var(--font-weight-medium);text-transform:uppercase;letter-spacing:var(--tracking-caps);margin:8px 0 4px}
+
+/* Results */
+.results-head{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;margin-bottom:12px}
+.results-head .count{display:block;height:auto;min-width:0;padding:0;border-radius:0;background:none;font-size:var(--text-sm);font-weight:var(--font-weight-regular);color:var(--color-text-strong)}
+.results-head .count b{font-weight:var(--font-weight-semibold);color:var(--color-text-deep)}
+.chips{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:12px}
+.chips:empty{display:none}
+.chips .chip{height:32px;padding:0 4px 0 12px;font-size:var(--text-xs);font-weight:var(--font-weight-medium);background:var(--color-brand-tint);border-color:var(--color-brand-light);color:var(--color-brand);gap:4px}
+.chip button{display:inline-flex;align-items:center;justify-content:center;width:24px;height:24px;border:0;border-radius:var(--radius-full);background:transparent;color:var(--color-brand);cursor:pointer;padding:0}
+.chip button:hover{background:var(--color-brand-tint-200)}
+.chip button svg{width:12px;height:12px;pointer-events:none}
+
+/* Strategy card */
+.card{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:12px 24px;align-items:start;padding:16px 20px;margin-bottom:12px;transition:border-color var(--duration-1) var(--ease-standard)}
+.card:hover{border-color:var(--color-border-medium)}
+.card .nm{font-size:var(--text-base);font-weight:var(--font-weight-semibold);color:var(--color-text-deep);line-height:1.4}
+.card .nm a{color:var(--color-text-deep)}
+.card .nm a:hover{color:var(--color-brand)}
+.card .amc{font-size:var(--text-xs);color:var(--color-text-cool);margin-top:4px}
+.card .tags{display:flex;gap:8px;flex-wrap:wrap;margin-top:8px}
+.tag{display:inline-flex;align-items:center;gap:4px;height:24px;font-size:var(--text-xs);font-weight:var(--font-weight-medium);padding:0 8px;border-radius:var(--radius-xs);border:1px solid var(--color-border-soft);background:var(--color-surface-app);color:var(--color-text-strong);white-space:nowrap}
+.tag.cat{background:var(--color-brand-tint);border-color:var(--color-brand-light);color:var(--color-brand)}
+.tag.warn{background:var(--color-warning-bg);border-color:var(--color-warning-border);color:var(--color-warning-text)}
+.tag svg{width:12px;height:12px}
+.status{font-size:var(--text-xs);font-weight:var(--font-weight-medium);white-space:nowrap}
+.card .rets{display:grid;grid-template-columns:repeat(2,minmax(96px,auto));gap:8px 24px;text-align:left}
+.card .rets .k{font-size:var(--text-xs);color:var(--color-text-cool)}
+.card .rets .v{font-size:var(--text-base);font-weight:var(--font-weight-semibold);color:var(--color-text-deep)}
+.card .rets .v.sm{font-size:var(--text-sm)}
+.card .meta{grid-column:1/-1;display:flex;gap:16px;align-items:center;font-size:var(--text-xs);color:var(--color-text-cool);border-top:1px solid var(--color-border-subtle);padding-top:12px}
+.card .meta .mi{flex:1;display:flex;gap:8px 20px;flex-wrap:wrap;min-width:0}
+.card .meta .bm{max-width:280px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.card .meta b{color:var(--color-text-deep);font-weight:var(--font-weight-medium)}
+.card .meta label{flex:0 0 auto;display:flex;gap:8px;align-items:center;cursor:pointer;color:var(--color-brand);font-weight:var(--font-weight-semibold);font-size:var(--text-sm);min-height:32px}
+.card .meta label input{accent-color:var(--color-brand);width:16px;height:16px;margin:0}
+@media(max-width:600px){
+  .card{grid-template-columns:minmax(0,1fr);padding:16px}
+  .card .rets{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .card .meta{flex-wrap:wrap}
+  .card .meta .bm{max-width:100%;white-space:normal}
+}
+.loadmore{margin:16px auto 0}
+.empty{border:1px dashed var(--color-border-medium);border-radius:var(--radius-card);padding:40px 24px;text-align:center;font-size:var(--text-sm);color:var(--color-text-cool)}
+
+/* Compare bar */
+.cmpbar{position:fixed;left:0;right:0;bottom:0;background:var(--color-surface-page);border-top:1px solid var(--color-border-soft);padding:12px 0;display:none;z-index:var(--z-overlay)}
+.cmpbar .wrap{display:flex;align-items:center;gap:12px;flex-wrap:wrap}
+.cmpbar .ttl{font-size:var(--text-sm);font-weight:var(--font-weight-semibold);color:var(--color-text-deep)}
+.cmpbar .names{flex:1;font-size:var(--text-xs);display:flex;gap:8px;flex-wrap:wrap;min-width:0}
+.cmpbar .names span{background:var(--color-brand-tint);border:1px solid var(--color-brand-light);color:var(--color-brand);font-weight:var(--font-weight-medium);border-radius:var(--radius-pill);padding:4px 12px;max-width:100%;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+body.has-cmp{padding-bottom:96px}
+
+/* Compare dialog (overlay + box) */
+.cmp-modal{position:fixed;inset:0;background:var(--backdrop);display:none;z-index:var(--z-modal);align-items:flex-start;justify-content:center;padding:32px 16px;overflow:auto}
+.cmp-modal .box{background:var(--color-surface-page);border:1px solid var(--color-border-soft);border-radius:var(--radius-card);max-width:1100px;width:100%;padding:24px}
+.cmp-modal h2{font-size:var(--text-lg);font-weight:var(--font-weight-semibold);color:var(--color-text-deep);margin-bottom:16px;display:flex;justify-content:space-between;align-items:center;gap:12px}
+@media(max-width:600px){.cmp-modal{padding:16px 8px}.cmp-modal .box{padding:16px}}
+table.data th,table.data td{text-align:left;vertical-align:top}
+table.data th.col{min-width:180px;white-space:normal;vertical-align:bottom;color:var(--color-text-deep);font-size:var(--text-sm);font-weight:var(--font-weight-semibold)}
+table.data th[scope=row]{white-space:nowrap}
+table.data td{word-break:normal}
+
+/* Ongoing NFOs */
+.nfo{background:var(--color-surface-page);border:1px solid var(--color-border-soft);border-radius:var(--radius-card);padding:16px 20px 20px;margin-bottom:24px}
+.nfo-head{display:flex;align-items:center;gap:8px 12px;flex-wrap:wrap;margin-bottom:12px}
+.nfo-head h2{font-size:var(--text-lg);font-weight:var(--font-weight-semibold);color:var(--color-text-deep)}
+.nfo-head .note{font-size:var(--text-xs);color:var(--color-text-cool)}
+.nfo-head .tg{margin-left:auto}
+.nfo-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(320px,100%),1fr));gap:12px}
+.nfo-card{border:1px solid var(--color-border-soft);border-radius:var(--radius-card);background:var(--color-surface-app);padding:12px 16px 16px;display:flex;flex-direction:column;gap:8px;min-width:0;transition:border-color var(--duration-1) var(--ease-standard)}
+.nfo-card:hover{border-color:var(--color-border-medium)}
+.nfo-card .top{display:flex;align-items:center;gap:8px}
+.nfo-card .badge{letter-spacing:var(--tracking-caps)}
+.nfo-card .st{margin-left:auto}
+.nfo-card .nm{font-size:var(--text-base);font-weight:var(--font-weight-semibold);line-height:1.35}
+.nfo-card .nm a{color:var(--color-text-deep)}
+.nfo-card .nm a:hover{color:var(--color-brand)}
+.nfo-card .amc{font-size:var(--text-xs);color:var(--color-text-cool);margin-top:-4px}
+.nfo-card .tags{display:flex;gap:8px;flex-wrap:wrap;align-items:center}
+.nfo-card .tags .sid{background:var(--color-surface-page);border-color:var(--color-brand-light);color:var(--color-brand);font-weight:var(--font-weight-semibold)}
+.nfo-card .tags .sid:hover{background:var(--color-brand-tint);text-decoration:none}
+.nfo-card .dates{display:flex;gap:16px;flex-wrap:wrap;font-size:var(--text-xs);color:var(--color-text-cool);border-top:1px solid var(--color-border-soft);padding-top:8px}
+.nfo-card .dates b{display:block;color:var(--color-text-deep);font-weight:var(--font-weight-semibold);font-size:var(--text-sm)}
+.nfo-card .foot{display:flex;align-items:center;gap:16px;flex-wrap:wrap;font-size:var(--text-xs);color:var(--color-text-cool);margin-top:auto;padding-top:4px}
+.nfo-card .foot b{color:var(--color-text-deep);font-weight:var(--font-weight-semibold)}
+.nfo-card .foot .btn{margin-left:auto}
+
+/* Footer disclaimer */
+footer.disclaimer{margin-top:0;padding-block:24px}
+footer.disclaimer b{color:var(--color-text-strong);font-weight:var(--font-weight-semibold)}
+footer.disclaimer p+p{margin-top:12px}
+
+@media print{
+  .rail,.cmpbar,.cmp-modal,.searchrow,.collections,.loadmore,#nfoMore,.nfo-head .tg,.card .meta label{display:none!important}
+  .layout{grid-template-columns:minmax(0,1fr)}
+  .card,.nfo-card{break-inside:avoid}
+  body.has-cmp{padding-bottom:0}
+}
+@media(max-width:767px){
+  .searchrow .sortsel{flex:1 1 0;min-width:0}
+  .collections{flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none;margin-inline:calc(-1 * var(--gutter));padding-inline:var(--gutter)}
+  .collections::-webkit-scrollbar{display:none}
+}
+</style>
+<noscript><style>
+/* Without JavaScript the list shows the server-rendered rows; the search, sort, collections, filters and count need the script. */
+.searchrow,.collections,.rail,.results-head,.loadmore{display:none}
+.layout{grid-template-columns:minmax(0,1fr)}
+</style></noscript>
+</head>
+<body class="page-explore">
+<header class="sr-header"><div class="sr-aud"><nav aria-label="Audience" class="sr-wrap"><a aria-current="true" href="../../index.html">Investors</a><a href="../../solutions/nri/index.html">NRIs</a><a href="https://ba.moneyhoney.co.in/">Business Associates</a></nav></div><div class="sr-head"><div class="sr-wrap sr-head__row"><a aria-label="MoneyHoney home" class="sr-logo" href="../../index.html"><svg aria-label="MoneyHoney" fill="none" height="20" role="img" viewbox="0 0 139 20" width="139" xmlns="http://www.w3.org/2000/svg">
+<path d="M1 10C1 15.2842 5.12632 19.6211 10.3474 20C10.3474 18.4632 9.46316 17.0316 8.07368 16.3579C5.67368 15.2211 4.01053 12.8 4.01053 9.97895C4.01053 7.51579 5.27368 5.36842 7.18947 4.08421V7.64211C7.18947 9.36842 8.6 10.7789 10.3474 10.7789V0C5.12632 0.4 1 4.73684 1 10Z" fill="#FF4A00"></path>
+<path d="M21.2318 10C21.2318 15.2842 17.1054 19.6211 11.8844 20C11.8844 18.4632 12.7686 17.0316 14.1581 16.3579C16.5581 15.2211 18.2212 12.8 18.2212 9.97895C18.2212 7.51579 16.9581 5.36842 15.0212 4.08421V7.64211C15.0212 9.36842 13.6107 10.7789 11.8633 10.7789V0C17.0844 0.4 21.2107 4.73684 21.2107 10H21.2318Z" fill="#FF4A00"></path>
+<path d="M13.4418 14.0201C13.4418 15.3043 12.4103 16.3359 11.126 16.3359C9.84184 16.3359 8.81026 15.3043 8.81026 14.0201C8.81026 12.7359 9.84184 11.7043 11.126 11.7043C12.4103 11.7043 13.4418 12.7359 13.4418 14.0201Z" fill="#16205B"></path>
+<path d="M27.6319 3.41083H29.5477C30.1582 3.41083 30.7056 3.72662 31.0214 4.23188L33.6951 8.52662L36.3687 4.23188C36.6845 3.72662 37.253 3.41083 37.8424 3.41083H39.7582V15.474H38.5161C37.7372 15.474 37.1056 14.8424 37.1056 14.0635V7.6003L33.6951 12.7582H33.6319L30.2424 7.66346V14.0845C30.2424 14.8635 29.6108 15.495 28.8319 15.495H27.6319V3.43188V3.41083Z" fill="#16205B"></path>
+<path d="M49.0839 10.905V10.8629C49.0839 9.49451 48.0944 8.31556 46.6418 8.31556C45.1892 8.31556 44.2207 9.47345 44.2207 10.8419V10.884C44.2207 12.2524 45.2102 13.4313 46.6628 13.4313C48.1155 13.4313 49.0839 12.2735 49.0839 10.905ZM41.6102 10.905V10.8629C41.6102 8.21029 43.7576 6.06293 46.6628 6.06293C49.5681 6.06293 51.6734 8.18924 51.6734 10.8419V10.884C51.6734 13.5366 49.526 15.684 46.6207 15.684C43.7155 15.684 41.6102 13.5577 41.6102 10.905Z" fill="#16205B"></path>
+<path d="M53.2529 6.25173H55.0003C55.5055 6.25173 55.9055 6.65173 55.9055 7.13594V7.557C56.5161 6.77805 57.295 6.08331 58.6213 6.08331C60.6213 6.08331 61.7792 7.38858 61.7792 9.51489V15.4938H60.3897C59.695 15.4938 59.1476 14.9465 59.1476 14.2517V10.3359C59.1476 9.09384 58.5582 8.46226 57.5476 8.46226C56.5371 8.46226 55.9055 9.09384 55.9055 10.3359V14.2517C55.9055 14.9254 55.3371 15.4938 54.6634 15.4938H53.274V6.25173H53.2529Z" fill="#16205B"></path>
+<path d="M69.8203 10.1471C69.673 8.96819 68.9782 8.18924 67.8624 8.18924C66.7467 8.18924 66.0519 8.96819 65.8414 10.1471H69.8203ZM63.273 10.905V10.8629C63.273 8.23135 65.1677 6.06293 67.8624 6.06293C70.9782 6.06293 72.3888 8.46293 72.3888 11.0735C72.3888 11.284 72.3888 11.5156 72.3467 11.7682H65.8624C66.1151 12.9471 66.9572 13.5787 68.1361 13.5787C68.8309 13.5787 69.3782 13.4103 69.9256 13.0103C70.2203 12.7998 70.6203 12.8419 70.873 13.0735L71.8835 13.9577C71.0203 15.0313 69.7572 15.684 68.073 15.684C65.273 15.684 63.2098 13.7471 63.2098 10.905H63.273Z" fill="#16205B"></path>
+<path d="M80.8733 6.2522H82.4312L78.8523 15.7048C78.1365 17.5785 77.3786 18.2943 75.7996 18.2943C74.8523 18.2943 74.1365 18.0627 73.4628 17.6627L74.2417 16.0206C74.3049 15.8943 74.4523 15.8311 74.5786 15.8943C74.8733 16.0417 75.2102 16.1259 75.4628 16.1259C75.9049 16.1259 76.1575 15.9785 76.3891 15.5154L72.747 6.2522H74.2839C75.0417 6.2522 75.6944 6.73641 75.926 7.43114L77.6523 12.5469L79.3154 7.36799C79.526 6.6943 80.1575 6.2522 80.8523 6.2522H80.8733Z" fill="#16205B"></path>
+<path d="M84.4945 3.41083H85.6735C86.4945 3.41083 87.1682 4.06346 87.1682 4.88451V8.18977H92.0945V4.88451C92.0945 4.06346 92.7682 3.41083 93.5893 3.41083H94.7682V15.474H93.6314C92.7682 15.474 92.0945 14.7792 92.0945 13.9371V10.6319H87.1682V13.9371C87.1682 14.7792 86.4735 15.474 85.6314 15.474H84.4945V3.41083Z" fill="#FF4A00"></path>
+<path d="M104.073 10.905V10.8629C104.073 9.49451 103.083 8.31556 101.631 8.31556C100.178 8.31556 99.2098 9.47345 99.2098 10.8419V10.884C99.2098 12.2524 100.199 13.4313 101.652 13.4313C103.105 13.4313 104.073 12.2735 104.073 10.905ZM96.6203 10.905V10.8629C96.6203 8.21029 98.7677 6.06293 101.673 6.06293C104.578 6.06293 106.683 8.18924 106.683 10.8419V10.884C106.683 13.5366 104.536 15.684 101.631 15.684C98.7256 15.684 96.6203 13.5577 96.6203 10.905Z" fill="#FF4A00"></path>
+<path d="M135.863 6.2522H137.421L133.842 15.7048C133.126 17.5785 132.368 18.2943 130.789 18.2943C129.842 18.2943 129.126 18.0627 128.452 17.6627L129.231 16.0206C129.294 15.8943 129.442 15.8311 129.589 15.8943C129.884 16.0417 130.199 16.1259 130.473 16.1259C130.915 16.1259 131.168 15.9785 131.399 15.5154L127.757 6.2522H129.294C130.052 6.2522 130.705 6.73641 130.936 7.43114L132.663 12.5469L134.326 7.36799C134.536 6.6943 135.168 6.2522 135.863 6.2522Z" fill="#FF4A00"></path>
+<path d="M108.243 6.25173H109.99C110.495 6.25173 110.895 6.65173 110.895 7.13594V7.557C111.506 6.77805 112.285 6.08331 113.611 6.08331C115.611 6.08331 116.769 7.38858 116.769 9.51489V15.4938H115.379C114.685 15.4938 114.137 14.9465 114.137 14.2517V10.3359C114.137 9.09384 113.548 8.46226 112.537 8.46226C111.527 8.46226 110.895 9.09384 110.895 10.3359V14.2517C110.895 14.9254 110.327 15.4938 109.653 15.4938H108.264V6.25173H108.243Z" fill="#FF4A00"></path>
+<path d="M124.895 10.1471C124.747 8.96819 124.053 8.18924 122.937 8.18924C121.821 8.18924 121.126 8.96819 120.916 10.1471H124.895ZM118.326 10.905V10.8629C118.326 8.23135 120.221 6.06293 122.916 6.06293C126.032 6.06293 127.442 8.46293 127.442 11.0735C127.442 11.284 127.442 11.5156 127.4 11.7682H120.916C121.168 12.9471 122.01 13.5787 123.189 13.5787C123.884 13.5787 124.432 13.4103 124.979 13.0103C125.274 12.7998 125.674 12.8419 125.926 13.0735L126.937 13.9577C126.074 15.0313 124.81 15.684 123.126 15.684C120.326 15.684 118.263 13.7471 118.263 10.905H118.326Z" fill="#FF4A00"></path>
+</svg></a><nav aria-label="Main" class="sr-nav"><div class="sr-nav__item"><button aria-controls="mega-invest" aria-current="page" aria-expanded="false" class="sr-nav__top" type="button">Invest <svg aria-hidden="true" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><path d="m6 9 6 6 6-6"></path></svg></button><div class="sr-mega" id="mega-invest"><div class="sr-mega__col"><p class="sr-mega__h">Mutual funds</p><a class="sr-mega__link" href="../../mutual-funds/index.html"><b>Mutual Funds</b><span>All 1,774 open schemes by category</span></a><a class="sr-mega__link" href="../../mutual-funds/explore/index.html"><b>Explore Funds</b><span>Filter by category, cost and risk</span></a><a class="sr-mega__link" href="../../mutual-funds/screens/index.html"><b>Fund Screens</b><span>Ready-made lists, each with its rule</span></a><a class="sr-mega__link" href="../../mutual-funds/screener/index.html"><b>Screener</b><span>Every scheme on one table</span></a><a class="sr-mega__link" href="../../mutual-funds/amc/index.html"><b>Fund Houses</b><span>The 49 fund houses we distribute</span></a></div><div class="sr-mega__col"><p class="sr-mega__h">Beyond mutual funds</p><a class="sr-mega__link" href="../../sif/index.html"><b>SIF</b><span>Specialised Investment Funds, from ₹10,00,000</span></a><a class="sr-mega__link" href="../../gift-city-funds/index.html"><b>GIFT City Funds</b><span>Dollar funds for NRIs and residents</span></a><a class="sr-mega__link" href="../../mutual-funds/nfo/index.html"><b>New Fund Offers</b><span>Open, upcoming and recently closed</span></a><a class="sr-mega__link" href="../../mutual-funds/dividends/index.html"><b>Dividends (IDCW)</b><span>Record dates and history</span></a></div><div class="sr-mega__promo"><b>Not sure where to start?</b><p>Six questions on your goals, your debts and your nerve.</p><a class="sr-more" href="../../solutions/know-yourself/index.html">Know Yourself <svg aria-hidden="true" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a></div></div></div><div class="sr-nav__item"><button aria-controls="mega-save" aria-expanded="false" class="sr-nav__top" type="button">Save <svg aria-hidden="true" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><path d="m6 9 6 6 6-6"></path></svg></button><div class="sr-mega" id="mega-save"><div class="sr-mega__col"><p class="sr-mega__h">Fixed deposits</p><a class="sr-mega__link" href="../../fixed-deposits/index.html"><b>Fixed Deposits</b><span>FDs from banks, housing finance companies and NBFCs</span></a><a class="sr-mega__link" href="../../fixed-deposits/bank-fd-rates/index.html"><b>Compare FD Rates</b><span>Bank FD rates side by side</span></a><a class="sr-mega__link" href="../../fixed-deposits/explore/index.html"><b>FD Explorer</b><span>Filter by tenure, payout and rating</span></a><a class="sr-mega__link" href="../../fixed-deposits/guide/index.html"><b>FD Guide</b><span>Payouts, tax, early withdrawal</span></a></div><div class="sr-mega__col"><p class="sr-mega__h">Bonds</p><a class="sr-mega__link" href="../../bonds/index.html"><b>Bonds &amp; NCDs</b><span>Every bond we offer</span></a><a class="sr-mega__link" href="../../bonds/ncd/index.html"><b>NCD IPOs</b><span>Open public issues, series and ratings</span></a><a class="sr-mega__link" href="../../bonds/rbi-bonds/index.html"><b>RBI Floating Rate Bonds</b><span>Government of India, reset every six months</span></a><a class="sr-mega__link" href="../../bonds/capital-gain-bonds/index.html"><b>Capital Gain Bonds</b><span>REC, PFC and IRFC series</span></a></div><div class="sr-mega__promo"><b>Most of your savings in FDs?</b><p>See what else could sit beside them, and what it would change.</p><a class="sr-more" href="../../solutions/beyond-fixed-deposits/index.html">Beyond Fixed Deposits <svg aria-hidden="true" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a></div></div></div><div class="sr-nav__item"><button aria-controls="mega-plan" aria-expanded="false" class="sr-nav__top" type="button">Plan <svg aria-hidden="true" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><path d="m6 9 6 6 6-6"></path></svg></button><div class="sr-mega" id="mega-plan"><div class="sr-mega__col"><p class="sr-mega__h">Goals</p><a class="sr-mega__link" href="../../solutions/retirement/index.html"><b>Retirement</b><span>How much you need, and how to draw it</span></a><a class="sr-mega__link" href="../../solutions/child-education/index.html"><b>Child Education</b><span>What school and college will cost</span></a><a class="sr-mega__link" href="../../solutions/sip/index.html"><b>SIP</b><span>How much to invest each month</span></a><a class="sr-mega__link" href="../../solutions/wealth/index.html"><b>Building Wealth</b><span>A plan for money you will not touch</span></a><a class="sr-mega__link" href="../../solutions/women/index.html"><b>Women and Money</b><span>Plans that fit career breaks</span></a></div><div class="sr-mega__col"><p class="sr-mega__h">Money checks</p><a class="sr-mega__link" href="../../solutions/emergency-fund/index.html"><b>Emergency Fund</b><span>Could you pay your bills for 6 months?</span></a><a class="sr-mega__link" href="../../solutions/tax-saving/index.html"><b>Tax Saving (ELSS)</b><span>Does ELSS still save you tax?</span></a><a class="sr-mega__link" href="../../solutions/portfolio-health/index.html"><b>Portfolio Health</b><span>Is your money in the right places?</span></a><a class="sr-mega__link" href="../../solutions/nri/index.html"><b>NRI Investing</b><span>Investing in India from abroad</span></a><a class="sr-mega__link" href="../../solutions/index.html"><b>All Solutions</b><span>17 goals and checks</span></a></div><div class="sr-mega__promo"><b>Run the numbers</b><p>SIP, retirement, FD, tax regime, XIRR and 20 more calculators.</p><a class="sr-more" href="../../calculators/index.html">All Calculators <svg aria-hidden="true" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a></div></div></div><div class="sr-nav__item"><button aria-controls="mega-learn" aria-expanded="false" class="sr-nav__top" type="button">Learn <svg aria-hidden="true" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><path d="m6 9 6 6 6-6"></path></svg></button><div class="sr-mega" id="mega-learn"><div class="sr-mega__col"><p class="sr-mega__h">Read and watch</p><a class="sr-mega__link" href="../../blog/index.html"><b>Blog</b><span>Plain explainers and founder notes</span></a><a class="sr-mega__link" href="../../videos/index.html"><b>Videos and Posts</b><span>Market updates on video</span></a><a class="sr-mega__link" href="../../mutual-funds/market-outlook/index.html"><b>Market Outlook</b><span>A fund house's monthly view</span></a><a class="sr-mega__link" href="../../methodology/index.html"><b>Methodology</b><span>Where our figures come from</span></a></div><div class="sr-mega__col"><p class="sr-mega__h">Guides</p><a class="sr-mega__link" href="../../fixed-deposits/guide/index.html"><b>FD Guide</b><span>How fixed deposits work</span></a><a class="sr-mega__link" href="../../bonds/ncd/guide/index.html"><b>NCD Guide</b><span>Ratings, risks and how to apply</span></a><a class="sr-mega__link" href="../../bonds/capital-gain-bonds/guide/index.html"><b>Capital Gain Bond Guide</b><span>Who can claim, and the time limit</span></a><a class="sr-mega__link" href="../../bonds/rbi-bonds/guide/index.html"><b>RBI Bond Guide</b><span>How the rate is set</span></a></div><div class="sr-mega__promo"><b>The power of compounding in SIPs</b><p>How small monthly amounts turn into long-term wealth.</p><a class="sr-more" href="../../blog/power-of-compounding-in-sip-mutual-funds/index.html">Read the Post <svg aria-hidden="true" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a></div></div></div><div class="sr-nav__item"><a class="sr-nav__top" href="../../contact/index.html">Talk to Us</a></div></nav><div class="sr-head__end"><a class="sr-signin" href="https://inv.moneyhoney.co.in/#/investor-login">Sign In</a><a class="btn btn-primary" href="../../get-started/index.html">Get Started</a></div><details class="sr-mnav"><summary aria-label="Menu"><svg aria-hidden="true" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"></path></svg></summary><div class="sr-mnav__panel"><details><summary>Invest</summary><a href="../../mutual-funds/index.html">Mutual Funds</a><a href="../../mutual-funds/explore/index.html">Explore Funds</a><a href="../../mutual-funds/screens/index.html">Fund Screens</a><a href="../../mutual-funds/screener/index.html">Screener</a><a href="../../mutual-funds/amc/index.html">Fund Houses</a><a href="../../sif/index.html">SIF</a><a href="../../gift-city-funds/index.html">GIFT City Funds</a><a href="../../mutual-funds/nfo/index.html">New Fund Offers</a><a href="../../mutual-funds/dividends/index.html">Dividends (IDCW)</a></details><details><summary>Save</summary><a href="../../fixed-deposits/index.html">Fixed Deposits</a><a href="../../fixed-deposits/bank-fd-rates/index.html">Compare FD Rates</a><a href="../../fixed-deposits/explore/index.html">FD Explorer</a><a href="../../fixed-deposits/guide/index.html">FD Guide</a><a href="../../bonds/index.html">Bonds &amp; NCDs</a><a href="../../bonds/ncd/index.html">NCD IPOs</a><a href="../../bonds/rbi-bonds/index.html">RBI Floating Rate Bonds</a><a href="../../bonds/capital-gain-bonds/index.html">Capital Gain Bonds</a></details><details><summary>Plan</summary><a href="../../solutions/retirement/index.html">Retirement</a><a href="../../solutions/child-education/index.html">Child Education</a><a href="../../solutions/sip/index.html">SIP</a><a href="../../solutions/wealth/index.html">Building Wealth</a><a href="../../solutions/women/index.html">Women and Money</a><a href="../../solutions/emergency-fund/index.html">Emergency Fund</a><a href="../../solutions/tax-saving/index.html">Tax Saving (ELSS)</a><a href="../../solutions/portfolio-health/index.html">Portfolio Health</a><a href="../../solutions/nri/index.html">NRI Investing</a><a href="../../solutions/index.html">All Solutions</a></details><details><summary>Learn</summary><a href="../../blog/index.html">Blog</a><a href="../../videos/index.html">Videos and Posts</a><a href="../../mutual-funds/market-outlook/index.html">Market Outlook</a><a href="../../methodology/index.html">Methodology</a><a href="../../fixed-deposits/guide/index.html">FD Guide</a><a href="../../bonds/ncd/guide/index.html">NCD Guide</a><a href="../../bonds/capital-gain-bonds/guide/index.html">Capital Gain Bond Guide</a><a href="../../bonds/rbi-bonds/guide/index.html">RBI Bond Guide</a></details><details><summary>Talk to Us</summary><a href="../../contact/index.html">Contact</a><a href="tel:+917738032704">Call +91 77380 32704</a><a href="https://wa.me/917738032704">WhatsApp Us</a></details><div class="sr-mnav__cta"><a class="btn btn-secondary" href="https://inv.moneyhoney.co.in/#/investor-login">Sign In</a></div></div></details></div></div></header>
+<div class="head"><div class="container wrap">
+<nav aria-label="Breadcrumb" class="breadcrumb">
+<a href="../../index.html">Home</a>
+<svg aria-hidden="true" fill="none" height="12" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24" width="12"><path d="m9 18 6-6-6-6"></path></svg>
+<a href="../index.html">SIF</a>
+<svg aria-hidden="true" fill="none" height="12" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24" width="12"><path d="m9 18 6-6-6-6"></path></svg>
+<span aria-current="page">Explore SIF</span>
+</nav>
+<h1>Explore SIF Investment Strategies</h1>
+<nav aria-label="Fund type" class="fundtype"><a href="../../mutual-funds/explore/index.html">Mutual Funds</a><a aria-current="page" href="./index.html">SIF</a></nav>
+<div class="gate alert alert-warning" role="note"><svg aria-hidden="true" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24"><path d="M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path><path d="M12 9v4M12 17h.01"></path></svg><div><b>A SIF is not a mutual fund.</b> The minimum aggregate investment across all strategies of one SIF is <b>₹10,00,000 per PAN</b> (₹1,00,000 for accredited investors), strategies may take short exposure through derivatives.</div></div>
+<div class="searchrow">
+<div class="search">
+<svg aria-hidden="true" fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="1.5" viewbox="0 0 24 24"><circle cx="11" cy="11" r="7"></circle><path d="M20 20l-3.5-3.5"></path></svg>
+<input aria-label="Search strategies" autocomplete="off" id="q" placeholder="Search by strategy name, SIF brand, asset manager, category or fund manager" type="text"/>
+</div>
+<select aria-label="Sort strategies" class="select sortsel" id="sort">
+<option value="au">Sort: Strategy Size, Largest First</option>
+<option value="new">Sort: Newest Launch First</option>
+<option value="old">Sort: Oldest Launch First</option>
+<option value="rb">Sort: Risk Band, Lowest First</option>
+<option value="n">Sort: Name A to Z</option>
+</select>
+<button aria-controls="rail" aria-expanded="false" class="btn btn-secondary fbtn" id="filtersBtn" type="button"><svg aria-hidden="true" fill="none" height="16" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24" width="16"><path d="M3 5h18l-7 8v6l-4-2v-4z"></path></svg>Filters</button>
+</div>
+<div aria-label="Collections" class="collections" id="collections"></div>
+</div></div>
+<div class="container wrap"><div class="layout">
+<aside aria-label="Filters" class="rail" id="rail">
+<div class="fh"><span class="section-label">Filters</span> <button class="btn-link clear" id="clearAll" type="button">Clear All</button></div>
+<div id="facets"></div>
+</aside>
+<main id="main">
+<section class="nfo" id="nfoSec" style="display:none">
+<div class="nfo-head">
+<h2>Ongoing NFOs</h2><span class="ct status status-warning" id="nfoCount"></span>
+<span class="note">New strategies open for subscription, units allotted at ₹10.</span>
+<a class="btn btn-link btn-sm" href="../nfo/index.html">See All NFOs</a><button class="tg btn btn-ghost btn-sm" id="nfoToggle" type="button">Hide</button>
+</div>
+<div class="nfo-grid" id="nfoList"></div>
+<button class="btn btn-secondary btn-sm" id="nfoMore" style="margin-top:12px" type="button">Show All NFOs</button>
+</section>
+<div class="results-head">
+<div class="count"><b id="resCount"></b> strategies</div>
+</div>
+<div class="chips" id="chips"></div>
+<div id="list">
+<div class="ssr">
+<p class="ssr-note">All 34 SIF strategies, filterable by category, SIF, risk band and status, as on 31 Aug 2026. Listed A to Z below; the filters load when the page's script runs.</p>
+<div class="table-wrap"><table class="table table-stack" data-order="alpha">
+<thead><tr><th scope="col">Strategy</th><th scope="col">SIF</th><th scope="col">Category</th><th scope="col">Risk Band</th><th scope="col">AUM</th><th scope="col">Status</th></tr></thead>
+<tbody><tr><td data-label="Strategy"><a href="../strategy/index.html?scheme=S-22">Altiva Equity Ex- Top 100 Long - Short Fund</a></td><td data-label="SIF">Altiva SIF</td><td data-label="Category">Equity Ex-Top 100 Long-Short</td><td data-label="Risk Band">Level 5 of 5</td><td class="num" data-label="AUM">₹91.58 Crores</td><td data-label="Status">Live</td></tr>
+<tr><td data-label="Strategy"><a href="../strategy/index.html?scheme=S-34">Altiva Equity Long-Short Fund</a></td><td data-label="SIF">Altiva SIF</td><td data-label="Category">Equity Long-Short</td><td data-label="Risk Band">Not Yet Published</td><td class="num" data-label="AUM">–</td><td data-label="Status">Pre-Launch</td></tr>
+<tr><td data-label="Strategy"><a href="../strategy/index.html?scheme=S-3">Altiva Hybrid Long-Short Fund</a></td><td data-label="SIF">Altiva SIF</td><td data-label="Category">Hybrid Long-Short</td><td data-label="Risk Band">Level 1 of 5</td><td class="num" data-label="AUM">₹4,246.34 Crores</td><td data-label="Status">Live</td></tr>
+<tr><td data-label="Strategy"><a href="../strategy/index.html?scheme=S-32">Apex Equity Ex-Top 100 Long-short Fund</a></td><td data-label="SIF">Apex SIF</td><td data-label="Category">Equity Ex-Top 100 Long-Short</td><td data-label="Risk Band">Level 5 of 5</td><td class="num" data-label="AUM">–</td><td data-label="Status">Live</td></tr>
+<tr><td data-label="Strategy"><a href="../strategy/index.html?scheme=S-31">Apex Equity Long-Short Fund</a></td><td data-label="SIF">Apex SIF</td><td data-label="Category">Equity Long-Short</td><td data-label="Risk Band">Level 5 of 5</td><td class="num" data-label="AUM">–</td><td data-label="Status">Live</td></tr>
+<tr><td data-label="Strategy"><a href="../strategy/index.html?scheme=S-13">Apex Hybrid Long-Short Fund</a></td><td data-label="SIF">Apex SIF</td><td data-label="Category">Hybrid Long-Short</td><td data-label="Risk Band">Level 1 of 5</td><td class="num" data-label="AUM">₹73.80 Crores</td><td data-label="Status">Live</td></tr>
+<tr><td data-label="Strategy"><a href="../strategy/index.html?scheme=S-20">Arthaya Equity Long Short Fund</a></td><td data-label="SIF">Arthaya SIF</td><td data-label="Category">Equity Long-Short</td><td data-label="Risk Band">Level 5 of 5</td><td class="num" data-label="AUM">₹49.80 Crores</td><td data-label="Status">Live</td></tr>
+<tr><td data-label="Strategy"><a href="../strategy/index.html?scheme=S-12">Arudha Equity Long-Short Fund</a></td><td data-label="SIF">Arudha SIF</td><td data-label="Category">Equity Long-Short</td><td data-label="Risk Band">Level 5 of 5</td><td class="num" data-label="AUM">₹72.73 Crores</td><td data-label="Status">Live</td></tr>
+<tr><td data-label="Strategy"><a href="../strategy/index.html?scheme=S-10">Arudha Hybrid Long-Short Fund</a></td><td data-label="SIF">Arudha SIF</td><td data-label="Category">Hybrid Long-Short</td><td data-label="Risk Band">Level 1 of 5</td><td class="num" data-label="AUM">₹110.88 Crores</td><td data-label="Status">Live</td></tr>
+<tr><td data-label="Strategy"><a href="../strategy/index.html?scheme=S-5">Diviniti Equity Long Short Fund</a></td><td data-label="SIF">Diviniti SIF</td><td data-label="Category">Equity Long-Short</td><td data-label="Risk Band">Not Yet Published</td><td class="num" data-label="AUM">₹387.88 Crores</td><td data-label="Status">Launch Overdue</td></tr>
+<tr><td data-label="Strategy"><a href="../strategy/index.html?scheme=S-14">DynaSIF Active Asset Allocator Long-Short Fund</a></td><td data-label="SIF">DynaSIF</td><td data-label="Category">Active Asset Allocator</td><td data-label="Risk Band">Level 3 of 5</td><td class="num" data-label="AUM">₹181.29 Crores</td><td data-label="Status">Live</td></tr>
+<tr><td data-label="Strategy"><a href="../strategy/index.html?scheme=S-28">DynaSIF Equity Ex-Top 100 Long - Short Fund</a></td><td data-label="SIF">DynaSIF</td><td data-label="Category">Equity Ex-Top 100 Long-Short</td><td data-label="Risk Band">Not Yet Published</td><td class="num" data-label="AUM">₹6.63 Crores</td><td data-label="Status">Launch Overdue</td></tr>
+<tr><td data-label="Strategy"><a href="../strategy/index.html?scheme=S-11">DynaSIF Equity Long - Short Fund</a></td><td data-label="SIF">DynaSIF</td><td data-label="Category">Equity Long-Short</td><td data-label="Risk Band">Level 5 of 5</td><td class="num" data-label="AUM">₹252.01 Crores</td><td data-label="Status">Live</td></tr>
+<tr><td data-label="Strategy"><a href="../strategy/index.html?scheme=S-29">INFINITY HYBRID LONG-SHORT FUND</a></td><td data-label="SIF">Infinity SIF</td><td data-label="Category">Hybrid Long-Short</td><td data-label="Risk Band">Level 1 of 5</td><td class="num" data-label="AUM">–</td><td data-label="Status">Live</td></tr>
+<tr><td data-label="Strategy"><a href="../strategy/index.html?scheme=S-23">iSIF Active Asset Allocator Long-Short Fund</a></td><td data-label="SIF">iSIF</td><td data-label="Category">Active Asset Allocator</td><td data-label="Risk Band">Not Yet Published</td><td class="num" data-label="AUM">₹155.19 Crores</td><td data-label="Status">Live</td></tr>
+<tr><td data-label="Strategy"><a href="../strategy/index.html?scheme=S-8">iSIF Equity Ex-Top 100 Long-Short Fund</a></td><td data-label="SIF">iSIF</td><td data-label="Category">Equity Ex-Top 100 Long-Short</td><td data-label="Risk Band">Not Yet Published</td><td class="num" data-label="AUM">₹1,626.84 Crores</td><td data-label="Status">Live</td></tr>
+<tr><td data-label="Strategy"><a href="../strategy/index.html?scheme=S-24">iSIF Equity Long-Short Fund</a></td><td data-label="SIF">iSIF</td><td data-label="Category">Equity Long-Short</td><td data-label="Risk Band">Not Yet Published</td><td class="num" data-label="AUM">₹68.72 Crores</td><td data-label="Status">Live</td></tr>
+<tr><td data-label="Strategy"><a href="../strategy/index.html?scheme=S-9">iSIF Hybrid Long-Short Fund</a></td><td data-label="SIF">iSIF</td><td data-label="Category">Hybrid Long-Short</td><td data-label="Risk Band">Not Yet Published</td><td class="num" data-label="AUM">₹827.21 Crores</td><td data-label="Status">Live</td></tr>
+<tr><td data-label="Strategy"><a href="../strategy/index.html?scheme=S-33">Magnum Equity Ex-Top 100Long Short Fund</a></td><td data-label="SIF">Magnum SIF</td><td data-label="Category">Equity Ex-Top 100 Long-Short</td><td data-label="Risk Band">Not Yet Published</td><td class="num" data-label="AUM">–</td><td data-label="Status">Launch Awaited</td></tr>
+<tr><td data-label="Strategy"><a href="../strategy/index.html?scheme=S-4">Magnum Hybrid Long Short Fund</a></td><td data-label="SIF">Magnum SIF</td><td data-label="Category">Hybrid Long-Short</td><td data-label="Risk Band">Level 1 of 5</td><td class="num" data-label="AUM">₹3,506.86 Crores</td><td data-label="Status">Live</td></tr>
+<tr><td data-label="Strategy"><a href="../strategy/index.html?scheme=S-26">Platinum Hybrid Long-Short Fund</a></td><td data-label="SIF">Platinum SIF</td><td data-label="Category">Hybrid Long-Short</td><td data-label="Risk Band">Not Yet Published</td><td class="num" data-label="AUM">₹42.43 Crores</td><td data-label="Status">Launch Overdue</td></tr>
+<tr><td data-label="Strategy"><a href="../strategy/index.html?scheme=S-27">Prism Hybrid Long - Short Fund</a></td><td data-label="SIF">Prism SIF</td><td data-label="Category">Hybrid Long-Short</td><td data-label="Risk Band">Level 1 of 5</td><td class="num" data-label="AUM">–</td><td data-label="Status">Live</td></tr>
+<tr><td data-label="Strategy"><a href="../strategy/index.html?scheme=S-15">qsif Active Asset Allocator Long-Short Fund</a></td><td data-label="SIF">qsif</td><td data-label="Category">Active Asset Allocator</td><td data-label="Risk Band">Level 2 of 5</td><td class="num" data-label="AUM">₹50.66 Crores</td><td data-label="Status">Live</td></tr>
+<tr><td data-label="Strategy"><a href="../strategy/index.html?scheme=S-6">qsif Equity Ex-Top 100 Long-Short Fund</a></td><td data-label="SIF">qsif</td><td data-label="Category">Equity Ex-Top 100 Long-Short</td><td data-label="Risk Band">Level 3 of 5</td><td class="num" data-label="AUM">₹223.72 Crores</td><td data-label="Status">Live</td></tr>
+<tr><td data-label="Strategy"><a href="../strategy/index.html?scheme=S-1">qsif Equity Long-Short Fund</a></td><td data-label="SIF">qsif</td><td data-label="Category">Equity Long-Short</td><td data-label="Risk Band">Level 3 of 5</td><td class="num" data-label="AUM">₹578.45 Crores</td><td data-label="Status">Live</td></tr>
+<tr><td data-label="Strategy"><a href="../strategy/index.html?scheme=S-2">qsif Hybrid Long-Short Fund</a></td><td data-label="SIF">qsif</td><td data-label="Category">Hybrid Long-Short</td><td data-label="Risk Band">Level 3 of 5</td><td class="num" data-label="AUM">₹154.29 Crores</td><td data-label="Status">Live</td></tr>
+<tr><td data-label="Strategy"><a href="../strategy/index.html?scheme=S-21">qsif Sector Rotation Long-Short Fund</a></td><td data-label="SIF">qsif</td><td data-label="Category">Sector Rotation Long-Short</td><td data-label="Risk Band">Level 2 of 5</td><td class="num" data-label="AUM">₹19.44 Crores</td><td data-label="Status">Live</td></tr>
+<tr><td data-label="Strategy"><a href="../strategy/index.html?scheme=S-25">RedHex Hybrid Long-Short Fund</a></td><td data-label="SIF">RedHex SIF</td><td data-label="Category">Hybrid Long-Short</td><td data-label="Risk Band">Level 2 of 5</td><td class="num" data-label="AUM">₹74.73 Crores</td><td data-label="Status">Live</td></tr>
+<tr><td data-label="Strategy"><a href="../strategy/index.html?scheme=S-16">Sapphire Equity Long-Short SIF</a></td><td data-label="SIF">Sapphire SIF</td><td data-label="Category">Equity Long-Short</td><td data-label="Risk Band">Level 5 of 5</td><td class="num" data-label="AUM">₹107.07 Crores</td><td data-label="Status">Live</td></tr>
+<tr><td data-label="Strategy"><a href="../strategy/index.html?scheme=S-30">Summit Equity Long-Short Fund</a></td><td data-label="SIF">SUMMIT SIF</td><td data-label="Category">Equity Long-Short</td><td data-label="Risk Band">Not Yet Published</td><td class="num" data-label="AUM">–</td><td data-label="Status">Launch Overdue</td></tr>
+<tr><td data-label="Strategy"><a href="../strategy/index.html?scheme=S-17">Titanium Equity Long-Short Fund</a></td><td data-label="SIF">Titanium SIF</td><td data-label="Category">Equity Long-Short</td><td data-label="Risk Band">Level 5 of 5</td><td class="num" data-label="AUM">₹114.61 Crores</td><td data-label="Status">Live</td></tr>
+<tr><td data-label="Strategy"><a href="../strategy/index.html?scheme=S-7">Titanium Hybrid Long-Short Fund</a></td><td data-label="SIF">Titanium SIF</td><td data-label="Category">Hybrid Long-Short</td><td data-label="Risk Band">Level 5 of 5</td><td class="num" data-label="AUM">₹538.96 Crores</td><td data-label="Status">Live</td></tr>
+<tr><td data-label="Strategy"><a href="../strategy/index.html?scheme=S-18">WSIF Equity Ex-Top 100 Long-Short Fund</a></td><td data-label="SIF">WSIF</td><td data-label="Category">Equity Ex-Top 100 Long-Short</td><td data-label="Risk Band">Level 5 of 5</td><td class="num" data-label="AUM">₹10.74 Crores</td><td data-label="Status">Live</td></tr>
+<tr><td data-label="Strategy"><a href="../strategy/index.html?scheme=S-19">WSIF Equity Long-Short Fund</a></td><td data-label="SIF">WSIF</td><td data-label="Category">Equity Long-Short</td><td data-label="Risk Band">Level 5 of 5</td><td class="num" data-label="AUM">₹11.02 Crores</td><td data-label="Status">Live</td></tr>
+</tbody>
+</table></div>
+</div></div>
+<button class="btn btn-secondary loadmore" id="more" type="button">Show More Strategies</button>
+</main>
+</div></div>
+<div class="cmpbar" id="cmpbar"><div class="container wrap">
+<span class="ttl">Compare</span><div class="names" id="cmpNames"></div>
+<button class="btn btn-secondary btn-sm" id="cmpClear" type="button">Clear</button>
+<button class="btn btn-primary btn-sm" id="cmpOpen" type="button">Compare Now</button>
+</div></div>
+<div class="cmp-modal" id="modal"><div aria-labelledby="cmpTitle" aria-modal="true" class="box" role="dialog"><h2><span id="cmpTitle">Compare SIF Strategies</span> <button class="btn btn-secondary btn-sm" id="cmpClose" type="button"><svg aria-hidden="true" fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="1.5" viewbox="0 0 24 24"><path d="M18 6 6 18M6 6l12 12"></path></svg>Close</button></h2><div class="table-wrap"><table class="table data" id="cmpTable"></table></div></div></div>
+<footer class="disclaimer"><div class="container wrap">
+<p><b>Data sources.</b> AMFI, CAMS, Kfintech.</p>
+<p><b>Disclaimer.</b> A Specialised Investment Fund is a distinct product category from a mutual fund, carries a ₹10,00,000 minimum aggregate investment per PAN and may take unhedged short exposure through derivatives. Read all strategy related documents carefully, including the Scheme Information Document. Past performance may or may not be sustained in future. This page is for information only and is not investment advice.</p>
+</div></footer>
+<script>
+/* TAX:BEGIN (generated by tax_classify.py, do not edit by hand) */
+var TAX={"asof":"2026-10-10","S-22":["eq","document",0],"S-34":["eq","document",0],"S-3":["nc","none",0],"S-32":["eq","document",0],"S-31":["eq","document",0],"S-13":["ot","document",1],"S-20":["nc","document",0],"S-12":["eq","document",0],"S-10":["ot","document",1],"S-5":["eq","document",0],"S-14":["ot","document",1],"S-28":["eq","document",0],"S-11":["eq","document",0],"S-29":["ot","document",1],"S-33":["eq","document",0],"S-4":["eq","document",1],"S-26":["eq","document",1],"S-27":["ot","document",1],"S-25":["nc","none",0],"S-16":["eq","document",0],"S-30":["eq","document",0],"S-17":["eq","document",0],"S-7":["ot","document",1],"S-18":["eq","document",0],"S-19":["eq","document",0],"S-23":["ot","document",1],"S-8":["eq","document",0],"S-24":["eq","document",0],"S-9":["eq","document",1],"S-15":["nc","none",0],"S-6":["eq","document",0],"S-1":["eq","document",0],"S-2":["ot","document",1],"S-21":["eq","document",0]};
+/* TAX:END */
+var DATA_AS_ON="2026-08-31"; // the date the DATA block describes; update with every data refresh
+/* ELIG:BEGIN (generated by sitegen/explorer_lists.py --write, do not edit by hand) */
+var ELIG={"online":{"asOn":"21 Aug 2026","countries":["USA","Canada","Afghanistan","Albania","Algeria","Angola","Bahamas","Bangladesh","Barbados","Bolivia","Botswana","Bulgaria","Burkina Faso","Cambodia","Cameroon","Cayman Islands","Congo, the Democratic Republic of the","Cote Divoire","Croatia","Cuba","Ethiopia","Ghana","Haiti","Iceland","Iran, Islamic Republic of","Jamaica","Jordan","Kenya","Korea, Democratic Peoples Republic of","Korea, Republic of","Kuwait","Lao Peoples Democratic Republic","Lebanon","Mali","Mauritius","Monaco","Mongolia","Morocco","Mozambique","Myanmar","Namibia","Nepal","Nicaragua","Nigeria","Pakistan","Panama","Papua New Guinea","Philippines","Russian Federation","Senegal","South Africa","Sri Lanka","Sudan","Syrian Arab Republic","Tanzania, United Republic of","Trinidad and Tobago","Tunisia","Turkey","Uganda","Ukraine","Venezuela","Viet Nam","Virgin Islands, British","Yemen"],"blocked":{"Canada":["Altiva SIF","Magnum SIF","Platinum SIF","Sapphire SIF","Titanium SIF"],"Iran, Islamic Republic of":["Altiva SIF","Platinum SIF","Sapphire SIF","qsif SIF"],"Korea, Republic of":["Platinum SIF","qsif SIF"],"Myanmar":["Altiva SIF","Platinum SIF","qsif SIF"],"USA":["Magnum SIF","Platinum SIF","Sapphire SIF","Titanium SIF"],"Korea, Democratic Peoples Republic of":["Altiva SIF","Platinum SIF","Sapphire SIF","qsif SIF"],"Bangladesh":["Sapphire SIF"],"Cuba":["Sapphire SIF"],"Pakistan":["Platinum SIF","Sapphire SIF","qsif SIF"],"Syrian Arab Republic":["Sapphire SIF"],"Russian Federation":["Sapphire SIF"],"Bolivia":["qsif SIF"],"Lebanon":["qsif SIF"],"Virgin Islands, British":["qsif SIF"]}}};
+/* ELIG:END */
+// The Solutions pages the "Who Is Investing?" box links: empty here; sitegen (pages/existing.py) fills in the topics
+// that have a page, so the box never links a page that does not exist.
+var SOL_LINKS={"nri": "../../solutions/nri/index.html"};
+var GIFT_LINK={"lead": "Funds in US dollars for NRIs:", "label": "GIFT City Funds", "href": "../../gift-city-funds/index.html"};     /* filled by sitegen/pages/existing.py: the GIFT City section, for NRIs */
+var DATA=[
+{"id":"S-22","n":"Altiva Equity Ex- Top 100 Long - Short Fund","sif":"Altiva SIF","amc":"Edelweiss","t":"Equity","c":"Equity Ex-Top 100 Long-Short Fund","au":91.58,"auq":"2026-06-30","l":"2026-06-08","rb":5,"rbl":5,"ldt":"0.50% within 90 days","ld":0.5,"ldd":90,"minv":1000000.0,"sip":1000.0,"bm":"Nifty 500 TRI","st":"present","fm":["Nikhil Gada","Trideep Bhattacharya","Ashish Sood","Amit Vora"],"isin":8,"plans":["Direct","Regular"],"sidu":"https://portal.amfiindia.com/spages/S-22.pdf","web":"https://www.edelweissmf.com"},
+{"id":"S-34","n":"Altiva Equity Long-Short Fund","sif":"Altiva SIF","amc":"Edelweiss","t":"Equity","c":"Equity Long-Short Fund","l":"2026-09-10","ldt":"Not stated","st":"pre_launch","isin":0,"sidu":"https://portal.amfiindia.com/spages/S-34.pdf","web":"https://www.edelweissmf.com"},
+{"id":"S-3","n":"Altiva Hybrid Long-Short Fund","sif":"Altiva SIF","amc":"Edelweiss","t":"Hybrid","c":"Hybrid Long-Short Fund","au":4246.34,"auq":"2026-06-30","l":"2025-10-20","rb":1,"rbl":2,"ldt":"0.50% within 30 days","ld":0.5,"ldd":30,"minv":1000000.0,"sip":1000.0,"bm":"NIFTY 50 Hybrid Composite Debt 50:50 Index","st":"present","fm":["Bhavesh Jain","Bharat Lahoti","Dhawal Dalal","Kedar Karnik","Amit Vora"],"isin":8,"plans":["Direct","Regular"],"sidu":"https://portal.amfiindia.com/spages/S-3.pdf","web":"https://www.edelweissmf.com"},
+{"id":"S-32","n":"Apex Equity Ex-Top 100 Long-short Fund","sif":"Apex SIF","amc":"Aditya Birla Sun Life","t":"Equity","c":"Equity Ex-Top 100 Long-Short Fund","l":"2026-08-31","rb":5,"rbl":5,"ldt":"1% within 365 days","ld":1.0,"ldd":365,"minv":1000000.0,"sip":10000.0,"bm":"NIFTY 500 TRI","st":"present","fm":["Manish Gupta"],"isin":2,"sidu":"https://portal.amfiindia.com/spages/S-32.pdf","web":"https://mutualfund.adityabirlacapital.com/"},
+{"id":"S-31","n":"Apex Equity Long-Short Fund","sif":"Apex SIF","amc":"Aditya Birla Sun Life","t":"Equity","c":"Equity Long-Short Fund","l":"2026-08-31","rb":5,"rbl":5,"ldt":"1% within 365 days","ld":1.0,"ldd":365,"minv":1000000.0,"sip":10000.0,"bm":"NIFTY 500 TRI","st":"present","fm":["Manish Gupta"],"isin":2,"sidu":"https://portal.amfiindia.com/spages/S-31.pdf","web":"https://mutualfund.adityabirlacapital.com/"},
+{"id":"S-13","n":"Apex Hybrid Long-Short Fund","sif":"Apex SIF","amc":"Aditya Birla Sun Life","t":"Hybrid","c":"Hybrid Long-Short Fund","au":73.8,"auq":"2026-06-30","l":"2026-03-25","rb":1,"rbl":2,"ldt":"0.50% within 90 days","ld":0.5,"ldd":90,"minv":1000000.0,"sip":10000.0,"bm":"NIFTY 50 Hybrid Composite Debt 50:50 Index","st":"present","fm":["Lovelish Solanki"],"isin":6,"plans":["Direct","Regular"],"sidu":"https://portal.amfiindia.com/spages/S-13.pdf","web":"https://mutualfund.adityabirlacapital.com/"},
+{"id":"S-20","n":"Arthaya Equity Long Short Fund","sif":"Arthaya SIF","amc":"Union","t":"Equity","c":"Equity Long-Short Fund","au":49.8,"auq":"2026-06-30","l":"2026-05-25","rb":5,"rbl":5,"er":5.39,"ed":3.95,"ldt":"1% within 1 year","ld":1.0,"ldd":365,"minv":100000.0,"bm":"NIFTY 200 Total Return Index (TRI)","st":"present","fm":["Rajesh Aynor","Hiten Bhadra"],"isin":6,"plans":["Direct","Regular"],"sidu":"https://portal.amfiindia.com/spages/S-20.pdf","web":"https://www.unionmf.com"},
+{"id":"S-12","n":"Arudha Equity Long-Short Fund","sif":"Arudha SIF","amc":"Bandhan","t":"Equity","c":"Equity Long-Short Fund","au":72.73,"auq":"2026-06-30","l":"2026-03-24","rb":5,"rbl":5,"er":3.29,"ed":1.78,"ldt":"0.50% within 30 days","ld":0.5,"ldd":30,"minv":1000000.0,"bm":"NIFTY 500 TRI","st":"present","fm":["Nilesh Saha","Brijesh Shah"],"isin":34,"plans":["Direct","Regular"],"sidu":"https://portal.amfiindia.com/spages/S-12.pdf","web":"https://www.bandhanmutual.com"},
+{"id":"S-10","n":"Arudha Hybrid Long-Short Fund","sif":"Arudha SIF","amc":"Bandhan","t":"Hybrid","c":"Hybrid Long-Short Fund","au":110.88,"auq":"2026-06-30","l":"2026-01-28","rb":1,"rbl":2,"er":1.27,"ed":0.83,"ldt":"Nil","ld":0.0,"ldd":0,"minv":1000000.0,"bm":"CRISIL Hybrid 85+15 Conservative Index","st":"present","fm":["Brijesh Shah","Debraj Lahiri","Kapil Kankonkar","Nilesh Saha"],"isin":34,"plans":["Direct","Regular"],"sidu":"https://portal.amfiindia.com/spages/S-10.pdf","web":"https://www.bandhanmutual.com"},
+{"id":"S-5","n":"Diviniti Equity Long Short Fund","sif":"Diviniti SIF","amc":"ITI","t":"Equity","c":"Equity Long-Short Fund","au":387.88,"auq":"2026-06-30","l":"2025-11-10","ldt":"0.50% within 6 months (10% of units free)","ld":0.5,"ldd":180,"st":"overdue","isin":0,"plans":["Direct","Regular"],"sidu":"https://portal.amfiindia.com/spages/S-5.pdf","web":"https://www.itiamc.com"},
+{"id":"S-14","n":"DynaSIF Active Asset Allocator Long-Short Fund","sif":"DynaSIF SIF","amc":"360 ONE","t":"Hybrid","c":"Active Asset Allocator Long-Short Fund","au":181.29,"auq":"2026-06-30","l":"2026-03-25","rb":3,"rbl":2,"er":1.63,"ed":0.53,"ldt":"0.5% within 3 months","ld":0.5,"ldd":90,"minv":1000000.0,"sip":20000.0,"bm":"25% BSE SENSEX TRI + 60% CRISIL Short Term Bond Fund Index + 15% iCOMDEX Composite Index","st":"present","fm":["Harsh Agarwal","Milan Mody","Rahul Khetawat","Pranav Mise"],"isin":6,"sidu":"https://portal.amfiindia.com/spages/S-14.pdf","web":"https://www.360.one/asset-management/mutualfund/"},
+{"id":"S-28","n":"DynaSIF Equity Ex-Top 100 Long - Short Fund","sif":"DynaSIF SIF","amc":"360 ONE","t":"Equity","c":"Equity Ex-Top 100 Long-Short Fund","au":6.63,"auq":"2026-06-30","l":"2026-06-05","ldt":"0.5% within 3 months","ld":0.5,"ldd":90,"st":"overdue","isin":0,"plans":["Direct","Regular"],"sidu":"https://portal.amfiindia.com/spages/S-28.pdf","web":"https://www.360.one/asset-management/mutualfund/"},
+{"id":"S-11","n":"DynaSIF Equity Long - Short Fund","sif":"DynaSIF SIF","amc":"360 ONE","t":"Equity","c":"Equity Long-Short Fund","au":252.01,"auq":"2026-06-30","l":"2026-02-25","rb":5,"rbl":5,"er":2.1,"ed":0.83,"ldt":"0.5% within 3 months","ld":0.5,"ldd":90,"minv":1000000.0,"sip":20000.0,"bm":"BSE 500 TRI","st":"present","fm":["Harsh Aggarwal","Pranav Mise"],"isin":6,"sidu":"https://portal.amfiindia.com/spages/S-11.pdf","web":"https://www.360.one/asset-management/mutualfund/"},
+{"id":"S-29","n":"INFINITY HYBRID LONG-SHORT FUND","sif":"Infinity SIF","amc":"Kotak Mahindra","t":"Hybrid","c":"Hybrid Long-Short Fund","l":"2026-07-06","rb":1,"rbl":2,"ldt":"Nil","ld":0.0,"ldd":0,"minv":1000000.0,"bm":"NIFTY 50 Hybrid Composite debt 50:50 Index","st":"present","fm":["Hiten Shah","Kalpesh Jain","Abhishek Bisen"],"isin":6,"plans":["Direct","Regular"],"sidu":"https://portal.amfiindia.com/spages/S-29.pdf","web":"https://www.kotakmf.com"},
+{"id":"S-33","n":"Magnum Equity Ex-Top 100Long Short Fund","sif":"Magnum SIF","amc":"SBI","t":"Equity","c":"Equity Ex-Top 100 Long-Short Fund","l":"2026-08-07","ldt":"Not stated","st":"awaited","isin":0,"sidu":"https://portal.amfiindia.com/spages/S-33.pdf","web":"https://www.sbimf.com"},
+{"id":"S-4","n":"Magnum Hybrid Long Short Fund","sif":"Magnum SIF","amc":"SBI","t":"Hybrid","c":"Hybrid Long-Short Fund","au":3506.86,"auq":"2026-06-30","l":"2025-10-20","rb":1,"rbl":2,"er":0.92,"ed":0.4,"ldt":"Not stated","minv":1000000.0,"sip":10000.0,"bm":"Nifty 50 Hybrid composite debt 50:50 Index","st":"present","isin":6,"plans":["Direct","Regular"],"sidu":"https://portal.amfiindia.com/spages/S-4.pdf","web":"https://www.sbimf.com"},
+{"id":"S-26","n":"Platinum Hybrid Long-Short Fund","sif":"Platinum SIF","amc":"Mirae Asset","t":"Hybrid","c":"Hybrid Long-Short Fund","au":42.43,"auq":"2026-06-30","l":"2026-05-20","ldt":"1% within 30 days","ld":1.0,"ldd":30,"st":"overdue","isin":0,"plans":["Direct","Regular"],"sidu":"https://portal.amfiindia.com/spages/S-26.pdf","web":"https://www.miraeassetmf.co.in"},
+{"id":"S-27","n":"Prism Hybrid Long - Short Fund","sif":"Prism SIF","amc":"Jio BlackRock","t":"Hybrid","c":"Hybrid Long-Short Fund","l":"2026-07-17","rb":1,"rbl":2,"er":3.56,"ed":2.41,"ldt":"Nil","ld":0.0,"ldd":0,"minv":1000000.0,"bm":"NIFTY 50 Hybrid Composite Debt 50:50 Index (TRI)","st":"present","fm":["Arun Ramachandran","Tanvi Kacheria","Siddharth Deb","Virendra Kumar","Manish Kalani"],"isin":2,"plans":["Direct","Regular"],"sidu":"https://portal.amfiindia.com/spages/S-27.pdf","web":"https://www.jioblackrockamc.com/"},
+{"id":"S-25","n":"RedHex Hybrid Long-Short Fund","sif":"RedHex SIF","amc":"HSBC","t":"Hybrid","c":"Hybrid Long-Short Fund","au":74.73,"auq":"2026-06-30","l":"2026-06-19","rb":2,"rbl":2,"er":1.09,"ed":0.45,"ldt":"2.00% within 1 year","ld":2.0,"ldd":365,"minv":1000000.0,"bm":"NIFTY 50 Hybrid Composite Debt 50:50 Index","st":"present","fm":["Shriram Ramanathan","Praveen Ayathan","Venugopal Manghat","Mayank Chaturvedi"],"isin":10,"plans":["Direct","Regular"],"sidu":"https://portal.amfiindia.com/spages/S-25.pdf","web":"https://www.assetmanagement.hsbc.co.in"},
+{"id":"S-16","n":"Sapphire Equity Long-Short SIF","sif":"Sapphire SIF","amc":"Franklin Templeton","t":"Equity","c":"Equity Long-Short Fund","au":107.07,"auq":"2026-06-30","l":"2026-04-29","rb":5,"rbl":5,"er":3.01,"ed":1.28,"ldt":"1% within 1 year","ld":1.0,"ldd":365,"minv":1000000.0,"bm":"Nifty 500 TRI","st":"present","fm":["Arihant Jain"],"isin":6,"plans":["Direct","Regular"],"sidu":"https://portal.amfiindia.com/spages/S-16.pdf","web":"https://www.franklintempletonindia.com"},
+{"id":"S-30","n":"Summit Equity Long-Short Fund","sif":"SUMMIT SIF","amc":"Invesco","t":"Equity","c":"Equity Long-Short Fund","l":"2026-07-02","ldt":"Not stated","st":"overdue","isin":0,"sidu":"https://portal.amfiindia.com/spages/S-30.pdf","web":"https://www.invescomutualfund.com"},
+{"id":"S-17","n":"Titanium Equity Long-Short Fund","sif":"Titanium SIF","amc":"Tata","t":"Equity","c":"Equity Long-Short Fund","au":114.61,"auq":"2026-06-30","l":"2026-05-14","rb":5,"rbl":5,"er":2.25,"ed":2.25,"ldt":"1% within 1 month","ld":1.0,"ldd":30,"minv":1000000.0,"sip":1000.0,"bm":"Nifty 500 Total Return Index (TRI)","st":"present","fm":["Suraj Nanda","Amit Somani","Hasmukh Devji Vishariya"],"isin":6,"plans":["Direct","Regular"],"sidu":"https://portal.amfiindia.com/spages/S-17.pdf","web":"https://www.tatamutualfund.com"},
+{"id":"S-7","n":"Titanium Hybrid Long-Short Fund","sif":"Titanium SIF","amc":"Tata","t":"Hybrid","c":"Hybrid Long-Short Fund","au":538.96,"auq":"2026-06-30","l":"2025-12-11","rb":5,"rbl":5,"er":2.25,"ed":2.25,"ldt":"1% within 1 year","ld":1.0,"ldd":365,"minv":1000000.0,"sip":1000.0,"bm":"CRISIL Hybrid 50+50 - Moderate Index","st":"present","fm":["Suraj Nanda","Amit Somani","Hasmukh Devji Vishariya"],"isin":6,"sidu":"https://portal.amfiindia.com/spages/S-7.pdf","web":"https://www.tatamutualfund.com"},
+{"id":"S-18","n":"WSIF Equity Ex-Top 100 Long-Short Fund","sif":"WSIF","amc":"The Wealth Company","t":"Equity","c":"Equity Ex-Top 100 Long-Short Fund","au":10.74,"auq":"2026-06-30","l":"2026-04-15","rb":5,"rbl":5,"er":5.18,"ed":3.16,"ldt":"Not stated","minv":1000000.0,"bm":"NIFTY 500 Total Return Index (TRI)","st":"present","fm":["Chinmay Sathe"],"isin":6,"plans":["Direct","Regular"],"sidu":"https://portal.amfiindia.com/spages/S-18.pdf","web":"https://www.wealthcompanyamc.in"},
+{"id":"S-19","n":"WSIF Equity Long-Short Fund","sif":"WSIF","amc":"The Wealth Company","t":"Equity","c":"Equity Long-Short Fund","au":11.02,"auq":"2026-06-30","l":"2026-04-15","rb":5,"rbl":5,"er":4.92,"ed":2.9,"ldt":"Not stated","minv":1000000.0,"bm":"NIFTY 500 Total Return Index (TRI)","st":"present","fm":["Chinmay Sathe"],"isin":6,"plans":["Direct","Regular"],"sidu":"https://portal.amfiindia.com/spages/S-19.pdf","web":"https://www.wealthcompanyamc.in"},
+{"id":"S-23","n":"iSIF Active Asset Allocator Long-Short Fund","sif":"iSIF SIF","amc":"ICICI Prudential","t":"Hybrid","c":"Active Asset Allocator Long-Short Fund","au":155.19,"auq":"2026-06-30","l":"2026-06-05","rbl":5,"ldt":"1% within 12 months","ld":1.0,"ldd":360,"minv":1000000.0,"sip":5000.0,"bm":"50% Nifty 500 TRI + 40% Nifty Composite Debt Index + 7% Domestic Price of Gold + 3% Domestic Price of Silver.","st":"present","fm":["Ihab Dalwai"],"isin":2,"plans":["Direct"],"sidu":"https://portal.amfiindia.com/spages/S-23.pdf","web":"https://www.icicipruamc.com"},
+{"id":"S-8","n":"iSIF Equity Ex-Top 100 Long-Short Fund","sif":"iSIF SIF","amc":"ICICI Prudential","t":"Equity","c":"Equity Ex-Top 100 Long-Short Fund","au":1626.84,"auq":"2026-06-30","l":"2026-02-04","rbl":5,"ldt":"1% within 12 months","ld":1.0,"ldd":360,"minv":1000000.0,"sip":5000.0,"bm":"Nifty 500 TRI","st":"present","fm":["Sankaran Naren"],"isin":2,"plans":["Direct"],"sidu":"https://portal.amfiindia.com/spages/S-8.pdf","web":"https://www.icicipruamc.com"},
+{"id":"S-24","n":"iSIF Equity Long-Short Fund","sif":"iSIF SIF","amc":"ICICI Prudential","t":"Equity","c":"Equity Long-Short Fund","au":68.72,"auq":"2026-06-30","l":"2026-06-05","rbl":5,"ldt":"1% within 12 months","ld":1.0,"ldd":360,"minv":1000000.0,"sip":5000.0,"bm":"Nifty 500 TRI","st":"present","fm":["Mittul Kalawadia"],"isin":2,"plans":["Direct"],"sidu":"https://portal.amfiindia.com/spages/S-24.pdf","web":"https://www.icicipruamc.com"},
+{"id":"S-9","n":"iSIF Hybrid Long-Short Fund","sif":"iSIF SIF","amc":"ICICI Prudential","t":"Hybrid","c":"Hybrid Long-Short Fund","au":827.21,"auq":"2026-06-30","l":"2026-02-04","rbl":5,"ldt":"1% within 12 months","ld":1.0,"ldd":360,"minv":1000000.0,"sip":5000.0,"bm":"CRISIL Hybrid 50+50 Moderate Index","st":"present","fm":["Rajat Chandak"],"isin":2,"plans":["Direct"],"sidu":"https://portal.amfiindia.com/spages/S-9.pdf","web":"https://www.icicipruamc.com"},
+{"id":"S-15","n":"qsif Active Asset Allocator Long-Short Fund","sif":"qsif SIF","amc":"Quant","t":"Hybrid","c":"Active Asset Allocator Long-Short Fund","au":50.66,"auq":"2026-06-30","l":"2026-04-21","rb":2,"rbl":5,"er":3.76,"ed":2.26,"ldt":"1% within 15 days","ld":1.0,"ldd":15,"minv":1000000.0,"sip":1000.0,"bm":"40% NSE 500 TRI + 30% CRISIL Short Term Bond Fund Index + 30% iCOMDEX Composite Index","st":"present","fm":["Sandeep Tandon"],"isin":6,"plans":["Direct","Regular"],"sidu":"https://portal.amfiindia.com/spages/S-15.pdf","web":"https://www.quantmutual.com"},
+{"id":"S-6","n":"qsif Equity Ex-Top 100 Long-Short Fund","sif":"qsif SIF","amc":"Quant","t":"Equity","c":"Equity Ex-Top 100 Long-Short Fund","au":223.72,"auq":"2026-06-30","l":"2025-11-12","rb":3,"rbl":5,"er":4.07,"ed":2.71,"ldt":"1% within 15 days","ld":1.0,"ldd":15,"minv":1000000.0,"sip":1000.0,"bm":"NIFTY 500 Total Return Index (TRI)","st":"present","fm":["Sandeep Tandon"],"isin":6,"plans":["Direct","Regular"],"sidu":"https://portal.amfiindia.com/spages/S-6.pdf","web":"https://www.quantmutual.com"},
+{"id":"S-1","n":"qsif Equity Long-Short Fund","sif":"qsif SIF","amc":"Quant","t":"Equity","c":"Equity Long-Short Fund","au":578.45,"auq":"2026-06-30","l":"2025-10-07","rb":3,"rbl":5,"er":4.25,"ed":2.89,"ldt":"1% within 15 days","ld":1.0,"ldd":15,"minv":1000000.0,"sip":1000.0,"bm":"NIFTY 500 Total Return Index (TRI)","st":"present","fm":["Sandeep Tandon"],"isin":6,"plans":["Direct","Regular"],"sidu":"https://portal.amfiindia.com/spages/S-1.pdf","web":"https://www.quantmutual.com"},
+{"id":"S-2","n":"qsif Hybrid Long-Short Fund","sif":"qsif SIF","amc":"Quant","t":"Hybrid","c":"Hybrid Long-Short Fund","au":154.29,"auq":"2026-06-30","l":"2025-10-15","rb":3,"rbl":5,"er":3.42,"ed":2.0,"ldt":"1% within 15 days","ld":1.0,"ldd":15,"minv":1000000.0,"sip":1000.0,"bm":"NIFTY 50 HYBRID COMPOSITE DEBT 50:50 INDEX","st":"present","fm":["Sandeep Tandon"],"isin":6,"plans":["Direct","Regular"],"sidu":"https://portal.amfiindia.com/spages/S-2.pdf","web":"https://www.quantmutual.com"},
+{"id":"S-21","n":"qsif Sector Rotation Long-Short Fund","sif":"qsif SIF","amc":"Quant","t":"Equity","c":"Sector Rotation Long-Short Fund","au":19.44,"auq":"2026-06-30","l":"2026-05-15","rb":2,"rbl":5,"er":4.5,"ed":2.94,"ldt":"1% within 15 days","ld":1.0,"ldd":15,"minv":1000000.0,"sip":1000.0,"bm":"NIFTY 500 Total Return Index (TRI)","st":"present","fm":["Sandeep Tandon"],"isin":6,"plans":["Direct","Regular"],"sidu":"https://portal.amfiindia.com/spages/S-21.pdf","web":"https://www.quantmutual.com"}
+];
+function fmtIN(n){n=Math.round(n);var neg=n<0;n=Math.abs(n);var s=String(n),l=s.slice(-3),r=s.slice(0,-3);if(r)l=r.replace(/\B(?=(\d{2})+(?!\d))/g,",")+","+l;return (neg?'-':'')+l;}
+function inr(n){ return '₹'+fmtIN(n); }
+function aum(v){ if(v==null) return '—'; return '₹'+v.toLocaleString('en-IN',{minimumFractionDigits:2,maximumFractionDigits:2})+' Crores'; } // AUM is stored in crores
+function fmtISO(s){ if(!s) return '—'; var p=s.split('-'); return (+p[2])+' '+MON[+p[1]-1]+' '+p[0]; }
+var CHEV_R='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg>', CHEV_D='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>', XICON='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true"><path d="M18 6 6 18M6 6l12 12"/></svg>';
+function esc(s){ return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;'); }
+var TODAY=new Date(2026,8,4);
+function months(l){ if(!l) return null; var d=new Date(l); return (TODAY-d)/2629800000; }
+function ageTxt(l){ var m=months(l); if(m==null) return '—'; if(m<0) return 'not launched';
+  if(m<12){ var k=Math.max(0,Math.round(m)); return k+(k===1?' month':' months'); }
+  return (m/12).toFixed(1)+' years'; }
+// SIF risk bands 1-5 map to SEBI risk levels 1, 2, 3, 4, 6
+var BAND={1:[1,'success'],2:[2,'success'],3:[3,'warning'],4:[4,'warning'],5:[6,'danger']};
+function bandTag(rb){
+  if(!BAND[rb]) return '<span class="status no-dot b0">Risk Band Not Disclosed</span>';
+  var bar=''; for(var i=1;i<=5;i++) bar+='<i'+(String(i)===String(rb)?' class="on"':'')+'></i>';
+  return '<span class="status no-dot b'+rb+'"><span class="rb" aria-hidden="true">'+bar+'</span>Risk Band '+rb+'</span>';
+}
+var STATUS={present:'',awaited:'',overdue:'',pre_launch:'Pre-Launch'};
+var TYPES=['Equity','Hybrid','Debt'];
+var CATS=['Equity Long-Short Fund','Equity Ex-Top 100 Long-Short Fund','Sector Rotation Long-Short Fund','Hybrid Long-Short Fund','Active Asset Allocator Long-Short Fund'];
+var BANDS=['1','2','3','4','5','Not disclosed'];
+var st={q:'',t:{},c:{},f:{},a:{},r:{},size:'',age:'',ld:'',minv:'',tx:{},no:'',sort:'au',page:1,cmp:[],coll:''};
+// Who Is Investing? (NRI Online) from the ELIG block: SIFs NSE blocks for each country
+var ANY_OTHER='Any Other Country';
+function onlineOK(x,c){ return !c||(ELIG.online.blocked[c]||[]).indexOf(x.sif)<0; }
+var COLL=[
+ {n:'Equity Long-Short',f:function(s){s.c['Equity Long-Short Fund']=1;}},
+ {n:'Hybrid Long-Short',f:function(s){s.c['Hybrid Long-Short Fund']=1;}},
+ {n:'Ex-Top 100 Strategies',f:function(s){s.c['Equity Ex-Top 100 Long-Short Fund']=1;}},
+ {n:'Active Asset Allocator',f:function(s){s.c['Active Asset Allocator Long-Short Fund']=1;}},
+ {n:'Lower Risk Bands, 1 and 2',f:function(s){s.r['1']=1;s.r['2']=1;}},
+ {n:'Highest Risk Band, 5',f:function(s){s.r['5']=1;}},
+ {n:'Nil Exit Load',f:function(s){s.ld='0';}},
+ {n:'Above ₹500 Crores',f:function(s){s.size='l';}},
+ {n:'Newest Launches',f:function(s){s.sort='new';}},
+ {n:'Accredited Investor Entry',f:function(s){s.minv='acc';}}
+];
+var NFO=[];
+// Entries the build writes carry real dates (os, cs: ISO) and a minimum as text (mins): days from today, and
+// NFOs already closed are dropped. The sample entries above use day offsets (od, cd).
+function nfoOff(s){ var t=new Date(); t.setHours(0,0,0,0); var p=s.split('-'); return Math.round((new Date(+p[0],+p[1]-1,+p[2])-t)/864e5); }
+function nfoIso(s){ var p=s.split('-'); return (+p[2])+' '+MON[+p[1]-1]+' '+p[0]; }
+NFO.forEach(function(x){ if(x.os){ x.od=nfoOff(x.os); x.cd=nfoOff(x.cs); } });
+NFO=NFO.filter(function(x){ return x.cd>=0; });
+var MON=['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+function nfoDay(off){ var d=new Date(TODAY.getTime()); d.setDate(d.getDate()+off); return d.getDate()+' '+MON[d.getMonth()]+' '+d.getFullYear(); }
+function nfoStatus(x){
+  var n=function(v){ return v+(v===1?' day':' days'); };
+  if(x.od>0) return {c:'new status-success',t:'Opens in '+n(x.od)};
+  if(x.cd<=0) return {c:'soon status-danger',t:'Closes today'};
+  if(x.cd<=2) return {c:'soon status-danger',t:'Closes in '+n(x.cd)};
+  return {c:'status-warning',t:'Closes in '+n(x.cd)};
+}
+function nfoMatches(x){
+  if(Object.keys(st.tx).length) return false;
+  if(st.q){ var q=st.q.toLowerCase();
+    if((x.n+' '+x.sif+' '+(x.amc||'')+' '+x.c+' '+x.t).toLowerCase().indexOf(q)<0) return false; }
+  if(Object.keys(st.t).length && !st.t[x.t]) return false;
+  if(Object.keys(st.c).length && !st.c[x.c]) return false;
+  if(Object.keys(st.f).length && !st.f[x.sif]) return false;
+  if(Object.keys(st.a).length && !st.a[x.amc||'Not mapped']) return false;
+  if(Object.keys(st.r).length && !st.r[x.rb?String(x.rb):'Not disclosed']) return false;
+  if(st.minv==='acc' && !(x.minv!=null && x.minv<1000000)) return false;
+  if(st.minv==='std' && !(x.minv!=null && x.minv>=1000000)) return false;
+  return true;
+}
+function nfoSlug(n){ return n.toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,''); }
+function nfoCard(x){
+  var s=nfoStatus(x), u='#nfo/'+nfoSlug(x.n);
+  var sd=x.sidu||'#sid/'+nfoSlug(x.n), ext=x.sidu?' target="_blank" rel="noopener"':'';
+  return '<div class="nfo-card"><div class="top"><span class="badge">NFO</span><span class="st status '+s.c+'">'+s.t+'</span></div>'+
+   '<div class="nm"><a href="'+u+'">'+esc(x.n)+'</a></div>'+
+   '<div class="amc">'+esc(x.sif)+(x.amc?' &middot; '+esc(x.amc)+' Asset Management':'')+'</div>'+
+   '<div class="tags"><span class="tag">'+x.t+'</span><span class="tag cat">'+esc(x.c)+'</span><a class="tag sid" href="'+sd+'"'+ext+'>SID'+CHEV_R+'</a></div>'+
+   '<div class="dates num"><span>Opens<b>'+(x.os?nfoIso(x.os):nfoDay(x.od))+'</b></span><span>Closes<b>'+(x.cs?nfoIso(x.cs):nfoDay(x.cd))+'</b></span><span>Offer Price<b>₹10.00</b></span></div>'+
+   '<div class="foot num"><span>'+(x.mins?'Min Investment <b>'+esc(x.mins)+'</b>':'Min Subscription Amount <b>'+inr(x.minsub)+'</b>')+'</span><a class="btn btn-primary btn-sm" href="'+u+'">Apply</a></div></div>';
+}
+var nfoShow=true, nfoAll=false, NFO_PREVIEW=4;
+function renderNFO(){
+  var open=NFO.filter(nfoMatches).sort(function(a,b){ return a.cd-b.cd; });
+  var sec=document.getElementById('nfoSec');
+  if(!open.length){ sec.style.display='none'; return; }
+  sec.style.display='block';
+  document.getElementById('nfoCount').textContent=open.length+' open';
+  var n=nfoAll?open.length:Math.min(open.length,NFO_PREVIEW);
+  var list=document.getElementById('nfoList'), more=document.getElementById('nfoMore');
+  list.innerHTML=open.slice(0,n).map(nfoCard).join('');
+  list.style.display=nfoShow?'grid':'none';
+  document.getElementById('nfoToggle').textContent=nfoShow?'Hide':'Show';
+  more.style.display=(nfoShow && open.length>NFO_PREVIEW)?'inline-flex':'none';
+  more.textContent=nfoAll?'Show Fewer':'Show All '+open.length+' NFOs';
+}
+var TXL={eq:'Equity-Oriented',sp:'Debt-Oriented (Slab Rate)',ot:'Other (Hybrid, Gold, Overseas)',nc:'Not Yet Confirmed'};
+var TX_ORDER=['eq','sp','ot','nc'];
+function txCode(x){ var t=(typeof TAX!=='undefined')&&TAX[x.id]; return t?t[0]:'nc'; }
+function txOf(x){ return TXL[txCode(x)]; }
+function txCell(x){ var t=(typeof TAX!=='undefined')&&TAX[x.id], c=t?t[0]:'nc';
+  var how={category:'from its category',name:'from what it invests in',portfolio:'from its latest portfolios',document:'as stated in its scheme document',none:''}[t?t[1]:'none']||'';
+  return TXL[c]+(how&&c!=='nc'?'<br><span class="text-cool">'+how+'</span>':''); }
+function matches(x,skip){
+  if(st.q){ var q=st.q.toLowerCase();
+    if((x.n+' '+x.sif+' '+(x.amc||'')+' '+x.c+' '+x.t+' '+(x.bm||'')+' '+(x.fm||[]).join(' ')).toLowerCase().indexOf(q)<0) return false; }
+  if(Object.keys(st.t).length && !st.t[x.t]) return false;
+  if(Object.keys(st.c).length && !st.c[x.c]) return false;
+  if(Object.keys(st.f).length && !st.f[x.sif]) return false;
+  if(Object.keys(st.a).length && !st.a[x.amc||'Not mapped']) return false;
+  if(Object.keys(st.r).length && !st.r[x.rb?String(x.rb):'Not disclosed']) return false;
+  if(st.size){ var v=x.au; if(v==null) return false;
+    if(st.size==='s'&&v>=100) return false;
+    if(st.size==='m'&&(v<100||v>500)) return false;
+    if(st.size==='l'&&v<=500) return false; }
+  if(st.age){ var m=months(x.l); if(m==null||m<parseInt(st.age,10)) return false; }
+  if(st.ld==='0' && x.ld!==0) return false;
+  if(st.minv==='acc' && !(x.minv!=null && x.minv<1000000)) return false;
+  if(st.minv==='std' && !(x.minv!=null && x.minv>=1000000)) return false;
+  if(Object.keys(st.tx).length && !st.tx[txOf(x)]) return false;
+  if(skip!=='no'&&!onlineOK(x,st.no)) return false;
+  return true;
+}
+function sorted(arr){
+  var k=st.sort;
+  return arr.slice().sort(function(a,b){
+    if(k==='n') return a.n.localeCompare(b.n);
+    if(k==='new') return (b.l||'').localeCompare(a.l||'');
+    if(k==='old') return (a.l||'9').localeCompare(b.l||'9');
+    if(k==='rb'){ var ra=a.rb==null?9:a.rb, rb2=b.rb==null?9:b.rb; return ra-rb2; }
+    var va=a.au==null?-1:a.au, vb=b.au==null?-1:b.au; return vb-va;
+  });
+}
+function counts(fn, pool){ var m={}; pool.forEach(function(x){ var v=fn(x); if(v) m[v]=(m[v]||0)+1; }); return m; }
+function facetList(id,title,keyset,items,countMap,opts){
+  opts=opts||{}; var h='<div class="facet'+(opts.closed?' closed':'')+'" id="f-'+id+'"><h4 data-f="'+id+'">'+title+'<span>'+CHEV_D+'</span></h4><div class="body">';
+  if(opts.search) h+='<input class="fsearch" data-fs="'+id+'" placeholder="Search '+title+'" value="'+esc(opts.sval||'')+'">';
+  var shown=0, hidden=0, lim=opts.limit||1e9, sv=(opts.sval||'').toLowerCase();
+  items.forEach(function(it){
+    var name=it.n||it;
+    if(sv && name.toLowerCase().indexOf(sv)<0) return;
+    var on=!!keyset[name];
+    if(!on && shown>=lim){ hidden++; return; }
+    h+='<label><input type="checkbox" data-set="'+id+'" data-v="'+esc(name)+'"'+(on?' checked':'')+'> '+esc(name)+'<span class="ct">'+(countMap[name]||0)+'</span></label>';
+    shown++;
+  });
+  if(hidden) h+='<div class="more" data-more="'+id+'">Show '+hidden+' more</div>';
+  return h+'</div></div>';
+}
+var expanded={}, fsearch={};
+// Sunrise: "Who Is Investing?" starts minimised. It opens when one of its filters is set (from a shared link, say)
+// and remembers a reader's click across redraws; its heading is a button, so the keyboard can open it.
+var eligShow=null;
+function eligOpen(){ return eligShow!==null?eligShow:!!(st.tr||st.no||st.nf); }
+function eligFacet(){
+  var h='<div class="facet elig'+(eligOpen()?'':' closed')+'" id="f-elig"><h4 data-f="elig"><button type="button" class="ehead" aria-expanded="'+eligOpen()+'" aria-controls="f-elig-body">Who Is Investing?<span>'+CHEV_D+'</span></button></h4><div class="body" id="f-elig-body">'+
+   '<div class="esub">NRI Online</div><div class="elabel" aria-hidden="true">Country of Residence</div>'+
+   '<select class="select esel" data-radio="no" aria-label="Country of residence for NRI Online" aria-describedby="en-no"><option value="">Not Selected</option>';
+  ELIG.online.countries.concat([ANY_OTHER]).forEach(function(c){
+    var n=DATA.filter(function(x){ return matches(x,'no')&&onlineOK(x,c); }).length;
+    h+='<option value="'+esc(c)+'"'+(st.no===c?' selected':'')+'>'+esc(c)+' ('+n+')</option>'; });
+  return h+'</select><div class="fnote" id="en-no">Strategies available online for NRIs living in the chosen country, through MoneyHoney on NSE. NSE list as on '+ELIG.online.asOn+'. Other routes may differ.</div>'+
+   (SOL_LINKS.nri?'<div class="fnote">Rules and tax for NRIs: <a href="'+SOL_LINKS.nri+'">NRI Investing</a></div>':'')+
+   (GIFT_LINK.href?'<div class="fnote">'+esc(GIFT_LINK.lead)+' <a data-gift href="'+GIFT_LINK.href+'">'+esc(GIFT_LINK.label)+'</a></div>':'')+'</div></div>';
+}
+function renderFacets(pool){
+  var h=eligFacet();
+  h+=facetList('t','Strategy Type',st.t,TYPES,counts(function(x){return x.t;},pool));
+  h+=facetList('c','SIF Category',st.c,CATS,counts(function(x){return x.c;},pool));
+  h+=facetList('tx','Tax Treatment',st.tx,TX_ORDER.map(function(c){return TXL[c];}),counts(txOf,pool)).replace(/<\/div><\/div>$/,'<div class="fnote">Worked out from the SEBI category, the fund&rsquo;s own documents or its latest portfolios. Rules and rates are on each scheme page.</div></div></div>');
+  var sifs=Object.keys(counts(function(x){return x.sif;},DATA)).sort();
+  h+=facetList('f','SIF Brand',st.f,sifs,counts(function(x){return x.sif;},pool),{search:true,sval:fsearch.f,limit:expanded.f?1e9:8});
+  var amcs=Object.keys(counts(function(x){return x.amc||'Not mapped';},DATA)).sort();
+  h+=facetList('a','Asset Manager',st.a,amcs,counts(function(x){return x.amc||'Not mapped';},pool),{search:true,sval:fsearch.a,limit:expanded.a?1e9:8});
+  h+=facetList('r','Risk Band',st.r,BANDS,counts(function(x){return x.rb?String(x.rb):'Not disclosed';},pool));
+  function radio(id,title,cur,opts){
+    var s='<div class="facet" id="f-'+id+'"><h4 data-f="'+id+'">'+title+'<span>'+CHEV_D+'</span></h4><div class="body">';
+    opts.forEach(function(o){ s+='<label><input type="radio" name="rd-'+id+'" data-radio="'+id+'" value="'+o[0]+'"'+(cur===o[0]?' checked':'')+'> '+o[1]+'</label>'; });
+    return s+'</div></div>';
+  }
+  h+=radio('size','Strategy Size (AAUM)',st.size,[['','Any'],['s','Under ₹100 Crores'],['m','₹100 Crores to ₹500 Crores'],['l','Above ₹500 Crores']]);
+  h+=radio('age','Track Record',st.age,[['','Any'],['3','More Than 3 Months'],['6','More Than 6 Months'],['12','More Than 1 Year']]);
+  h+=radio('ld','Exit Load',st.ld,[['','Any'],['0','Nil Exit Load Only']]);
+  h+=radio('minv','Minimum Investment',st.minv,[['','Any'],['std','₹10,00,000, Standard'],['acc','Below ₹10,00,000, Accredited Investor']]);
+  document.getElementById('facets').innerHTML=h;
+}
+function card(x){
+  var link=x.id==='S-1'?'../strategy/index.html':'#strategy/'+x.id;
+  var stt=STATUS[x.st];
+  return '<div class="card"><div><div class="nm"><a href="'+link+'">'+esc(x.n)+'</a></div>'+
+   '<div class="amc">'+esc(x.sif)+(x.amc?' &middot; '+esc(x.amc)+' Asset Management':'')+((x.fm&&x.fm.length)?' &middot; '+esc(x.fm.slice(0,2).join(', '))+(x.fm.length>2?' +'+(x.fm.length-2):''):'')+'</div>'+
+   '<div class="tags"><span class="tag">'+x.t+'</span><span class="tag cat">'+esc(x.c)+'</span>'+bandTag(x.rb)+(stt?'<span class="tag warn">'+stt+'</span>':'')+(st.no&&onlineOK(x,st.no)?'<span class="status status-success no-dot">Online From '+esc(st.no)+'</span>':'')+'</div></div>'+
+   '<div class="rets"><div><div class="k">Avg AUM</div><div class="v sm num">'+(x.au!=null?aum(x.au):'<span class="text-muted">n.a.</span>')+'</div></div>'+
+   '<div><div class="k">Track Record</div><div class="v sm num">'+ageTxt(x.l)+'</div></div></div>'+
+   '<div class="meta num"><div class="mi"><span>Launched <b>'+fmtISO(x.l)+'</b></span>'+
+   '<span>Min Investment <b>'+(x.minv!=null?inr(x.minv):'—')+'</b></span>'+
+   '<span>Exit Load <b>'+esc(x.ldt||'—')+'</b></span>'+
+   '<span class="bm" title="'+esc(x.bm||'')+'">Benchmark <b>'+esc(x.bm||'—')+'</b></span>'+
+   '</div>'+
+   '<label><input type="checkbox" data-cmp="'+x.id+'"'+(st.cmp.indexOf(x.id)>=0?' checked':'')+'> Compare</label></div></div>';
+}
+function chipsHtml(){
+  var h=''; function add(l,k,v){ h+='<span class="chip">'+esc(l)+'<button type="button" aria-label="Remove filter" data-ck="'+k+'" data-cv="'+esc(v)+'">'+XICON+'</button></span>'; }
+  ['t','c','f','a','r','tx'].forEach(function(k){ Object.keys(st[k]).forEach(function(v){ add(k==='r'?('Risk Band '+v):(k==='tx'?'Tax: '+v:v),k,v); }); });
+  if(st.size) add({s:'Under ₹100 Crores',m:'₹100 Crores to ₹500 Crores',l:'Above ₹500 Crores'}[st.size],'size','');
+  if(st.age) add(st.age==='12'?'More Than 1 Year':'More Than '+st.age+' Months','age','');
+  if(st.ld) add('Nil Exit Load','ld','');
+  if(st.minv) add(st.minv==='acc'?'Accredited Investor Entry':'₹10,00,000 Minimum','minv','');
+  if(st.no) add('NRI Online: '+st.no,'no','');
+  return h;
+}
+var PAGE=20, current=[];
+function render(){
+  var pool=DATA.filter(matches); current=sorted(pool);
+  document.getElementById('resCount').textContent=fmtIN(pool.length);
+  document.getElementById('chips').innerHTML=chipsHtml();
+  renderNFO();
+  var n=Math.min(current.length, PAGE*st.page);
+  document.getElementById('list').innerHTML=current.length?current.slice(0,n).map(card).join(''):'<div class="empty">No strategies match these filters. '+(st.no&&(ELIG.online.blocked[st.no]||[]).length?'NSE blocks '+ELIG.online.blocked[st.no].length+' SIFs online for NRIs in '+esc(st.no)+'. ':'')+'Try clearing a filter or widening the risk band.</div>';
+  document.getElementById('more').style.display=n<current.length?'flex':'none';
+  document.getElementById('more').textContent='Show More Strategies ('+fmtIN(current.length-n)+' Remaining)';
+  renderFacets(pool);
+  document.getElementById('sort').value=st.sort;
+  document.querySelectorAll('.coll').forEach(function(b){ b.classList.toggle('on', b.dataset.i===st.coll); b.setAttribute('aria-pressed', b.dataset.i===st.coll?'true':'false'); });
+  document.getElementById('cmpbar').style.display=st.cmp.length?'block':'none';
+  document.body.classList.toggle('has-cmp', st.cmp.length>0);
+  document.getElementById('cmpNames').innerHTML=st.cmp.map(function(id){ var x=DATA.filter(function(d){return d.id===id;})[0]; return '<span>'+esc(x.n)+'</span>'; }).join('');
+  urlWrite();
+}
+document.getElementById('collections').innerHTML=COLL.map(function(c,i){ return '<button type="button" class="chip coll" data-i="'+i+'">'+c.n+'</button>'; }).join('');
+document.getElementById('collections').addEventListener('click',function(e){
+  var b=e.target.closest('.coll'); if(!b) return; var i=b.dataset.i;
+  if(st.coll===i){ st={q:'',t:{},c:{},f:{},a:{},r:{},size:'',age:'',ld:'',minv:'',tx:{},no:'',sort:'au',page:1,cmp:st.cmp,coll:''}; }
+  else { st={q:'',t:{},c:{},f:{},a:{},r:{},size:'',age:'',ld:'',minv:'',tx:{},no:'',sort:'au',page:1,cmp:st.cmp,coll:i}; COLL[i].f(st); }
+  document.getElementById('q').value=''; render();
+});
+document.getElementById('q').addEventListener('input',function(){ st.q=this.value.trim(); st.page=1; render(); });
+document.getElementById('sort').addEventListener('change',function(){ st.sort=this.value; st.page=1; render(); });
+document.getElementById('more').addEventListener('click',function(){ st.page++; render(); });
+document.getElementById('nfoToggle').addEventListener('click',function(){ nfoShow=!nfoShow; renderNFO(); });
+document.getElementById('nfoMore').addEventListener('click',function(){ nfoAll=!nfoAll; renderNFO(); });
+document.getElementById('clearAll').addEventListener('click',function(e){ e.preventDefault(); st={q:'',t:{},c:{},f:{},a:{},r:{},size:'',age:'',ld:'',minv:'',tx:{},no:'',sort:'au',page:1,cmp:[],coll:''}; document.getElementById('q').value=''; render(); });
+document.getElementById('facets').addEventListener('change',function(e){
+  var t=e.target;
+  if(t.dataset.set){ var set=st[t.dataset.set]; if(t.checked) set[t.dataset.v]=1; else delete set[t.dataset.v]; }
+  else if(t.dataset.radio){ st[t.dataset.radio]=t.value; }
+  st.coll=''; st.page=1; render();
+});
+document.getElementById('facets').addEventListener('input',function(e){ var t=e.target; if(t.dataset.fs){ fsearch[t.dataset.fs]=t.value; renderFacets(DATA.filter(matches)); var el=document.querySelector('[data-fs="'+t.dataset.fs+'"]'); if(el){ el.focus(); el.setSelectionRange(el.value.length,el.value.length); } } });
+document.getElementById('facets').addEventListener('click',function(e){
+  var t=e.target;
+  if(t.dataset.more){ expanded[t.dataset.more]=true; renderFacets(DATA.filter(matches)); return; }
+  var h=t.closest('h4'); if(h&&h.dataset.f){ var f=h.parentNode; f.classList.toggle('closed'); if(h.dataset.f==='elig'){ eligShow=!h.parentNode.classList.contains('closed'); h.querySelector('button').setAttribute('aria-expanded',String(eligShow)); } }
+});
+document.getElementById('chips').addEventListener('click',function(e){
+  var b=e.target.closest('button'); if(!b||!b.dataset.ck) return; var k=b.dataset.ck;
+  if(typeof st[k]==='object') delete st[k][b.dataset.cv]; else st[k]='';
+  st.coll=''; st.page=1; render();
+});
+document.getElementById('list').addEventListener('change',function(e){
+  var t=e.target; if(!t.dataset.cmp) return;
+  if(t.checked){ if(st.cmp.length>=4){ t.checked=false; alert('Compare up to 4 strategies at a time.'); return; } st.cmp.push(t.dataset.cmp); }
+  else st.cmp=st.cmp.filter(function(i){return i!==t.dataset.cmp;});
+  render();
+});
+document.getElementById('cmpClear').addEventListener('click',function(){ st.cmp=[]; render(); });
+function closeCmp(){ document.getElementById('modal').style.display='none'; }
+document.getElementById('cmpClose').addEventListener('click',closeCmp);
+document.getElementById('modal').addEventListener('click',function(e){ if(e.target===this) closeCmp(); });
+document.addEventListener('keydown',function(e){ if(e.key==='Escape') closeCmp(); });
+document.getElementById('cmpOpen').addEventListener('click',function(){
+  var xs=st.cmp.map(function(id){ return DATA.filter(function(d){return d.id===id;})[0]; });
+  var rows=[
+    ['SIF Brand',function(x){return esc(x.sif);}],
+    ['Asset Manager',function(x){return esc(x.amc||'—');}],
+    ['Strategy Type',function(x){return x.t;}],
+    ['SEBI SIF Category',function(x){return esc(x.c);}],
+    ['Risk Band as on Date',function(x){return x.rb?('Band '+x.rb+' of 5'):'Not disclosed';}],
+    ['Risk Band at Launch',function(x){return x.rbl?('Band '+x.rbl+' of 5'):'Not disclosed';}],
+    ['Average AUM, 30 Jun 2026',function(x){return aum(x.au);}],
+    ['Allotment Date',function(x){return fmtISO(x.l);}],
+    ['Track Record',function(x){return ageTxt(x.l);}],
+    ['Tax Treatment',function(x){return txCell(x);}],
+    ['Exit Load',function(x){return esc(x.ldt||'—');}],
+    ['Minimum Investment',function(x){return x.minv!=null?inr(x.minv):'—';}],
+    ['Minimum SIP',function(x){return x.sip!=null?inr(x.sip):'Not stated';}],
+    ['Benchmark, Tier 1',function(x){return esc(x.bm||'—');}],
+    ['Fund Managers',function(x){return esc((x.fm||[]).join(', ')||'—');}],
+    ['Scheme Information Document',function(x){return x.sidu?'<a class="sidlink" href="'+x.sidu+'" target="_blank" rel="noopener">SID'+CHEV_R+'</a>':'—';}]
+  ];
+  var h='<thead><tr><th><span class="sr-only">Attribute</span></th>'+xs.map(function(x){return '<th class="col" scope="col">'+esc(x.n)+'</th>';}).join('')+'</tr></thead><tbody>';
+  rows.forEach(function(r){ h+='<tr><th scope="row">'+r[0]+'</th>'+xs.map(function(x){return '<td>'+r[1](x)+'</td>';}).join('')+'</tr>'; });
+  h+='</tbody>';
+  document.getElementById('cmpTable').innerHTML=h; document.getElementById('modal').style.display='flex';
+});
+/* ================= Filters in the address ("Build: Explorer URL Filter State", .scratch/solutions/issues/15)
+   The filters live after the #, for example #cat=equity-long-short&band=1,2, so a link can open the explorer filtered.
+   - A set of values is comma-separated slugs: lower case, "&" as "and", other punctuation as "-", a final "-fund" dropped.
+   - A single choice is a word from its list, and the search is q=<text>.
+   - Changing a filter replaces the address without adding a history entry; Clear All empties it.
+   - Unknown keys and values are ignored, and other hashes (#strategy/...) are left alone until a filter changes.
+   sitegen/solutions.py writes the same links (explorer_hash), and sitegen/tests/test_explorer_url.py checks them. */
+function urlSlug(s){ return String(s).toLowerCase().replace(/&/g,' and ').replace(/['’]/g,'').replace(/[^a-z0-9]+/g,'-').replace(/^-+|-+$/g,'').replace(/-fund$/,''); }
+function urlPairs(names){ var seen={}; return names.filter(function(n){ if(seen[n]) return false; seen[n]=1; return true; }).map(function(n){ return [urlSlug(n),n]; }); }
+function urlDecode(s){ try{ return decodeURIComponent(s.replace(/\+/g,' ')); }catch(e){ return s; } }
+var URL_SPEC=[ // [address key, st key, kind, [[address value, st value], ...], default]
+  ['type','t','set',urlPairs(TYPES)],
+  ['cat','c','set',urlPairs(CATS)],
+  ['sif','f','set',urlPairs(DATA.map(function(x){ return x.sif; }).sort())],
+  ['manager','a','set',urlPairs(DATA.map(function(x){ return x.amc||'Not mapped'; }).sort())],
+  ['band','r','set',urlPairs(BANDS)],
+  ['tax','tx','set',[['equity',TXL.eq],['debt',TXL.sp],['other',TXL.ot],['unconfirmed',TXL.nc]]],
+  ['size','size','one',[['small','s'],['medium','m'],['large','l']]],
+  ['track','age','one',[['3-months','3'],['6-months','6'],['1-year','12']]],
+  ['load','ld','one',[['nil','0']]],
+  ['min','minv','one',[['standard','std'],['accredited','acc']]],
+  ['nri','no','one',urlPairs(ELIG.online.countries.concat([ANY_OTHER]))],
+  ['q','q','text'],
+  ['sort','sort','one',[['newest','new'],['oldest','old'],['risk-band','rb'],['name','n']],'au']
+];
+function urlString(){
+  var out=[];
+  URL_SPEC.forEach(function(s){
+    var v=st[s[1]], kind=s[2];
+    if(kind==='set'){ var m={}; s[3].forEach(function(p){ m[p[1]]=p[0]; }); var vals=Object.keys(v).map(function(k){ return m[k]; }).filter(Boolean); if(vals.length) out.push(s[0]+'='+vals.join(',')); }
+    else if(kind==='one'){ var p=s[3].filter(function(p){ return p[1]===v; })[0]; if(p) out.push(s[0]+'='+p[0]); }
+    else if(kind==='flag'){ if(v) out.push(s[0]+'=1'); }
+    else if(v) out.push(s[0]+'='+encodeURIComponent(v));
+  });
+  return out.join('&');
+}
+function urlRead(h){
+  var got={}; h.split('&').forEach(function(kv){ var i=kv.indexOf('='); if(i>0) got[kv.slice(0,i).toLowerCase()]=kv.slice(i+1); });
+  URL_SPEC.forEach(function(s){
+    var k=s[1], kind=s[2], v=got[s[0]];
+    st[k]=kind==='set'?{}:(s[4]||'');
+    if(!v) return;
+    if(kind==='set'){ var m={}; s[3].forEach(function(p){ m[p[0]]=p[1]; }); v.split(',').forEach(function(x){ x=urlDecode(x).toLowerCase(); if(m[x]) st[k][m[x]]=1; }); }
+    else if(kind==='one'){ var p=s[3].filter(function(p){ return p[0]===urlDecode(v).toLowerCase(); })[0]; if(p) st[k]=p[1]; }
+    else if(kind==='flag'){ if(v==='1') st[k]='1'; }
+    else st[k]=urlDecode(v).trim();
+  });
+  st.page=1; st.coll='';
+  document.getElementById('q').value=st.q;
+}
+function urlWrite(){
+  var s=urlString(), cur=location.hash.replace(/^#/,'');
+  if(s===cur||(!s&&cur&&cur.indexOf('=')<0)) return;
+  try{ history.replaceState(history.state,'',location.pathname+location.search+(s?'#'+s:'')); }catch(e){}
+}
+window.addEventListener('hashchange',function(){ var h=location.hash.replace(/^#/,''); if(h.indexOf('=')<0) return; urlRead(h); render(); });
+if(location.hash.indexOf('=')>=0) urlRead(location.hash.replace(/^#/,''));
+render();
+/* Below 901px the filters sit above the results, so they open from the Filters button (mh.css, .page-explore .fbtn). */
+(function(){
+  var b=document.getElementById('filtersBtn'), r=document.getElementById('rail');
+  b.addEventListener('click',function(){ var open=!r.classList.contains('open'); r.classList.toggle('open',open); b.setAttribute('aria-expanded',String(open)); });
+})();
+</script>
+<section aria-labelledby="sr-sun-h" class="sr-sun"><div class="sr-wrap"><h2 id="sr-sun-h">Thinking about a SIF?</h2><p>SIFs start at ₹10,00,000 and carry higher risk than most mutual funds. Talk it through with us first.</p><div class="sr-sun__cta"><a class="btn btn-primary" href="../../contact/index.html">Talk to Us</a><a class="sr-more" href="tel:+917738032704">Or call +91 77380 32704 <svg aria-hidden="true" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a></div></div><svg aria-hidden="true" class="sr-sun__art" focusable="false" preserveaspectratio="xMidYMax slice" viewbox="0 0 1440 240"><circle cx="720" cy="250" fill="#FF8A50" fill-opacity=".30" r="230"></circle><circle cx="720" cy="250" fill="#FF4A00" r="168"></circle><path d="M0 170c160-34 300-34 460-6s300 30 460 4 340-36 520-4v76H0z" fill="#2E3D99"></path><path d="M0 196c200-26 380-24 560 0s360 22 540 0 240-18 340-8v52H0z" fill="#16205B"></path><path d="M0 220c240-14 480-14 720 0s480 14 720 0v20H0z" fill="#0C1240"></path></svg></section><footer class="sr-foot" data-nosnippet=""><div class="sr-wrap"><div class="sr-foot__top"><div><a aria-label="MoneyHoney home" class="sr-logo" href="../../index.html" tabindex="-1"><svg aria-label="MoneyHoney" fill="none" height="20" role="img" viewbox="0 0 139 20" width="139" xmlns="http://www.w3.org/2000/svg">
+<path d="M1 10C1 15.2842 5.12632 19.6211 10.3474 20C10.3474 18.4632 9.46316 17.0316 8.07368 16.3579C5.67368 15.2211 4.01053 12.8 4.01053 9.97895C4.01053 7.51579 5.27368 5.36842 7.18947 4.08421V7.64211C7.18947 9.36842 8.6 10.7789 10.3474 10.7789V0C5.12632 0.4 1 4.73684 1 10Z" fill="#FF4A00"></path>
+<path d="M21.2318 10C21.2318 15.2842 17.1054 19.6211 11.8844 20C11.8844 18.4632 12.7686 17.0316 14.1581 16.3579C16.5581 15.2211 18.2212 12.8 18.2212 9.97895C18.2212 7.51579 16.9581 5.36842 15.0212 4.08421V7.64211C15.0212 9.36842 13.6107 10.7789 11.8633 10.7789V0C17.0844 0.4 21.2107 4.73684 21.2107 10H21.2318Z" fill="#FF4A00"></path>
+<path d="M13.4418 14.0201C13.4418 15.3043 12.4103 16.3359 11.126 16.3359C9.84184 16.3359 8.81026 15.3043 8.81026 14.0201C8.81026 12.7359 9.84184 11.7043 11.126 11.7043C12.4103 11.7043 13.4418 12.7359 13.4418 14.0201Z" fill="#16205B"></path>
+<path d="M27.6319 3.41083H29.5477C30.1582 3.41083 30.7056 3.72662 31.0214 4.23188L33.6951 8.52662L36.3687 4.23188C36.6845 3.72662 37.253 3.41083 37.8424 3.41083H39.7582V15.474H38.5161C37.7372 15.474 37.1056 14.8424 37.1056 14.0635V7.6003L33.6951 12.7582H33.6319L30.2424 7.66346V14.0845C30.2424 14.8635 29.6108 15.495 28.8319 15.495H27.6319V3.43188V3.41083Z" fill="#16205B"></path>
+<path d="M49.0839 10.905V10.8629C49.0839 9.49451 48.0944 8.31556 46.6418 8.31556C45.1892 8.31556 44.2207 9.47345 44.2207 10.8419V10.884C44.2207 12.2524 45.2102 13.4313 46.6628 13.4313C48.1155 13.4313 49.0839 12.2735 49.0839 10.905ZM41.6102 10.905V10.8629C41.6102 8.21029 43.7576 6.06293 46.6628 6.06293C49.5681 6.06293 51.6734 8.18924 51.6734 10.8419V10.884C51.6734 13.5366 49.526 15.684 46.6207 15.684C43.7155 15.684 41.6102 13.5577 41.6102 10.905Z" fill="#16205B"></path>
+<path d="M53.2529 6.25173H55.0003C55.5055 6.25173 55.9055 6.65173 55.9055 7.13594V7.557C56.5161 6.77805 57.295 6.08331 58.6213 6.08331C60.6213 6.08331 61.7792 7.38858 61.7792 9.51489V15.4938H60.3897C59.695 15.4938 59.1476 14.9465 59.1476 14.2517V10.3359C59.1476 9.09384 58.5582 8.46226 57.5476 8.46226C56.5371 8.46226 55.9055 9.09384 55.9055 10.3359V14.2517C55.9055 14.9254 55.3371 15.4938 54.6634 15.4938H53.274V6.25173H53.2529Z" fill="#16205B"></path>
+<path d="M69.8203 10.1471C69.673 8.96819 68.9782 8.18924 67.8624 8.18924C66.7467 8.18924 66.0519 8.96819 65.8414 10.1471H69.8203ZM63.273 10.905V10.8629C63.273 8.23135 65.1677 6.06293 67.8624 6.06293C70.9782 6.06293 72.3888 8.46293 72.3888 11.0735C72.3888 11.284 72.3888 11.5156 72.3467 11.7682H65.8624C66.1151 12.9471 66.9572 13.5787 68.1361 13.5787C68.8309 13.5787 69.3782 13.4103 69.9256 13.0103C70.2203 12.7998 70.6203 12.8419 70.873 13.0735L71.8835 13.9577C71.0203 15.0313 69.7572 15.684 68.073 15.684C65.273 15.684 63.2098 13.7471 63.2098 10.905H63.273Z" fill="#16205B"></path>
+<path d="M80.8733 6.2522H82.4312L78.8523 15.7048C78.1365 17.5785 77.3786 18.2943 75.7996 18.2943C74.8523 18.2943 74.1365 18.0627 73.4628 17.6627L74.2417 16.0206C74.3049 15.8943 74.4523 15.8311 74.5786 15.8943C74.8733 16.0417 75.2102 16.1259 75.4628 16.1259C75.9049 16.1259 76.1575 15.9785 76.3891 15.5154L72.747 6.2522H74.2839C75.0417 6.2522 75.6944 6.73641 75.926 7.43114L77.6523 12.5469L79.3154 7.36799C79.526 6.6943 80.1575 6.2522 80.8523 6.2522H80.8733Z" fill="#16205B"></path>
+<path d="M84.4945 3.41083H85.6735C86.4945 3.41083 87.1682 4.06346 87.1682 4.88451V8.18977H92.0945V4.88451C92.0945 4.06346 92.7682 3.41083 93.5893 3.41083H94.7682V15.474H93.6314C92.7682 15.474 92.0945 14.7792 92.0945 13.9371V10.6319H87.1682V13.9371C87.1682 14.7792 86.4735 15.474 85.6314 15.474H84.4945V3.41083Z" fill="#FF4A00"></path>
+<path d="M104.073 10.905V10.8629C104.073 9.49451 103.083 8.31556 101.631 8.31556C100.178 8.31556 99.2098 9.47345 99.2098 10.8419V10.884C99.2098 12.2524 100.199 13.4313 101.652 13.4313C103.105 13.4313 104.073 12.2735 104.073 10.905ZM96.6203 10.905V10.8629C96.6203 8.21029 98.7677 6.06293 101.673 6.06293C104.578 6.06293 106.683 8.18924 106.683 10.8419V10.884C106.683 13.5366 104.536 15.684 101.631 15.684C98.7256 15.684 96.6203 13.5577 96.6203 10.905Z" fill="#FF4A00"></path>
+<path d="M135.863 6.2522H137.421L133.842 15.7048C133.126 17.5785 132.368 18.2943 130.789 18.2943C129.842 18.2943 129.126 18.0627 128.452 17.6627L129.231 16.0206C129.294 15.8943 129.442 15.8311 129.589 15.8943C129.884 16.0417 130.199 16.1259 130.473 16.1259C130.915 16.1259 131.168 15.9785 131.399 15.5154L127.757 6.2522H129.294C130.052 6.2522 130.705 6.73641 130.936 7.43114L132.663 12.5469L134.326 7.36799C134.536 6.6943 135.168 6.2522 135.863 6.2522Z" fill="#FF4A00"></path>
+<path d="M108.243 6.25173H109.99C110.495 6.25173 110.895 6.65173 110.895 7.13594V7.557C111.506 6.77805 112.285 6.08331 113.611 6.08331C115.611 6.08331 116.769 7.38858 116.769 9.51489V15.4938H115.379C114.685 15.4938 114.137 14.9465 114.137 14.2517V10.3359C114.137 9.09384 113.548 8.46226 112.537 8.46226C111.527 8.46226 110.895 9.09384 110.895 10.3359V14.2517C110.895 14.9254 110.327 15.4938 109.653 15.4938H108.264V6.25173H108.243Z" fill="#FF4A00"></path>
+<path d="M124.895 10.1471C124.747 8.96819 124.053 8.18924 122.937 8.18924C121.821 8.18924 121.126 8.96819 120.916 10.1471H124.895ZM118.326 10.905V10.8629C118.326 8.23135 120.221 6.06293 122.916 6.06293C126.032 6.06293 127.442 8.46293 127.442 11.0735C127.442 11.284 127.442 11.5156 127.4 11.7682H120.916C121.168 12.9471 122.01 13.5787 123.189 13.5787C123.884 13.5787 124.432 13.4103 124.979 13.0103C125.274 12.7998 125.674 12.8419 125.926 13.0735L126.937 13.9577C126.074 15.0313 124.81 15.684 123.126 15.684C120.326 15.684 118.263 13.7471 118.263 10.905H118.326Z" fill="#FF4A00"></path>
+</svg></a><p class="sr-foot__id">Money Honey Financial Services Private Limited · AMFI Registered Mutual Fund Distributor &amp; SIF Distributor · ARN-60930, valid till 6 May 2028</p></div><nav aria-label="Footer" class="sr-foot__cols"><div><h3>Invest</h3><ul><li><a href="../../mutual-funds/index.html">Mutual Funds</a></li><li><a href="../../mutual-funds/explore/index.html">Explore Funds</a></li><li><a href="../../mutual-funds/screens/index.html">Fund Screens</a></li><li><a href="../../mutual-funds/screener/index.html">Screener</a></li><li><a href="../../sif/index.html">SIF</a></li><li><a href="../../gift-city-funds/index.html">GIFT City Funds</a></li><li><a href="../../mutual-funds/nfo/index.html">New Fund Offers</a></li></ul></div><div><h3>Save</h3><ul><li><a href="../../fixed-deposits/index.html">Fixed Deposits</a></li><li><a href="../../fixed-deposits/bank-fd-rates/index.html">Compare FD Rates</a></li><li><a href="../../bonds/ncd/index.html">NCD IPOs</a></li><li><a href="../../bonds/rbi-bonds/index.html">RBI Bonds</a></li><li><a href="../../bonds/capital-gain-bonds/index.html">Capital Gain Bonds</a></li></ul></div><div><h3>Plan</h3><ul><li><a href="../../solutions/index.html">Solutions</a></li><li><a href="../../solutions/retirement/index.html">Retirement</a></li><li><a href="../../solutions/child-education/index.html">Child Education</a></li><li><a href="../../solutions/sip/index.html">SIP</a></li><li><a href="../../solutions/tax-saving/index.html">Tax Saving</a></li><li><a href="../../calculators/index.html">Calculators</a></li></ul></div><div><h3>Learn</h3><ul><li><a href="../../blog/index.html">Blog</a></li><li><a href="../../videos/index.html">Videos and Posts</a></li><li><a href="../../mutual-funds/market-outlook/index.html">Market Outlook</a></li><li><a href="../../mutual-funds/dividends/index.html">Dividends (IDCW)</a></li><li><a href="../../methodology/index.html">Methodology</a></li></ul></div><div><h3>Company</h3><ul><li><a href="../../about/index.html">About</a></li><li><a href="../../contact/index.html">Contact</a></li><li><a href="https://ba.moneyhoney.co.in/">Business Associates</a></li><li><a href="../../mutual-funds/amc/index.html">Fund Houses We Distribute</a></li><li><a href="../../site-map/index.html">Site Map</a></li></ul></div><div><h3>Disclosures</h3><ul><li><a href="../../disclaimer/index.html">Disclaimer</a></li><li><a href="../../commission-disclosure/index.html">Commission Disclosure</a></li><li><a href="../../contact/index.html#grievance-redressal">Grievance Redressal</a></li><li><a href="https://smartodr.in/">SMART ODR</a></li></ul></div></nav></div><section aria-labelledby="sr-disc-h" class="sr-disc"><h2 class="sr-disc__h" id="sr-disc-h">Important MoneyHoney Disclosures</h2><p class="sr-disc__lead">About Risk</p><p>Mutual Fund investments are subject to market risks, read all scheme related documents carefully.</p><p>Investments in Specialized Investment Fund involves relatively higher risk including potential loss of capital, liquidity risk and market volatility. Please read all investment strategy related documents carefully before making the investment decision.</p></section><p class="sr-foot__legal"><span>MoneyHoney is a mutual fund distributor, not a SEBI-registered investment adviser.</span><a href="../../disclaimer/index.html">Disclaimer</a><a href="../../commission-disclosure/index.html">Commission Disclosure</a><a href="../../site-map/index.html">Site Map</a></p></div></footer></body>
+</html>

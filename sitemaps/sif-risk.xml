@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://example.com/sif/category/equity-ex-top-100-long-short/moderate-risk/</loc><lastmod>2026-09-30</lastmod></url>
+  <url><loc>https://example.com/sif/category/equity-ex-top-100-long-short/higher-risk/</loc><lastmod>2026-09-30</lastmod></url>
+  <url><loc>https://example.com/sif/category/equity-ex-top-100-long-short/risk-band-not-published/</loc><lastmod>2026-09-30</lastmod></url>
+  <url><loc>https://example.com/sif/category/equity-long-short/moderate-risk/</loc><lastmod>2026-09-30</lastmod></url>
+  <url><loc>https://example.com/sif/category/equity-long-short/higher-risk/</loc><lastmod>2026-09-30</lastmod></url>
+  <url><loc>https://example.com/sif/category/equity-long-short/risk-band-not-published/</loc><lastmod>2026-09-30</lastmod></url>
+  <url><loc>https://example.com/sif/category/hybrid-long-short/lower-risk/</loc><lastmod>2026-09-30</lastmod></url>
+  <url><loc>https://example.com/sif/category/hybrid-long-short/moderate-risk/</loc><lastmod>2026-09-30</lastmod></url>
+  <url><loc>https://example.com/sif/category/hybrid-long-short/higher-risk/</loc><lastmod>2026-09-30</lastmod></url>
+  <url><loc>https://example.com/sif/category/hybrid-long-short/risk-band-not-published/</loc><lastmod>2026-09-30</lastmod></url>
+  <url><loc>https://example.com/sif/category/active-asset-allocator-long-short/lower-risk/</loc><lastmod>2026-09-30</lastmod></url>
+  <url><loc>https://example.com/sif/category/active-asset-allocator-long-short/moderate-risk/</loc><lastmod>2026-09-30</lastmod></url>
+  <url><loc>https://example.com/sif/category/active-asset-allocator-long-short/risk-band-not-published/</loc><lastmod>2026-09-30</lastmod></url>
+  <url><loc>https://example.com/sif/category/sector-rotation-long-short/lower-risk/</loc><lastmod>2026-09-30</lastmod></url>
+</urlset>

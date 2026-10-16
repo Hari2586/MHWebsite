@@ -1,0 +1,2186 @@
+<!DOCTYPE html>
+
+<html lang="en-IN">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>qsif Equity Long-Short Fund: SIF Strategy | MoneyHoney</title>
+<meta content="Sample SIF strategy page for qsif Equity Long-Short Fund, showing the layout planned for each strategy: facts, risk band, portfolio and tax." name="description"/>
+
+<link href="https://example.com/sif/strategy/" rel="canonical"/>
+<meta content="website" property="og:type"/>
+<meta content="MoneyHoney" property="og:site_name"/>
+<meta content="en_IN" property="og:locale"/>
+<meta content="qsif Equity Long-Short Fund: SIF Strategy | MoneyHoney" property="og:title"/>
+<meta content="Sample SIF strategy page for qsif Equity Long-Short Fund, showing the layout planned for each strategy: facts, risk band, portfolio and tax." property="og:description"/>
+<meta content="https://example.com/sif/strategy/" property="og:url"/>
+<meta content="https://example.com/assets/og/sif.png" property="og:image"/>
+<meta content="1200" property="og:image:width"/>
+<meta content="630" property="og:image:height"/>
+<meta content="MoneyHoney: Specialised Investment Funds" property="og:image:alt"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://example.com/"}, {"@type": "ListItem", "position": 2, "name": "SIF", "item": "https://example.com/sif/"}, {"@type": "ListItem", "position": 3, "name": "qsif Equity Long-Short Fund", "item": "https://example.com/sif/strategy/"}]}, {"@type": "WebPage", "name": "qsif Equity Long-Short Fund", "url": "https://example.com/sif/strategy/", "dateModified": "2026-10-12", "isPartOf": {"@id": "https://example.com/#website"}, "publisher": {"@id": "https://example.com/#organization"}}, {"@type": "Organization", "@id": "https://example.com/#organization", "name": "MoneyHoney", "url": "https://example.com/", "description": "AMFI Registered Mutual Fund Distributor & SIF Distributor, ARN-60930"}]}</script>
+<link href="../../assets/mh.css" rel="stylesheet"/><meta content="noindex, nofollow" name="robots"/><link href="../../assets/sunrise/sunrise.css" rel="stylesheet"/><script defer="" src="../../assets/sunrise/sunrise.js"></script>
+<script defer="" src="../../assets/mh.js"></script>
+<style>
+/* ---- Page CSS: qsif Equity Long-Short Fund (SIF strategy page). Tokens only. ---- */
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}}
+body{background:var(--color-surface-page);color:var(--color-text-primary)}
+.wrap{width:100%;max-width:var(--max-width);margin:0 auto;padding:0 var(--gutter)}
+@media (min-width:1024px){.wrap{padding:0 var(--gutter-lg)}}
+.num{font-variant-numeric:tabular-nums}
+.up{color:var(--color-gain)} .down{color:var(--color-loss)}
+.ic{display:inline-block;vertical-align:-2px;flex-shrink:0}
+
+/* ---- identity band ---- */
+.identity{background:var(--color-surface-page);border-bottom:1px solid var(--color-border-subtle);padding:var(--space-6) 0}
+.crumb{margin-bottom:var(--space-4)}
+.id-grid{display:flex;flex-wrap:wrap;gap:var(--space-6);align-items:flex-start;justify-content:space-between}
+.id-left{flex:1 1 520px;min-width:0}
+h1{font-size:var(--text-2xl);line-height:1.2}
+.subline{font-size:var(--text-base);color:var(--color-text-strong);margin-top:var(--space-2);max-width:760px}
+.chips{display:flex;flex-wrap:wrap;gap:var(--space-2);margin-top:var(--space-4)}
+.id-right{flex:0 0 auto;min-width:240px;display:flex;flex-direction:column;align-items:flex-start}
+.opt-note{font-size:var(--text-xs);color:var(--color-text-cool);margin-top:var(--space-1)}
+.nav-label{font-size:var(--text-xs);color:var(--color-text-cool)}
+.nav-big{font-size:var(--text-3xl);font-weight:var(--font-weight-semibold);line-height:1.1;color:var(--color-text-deep);font-variant-numeric:tabular-nums}
+.nav-chg{font-size:var(--text-sm);font-weight:var(--font-weight-medium);margin-top:var(--space-1)}
+.plan-switch{display:inline-flex;padding:2px;gap:2px;background:var(--color-surface-app);border:1px solid var(--color-border-soft);border-radius:var(--radius-btn)}
+.plan-switch button{height:32px;padding:0 var(--space-4);border:0;border-radius:var(--radius-xs);background:transparent;color:var(--color-text-cool);font-size:var(--text-sm);font-weight:var(--font-weight-medium)}
+.plan-switch button.on{background:var(--color-surface-page);color:var(--color-brand);outline:1px solid var(--color-border-soft)}
+.facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:1px;background:var(--color-border-soft);border:1px solid var(--color-border-soft);border-radius:var(--radius-card);overflow:hidden;margin-top:var(--space-6)}
+.fact{background:var(--color-surface-page);padding:var(--space-3) var(--space-4)}
+.fact .k{font-size:var(--text-xs);color:var(--color-text-cool)}
+.fact .v{font-size:var(--text-base);font-weight:var(--font-weight-semibold);color:var(--color-text-deep);margin-top:var(--space-1)}
+
+/* SIF gate notice */
+.gate{display:flex;gap:var(--space-3);align-items:flex-start;background:var(--color-warning-bg);border:1px solid var(--color-warning-border);border-radius:var(--radius-card);padding:var(--space-3) var(--space-4);margin-top:var(--space-4);font-size:var(--text-sm);color:var(--color-text-strong)}
+.gate .ic{color:var(--color-warning-text);margin-top:2px;vertical-align:0}
+.gate b{font-weight:var(--font-weight-semibold);color:var(--color-text-deep)}
+
+/* ---- section nav ---- */
+.secnav{position:sticky;top:0;z-index:var(--z-raised);background:var(--color-surface-page);border-bottom:1px solid var(--color-border-subtle)}
+@media (min-width:1264px){.secnav{top:var(--nav-height)}}
+.secnav .wrap{display:flex;gap:var(--space-6);overflow-x:auto;scrollbar-width:none}
+.secnav .wrap::-webkit-scrollbar{display:none}
+.secnav a{position:relative;display:inline-flex;align-items:center;min-height:44px;white-space:nowrap;font-size:var(--text-sm);font-weight:var(--font-weight-medium);color:var(--color-text-cool)}
+.secnav a:hover{text-decoration:none;color:var(--color-text-deep)}
+.secnav a.here{color:var(--color-brand)}
+.secnav a.here::after{content:"";position:absolute;left:0;right:0;bottom:-1px;height:2px;background:var(--color-brand);border-radius:var(--radius-2xs)}
+
+/* ---- sections ---- */
+section{padding:var(--space-12) 0 0;scroll-margin-top:56px}
+@media (min-width:1024px){section{scroll-margin-top:128px}}
+.sec-head{display:flex;align-items:baseline;justify-content:space-between;gap:var(--space-4);margin-bottom:var(--space-4);flex-wrap:wrap}
+.sec-note{font-size:var(--text-sm);color:var(--color-text-cool);max-width:560px}
+h3{font-size:var(--text-lg);margin-bottom:var(--space-3)}
+h4{font-size:var(--text-base);line-height:1.5}
+h4.calc-title{font-size:var(--text-md)}
+
+/* ---- chart controls ---- */
+.chart-controls{display:flex;flex-wrap:wrap;gap:var(--space-3) var(--space-4);align-items:center;justify-content:space-between;margin-bottom:var(--space-2)}
+.pills{display:inline-flex;flex-wrap:wrap;padding:2px;gap:2px;background:var(--color-surface-app);border:1px solid var(--color-border-soft);border-radius:var(--radius-btn)}
+.pills button{height:32px;padding:0 var(--space-3);border:0;border-radius:var(--radius-xs);background:transparent;color:var(--color-text-cool);font-size:var(--text-xs);font-weight:var(--font-weight-medium);white-space:nowrap}
+.pills button:hover:not([disabled]){color:var(--color-text-deep)}
+.pills button.on{background:var(--color-surface-page);color:var(--color-brand);outline:1px solid var(--color-border-soft)}
+.pills button[disabled]{color:var(--color-neutral-400);cursor:not-allowed}
+.legend{display:flex;gap:var(--space-4);align-items:center;font-size:var(--text-xs);color:var(--color-text-cool);flex-wrap:wrap}
+.legend.legend-text{display:block;max-width:820px;line-height:1.5}
+.legend b{color:var(--color-text-deep);font-weight:var(--font-weight-semibold)}
+.lg{display:flex;gap:var(--space-2);align-items:center}
+.lg .sw{display:inline-block;width:16px;height:3px;border-radius:var(--radius-2xs)}
+.lg .sw.area{height:8px}
+.lg .sw.dash{height:0;border-top:2px dashed var(--chart-benchmark);border-radius:0}
+.legend label.lgchk{display:flex;gap:var(--space-2);align-items:center;cursor:pointer}
+.legend label.lgchk input{accent-color:var(--color-brand);width:16px;height:16px}
+.svgchart{width:100%;display:block}
+.svgchart text{font-family:var(--font-family-body)}
+.chart-foot{display:flex;justify-content:space-between;gap:var(--space-4);font-size:var(--text-xs);color:var(--color-text-cool);margin-top:var(--space-3);flex-wrap:wrap}
+.chart-stats.num{font-variant-numeric:normal}
+.chart-stats b{font-variant-numeric:tabular-nums;color:var(--color-text-deep);font-weight:var(--font-weight-semibold)}
+.chart-stats b.up{color:var(--color-gain)} .chart-stats b.down{color:var(--color-loss)}
+.chart-stats .st{display:inline-flex;align-items:center;gap:var(--space-2);margin:2px var(--space-4) 2px 0}
+.chart-stats .st .dot{width:8px;height:8px;border-radius:var(--radius-full)}
+
+/* date range + small inputs */
+.daterange{display:flex;align-items:center;gap:var(--space-3);font-size:var(--text-sm);color:var(--color-text-strong);flex-wrap:wrap}
+.daterange label{display:flex;align-items:center;gap:var(--space-2);font-weight:var(--font-weight-medium)}
+.daterange input,.sortsel{height:40px;padding:0 var(--space-3);font-size:var(--text-sm);color:var(--color-text-primary);background:var(--color-surface-page);border:1px solid var(--color-border-soft);border-radius:var(--radius-input);outline:none;font-variant-numeric:tabular-nums}
+.daterange input:hover,.sortsel:hover{border-color:var(--color-border-medium)}
+.daterange input:focus,.sortsel:focus{border-color:var(--color-brand);box-shadow:var(--shadow-focus)}
+.daterange input[type=number]{width:120px}
+.daterange .step-custom{width:88px}
+.daterange .step-unit{color:var(--color-text-cool)}
+.sortsel{max-width:100%}
+@media (max-width:767px){.daterange input,.sortsel,.addscheme{font-size:16px}}
+
+.series-row{display:flex;justify-content:space-between;align-items:center;gap:var(--space-3);flex-wrap:wrap;margin:var(--space-2) 0 var(--space-3)}
+.series-chips{display:flex;flex-wrap:wrap;gap:var(--space-2)}
+.schip{display:inline-flex;align-items:center;gap:var(--space-2);min-height:28px;font-size:var(--text-xs);font-weight:var(--font-weight-medium);color:var(--color-text-strong);padding:0 var(--space-1) 0 var(--space-3);border:1px solid var(--color-border-soft);border-radius:var(--radius-pill);background:var(--color-surface-page)}
+.schip .dot{width:8px;height:8px;border-radius:var(--radius-full);flex-shrink:0}
+.schip button{display:inline-flex;align-items:center;justify-content:center;width:24px;height:24px;border:0;border-radius:var(--radius-full);background:transparent;color:var(--color-text-cool);padding:0}
+.schip button:hover{color:var(--color-loss);background:var(--color-danger-bg)}
+.schip button[disabled]{visibility:hidden;width:4px}
+.addscheme{height:40px;padding:0 var(--space-10) 0 var(--space-3);font-size:var(--text-sm);font-weight:var(--font-weight-medium);color:var(--color-brand);background-color:var(--color-surface-page);border:1px solid var(--color-border-soft);border-radius:var(--radius-input);max-width:340px}
+.addscheme:hover{border-color:var(--color-border-medium)}
+.chart-wrap{position:relative}
+.chart-box{border:1px solid var(--color-border-soft);border-radius:var(--radius-card);padding:var(--space-3) var(--space-3) var(--space-2);margin-bottom:var(--space-4)}
+
+/* hover tooltip */
+.tip{position:absolute;display:none;pointer-events:none;background:var(--color-brand-dark);color:#fff;border-radius:var(--radius-btn);padding:var(--space-2) var(--space-3);font-size:var(--text-xs);min-width:230px;z-index:var(--z-popover)}
+.tip .d{font-weight:var(--font-weight-semibold);margin-bottom:var(--space-1);padding-bottom:var(--space-1);border-bottom:1px solid var(--color-brand-secondary)}
+.tip .d span{font-weight:var(--font-weight-regular);color:var(--color-neutral-300)}
+.tip .r{display:grid;grid-template-columns:8px 1fr auto auto;gap:var(--space-1) var(--space-2);align-items:center;padding:2px 0}
+.tip .r .nm{color:var(--color-neutral-300);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:150px}
+.tip .r .nv{color:#fff;font-variant-numeric:tabular-nums}
+.tip .r .rt{font-weight:var(--font-weight-semibold);font-variant-numeric:tabular-nums}
+.tip .r .rt.tpos{color:var(--color-success-border)} .tip .r .rt.tneg{color:var(--color-danger-border)}
+.tip .r .sq{width:8px;height:8px;border-radius:var(--radius-2xs)}
+
+/* ---- performance tabs ---- */
+.perf-card{padding-top:var(--space-2)}
+.tabs button{position:relative;display:inline-flex;align-items:center;min-height:44px;padding:0;border:0;background:none;color:var(--color-text-cool);font-size:var(--text-sm);font-weight:var(--font-weight-medium);white-space:nowrap}
+.tabs button:hover{color:var(--color-text-deep)}
+.tabs button.on{color:var(--color-brand)}
+.tabs button.on::after{content:"";position:absolute;left:0;right:0;bottom:0;height:2px;background:var(--color-brand);border-radius:var(--radius-2xs)}
+.tabpanel{display:none;padding-top:var(--space-5)}
+.tabpanel.show{display:block}
+
+/* ---- tables: left-aligned, tabular, no zebra ---- */
+.scrollx{overflow-x:auto;border:1px solid var(--color-border-soft);border-radius:var(--radius-card);background:var(--color-surface-page)}
+table.data{width:100%;border-collapse:collapse;font-size:var(--text-sm);text-align:left;font-variant-numeric:tabular-nums}
+table.data th{font-size:var(--text-xs);font-weight:var(--font-weight-medium);color:var(--color-text-cool);background:var(--color-surface-app);text-align:left;padding:var(--space-3) var(--space-4);border-bottom:1px solid var(--color-border-subtle);white-space:nowrap;vertical-align:bottom}
+table.data th.wraphead{white-space:normal;min-width:150px}
+table.data th.bl,table.data td.bl{border-left:1px solid var(--color-border-subtle)}
+table.data td{padding:var(--space-3) var(--space-4);border-bottom:1px solid var(--color-border-subtle);color:var(--color-text-deep);text-align:left;vertical-align:top}
+table.data tr:last-child td{border-bottom:0}
+table.data td:first-child{font-weight:var(--font-weight-medium);font-variant-numeric:normal}
+table.data td.up{color:var(--color-gain)} table.data td.down{color:var(--color-loss)}
+table.data td.na{color:var(--color-text-muted)}
+table.data tr.hl td{background:var(--color-brand-tint);font-weight:var(--font-weight-semibold)}
+table.data tr.soft td{color:var(--color-text-strong)}
+table.data tr.band td{background:var(--color-surface-app);font-weight:var(--font-weight-semibold);color:var(--color-text-deep)}
+.tab-note{font-size:var(--text-xs);color:var(--color-text-cool);margin-top:var(--space-3);max-width:820px;line-height:1.5}
+.q{display:inline-flex;align-items:center;height:20px;padding:0 var(--space-2);font-size:var(--text-xs);font-weight:var(--font-weight-medium);border-radius:var(--radius-xs);border:1px solid transparent}
+.q1{background:var(--color-success-bg);border-color:var(--color-success-border);color:var(--color-success-text)}
+.q2{background:var(--color-brand-tint);border-color:var(--color-brand-light);color:var(--color-brand)}
+.q3{background:var(--color-warning-bg);border-color:var(--color-warning-border);color:var(--color-warning-text)}
+.q4{background:var(--color-danger-bg);border-color:var(--color-danger-border);color:var(--color-danger-text)}
+
+.subblock{margin-top:var(--space-6);padding-top:var(--space-5);border-top:1px solid var(--color-border-subtle)}
+.subblock.flush{margin-top:var(--space-4);padding-top:0;border-top:0}
+.subblock h4 + .scrollx,.subblock h4 + .legend{margin-top:var(--space-2)}
+details.ledger{margin-top:var(--space-4);border:1px solid var(--color-border-soft);border-radius:var(--radius-card);background:var(--color-surface-page)}
+details.ledger summary{cursor:pointer;min-height:44px;padding:var(--space-3) var(--space-4);font-size:var(--text-sm);font-weight:var(--font-weight-semibold);color:var(--color-brand);list-style:none;display:flex;justify-content:space-between;align-items:center;gap:var(--space-3);flex-wrap:wrap}
+details.ledger summary::-webkit-details-marker{display:none}
+details.ledger summary .meta{font-weight:var(--font-weight-regular);color:var(--color-text-cool);font-size:var(--text-xs);margin-left:auto}
+details.ledger summary::after{content:"";width:8px;height:8px;border-right:1.5px solid var(--color-text-cool);border-bottom:1.5px solid var(--color-text-cool);transform:rotate(45deg);margin:0 var(--space-1) var(--space-1) 0}
+details.ledger[open] summary::after{transform:rotate(-135deg);margin:var(--space-1) var(--space-1) 0 0}
+.ledger-scroll{max-height:420px;overflow:auto;border-top:1px solid var(--color-border-subtle);border-radius:0 0 var(--radius-card) var(--radius-card)}
+.ledger-scroll table.data td,.ledger-scroll table.data th{padding:var(--space-2) var(--space-3)}
+.ledger-scroll th{position:sticky;top:0;z-index:2}
+
+.bb-chart-card{border:1px solid var(--color-border-soft);border-radius:var(--radius-card);padding:var(--space-4);background:var(--color-surface-page);margin-bottom:var(--space-4)}
+.bb-chart-card h4{margin-bottom:var(--space-2);font-size:var(--text-sm)}
+.bb-legend{display:flex;flex-wrap:wrap;gap:var(--space-4);font-size:var(--text-xs);color:var(--color-text-cool);margin-top:var(--space-2)}
+.bb-legend .sw{width:16px;height:8px;border-radius:var(--radius-2xs)}
+.sw.bear{background:var(--color-danger-bg);border:1px solid var(--color-danger-border)}
+.sw.bull{background:var(--color-success-bg);border:1px solid var(--color-success-border)}
+.sw.sel{border:1.5px dashed var(--color-text-deep)}
+.edu{background:var(--color-surface-app);border:1px solid var(--color-border-soft);border-radius:var(--radius-card);padding:var(--space-4);font-size:var(--text-sm);color:var(--color-text-strong);margin-bottom:var(--space-4)}
+.edu p{margin-bottom:var(--space-2)}
+.edu p:last-child{margin-bottom:0}
+.edu b{font-weight:var(--font-weight-semibold);color:var(--color-text-deep)}
+ol.threeways{margin:var(--space-2) 0 0 var(--space-5);padding:0;font-size:var(--text-sm)}
+ol.threeways li{margin-bottom:var(--space-1)}
+
+.yeargrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(96px,1fr));gap:var(--space-2);margin-top:var(--space-3)}
+.yeargrid .yg{background:var(--color-surface-app);border:1px solid var(--color-border-soft);border-radius:var(--radius-btn);padding:var(--space-2) var(--space-3)}
+.yeargrid .yg .y{font-size:var(--text-xs);color:var(--color-text-cool)}
+.yeargrid .yg .a{font-size:var(--text-sm);font-weight:var(--font-weight-semibold);color:var(--color-text-deep);margin-top:2px}
+
+.two-col{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);gap:var(--space-5)}
+.card.tinted{background:var(--color-surface-app)}
+table.kv{display:table;width:100%;border-collapse:collapse;font-size:var(--text-sm);gap:0}
+table.kv td{padding:var(--space-2) var(--space-1);border-bottom:1px solid var(--color-border-subtle);vertical-align:top;text-align:left;color:var(--color-text-deep)}
+table.kv tr:last-child td{border-bottom:0}
+table.kv td:first-child{color:var(--color-text-cool);width:48%;padding-right:var(--space-4)}
+table.kv td:last-child{font-weight:var(--font-weight-medium)}
+table.kv td.plain{font-weight:var(--font-weight-regular)}
+table.kv td.nest{padding:var(--space-2) 0}
+table.kv td.nest .scrollx{border-radius:var(--radius-btn)}
+.empty{background:var(--color-surface-app);border:1px dashed var(--color-border-medium);border-radius:var(--radius-card);padding:var(--space-6);text-align:center;color:var(--color-text-cool);font-size:var(--text-sm);margin:var(--space-3) 0 var(--space-4)}
+.empty b{color:var(--color-text-deep);font-weight:var(--font-weight-semibold)}
+
+/* ---- returns calculator ---- */
+.calc{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.1fr);gap:var(--space-8);align-items:start;margin-bottom:var(--space-5)}
+.calc-row{display:flex;justify-content:space-between;align-items:center;gap:var(--space-4);margin-top:var(--space-5);flex-wrap:wrap}
+.calc-row .lab{font-size:var(--text-sm);color:var(--color-text-strong)}
+.calc-row .val{font-size:var(--text-xl);font-weight:var(--font-weight-semibold);color:var(--color-text-deep)}
+input[type=range].slider{width:100%;margin-top:var(--space-3);accent-color:var(--color-brand);height:4px;cursor:pointer}
+.calc-disc{font-size:var(--text-xs);color:var(--color-text-cool);margin-top:var(--space-8);line-height:1.5}
+.calc-disc button.linkbtn{border:0;background:none;padding:0;font-size:var(--text-xs);font-weight:var(--font-weight-semibold);color:var(--color-brand)}
+.calc-disc button.linkbtn:hover{text-decoration:underline}
+.calc-out{background:var(--color-surface-app);border:1px solid var(--color-border-soft);border-radius:var(--radius-card);padding:var(--space-4) var(--space-4) var(--space-3)}
+.calc-legend{margin-top:var(--space-3);font-size:var(--text-sm)}
+.calc-legend .row{display:flex;justify-content:space-between;align-items:center;flex-wrap:nowrap;padding:var(--space-2) 0}
+.calc-legend .row .k{display:flex;align-items:center;gap:var(--space-2);color:var(--color-text-strong)}
+.calc-legend .row .sq{width:12px;height:12px;border-radius:var(--radius-2xs)}
+.calc-legend .row .v{font-weight:var(--font-weight-semibold);color:var(--color-text-deep)}
+.calc-legend .total{border-top:1px solid var(--color-border-soft);margin-top:var(--space-1);padding-top:var(--space-3)}
+.calc-legend .total .k{color:var(--color-text-deep)}
+.calc-legend .total .v{font-size:var(--text-lg)}
+.calc-legend .ret .k,.calc-legend .ret .v{color:var(--color-gain);font-weight:var(--font-weight-semibold)}
+.calc-legend .ret.neg .k,.calc-legend .ret.neg .v{color:var(--color-loss)}
+.cta-row{display:flex;gap:var(--space-3);margin-top:var(--space-4);flex-wrap:wrap}
+
+/* ---- risk band ---- */
+.risk-title{font-size:var(--text-xs);color:var(--color-text-cool);font-weight:var(--font-weight-medium);margin-bottom:var(--space-1)}
+.risk-text{font-size:var(--text-xs);color:var(--color-text-cool);margin-top:var(--space-2)}
+.bandscale{width:100%;max-width:280px;display:block;margin:var(--space-2) auto 0}
+.band-val{margin-top:var(--space-2)}
+.bandgrid{display:grid;grid-template-columns:1fr 1fr 1.3fr;gap:var(--space-5);align-items:start}
+.bandbox{display:flex;flex-direction:column;align-items:center;border:1px solid var(--color-border-soft);border-radius:var(--radius-card);padding:var(--space-3)}
+.short-note{background:var(--color-surface-app);border:1px solid var(--color-border-soft);border-radius:var(--radius-card);padding:var(--space-3) var(--space-4);font-size:var(--text-sm);color:var(--color-text-strong);margin-top:var(--space-3)}
+.short-note b{font-weight:var(--font-weight-semibold);color:var(--color-text-deep)}
+.docs-card{display:flex;justify-content:space-between;align-items:center;gap:var(--space-5);flex-wrap:wrap;margin-bottom:var(--space-5)}
+.docs-card h3{margin-bottom:var(--space-1)}
+.docs-card .tab-note{margin:0}
+.docs-card .btns{display:flex;gap:var(--space-3);flex-wrap:wrap}
+.mt-5{margin-top:var(--space-5)}
+.stack-cards > .card + .card{margin-top:var(--space-5)}
+
+/* ---- footer ---- */
+footer{margin-top:var(--space-12);border-top:1px solid var(--color-border-subtle);background:var(--color-surface-page)}
+footer .wrap{padding-top:var(--space-6);padding-bottom:var(--space-6)}
+footer p{font-size:var(--text-xs);color:var(--color-text-muted);line-height:1.5;max-width:960px}
+footer p + p{margin-top:var(--space-3)}
+footer b{color:var(--color-text-deep);font-weight:var(--font-weight-semibold)}
+
+/* ---- responsive ---- */
+@media (max-width:1023px){.bandgrid{grid-template-columns:1fr 1fr}.bandgrid .bandref{grid-column:1/-1}}
+@media (max-width:880px){.two-col,.calc{grid-template-columns:minmax(0,1fr)}}
+@media (max-width:767px){
+  h1{font-size:var(--text-xl);line-height:1.25}
+  .nav-big{font-size:var(--text-2xl)}
+  .id-right{min-width:0;width:100%}
+  .facts{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .fact:last-child:nth-child(odd){grid-column:1/-1}
+  .bandgrid{grid-template-columns:minmax(0,1fr)}
+  .chart-controls,.series-row{align-items:flex-start}
+  .addscheme{max-width:100%;width:100%}
+  .schip{max-width:100%}
+  table.data td:first-child{min-width:176px}
+  table.kv,table.kv tbody,table.kv tr,table.kv td{display:block;width:100%}
+  table.kv tr{padding:var(--space-2) 0;border-bottom:1px solid var(--color-border-subtle)}
+  table.kv tr:last-child{border-bottom:0}
+  table.kv td,table.kv tr:last-child td{border:0;padding:var(--space-1) 0}
+  table.kv td:first-child{width:100%;padding-right:0;font-size:var(--text-xs)}
+  table.kv td.nest{padding:var(--space-1) 0 0;min-width:0}
+  table.kv td.nest .scrollx{max-width:100%}
+  table.kv td.nest table.data td:first-child{min-width:0}
+  .daterange label{flex-wrap:wrap;max-width:100%}
+  #bbSelect{width:100%}
+  .cta-row .btn{flex:1 1 0}
+  .tip{min-width:200px}
+}
+@media print{
+  .secnav,.cta-row,.plan-switch,.series-row select,.schip button,.tip{display:none !important}
+  section{padding-top:var(--space-6)}
+  .ledger-scroll{max-height:none;overflow:visible}
+}
+/* taxation */
+.tax-demo{display:flex;flex-wrap:wrap;align-items:center;gap:var(--space-3);margin-bottom:var(--space-3)}
+.tax-demo[hidden],.tax-demo__opts[hidden]{display:none}
+.tax-demo__opts{display:flex;flex-wrap:wrap;gap:var(--space-2)}
+.tax-demo .chip{height:44px}
+.tax-illus{margin-bottom:var(--space-4)}
+@media print{.tax-demo,.tax-illus{display:none}}
+.tax-lede{font-size:var(--text-base);color:var(--color-text-strong)}
+.tax-card{margin-top:var(--space-2)}
+.tax-top{display:flex;flex-wrap:wrap;align-items:center;gap:var(--space-2) var(--space-3);margin-bottom:var(--space-4)}
+.tax-basis{font-size:var(--text-sm);color:var(--color-text-cool)}
+.tax-kv{width:100%;border-collapse:collapse}
+.tax-kv th,.tax-kv td{padding:var(--space-3) 0;border-top:1px solid var(--color-border-subtle);text-align:left;vertical-align:top;font-size:var(--text-sm)}
+.tax-kv tr:first-child th,.tax-kv tr:first-child td{border-top:0}
+.tax-kv th{width:34%;padding-right:var(--space-4);font-weight:var(--font-weight-regular);color:var(--color-text-cool)}
+.tax-kv td{color:var(--color-text-deep);font-weight:var(--font-weight-medium)}
+.tax-kv td .sub{display:block;margin-top:var(--space-1);font-weight:var(--font-weight-regular);color:var(--color-text-cool)}
+.tax-h{margin:var(--space-8) 0 var(--space-3);font-size:var(--text-lg)}
+table.data.tax-compare th,table.data.tax-compare td{text-align:left;vertical-align:top;white-space:normal;min-width:160px}
+table.data.tax-compare td:first-child,table.data.tax-compare th:first-child{min-width:140px;color:var(--color-text-cool);font-weight:var(--font-weight-regular)}
+table.data.tax-compare .cur{background:var(--color-brand-tint)}
+table.data.tax-compare th.cur{color:var(--color-brand)}
+.tax-notes{margin:0;padding-left:var(--space-5);font-size:var(--text-sm);line-height:1.6;color:var(--color-text-strong)}
+.tax-notes li+li{margin-top:var(--space-2)}
+.tax-foot{margin-top:var(--space-6);padding-top:var(--space-4);border-top:1px solid var(--color-border-subtle);font-size:var(--text-xs);line-height:1.6;color:var(--color-text-muted)}
+@media(max-width:767px){.tax-kv th,.tax-kv td{display:block;width:100%;padding:0}.tax-kv th{padding-top:var(--space-3)}.tax-kv td{padding-bottom:var(--space-3);border-top:0}}
+.sample-note{margin-bottom:var(--space-3)}
+.calc-disc{font-size:var(--text-base);color:var(--color-text-strong)}
+.band-val{display:inline-block;font-size:var(--text-sm);font-weight:var(--font-weight-medium);color:var(--color-text-deep)}
+</style>
+</head>
+<body class="page-scheme">
+<header class="sr-header"><div class="sr-aud"><nav aria-label="Audience" class="sr-wrap"><a aria-current="true" href="../../index.html">Investors</a><a href="../../solutions/nri/index.html">NRIs</a><a href="https://ba.moneyhoney.co.in/">Business Associates</a></nav></div><div class="sr-head"><div class="sr-wrap sr-head__row"><a aria-label="MoneyHoney home" class="sr-logo" href="../../index.html"><svg aria-label="MoneyHoney" fill="none" height="20" role="img" viewbox="0 0 139 20" width="139" xmlns="http://www.w3.org/2000/svg">
+<path d="M1 10C1 15.2842 5.12632 19.6211 10.3474 20C10.3474 18.4632 9.46316 17.0316 8.07368 16.3579C5.67368 15.2211 4.01053 12.8 4.01053 9.97895C4.01053 7.51579 5.27368 5.36842 7.18947 4.08421V7.64211C7.18947 9.36842 8.6 10.7789 10.3474 10.7789V0C5.12632 0.4 1 4.73684 1 10Z" fill="#FF4A00"></path>
+<path d="M21.2318 10C21.2318 15.2842 17.1054 19.6211 11.8844 20C11.8844 18.4632 12.7686 17.0316 14.1581 16.3579C16.5581 15.2211 18.2212 12.8 18.2212 9.97895C18.2212 7.51579 16.9581 5.36842 15.0212 4.08421V7.64211C15.0212 9.36842 13.6107 10.7789 11.8633 10.7789V0C17.0844 0.4 21.2107 4.73684 21.2107 10H21.2318Z" fill="#FF4A00"></path>
+<path d="M13.4418 14.0201C13.4418 15.3043 12.4103 16.3359 11.126 16.3359C9.84184 16.3359 8.81026 15.3043 8.81026 14.0201C8.81026 12.7359 9.84184 11.7043 11.126 11.7043C12.4103 11.7043 13.4418 12.7359 13.4418 14.0201Z" fill="#16205B"></path>
+<path d="M27.6319 3.41083H29.5477C30.1582 3.41083 30.7056 3.72662 31.0214 4.23188L33.6951 8.52662L36.3687 4.23188C36.6845 3.72662 37.253 3.41083 37.8424 3.41083H39.7582V15.474H38.5161C37.7372 15.474 37.1056 14.8424 37.1056 14.0635V7.6003L33.6951 12.7582H33.6319L30.2424 7.66346V14.0845C30.2424 14.8635 29.6108 15.495 28.8319 15.495H27.6319V3.43188V3.41083Z" fill="#16205B"></path>
+<path d="M49.0839 10.905V10.8629C49.0839 9.49451 48.0944 8.31556 46.6418 8.31556C45.1892 8.31556 44.2207 9.47345 44.2207 10.8419V10.884C44.2207 12.2524 45.2102 13.4313 46.6628 13.4313C48.1155 13.4313 49.0839 12.2735 49.0839 10.905ZM41.6102 10.905V10.8629C41.6102 8.21029 43.7576 6.06293 46.6628 6.06293C49.5681 6.06293 51.6734 8.18924 51.6734 10.8419V10.884C51.6734 13.5366 49.526 15.684 46.6207 15.684C43.7155 15.684 41.6102 13.5577 41.6102 10.905Z" fill="#16205B"></path>
+<path d="M53.2529 6.25173H55.0003C55.5055 6.25173 55.9055 6.65173 55.9055 7.13594V7.557C56.5161 6.77805 57.295 6.08331 58.6213 6.08331C60.6213 6.08331 61.7792 7.38858 61.7792 9.51489V15.4938H60.3897C59.695 15.4938 59.1476 14.9465 59.1476 14.2517V10.3359C59.1476 9.09384 58.5582 8.46226 57.5476 8.46226C56.5371 8.46226 55.9055 9.09384 55.9055 10.3359V14.2517C55.9055 14.9254 55.3371 15.4938 54.6634 15.4938H53.274V6.25173H53.2529Z" fill="#16205B"></path>
+<path d="M69.8203 10.1471C69.673 8.96819 68.9782 8.18924 67.8624 8.18924C66.7467 8.18924 66.0519 8.96819 65.8414 10.1471H69.8203ZM63.273 10.905V10.8629C63.273 8.23135 65.1677 6.06293 67.8624 6.06293C70.9782 6.06293 72.3888 8.46293 72.3888 11.0735C72.3888 11.284 72.3888 11.5156 72.3467 11.7682H65.8624C66.1151 12.9471 66.9572 13.5787 68.1361 13.5787C68.8309 13.5787 69.3782 13.4103 69.9256 13.0103C70.2203 12.7998 70.6203 12.8419 70.873 13.0735L71.8835 13.9577C71.0203 15.0313 69.7572 15.684 68.073 15.684C65.273 15.684 63.2098 13.7471 63.2098 10.905H63.273Z" fill="#16205B"></path>
+<path d="M80.8733 6.2522H82.4312L78.8523 15.7048C78.1365 17.5785 77.3786 18.2943 75.7996 18.2943C74.8523 18.2943 74.1365 18.0627 73.4628 17.6627L74.2417 16.0206C74.3049 15.8943 74.4523 15.8311 74.5786 15.8943C74.8733 16.0417 75.2102 16.1259 75.4628 16.1259C75.9049 16.1259 76.1575 15.9785 76.3891 15.5154L72.747 6.2522H74.2839C75.0417 6.2522 75.6944 6.73641 75.926 7.43114L77.6523 12.5469L79.3154 7.36799C79.526 6.6943 80.1575 6.2522 80.8523 6.2522H80.8733Z" fill="#16205B"></path>
+<path d="M84.4945 3.41083H85.6735C86.4945 3.41083 87.1682 4.06346 87.1682 4.88451V8.18977H92.0945V4.88451C92.0945 4.06346 92.7682 3.41083 93.5893 3.41083H94.7682V15.474H93.6314C92.7682 15.474 92.0945 14.7792 92.0945 13.9371V10.6319H87.1682V13.9371C87.1682 14.7792 86.4735 15.474 85.6314 15.474H84.4945V3.41083Z" fill="#FF4A00"></path>
+<path d="M104.073 10.905V10.8629C104.073 9.49451 103.083 8.31556 101.631 8.31556C100.178 8.31556 99.2098 9.47345 99.2098 10.8419V10.884C99.2098 12.2524 100.199 13.4313 101.652 13.4313C103.105 13.4313 104.073 12.2735 104.073 10.905ZM96.6203 10.905V10.8629C96.6203 8.21029 98.7677 6.06293 101.673 6.06293C104.578 6.06293 106.683 8.18924 106.683 10.8419V10.884C106.683 13.5366 104.536 15.684 101.631 15.684C98.7256 15.684 96.6203 13.5577 96.6203 10.905Z" fill="#FF4A00"></path>
+<path d="M135.863 6.2522H137.421L133.842 15.7048C133.126 17.5785 132.368 18.2943 130.789 18.2943C129.842 18.2943 129.126 18.0627 128.452 17.6627L129.231 16.0206C129.294 15.8943 129.442 15.8311 129.589 15.8943C129.884 16.0417 130.199 16.1259 130.473 16.1259C130.915 16.1259 131.168 15.9785 131.399 15.5154L127.757 6.2522H129.294C130.052 6.2522 130.705 6.73641 130.936 7.43114L132.663 12.5469L134.326 7.36799C134.536 6.6943 135.168 6.2522 135.863 6.2522Z" fill="#FF4A00"></path>
+<path d="M108.243 6.25173H109.99C110.495 6.25173 110.895 6.65173 110.895 7.13594V7.557C111.506 6.77805 112.285 6.08331 113.611 6.08331C115.611 6.08331 116.769 7.38858 116.769 9.51489V15.4938H115.379C114.685 15.4938 114.137 14.9465 114.137 14.2517V10.3359C114.137 9.09384 113.548 8.46226 112.537 8.46226C111.527 8.46226 110.895 9.09384 110.895 10.3359V14.2517C110.895 14.9254 110.327 15.4938 109.653 15.4938H108.264V6.25173H108.243Z" fill="#FF4A00"></path>
+<path d="M124.895 10.1471C124.747 8.96819 124.053 8.18924 122.937 8.18924C121.821 8.18924 121.126 8.96819 120.916 10.1471H124.895ZM118.326 10.905V10.8629C118.326 8.23135 120.221 6.06293 122.916 6.06293C126.032 6.06293 127.442 8.46293 127.442 11.0735C127.442 11.284 127.442 11.5156 127.4 11.7682H120.916C121.168 12.9471 122.01 13.5787 123.189 13.5787C123.884 13.5787 124.432 13.4103 124.979 13.0103C125.274 12.7998 125.674 12.8419 125.926 13.0735L126.937 13.9577C126.074 15.0313 124.81 15.684 123.126 15.684C120.326 15.684 118.263 13.7471 118.263 10.905H118.326Z" fill="#FF4A00"></path>
+</svg></a><nav aria-label="Main" class="sr-nav"><div class="sr-nav__item"><button aria-controls="mega-invest" aria-current="page" aria-expanded="false" class="sr-nav__top" type="button">Invest <svg aria-hidden="true" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><path d="m6 9 6 6 6-6"></path></svg></button><div class="sr-mega" id="mega-invest"><div class="sr-mega__col"><p class="sr-mega__h">Mutual funds</p><a class="sr-mega__link" href="../../mutual-funds/index.html"><b>Mutual Funds</b><span>All 1,774 open schemes by category</span></a><a class="sr-mega__link" href="../../mutual-funds/explore/index.html"><b>Explore Funds</b><span>Filter by category, cost and risk</span></a><a class="sr-mega__link" href="../../mutual-funds/screens/index.html"><b>Fund Screens</b><span>Ready-made lists, each with its rule</span></a><a class="sr-mega__link" href="../../mutual-funds/screener/index.html"><b>Screener</b><span>Every scheme on one table</span></a><a class="sr-mega__link" href="../../mutual-funds/amc/index.html"><b>Fund Houses</b><span>The 49 fund houses we distribute</span></a></div><div class="sr-mega__col"><p class="sr-mega__h">Beyond mutual funds</p><a class="sr-mega__link" href="../../sif/index.html"><b>SIF</b><span>Specialised Investment Funds, from ₹10,00,000</span></a><a class="sr-mega__link" href="../../gift-city-funds/index.html"><b>GIFT City Funds</b><span>Dollar funds for NRIs and residents</span></a><a class="sr-mega__link" href="../../mutual-funds/nfo/index.html"><b>New Fund Offers</b><span>Open, upcoming and recently closed</span></a><a class="sr-mega__link" href="../../mutual-funds/dividends/index.html"><b>Dividends (IDCW)</b><span>Record dates and history</span></a></div><div class="sr-mega__promo"><b>Not sure where to start?</b><p>Six questions on your goals, your debts and your nerve.</p><a class="sr-more" href="../../solutions/know-yourself/index.html">Know Yourself <svg aria-hidden="true" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a></div></div></div><div class="sr-nav__item"><button aria-controls="mega-save" aria-expanded="false" class="sr-nav__top" type="button">Save <svg aria-hidden="true" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><path d="m6 9 6 6 6-6"></path></svg></button><div class="sr-mega" id="mega-save"><div class="sr-mega__col"><p class="sr-mega__h">Fixed deposits</p><a class="sr-mega__link" href="../../fixed-deposits/index.html"><b>Fixed Deposits</b><span>FDs from banks, housing finance companies and NBFCs</span></a><a class="sr-mega__link" href="../../fixed-deposits/bank-fd-rates/index.html"><b>Compare FD Rates</b><span>Bank FD rates side by side</span></a><a class="sr-mega__link" href="../../fixed-deposits/explore/index.html"><b>FD Explorer</b><span>Filter by tenure, payout and rating</span></a><a class="sr-mega__link" href="../../fixed-deposits/guide/index.html"><b>FD Guide</b><span>Payouts, tax, early withdrawal</span></a></div><div class="sr-mega__col"><p class="sr-mega__h">Bonds</p><a class="sr-mega__link" href="../../bonds/index.html"><b>Bonds &amp; NCDs</b><span>Every bond we offer</span></a><a class="sr-mega__link" href="../../bonds/ncd/index.html"><b>NCD IPOs</b><span>Open public issues, series and ratings</span></a><a class="sr-mega__link" href="../../bonds/rbi-bonds/index.html"><b>RBI Floating Rate Bonds</b><span>Government of India, reset every six months</span></a><a class="sr-mega__link" href="../../bonds/capital-gain-bonds/index.html"><b>Capital Gain Bonds</b><span>REC, PFC and IRFC series</span></a></div><div class="sr-mega__promo"><b>Most of your savings in FDs?</b><p>See what else could sit beside them, and what it would change.</p><a class="sr-more" href="../../solutions/beyond-fixed-deposits/index.html">Beyond Fixed Deposits <svg aria-hidden="true" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a></div></div></div><div class="sr-nav__item"><button aria-controls="mega-plan" aria-expanded="false" class="sr-nav__top" type="button">Plan <svg aria-hidden="true" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><path d="m6 9 6 6 6-6"></path></svg></button><div class="sr-mega" id="mega-plan"><div class="sr-mega__col"><p class="sr-mega__h">Goals</p><a class="sr-mega__link" href="../../solutions/retirement/index.html"><b>Retirement</b><span>How much you need, and how to draw it</span></a><a class="sr-mega__link" href="../../solutions/child-education/index.html"><b>Child Education</b><span>What school and college will cost</span></a><a class="sr-mega__link" href="../../solutions/sip/index.html"><b>SIP</b><span>How much to invest each month</span></a><a class="sr-mega__link" href="../../solutions/wealth/index.html"><b>Building Wealth</b><span>A plan for money you will not touch</span></a><a class="sr-mega__link" href="../../solutions/women/index.html"><b>Women and Money</b><span>Plans that fit career breaks</span></a></div><div class="sr-mega__col"><p class="sr-mega__h">Money checks</p><a class="sr-mega__link" href="../../solutions/emergency-fund/index.html"><b>Emergency Fund</b><span>Could you pay your bills for 6 months?</span></a><a class="sr-mega__link" href="../../solutions/tax-saving/index.html"><b>Tax Saving (ELSS)</b><span>Does ELSS still save you tax?</span></a><a class="sr-mega__link" href="../../solutions/portfolio-health/index.html"><b>Portfolio Health</b><span>Is your money in the right places?</span></a><a class="sr-mega__link" href="../../solutions/nri/index.html"><b>NRI Investing</b><span>Investing in India from abroad</span></a><a class="sr-mega__link" href="../../solutions/index.html"><b>All Solutions</b><span>17 goals and checks</span></a></div><div class="sr-mega__promo"><b>Run the numbers</b><p>SIP, retirement, FD, tax regime, XIRR and 20 more calculators.</p><a class="sr-more" href="../../calculators/index.html">All Calculators <svg aria-hidden="true" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a></div></div></div><div class="sr-nav__item"><button aria-controls="mega-learn" aria-expanded="false" class="sr-nav__top" type="button">Learn <svg aria-hidden="true" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><path d="m6 9 6 6 6-6"></path></svg></button><div class="sr-mega" id="mega-learn"><div class="sr-mega__col"><p class="sr-mega__h">Read and watch</p><a class="sr-mega__link" href="../../blog/index.html"><b>Blog</b><span>Plain explainers and founder notes</span></a><a class="sr-mega__link" href="../../videos/index.html"><b>Videos and Posts</b><span>Market updates on video</span></a><a class="sr-mega__link" href="../../mutual-funds/market-outlook/index.html"><b>Market Outlook</b><span>A fund house's monthly view</span></a><a class="sr-mega__link" href="../../methodology/index.html"><b>Methodology</b><span>Where our figures come from</span></a></div><div class="sr-mega__col"><p class="sr-mega__h">Guides</p><a class="sr-mega__link" href="../../fixed-deposits/guide/index.html"><b>FD Guide</b><span>How fixed deposits work</span></a><a class="sr-mega__link" href="../../bonds/ncd/guide/index.html"><b>NCD Guide</b><span>Ratings, risks and how to apply</span></a><a class="sr-mega__link" href="../../bonds/capital-gain-bonds/guide/index.html"><b>Capital Gain Bond Guide</b><span>Who can claim, and the time limit</span></a><a class="sr-mega__link" href="../../bonds/rbi-bonds/guide/index.html"><b>RBI Bond Guide</b><span>How the rate is set</span></a></div><div class="sr-mega__promo"><b>The power of compounding in SIPs</b><p>How small monthly amounts turn into long-term wealth.</p><a class="sr-more" href="../../blog/power-of-compounding-in-sip-mutual-funds/index.html">Read the Post <svg aria-hidden="true" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a></div></div></div><div class="sr-nav__item"><a class="sr-nav__top" href="../../contact/index.html">Talk to Us</a></div></nav><div class="sr-head__end"><a class="sr-signin" href="https://inv.moneyhoney.co.in/#/investor-login">Sign In</a><a class="btn btn-primary" href="../../get-started/index.html">Get Started</a></div><details class="sr-mnav"><summary aria-label="Menu"><svg aria-hidden="true" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"></path></svg></summary><div class="sr-mnav__panel"><details><summary>Invest</summary><a href="../../mutual-funds/index.html">Mutual Funds</a><a href="../../mutual-funds/explore/index.html">Explore Funds</a><a href="../../mutual-funds/screens/index.html">Fund Screens</a><a href="../../mutual-funds/screener/index.html">Screener</a><a href="../../mutual-funds/amc/index.html">Fund Houses</a><a href="../../sif/index.html">SIF</a><a href="../../gift-city-funds/index.html">GIFT City Funds</a><a href="../../mutual-funds/nfo/index.html">New Fund Offers</a><a href="../../mutual-funds/dividends/index.html">Dividends (IDCW)</a></details><details><summary>Save</summary><a href="../../fixed-deposits/index.html">Fixed Deposits</a><a href="../../fixed-deposits/bank-fd-rates/index.html">Compare FD Rates</a><a href="../../fixed-deposits/explore/index.html">FD Explorer</a><a href="../../fixed-deposits/guide/index.html">FD Guide</a><a href="../../bonds/index.html">Bonds &amp; NCDs</a><a href="../../bonds/ncd/index.html">NCD IPOs</a><a href="../../bonds/rbi-bonds/index.html">RBI Floating Rate Bonds</a><a href="../../bonds/capital-gain-bonds/index.html">Capital Gain Bonds</a></details><details><summary>Plan</summary><a href="../../solutions/retirement/index.html">Retirement</a><a href="../../solutions/child-education/index.html">Child Education</a><a href="../../solutions/sip/index.html">SIP</a><a href="../../solutions/wealth/index.html">Building Wealth</a><a href="../../solutions/women/index.html">Women and Money</a><a href="../../solutions/emergency-fund/index.html">Emergency Fund</a><a href="../../solutions/tax-saving/index.html">Tax Saving (ELSS)</a><a href="../../solutions/portfolio-health/index.html">Portfolio Health</a><a href="../../solutions/nri/index.html">NRI Investing</a><a href="../../solutions/index.html">All Solutions</a></details><details><summary>Learn</summary><a href="../../blog/index.html">Blog</a><a href="../../videos/index.html">Videos and Posts</a><a href="../../mutual-funds/market-outlook/index.html">Market Outlook</a><a href="../../methodology/index.html">Methodology</a><a href="../../fixed-deposits/guide/index.html">FD Guide</a><a href="../../bonds/ncd/guide/index.html">NCD Guide</a><a href="../../bonds/capital-gain-bonds/guide/index.html">Capital Gain Bond Guide</a><a href="../../bonds/rbi-bonds/guide/index.html">RBI Bond Guide</a></details><details><summary>Talk to Us</summary><a href="../../contact/index.html">Contact</a><a href="tel:+917738032704">Call +91 77380 32704</a><a href="https://wa.me/917738032704">WhatsApp Us</a></details><div class="sr-mnav__cta"><a class="btn btn-secondary" href="https://inv.moneyhoney.co.in/#/investor-login">Sign In</a></div></div></details></div></div></header>
+<div class="identity">
+<div class="wrap">
+<nav aria-label="Breadcrumb" class="breadcrumb crumb">
+<a href="../../index.html">Home</a>
+<svg aria-hidden="true" fill="none" height="12" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24" width="12"><path d="m9 18 6-6-6-6"></path></svg>
+<a href="../index.html">SIF</a>
+<svg aria-hidden="true" fill="none" height="12" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24" width="12"><path d="m9 18 6-6-6-6"></path></svg>
+<span aria-current="page">qsif Equity Long-Short Fund</span>
+</nav>
+<div class="id-grid">
+<div class="id-left">
+<h1>qsif Equity Long-Short Fund</h1>
+<div class="subline">qsif SIF, the Specialised Investment Fund of Quant Money Managers. An open ended equity investment strategy investing in listed equity and equity related instruments, including limited unhedged short exposure in equity through derivative instruments.</div>
+<div class="chips">
+<span class="chip cat">Equity: Long-Short Fund</span>
+<span class="chip">Regular Plan</span>
+</div>
+</div>
+<div class="id-right">
+<div class="nav-label">NAV as on 4 Sep 2026</div>
+<div class="nav-big num">₹11.42</div>
+<div class="nav-chg up num">+0.06 (+0.53%) today</div>
+<div class="opt-note" hidden="" id="optNote"></div>
+<div aria-label="Option" class="plan-switch" role="group" style="margin-top:var(--space-3)">
+<button aria-pressed="true" class="on" data-chg="+0.06 (+0.53%)" data-nav="11.42" type="button">Growth</button><button aria-pressed="false" data-chg="+0.06 (+0.53%)" data-nav="11.42" data-note="No IDCW declared yet, so the IDCW NAV equals Growth." type="button">IDCW</button>
+</div>
+<div class="cta-row">
+<a class="btn btn-primary" href="../../contact/index.html">Start SIP</a>
+<a class="btn btn-secondary" href="../../contact/index.html">Invest Lumpsum</a>
+</div>
+</div>
+</div>
+<div class="facts">
+<div class="fact"><div class="k">Average AUM</div><div class="v num">₹578.45 Crores</div></div>
+<div class="fact"><div class="k">Inception Date</div><div class="v num">7 Oct 2025</div></div>
+<div class="fact"><div class="k">Exit Load</div><div class="v">1% within 15 days</div></div>
+<div class="fact"><div class="k">Min Investment</div><div class="v num">₹10,00,000</div></div>
+<div class="fact"><div class="k">Min SIP</div><div class="v num">₹1,000</div></div>
+</div>
+<div class="gate" role="note"><svg aria-hidden="true" class="ic" fill="none" height="16" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24" width="16"><path d="M12 3.5 2.5 20h19L12 3.5Z"></path><path d="M12 10v4.5M12 17.5v.01"></path></svg><div><b>This is a Specialised Investment Fund, not a mutual fund.</b> The minimum aggregate investment across every strategy of qsif SIF is <b>₹10,00,000 at PAN level</b> (₹1,00,000 for an accredited investor). The strategy may take <b>unhedged short exposure through derivatives</b>, risk is disclosed on a <b>risk band scale of 1 to 5</b> rather than a riskometer.</div></div>
+</div>
+</div>
+<div class="secnav">
+<div class="wrap">
+<a class="here" href="#nav-chart">NAV Chart</a>
+<a href="#performance">Performance</a>
+<a href="#riskband">Risk Band</a>
+<a href="#details">Strategy Details</a>
+<a href="#taxation">Taxation</a>
+</div>
+</div>
+<main class="wrap" id="main">
+<!-- ===================== NAV CHART ===================== -->
+<section id="nav-chart">
+<div class="sec-head">
+<h2>NAV Growth with Peer Comparison</h2>
+<div class="sec-note">The Y axis shows growth in percent from the chosen start date, so every line starts at zero and strategies with different NAVs compare fairly. Add up to six peer strategies, pick any date window, and hover to read NAV and return on each line.</div>
+</div>
+<div class="card">
+<div class="chart-controls">
+<div class="pills" id="periodPills">
+<button data-p="1M">1M</button><button data-p="3M">3M</button><button data-p="6M">6M</button>
+<button data-p="1Y">1Y</button><button data-p="3Y">3Y</button><button data-p="5Y">5Y</button>
+<button data-p="10Y">10Y</button><button data-p="15Y">15Y</button><button class="on" data-p="SA">Since Allotment</button>
+</div>
+<div class="daterange">
+<label>From <input id="dFrom" type="date"/></label>
+<label>To <input id="dTo" type="date"/></label>
+<button class="btn btn-secondary" id="dApply">Apply</button>
+</div>
+</div>
+<div class="series-row">
+<div class="series-chips" id="seriesChips"></div>
+<select aria-label="Add a strategy to compare" class="addscheme" id="addScheme"></select>
+</div>
+<div class="chart-wrap">
+<svg aria-label="NAV growth chart" class="svgchart" height="380" id="navchart" preserveaspectratio="none" style="height:380px" viewbox="0 0 1080 380" width="100%"></svg>
+<div class="tip" id="navTip"></div>
+</div>
+<div class="chart-foot">
+<div class="chart-stats num" id="chartStats"></div>
+</div>
+</div>
+</section>
+<!-- ===================== PERFORMANCE WORKBENCH ===================== -->
+<section id="performance">
+<div class="sec-head">
+<h2>Performance Workbench</h2>
+</div>
+<div class="card perf-card">
+<div class="tabs" id="perfTabs">
+<button class="on" data-t="lumpsum">Lumpsum</button>
+<button data-t="cy">Calendar Year</button>
+<button data-t="rolling">Rolling Returns</button>
+<button data-t="mdd">Max Drawdown</button>
+<button data-t="sip">SIP Returns</button>
+<button data-t="incsip">SIP Top-up Returns</button>
+<button data-t="bb">Bull and Bear</button>
+<button data-t="swp">SWP Working</button>
+<button data-t="idcw">IDCW History</button>
+</div>
+<!-- ============ TAB: LUMPSUM ============ -->
+<div class="tabpanel show" id="tab-lumpsum">
+<div class="calc" style="margin-bottom:20px">
+<div>
+<h4 class="calc-title">Lumpsum Returns Calculator</h4>
+<div class="calc-row">
+<span class="lab">One-Time Investment (SIF Minimum ₹10,00,000)</span>
+<span class="val num" id="calcAmtVal">₹10,00,000</span>
+</div>
+<input aria-label="Investment amount" class="slider" id="calcAmt" max="50000000" min="1000000" step="100000" type="range" value="1000000"/>
+<div class="calc-row">
+<span class="lab">Investment Period</span>
+<div class="pills" id="calcPills">
+<button data-y="ytd">YTD</button><button data-y="1m">1M</button><button data-y="3m">3M</button><button data-y="6m">6M</button>
+<button data-y="1" disabled="" title="Strategy allotted 7 Oct 2025, history is shorter than 1Y">1Y</button>
+<button data-y="2" disabled="" title="Strategy allotted 7 Oct 2025, history is shorter than 2Y">2Y</button>
+<button data-y="3" disabled="" title="Strategy allotted 7 Oct 2025, history is shorter than 3Y">3Y</button>
+<button data-y="5" disabled="" title="Strategy allotted 7 Oct 2025, history is shorter than 5Y">5Y</button>
+<button data-y="7" disabled="" title="Strategy allotted 7 Oct 2025, history is shorter than 7Y">7Y</button>
+<button data-y="10" disabled="" title="Strategy allotted 7 Oct 2025, history is shorter than 10Y">10Y</button>
+<button data-y="15" disabled="" title="Strategy allotted 7 Oct 2025, history is shorter than 15Y">15Y</button>
+<button class="on" data-y="si">Since Launch</button>
+</div>
+</div>
+<div class="calc-disc">Disclaimer: Products compared, such as fixed deposits, pay a fixed rate of interest. SIF investments are subject to market risks<span id="discMore" style="display:none"> and do not guarantee returns. Projections use past trailing returns of each option for the selected horizon and are not indicative of future results</span>. <button class="linkbtn" id="discToggle" type="button">Read more</button></div>
+</div>
+<div class="calc-out">
+<svg class="svgchart" height="250" id="calcChart" preserveaspectratio="xMidYMid meet" style="height:250px" viewbox="0 0 480 250" width="100%"></svg>
+<div class="calc-legend">
+<div class="row"><span class="k"><span class="sq" style="background:var(--chart-other)"></span>Total Investment</span><span class="v num" id="calcInv"></span></div>
+<div class="row"><span class="k"><span class="sq" style="background:var(--chart-1)"></span>Profit</span><span class="v num" id="calcProfit"></span></div>
+<div class="row total"><span class="k">Total Corpus</span><span class="v num" id="calcCorpus"></span></div>
+<div class="row ret" id="calcRetRow"><span class="k">Returns</span><span class="v num" id="calcRet"></span></div>
+</div>
+</div>
+</div>
+<div class="scrollx">
+<table class="data">
+<tr>
+<th></th><th>YTD</th><th>1M</th><th>3M</th><th>6M</th>
+<th>1Y</th><th>2Y</th><th>3Y</th><th>5Y</th><th>10Y</th><th>15Y</th><th>Since Launch</th>
+</tr>
+<tr class="hl">
+<td>qsif Equity Long-Short Fund</td>
+<td class="up">6.42</td><td class="up">1.08</td><td class="up">3.31</td><td class="up">5.90</td>
+<td class="na">n.a.</td><td class="na">n.a.</td><td class="na">n.a.</td><td class="na">n.a.</td><td class="na">n.a.</td><td class="na">n.a.</td><td class="up">14.20</td>
+</tr>
+<tr class="soft">
+<td>Equity Long-Short Category Average</td>
+<td>5.10</td><td>0.92</td><td>2.64</td><td>4.71</td>
+<td class="na">n.a.</td><td class="na">n.a.</td><td class="na">n.a.</td><td class="na">n.a.</td><td class="na">n.a.</td><td class="na">n.a.</td><td>11.80</td>
+</tr>
+<tr class="soft">
+<td>₹10,00,000 Grew to (₹)</td>
+<td class="num">10,64,200</td><td class="num">10,10,800</td><td class="num">10,33,100</td><td class="num">10,59,000</td>
+<td></td><td></td><td></td><td></td><td></td><td></td><td class="num">11,42,000</td>
+</tr>
+</table>
+</div>
+<div class="tab-note">YTD to 6M are absolute, 1Y onward are annualised. This strategy was allotted on 7 Oct 2025, so every window of a year or more reads n.a. rather than a blank; a reader should never mistake a missing number for a zero.</div>
+</div>
+<!-- ============ TAB: CALENDAR YEAR ============ -->
+<div class="tabpanel" id="tab-cy">
+<div class="calc" style="margin-bottom:20px">
+<div>
+<h4 class="calc-title">Calendar Year Returns Calculator</h4>
+<div class="calc-row">
+<span class="lab">Investment at the Start</span>
+<span class="val num" id="cyAmtVal">₹10,00,000</span>
+</div>
+<input aria-label="Investment amount" class="slider" id="cyAmt" max="50000000" min="1000000" step="100000" type="range" value="1000000"/>
+<div class="calc-row">
+<span class="lab">Calendar Years</span>
+<div class="pills" id="cyPills">
+<button data-y="2025">2025 (From 07 Oct)</button><button class="on" data-y="2026">2026 YTD</button>
+</div>
+</div>
+<div class="calc-disc">Each option grows at its own return for the selected calendar year. SIF investments are subject to market risks; past calendar year returns do not repeat on schedule.</div>
+</div>
+<div class="calc-out">
+<svg class="svgchart" height="250" id="cyChart" preserveaspectratio="xMidYMid meet" style="height:250px" viewbox="0 0 480 250" width="100%"></svg>
+<div class="calc-legend">
+<div class="row"><span class="k"><span class="sq" style="background:var(--chart-other)"></span>Total Investment</span><span class="v num" id="cyInv"></span></div>
+<div class="row"><span class="k"><span class="sq" style="background:var(--chart-1)"></span>Profit</span><span class="v num" id="cyProfit"></span></div>
+<div class="row total"><span class="k">Total Corpus</span><span class="v num" id="cyCorpus"></span></div>
+<div class="row ret" id="cyRetRow"><span class="k">Returns</span><span class="v num" id="cyRet"></span></div>
+</div>
+</div>
+</div>
+<div class="scrollx">
+<table class="data">
+<tr><th>Year</th><th>Strategy Return (%)</th><th>Category Avg (%)</th><th>Fixed Deposit (%)</th><th>Gold (%)</th></tr>
+<tr><td class="num">2026 YTD</td><td class="up num">6.42</td><td class="num">5.10</td><td class="num">4.40</td><td class="num">9.50</td></tr>
+<tr><td class="num">2025 (from 07 Oct)</td><td class="up num">7.31</td><td class="num">6.35</td><td class="num">1.60</td><td class="num">3.40</td></tr>
+</table>
+</div>
+</div>
+<!-- ============ TAB: ROLLING RETURNS ============ -->
+<div class="tabpanel" id="tab-rolling">
+<div class="chart-controls">
+<div class="pills" id="rollPills">
+<button class="on" data-r="1">1 Year Rolling</button>
+<button data-r="3">3 Years Rolling</button>
+<button data-r="5">5 Years Rolling</button>
+<button data-r="7">7 Years Rolling</button>
+<button data-r="10">10 Years Rolling</button>
+</div>
+<div class="legend"><span id="rollObsNote"></span></div>
+</div>
+<div class="series-row">
+<div class="series-chips" id="rollChips"></div>
+<select aria-label="Add a strategy to compare rolling returns" class="addscheme" id="rollAdd"></select>
+</div>
+<div id="rollNA"></div>
+<div id="rollBody">
+<div class="chart-wrap chart-box">
+<h4 id="rollChartTitle" style="margin-bottom:var(--space-2)"></h4>
+<svg class="svgchart" height="300" id="rollchart" preserveaspectratio="none" style="height:300px" viewbox="0 0 1080 300" width="100%"></svg>
+<div class="tip" id="rollTip"></div>
+</div>
+<div class="subblock flush" style="margin-top:0">
+<h4>Distribution, Key Parameters and Return Consistency</h4>
+<div class="scrollx" style="margin-top:var(--space-2)">
+<table class="data" id="rollTable"></table>
+</div>
+<div class="tab-note" id="rollCommonNote"></div>
+</div>
+<div class="subblock">
+<h4>How to Read This</h4>
+<div class="tab-note" style="margin-top:var(--space-2)">Rolling returns remove start date luck: every possible entry date is one observation, and every selected strategy is measured over the same set of dates so the observation counts match. Longer holding windows squeeze the range of outcomes; watch the minimum column and the loss probability fall as the window grows.</div>
+</div>
+</div>
+</div>
+<!-- ============ TAB: MAX DRAWDOWN ============ -->
+<div class="tabpanel" id="tab-mdd">
+<div class="tab-note" style="margin:0 0 var(--space-3);max-width:none">Drawdown is the fall from the running all time high (ATH) within the chosen window; 0% means the scheme is at a new high that day. It answers the question investors actually feel: how deep was the worst dip, and how long did it take to climb out?</div>
+<div class="chart-controls">
+<div class="pills" id="ddPills">
+<button data-p="1M">1M</button><button data-p="3M">3M</button><button data-p="6M">6M</button>
+<button data-p="1Y">1Y</button><button data-p="3Y">3Y</button><button data-p="5Y">5Y</button>
+<button data-p="10Y">10Y</button><button data-p="15Y">15Y</button><button class="on" data-p="SA">Since Allotment</button>
+</div>
+<div class="daterange">
+<label>From <input id="ddFrom" type="date"/></label>
+<label>To <input id="ddTo" type="date"/></label>
+<button class="btn btn-secondary" id="ddApply">Apply</button>
+</div>
+</div>
+<div class="series-row">
+<div class="series-chips" id="ddChips"></div>
+<select aria-label="Add a strategy to the drawdown chart" class="addscheme" id="ddAdd"></select>
+</div>
+<div class="chart-wrap">
+<svg aria-label="Drawdown chart" class="svgchart" height="360" id="ddchart" preserveaspectratio="none" style="height:360px" viewbox="0 0 1080 360" width="100%"></svg>
+<div class="tip" id="ddTip"></div>
+</div>
+<div class="subblock">
+<h4>Max Drawdown Across Standard Periods</h4>
+<div class="scrollx" style="margin-top:var(--space-2)"><table class="data" id="ddHorizon"></table></div>
+<div class="tab-note">Each period runs back from the latest NAV date, with the all time high resetting at the period start, the same method as the chart above. Periods longer than a scheme's history read n.a. so a missing number is never mistaken for a small drawdown. Add or remove schemes on the chart and this table follows.</div>
+</div>
+<div class="chart-foot">
+<div></div>
+<div>Computed from the same daily NAV feed as the growth chart. ATH resets at the window start.</div>
+</div>
+</div>
+<!-- ============ TAB: SIP ============ -->
+<div class="tabpanel" id="tab-sip">
+<div class="chart-controls">
+<div class="daterange">
+<label>Monthly SIP (₹) <input id="sipAmt" min="500" step="500" type="number" value="10000"/></label>
+</div>
+<div class="pills" id="sipPills">
+<button data-p="1M">1M</button><button data-p="3M">3M</button><button data-p="6M">6M</button>
+<button data-p="1Y" disabled="" title="Strategy allotted 7 Oct 2025, history is shorter than 1Y">1Y</button>
+<button data-p="2Y" disabled="" title="Strategy allotted 7 Oct 2025, history is shorter than 2Y">2Y</button>
+<button data-p="3Y" disabled="" title="Strategy allotted 7 Oct 2025, history is shorter than 3Y">3Y</button>
+<button data-p="5Y" disabled="" title="Strategy allotted 7 Oct 2025, history is shorter than 5Y">5Y</button>
+<button data-p="7Y" disabled="" title="Strategy allotted 7 Oct 2025, history is shorter than 7Y">7Y</button>
+<button data-p="10Y" disabled="" title="Strategy allotted 7 Oct 2025, history is shorter than 10Y">10Y</button>
+<button data-p="15Y" disabled="" title="Strategy allotted 7 Oct 2025, history is shorter than 15Y">15Y</button>
+<button class="on" data-p="SI">Since Inception</button>
+</div>
+</div>
+<div class="subblock flush">
+<h4>Growth of the SIP, Month by Month</h4>
+<div class="legend" id="sipLegend" style="margin:var(--space-2) 0"></div>
+<div class="chart-wrap">
+<svg class="svgchart" height="330" id="sipchart" preserveaspectratio="none" style="height:330px" viewbox="0 0 1080 330" width="100%"></svg>
+<div class="tip" id="sipTip"></div>
+</div>
+</div>
+<div class="subblock">
+<h4>SIP Versus Traditional Options</h4>
+<div class="scrollx" style="margin-top:var(--space-2)">
+<table class="data" id="sipCmpTable"></table>
+</div>
+<details class="ledger">
+<summary>Monthly SIP Ledger<span class="meta" id="sipLedgerNote"></span></summary>
+<div class="ledger-scroll"><table class="data" id="sipLedger"></table></div>
+</details>
+<div class="tab-note">Post Office and SBI recurring deposits compound at their published rates. Gold uses the domestic price series. Every option receives the same instalments on the same dates, so the finishing values are directly comparable.</div>
+</div>
+</div>
+<!-- ============ TAB: SIP TOP-UP ============ -->
+<div class="tabpanel" id="tab-incsip">
+<div class="edu">
+<p><b>Top-up SIP</b> (also called step-up or incremental SIP) raises the monthly amount by a fixed percentage once a year, the same way a salary rises. The plan keeps pace with income instead of staying frozen at the amount chosen on day one.</p>
+</div>
+<div class="chart-controls">
+<div class="daterange">
+<label>Starting Monthly SIP (₹) <input id="tuAmt" min="500" step="500" type="number" value="10000"/></label>
+<label>Top-up Every Year
+            <select class="sortsel" id="tuPct">
+<option value="5">5%</option><option selected="" value="10">10%</option><option value="15">15%</option><option value="20">20%</option><option value="25">25%</option>
+</select>
+</label>
+</div>
+<div class="pills" id="tuPills">
+<button data-p="2Y" disabled="" title="Strategy allotted 7 Oct 2025, history is shorter than 2Y">2Y</button>
+<button data-p="3Y" disabled="" title="Strategy allotted 7 Oct 2025, history is shorter than 3Y">3Y</button>
+<button data-p="5Y" disabled="" title="Strategy allotted 7 Oct 2025, history is shorter than 5Y">5Y</button>
+<button data-p="7Y" disabled="" title="Strategy allotted 7 Oct 2025, history is shorter than 7Y">7Y</button>
+<button data-p="10Y" disabled="" title="Strategy allotted 7 Oct 2025, history is shorter than 10Y">10Y</button>
+<button data-p="15Y" disabled="" title="Strategy allotted 7 Oct 2025, history is shorter than 15Y">15Y</button>
+<button class="on" data-p="SI">Since Inception</button>
+</div>
+</div>
+<div id="tuNA"></div>
+<div id="tuBody">
+<div class="subblock flush">
+<h4>Growth of the Top-up SIP Against the Plain SIP</h4>
+<div class="legend" style="margin:var(--space-2) 0">
+<div class="lg"><span class="sw area" style="background:var(--chart-other)"></span>Amount Invested, Top-up</div>
+<div class="lg"><span class="sw" style="background:var(--chart-4)"></span>Amount Invested, Plain</div>
+<div class="lg"><span class="sw" style="background:var(--chart-1)"></span>Fund Value, Top-up SIP</div>
+<div class="lg"><span class="sw" style="background:var(--chart-3)"></span>Fund Value, Plain SIP</div>
+</div>
+<div class="chart-wrap">
+<svg class="svgchart" height="330" id="incchart" preserveaspectratio="none" style="height:330px" viewbox="0 0 1080 330" width="100%"></svg>
+<div class="tip" id="incTip"></div>
+</div>
+<details class="ledger">
+<summary>Top-up SIP Ledger<span class="meta">investment date, amount, NAV, units, total units, value</span></summary>
+<div class="ledger-scroll"><table class="data" id="incLedger"></table></div>
+</details>
+</div>
+<div class="subblock">
+<h4>Plain SIP Versus Top-up SIP, Same Fund, Same Dates</h4>
+<div class="scrollx" style="margin-top:var(--space-2)">
+<table class="data" id="tuTable"></table>
+</div>
+<div class="tab-note">The XIRR of the top-up plan is usually a touch lower because more of its money arrives in later years. What matters to the household is the wealth row: the bigger cheques land exactly when the family can afford them.</div>
+</div>
+<div class="subblock">
+<h4>Monthly SIP Amount, Year by Year</h4>
+<div class="yeargrid" id="incYearGrid"></div>
+</div>
+</div>
+</div>
+<!-- ============ TAB: BULL AND BEAR ============ -->
+<div class="tabpanel" id="tab-bb">
+<div class="edu">
+<p><b>Bull market:</b> when the broad market like SENSEX goes up or rallies higher. <b>Bear market:</b> when the broad market like SENSEX goes down.</p>
+<p>There are broadly 3 possibilities of returns when you invest through SIP:</p>
+<ol class="threeways">
+<li>Negative returns when you invest only in the bear phase and withdraw money immediately after a run of negative returns.</li>
+<li>Positive returns when you invest throughout the bull and bear phase.</li>
+<li>Positive returns when you invest only in the bear phase but do not withdraw money.</li>
+</ol>
+</div>
+<div class="chart-controls" style="margin-bottom:var(--space-3)">
+<div class="daterange"><label>Bear Market
+          <select class="sortsel" id="bbSelect">
+<option selected="" value="0">Jan 2005 to Mar 2009, global financial crisis cycle</option>
+<option value="1">Jan 2008 to Mar 2009, the crash year</option>
+<option value="2">Nov 2010 to Dec 2011, rate hike slowdown</option>
+</select>
+</label></div>
+<div class="legend">Monthly SIP ₹10,000. Bull phase in the working runs from the bear's end to Dec 2018. The dashed box on the chart marks the phase used in the table.</div>
+</div>
+<div class="bb-chart-card">
+<h4>S&amp;P BSE SENSEX Since 1997, Monthly Closes on a Log Scale, with Bull and Bear Phases Marked</h4>
+<div class="chart-wrap">
+<svg class="svgchart" height="400" id="bbSensex" preserveaspectratio="none" style="height:400px" viewbox="0 0 1080 400" width="100%"></svg>
+<div class="tip" id="bbSxTip"></div>
+</div>
+<div class="bb-legend">
+<div class="lg"><span class="sw bear"></span>Bear phase, fall from the peak marked</div>
+<div class="lg"><span class="sw bull"></span>Bull phase</div>
+<div class="lg"><span class="sw sel"></span>Phase used in the working below</div>
+</div>
+</div>
+<div class="scrollx">
+<table class="data" id="bbTable"></table>
+</div>
+<div class="tab-note" id="bbNote"></div>
+</div>
+<!-- ============ TAB: SWP ============ -->
+<div class="tabpanel" id="tab-swp">
+<div class="chart-controls">
+<div class="pills" id="swpPills">
+<button data-s="5">5 Years Plan</button>
+<button data-s="10">10 Years Plan</button>
+<button data-s="15">15 Years Plan</button>
+<button class="on" data-s="20">20 Years Plan</button>
+<button data-s="25">25 Years Plan</button>
+<button data-s="30">30 Years Plan</button>
+<button data-s="35">35 Years Plan</button>
+<button data-s="40">40 Years Plan</button>
+</div>
+<div class="legend legend-text">A generic <span class="swpYrs">20</span> year equity path, not this strategy: investment <b class="num">₹10,00,000</b> on <span id="swpInvD">1 Sep 2000</span>, withdrawals from <span id="swpFirstD">1 Sep 2001</span>, monthly amount steps up 6% every year. Click any row for its detailed working. qsif Equity Long-Short Fund has 11 months of life, far too short for a <span class="swpYrs">20</span> year SWP, so this block shows the mechanics on a long horizon and the calculator below runs on the strategy itself.</div>
+</div>
+<div class="scrollx">
+<table class="data" id="swpTable"></table>
+</div>
+<div class="subblock two-col">
+<div class="card tinted">
+<h4 id="swpDetailTitle">Detailed Working</h4>
+<table class="kv" id="swpDetailKV" style="margin-top:var(--space-2)"></table>
+</div>
+<div>
+<h4>Monthly Withdrawal Amount, Year by Year</h4>
+<div class="tab-note" id="swpYearNote" style="margin:var(--space-2) 0 var(--space-1)"></div>
+<div class="yeargrid" id="swpYearGrid"></div>
+</div>
+</div>
+<details class="ledger">
+<summary id="swpLedgerSummary">Monthly Withdrawal History<span class="meta">NAV, units redeemed, cash flow, capital gain and balance value, row by row</span></summary>
+<div class="ledger-scroll"><table class="data" id="swpLedger"></table></div>
+</details>
+<div class="subblock">
+<h4>Run Your Own SWP on This Scheme</h4>
+<div class="tab-note" style="margin:var(--space-2) 0 var(--space-3)">Runs on the simulated qsif Equity Long-Short Fund NAV path, from any investment date after allotment (7 Oct 2025) to the latest date. Pick the amounts and dates; the working updates instantly. An SWP over a window this short is shown for mechanics, not as a retirement plan.</div>
+<div class="chart-controls" style="margin-bottom:var(--space-3)">
+<div class="daterange" style="row-gap:var(--space-2)">
+<label>Investment (₹) <input id="cswpAmt" min="10000" step="10000" type="number" value="1000000"/></label>
+<label>Investment Date <input id="cswpInv" type="date"/></label>
+<label>Monthly Withdrawal (₹) <input id="cswpW" min="500" step="500" type="number" value="8000"/></label>
+<label>Annual Increase <select class="sortsel" id="cswpStep"><option selected="" value="0">0%</option><option value="6">6%</option><option value="10">10%</option><option value="custom">Enter Manually</option></select><input aria-label="Annual increase in percent" class="step-custom" hidden="" id="cswpStepC" max="50" min="0" step="0.5" type="number" value="8"/><span class="step-unit" hidden="">%</span></label>
+<label>First Withdrawal <input id="cswpStart" type="date"/></label>
+</div>
+</div>
+<div id="cswpMsg"></div>
+<div class="two-col">
+<div class="card tinted" id="cswpCard">
+<h4>Your SWP Working</h4>
+<table class="kv" id="cswpOut" style="margin-top:var(--space-2)"></table>
+</div>
+<div class="cswp-right">
+<details class="ledger" open="">
+<summary>Withdrawal History<span class="meta" id="cswpLedgerNote"></span></summary>
+<div class="ledger-scroll"><table class="data" id="cswpLedger"></table></div>
+</details>
+</div>
+</div>
+</div>
+<div class="tab-note">Each ledger row shows the NAV on the withdrawal date, units redeemed, cumulative units left, cash flow to the investor, remaining principal, capital gain on the redemption, days invested and the market value of the balance. This is the working an advisor walks a retiree through, line by line.</div>
+</div>
+<!-- ============ TAB: IDCW ============ -->
+<div class="tabpanel" id="tab-idcw">
+<div class="empty" style="margin-top:0"><b>No IDCW declared yet.</b><br/>The strategy was allotted on 7 Oct 2025 and has not declared a distribution. Record dates, NAV on the record date, amount per unit and the yield on NAV will appear here once the first distribution is announced.</div>
+</div>
+</div>
+</section>
+<!-- ===================== SCHEME DETAILS (AMFI SSD, all fields) ===================== -->
+<!-- ===================== SIF RISK BAND ===================== -->
+<section id="riskband">
+<div class="sec-head">
+<h2>Risk Band</h2>
+</div>
+<div class="card">
+<div class="bandgrid">
+<div class="bandbox">
+<div class="risk-title">Risk Band as on Date</div>
+<svg aria-label="Risk band as on date: band 3 of 5" class="bandscale" id="rbNow" style="aspect-ratio:280/130" viewbox="0 0 280 130"></svg>
+<span class="band-val">Risk band level 3 of 5</span>
+<div class="risk-text">Moderate risk on the SIF scale</div>
+</div>
+<div class="bandbox">
+<div class="risk-title">Risk Band at the Time of Launch</div>
+<svg aria-label="Risk band at launch: band 5 of 5" class="bandscale" id="rbLaunch" style="aspect-ratio:280/130" viewbox="0 0 280 130"></svg>
+<span class="band-val">Risk band level 5 of 5</span>
+<div class="risk-text">Highest risk on the SIF scale</div>
+</div>
+<div class="bandref">
+<table class="kv">
+<tr><td>Risk Band at the Time of Launch</td><td>Band 5 of 5, highest</td></tr>
+<tr><td>Risk Band as on Date</td><td>Band 3 of 5, moderate</td></tr>
+<tr><td>Change Since Launch</td><td>Reduced by two bands</td></tr>
+<tr><td>Potential Risk Class as on Date</td><td>N.A. as filed (applies to debt oriented strategies)</td></tr>
+<tr><td>Risk Band Scale</td><td class="plain">1, 2, 3, 4, 5 where 5 is the highest risk</td></tr>
+</table>
+</div>
+</div>
+</div>
+</section>
+<!-- ============ STRATEGY DETAILS (AMFI SSD, all fields) ============ -->
+<section id="details">
+<div class="sec-head">
+<h2>Strategy Details</h2>
+</div>
+<div class="card docs-card">
+<div>
+<h3>Strategy Documents</h3>
+<div class="tab-note" style="margin:0">Read all strategy related documents carefully before investing.</div>
+</div>
+<div class="btns">
+<a class="btn btn-primary" href="https://portal.amfiindia.com/spages/S-1.pdf" rel="noopener" target="_blank"><svg aria-hidden="true" fill="none" height="16" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24" width="16"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8l-5-5Z"></path><path d="M14 3v5h5M9 13h6M9 17h6"></path></svg>Scheme Information Document (SID)</a>
+<a class="btn btn-secondary" href="https://www.quantmutual.com" rel="noopener" target="_blank">KIM, SAI and Factsheet on the AMC Site<svg aria-hidden="true" fill="none" height="16" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24" width="16"><path d="M14 4h6v6M20 4l-9 9M18 14v4a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4"></path></svg></a>
+</div>
+</div>
+<div class="two-col">
+<div class="card">
+<h3>Strategy Identity</h3>
+<table class="kv">
+<tr><td>Strategy Name</td><td>qsif Equity Long-Short Fund</td></tr>
+<tr><td>Specialised Investment Fund</td><td>qsif SIF</td></tr>
+<tr><td>Sponsoring Asset Manager</td><td>Quant Money Managers Limited</td></tr>
+<tr><td>Strategy Type</td><td>Open Ended</td></tr>
+<tr><td>Category as per SEBI SIF Framework</td><td>Equity Oriented Investment Strategies – Equity Long-Short Fund</td></tr>
+<tr><td>Risk Band at the Time of Launch</td><td>Band 5 of 5 <span class="badge">See Scale Above</span></td></tr>
+<tr><td>Risk Band as on Date</td><td>Band 3 of 5</td></tr>
+<tr><td>Potential Risk Class as on Date</td><td>N.A. (not applicable, equity oriented strategy)</td></tr>
+<tr><td>Face Value</td><td class="num">₹10 per unit</td></tr>
+<tr><td>SEBI Code</td><td class="num">QSIF/O/E/ELSF/25/07/0001/QNTM</td></tr>
+<tr><td>RTA Code</td><td class="num">905</td></tr>
+<tr><td>Maturity Date (For Close Ended Strategies)</td><td>NA</td></tr>
+</table>
+</div>
+<div class="card">
+<h3>Key Dates</h3>
+<table class="kv">
+<tr><td>NFO Open Date</td><td class="num">17 Sep 2025</td></tr>
+<tr><td>NFO Close Date</td><td class="num">1 Oct 2025</td></tr>
+<tr><td>Inception Date</td><td class="num">7 Oct 2025</td></tr>
+<tr><td>Reopen Date for Continuous Sale and Repurchase</td><td class="num">8 Oct 2025</td></tr>
+<tr><td>Track Record as on 4 Sep 2026</td><td class="num">11 months</td></tr>
+</table>
+<h3 class="mt-5">Strategy Management</h3>
+<table class="kv">
+<tr><td>Fund Manager Name</td><td>Sandeep Tandon</td></tr>
+<tr><td>Fund Manager Type</td><td>Primary</td></tr>
+<tr><td>Fund Manager From Date</td><td class="num">7 Oct 2025, since allotment</td></tr>
+</table>
+<h3 class="mt-5">Average AUM, AMFI Quarterly Disclosure</h3>
+<div class="scrollx">
+<table class="data">
+<tr><th>Quarter</th><th>Average AUM</th></tr>
+<tr class="hl"><td>Apr to Jun 2026</td><td class="num">₹578.45 Crores</td></tr>
+</table>
+</div>
+</div>
+</div>
+<div class="two-col mt-5">
+<div class="card">
+<h3>Objective, Allocation and Benchmark</h3>
+<table class="kv">
+<tr><td>Description / Objective of the Strategy</td><td class="plain">To generate long-term capital appreciation by investing in a diversified portfolio of equity and equity-related instruments while employing limited short exposure through derivatives to enhance returns and manage risk efficiently. There is no assurance that the investment objective of the investment strategy will be achieved.</td></tr>
+<tr><td>Strategy Type Description</td><td class="plain">An open ended equity investment strategy investing in listed equity and equity related instruments including limited short exposure in equity through derivative instruments.</td></tr>
+<tr><td>Stated Asset Allocation</td><td class="plain nest">
+<div class="scrollx">
+<table class="data">
+<tr><th>Instrument</th><th>Indicative Range</th></tr>
+<tr><td>Equity and equity related instruments, including the unhedged short exposure</td><td class="num">80% to 100%</td></tr>
+<tr><td>Debt and money market instruments</td><td class="num">0% to 20%</td></tr>
+<tr><td>Units issued by InvITs</td><td class="num">0% to 20%</td></tr>
+</table>
+</div>
+</td></tr>
+<tr><td>Benchmark Tier 1</td><td>NIFTY 500 Total Return Index (TRI)</td></tr>
+<tr><td>Benchmark Tier 2</td><td>–</td></tr>
+<tr><td>Swing Pricing (If Applicable)</td><td>N.A. as filed</td></tr>
+<tr><td>Side Pocketing (If Applicable)</td><td>N.A. as filed</td></tr>
+<tr><td>Listing Details</td><td>N.A. as filed, not listed</td></tr>
+</table>
+</div>
+<div>
+<div class="card" style="margin-bottom:var(--space-5)">
+<h3>Expenses and Exit Load</h3>
+<table class="kv">
+<tr><td>Annual Expense, Stated Maximum</td><td class="num plain">Regular 4.25%, Direct 2.89%</td></tr>
+<tr><td>Exit Load (If Applicable)</td><td class="plain">1% if redeemed or switched out on or before completion of 15 days from the date of allotment of units.<br/>No exit load is payable if units are redeemed or switched out after 15 days from the date of allotment.</td></tr>
+<tr><td>Entry Load</td><td class="plain">Not applicable</td></tr>
+</table>
+</div>
+<div class="card">
+<h3>Service Providers</h3>
+<table class="kv">
+<tr><td>Custodian</td><td>HDFC Bank Limited</td></tr>
+<tr><td>Auditor</td><td>M M Nissim &amp; Co. LLP</td></tr>
+<tr><td>Registrar</td><td>KFin Technologies Limited</td></tr>
+</table>
+</div>
+</div>
+</div>
+<div class="two-col mt-5">
+<div class="card">
+<h3>Transaction Limits</h3>
+<table class="kv">
+<tr><td>Minimum Aggregate Investment Across All Strategies of the SIF, at PAN Level</td><td class="plain"><b>₹10,00,000</b>. For an accredited investor, not less than ₹1,00,000.</td></tr>
+<tr><td>Minimum Application Amount</td><td class="num">₹10,00,000</td></tr>
+<tr><td>Minimum Application Amount, in Multiples of</td><td class="num">₹1</td></tr>
+<tr><td>Minimum Additional Amount</td><td class="num">₹1,000</td></tr>
+<tr><td>Minimum Additional Amount, in Multiples of</td><td class="num">₹1</td></tr>
+<tr><td>Minimum Redemption Amount</td><td class="num">₹1,000</td></tr>
+<tr><td>Minimum Redemption Amount in Units</td><td>NA</td></tr>
+<tr><td>Minimum Balance Amount</td><td class="plain">Governed by the ₹10,00,000 PAN level aggregate above</td></tr>
+<tr><td>Maximum Investment Amount</td><td>N.A. as filed</td></tr>
+<tr><td>Minimum Switch Amount</td><td class="plain">Switch-in ₹1,000 and in multiples of ₹1 thereafter; switch-out ₹1,000 and in multiples of ₹1 thereafter</td></tr>
+<tr><td>Switch Multiple Amount</td><td class="num">₹1</td></tr>
+<tr><td>Maximum Switch Amount</td><td>NA</td></tr>
+</table>
+<div class="short-note"><b>Read the first row carefully.</b> The ₹10,00,000 floor is not per strategy, it is the aggregate an investor must hold across every strategy offered by qsif SIF, measured at PAN level. Redeeming below that aggregate is what the SIF framework restricts, which is why the minimum additional and minimum redemption amounts can be as small as ₹1,000.</div>
+</div>
+<div class="card">
+<h3>SIP, STP and SWP Facility</h3>
+<div class="scrollx">
+<table class="data">
+<tr><th>Detail</th><th>SIP</th><th>STP</th><th>SWP</th></tr>
+<tr><td>Frequency</td><td>Weekly, Fortnightly, Monthly, Quarterly</td><td>Daily, Weekly, Fortnightly, Monthly, Quarterly</td><td>Monthly, Quarterly</td></tr>
+<tr><td>Minimum Amount</td><td class="num">₹1,000</td><td class="num">₹1,000</td><td class="num">₹1,000</td></tr>
+<tr><td>In Multiples of</td><td class="num">₹1</td><td class="num">₹1</td><td class="num">₹1</td></tr>
+<tr><td>Minimum Instalments</td><td class="num">6</td><td class="num">6</td><td class="num">6</td></tr>
+<tr><td>Dates</td>
+<td>Weekly: Wednesday.<br/>Fortnightly: alternate Wednesday.<br/>Monthly: any day, 1st to 28th.<br/>Quarterly: any day, 1st to 28th of the quarter.</td>
+<td>Daily: every business day.<br/>Weekly: Wednesday.<br/>Fortnightly: alternate Wednesday.<br/>Monthly and Quarterly: 1, 5, 10, 15, 20, 25.</td>
+<td>Monthly: 1, 5, 10, 15, 20, 25.<br/>Quarterly: 1, 5, 10, 15, 20, 25.</td></tr>
+<tr><td>Maximum Amount (If Any)</td><td>NA</td><td>NA</td><td>NA</td></tr>
+</table>
+</div>
+</div>
+</div>
+</section>
+<section id="taxation">
+<div class="sec-head">
+<h2>Taxation</h2>
+<p class="tax-lede">How gains and payouts are taxed for resident individual investors in tax year 2026-27.</p>
+</div>
+<div class="tax-demo" hidden="" id="taxDemoBar">
+<button aria-controls="taxDemo" aria-expanded="false" class="btn btn-secondary" id="taxDemoBtn" type="button">Show Demo Tax Classes</button>
+<div aria-label="Demo tax class" class="tax-demo__opts" hidden="" id="taxDemo" role="group">
+<button aria-pressed="true" class="chip" data-cls="" type="button">This Scheme</button>
+<button aria-pressed="false" class="chip" data-cls="sp" type="button">Debt-Oriented</button>
+<button aria-pressed="false" class="chip" data-cls="ot" type="button">Other</button>
+<button aria-pressed="false" class="chip" data-cls="nc" type="button">Not Yet Confirmed</button>
+</div>
+</div>
+<div id="taxBody"></div>
+</section>
+</main>
+<footer id="sources">
+<div class="wrap">
+<p><b>Data Sources.</b> AMFI, CAMS, Kfintech</p>
+<p><b>Disclaimer.</b> A Specialised Investment Fund is a distinct product category from a mutual fund. It carries a ₹10,00,000 minimum aggregate investment per PAN, may take unhedged short exposure through derivatives, and discloses risk on a band scale of 1 to 5. Read all strategy related documents carefully, including the Scheme Information Document (SID). Past performance may or may not be sustained in future and is not a guarantee of future returns. This page is for information only and is not investment advice.</p>
+</div>
+</footer>
+<script>
+/* ================= helpers ================= */
+/* Charts draw at the width they are given (a viewBox as wide as the chart), so 12px text is drawn at 12px. They redraw
+   when the width changes: on resize, when a tab is shown, and as printing starts and ends (the print media change comes
+   with the paper's layout already in place, so a chart redrawn then prints at its width on paper). */
+function cw(svg){ var w=Math.round(svg.getBoundingClientRect().width); var vb=svg.viewBox.baseVal; if(w>0){ if(w!==vb.width) svg.setAttribute('viewBox','0 0 '+w+' '+vb.height); return w; } return vb.width; }
+function onWidth(svg,fn){ var last=Math.round(svg.getBoundingClientRect().width); function chk(){ var w=Math.round(svg.getBoundingClientRect().width); if(w>0&&w!==last){ last=w; fn(); } } window.addEventListener('resize',chk); document.addEventListener('mh:tabshown',chk); if(window.matchMedia){ var pm=matchMedia('print'); if(pm.addEventListener) pm.addEventListener('change',chk); else if(pm.addListener) pm.addListener(chk); } }
+function tickWant(W,max){ return Math.max(3,Math.min(max,Math.floor(W/90))); }
+var XIC='<svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>';
+function fmtIN(n){
+  n = Math.round(n);
+  var neg = n<0; n = Math.abs(n);
+  var s = String(n), last3 = s.slice(-3), rest = s.slice(0,-3);
+  if (rest) last3 = rest.replace(/\B(?=(\d{2})+(?!\d))/g, ",") + "," + last3;
+  return (neg?"-":"") + last3;
+}
+function lerpSeries(anchors, n){
+  var out = [];
+  for (var i=0;i<n;i++){
+    var t = i/(n-1)*(anchors.length-1);
+    var a = Math.floor(t), b = Math.min(a+1, anchors.length-1), f = t-a;
+    var v = anchors[a]*(1-f)+anchors[b]*f;
+    v += Math.sin(i*1.7)*Math.abs(anchors[b]-anchors[a])*0.06 + Math.sin(i*0.53)*1.2;
+    out.push(v);
+  }
+  return out;
+}
+function drawLines(svg, series, opts){
+  opts = opts||{};
+  var vb = svg.viewBox.baseVal, W=vb.width, H=vb.height;
+  var padL=8, padR=8, padT=12, padB=22;
+  var all=[]; series.forEach(function(s){ all=all.concat(s.data); });
+  var mn = opts.yMin!==undefined?opts.yMin:Math.min.apply(null,all);
+  var mx = opts.yMax!==undefined?opts.yMax:Math.max.apply(null,all);
+  if (mx===mn) mx=mn+1;
+  var n = series[0].data.length;
+  function X(i){ return padL + i*(W-padL-padR)/(n-1); }
+  function Y(v){ return padT + (1-(v-mn)/(mx-mn))*(H-padT-padB); }
+  var html='';
+  for (var g=0; g<=4; g++){
+    var gv = mn + g*(mx-mn)/4, gy = Y(gv);
+    html += '<line x1="'+padL+'" y1="'+gy+'" x2="'+(W-padR)+'" y2="'+gy+'" style="stroke:var(--chart-grid)"/>';
+    html += '<text x="'+(W-padR)+'" y="'+(gy-4)+'" text-anchor="end" font-size="12" style="fill:var(--chart-axis)">'+(opts.fmt?opts.fmt(gv):Math.round(gv))+'</text>';
+  }
+  if (opts.zeroLine && mn<0 && mx>0){
+    html += '<line x1="'+padL+'" y1="'+Y(0)+'" x2="'+(W-padR)+'" y2="'+Y(0)+'" style="stroke:var(--color-border-strong)" stroke-width="1.2"/>';
+  }
+  series.forEach(function(s){
+    var d = s.data.map(function(v,i){return (i?'L':'M')+X(i).toFixed(1)+' '+Y(v).toFixed(1);}).join(' ');
+    if (s.fill){
+      var base = Y(Math.max(mn, Math.min(0, mx)));
+      html += '<path d="'+d+' L'+X(n-1).toFixed(1)+' '+base+' L'+X(0).toFixed(1)+' '+base+' Z" style="fill:'+s.color+'" opacity="'+(s.fillOpacity||0.85)+'"/>';
+    }
+    if (!s.fillOnly) html += '<path d="'+d+'" fill="none" style="stroke:'+s.color+'" stroke-width="'+(s.width||2)+'"/>';
+  });
+  if (opts.xLabels){
+    opts.xLabels.forEach(function(l){
+      html += '<text x="'+(padL + l.t*(W-padL-padR))+'" y="'+(H-6)+'" text-anchor="middle" font-size="12" style="fill:var(--chart-axis)">'+l.text+'</text>';
+    });
+  }
+  svg.innerHTML = html;
+}
+function tiltToTarget(nav, sipAmt, target){
+  // scale nav with exp tilt so SIP future value hits target; end value pinned by shape
+  function fv(g){
+    var t = nav.map(function(v,i){return v*Math.exp(g*i);});
+    var u=0; for (var i=0;i<t.length;i++) u += sipAmt/t[i];
+    return u*t[t.length-1];
+  }
+  var lo=-0.03, hi=0.03;
+  for (var k=0;k<60;k++){ var mid=(lo+hi)/2; if (fv(mid)<target) lo=mid; else hi=mid; }
+  var g=(lo+hi)/2;
+  return nav.map(function(v,i){return v*Math.exp(g*i);});
+}
+
+function solveXirrMonthly(amt,n,fv){
+  if(n<1||fv<=0||amt<=0) return null;
+  function f(i){ var s=0; for(var k=0;k<n;k++) s+=amt*Math.pow(1+i,(n-k)/1); return s; }
+  // value at end when monthly rate i: sum amt*(1+i)^(months remaining)
+  function val(i){ var s=0; for(var k=0;k<n;k++) s+=amt*Math.pow(1+i,n-k); return s; }
+  var lo=-0.08, hi=0.08;
+  for(var t=0;t<80;t++){ var mid=(lo+hi)/2; if(val(mid)<fv) lo=mid; else hi=mid; }
+  var i=(lo+hi)/2; return (Math.pow(1+i,12)-1)*100;
+}
+function bindHover(svg,tipEl,getCur,rowFn,headFn){
+  svg.addEventListener('mousemove',function(e){
+    var cur=getCur(); if(!cur) return;
+    var r=svg.getBoundingClientRect(), W=svg.viewBox.baseVal.width;
+    var fx=(e.clientX-r.left)/r.width*W;
+    var i=Math.round((fx-cur.x0)/(cur.x1-cur.x0)*(cur.n-1)); if(i<0)i=0; if(i>cur.n-1)i=cur.n-1;
+    var cross=svg.querySelector('.crossg'); if(cross){ cross.innerHTML='<line x1="'+cur.X(i)+'" y1="'+cur.y0+'" x2="'+cur.X(i)+'" y2="'+cur.y1+'" style="stroke:var(--chart-axis)" stroke-dasharray="3 3"/>'+cur.dots(i); }
+    tipEl.innerHTML='<div class="d">'+headFn(i)+'</div>'+rowFn(i);
+    tipEl.style.display='block';
+    var left=(e.clientX-r.left)+14; if(left+250>r.width) left=(e.clientX-r.left)-262;
+    tipEl.style.left=left+'px'; tipEl.style.top=Math.max(0,(e.clientY-r.top)-16)+'px';
+  });
+  svg.addEventListener('mouseleave',function(){ tipEl.style.display='none'; var c=svg.querySelector('.crossg'); if(c) c.innerHTML=''; });
+}
+/* ================= NAV chart: multi scheme, date window, percent axis, hover ================= */
+(function(){
+  var MS=86400000, MON=['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+  var ALLOT=new Date(2025,9,7), LAST=new Date(2026,8,4);
+  // business days
+  var days=[]; for(var d=new Date(ALLOT); d<=LAST; d=new Date(d.getTime()+MS)){ var w=d.getDay(); if(w!==0&&w!==6) days.push(new Date(d)); }
+  var N=days.length;
+  function iso(d){ return d.getFullYear()+'-'+('0'+(d.getMonth()+1)).slice(-2)+'-'+('0'+d.getDate()).slice(-2); }
+  function dmy(d){ return d.getDate()+' '+MON[d.getMonth()]+' '+d.getFullYear(); }
+  function my(d){ return MON[d.getMonth()]+' '+String(d.getFullYear()).slice(2); }
+  var seed=7; function rnd(){ seed=(seed*9301+49297)%233280; return seed/233280; }
+  // series definitions: base NAV on allotment day, end multiple over the whole history, volatility
+  var DEFS=[
+    {id:'fund',name:'qsif Equity Long-Short Fund',base:10,endMult:1.142,vol:0.010,fixed:true,color:'var(--chart-1)'},
+    {id:'cat',name:'Equity Long-Short category average (rebased to 10)',base:10,endMult:1.118,vol:0.008,color:'var(--chart-3)'},
+    {id:'bench',name:'NIFTY 500 TRI (benchmark, rebased to 10)',base:10,endMult:1.091,vol:0.009,color:'var(--chart-benchmark)',dash:'2 3'},
+    {id:'dyna',name:'DynaSIF Equity Long - Short Fund (allotted 25 Feb 2026)',base:10,endMult:1.068,vol:0.011,color:'var(--chart-2)'},
+    {id:'arudha',name:'Arudha Equity Long-Short Fund (allotted 24 Mar 2026)',base:10,endMult:1.052,vol:0.010,color:'var(--chart-4)'},
+    {id:'sapphire',name:'Sapphire Equity Long-Short SIF (allotted 29 Apr 2026)',base:10,endMult:1.041,vol:0.009,color:'var(--chart-other)'},
+    {id:'titanium',name:'Titanium Equity Long-Short Fund (allotted 14 May 2026)',base:10,endMult:1.034,vol:0.012,color:'var(--chart-2)',dash:'6 4'},
+    {id:'arthaya',name:'Arthaya Equity Long Short Fund (allotted 25 May 2026)',base:10,endMult:1.026,vol:0.010,color:'var(--chart-4)',dash:'6 4'},
+    {id:'isif',name:'iSIF Equity Long-Short Fund (allotted 5 Jun 2026)',base:10,endMult:1.031,vol:0.009,color:'var(--chart-other)',dash:'6 4'}
+  ];
+  var PALETTE=['var(--chart-other)'];
+  var shared=[]; for(var i=0;i<N;i++) shared.push(rnd()-0.5);   // common market factor
+  DEFS.forEach(function(df,k){
+    var w=[df.base], v=df.base;
+    for(var i=1;i<N;i++){ v*=1+0.0007+(shared[i]*0.75+(rnd()-0.5)*0.55)*df.vol*2; w.push(v); }
+    var g=Math.log(df.base*df.endMult/w[N-1])/(N-1);
+    df.nav=w.map(function(x,i){ return x*Math.exp(g*i); });
+    if(!df.color) df.color=PALETTE[k%PALETTE.length];
+  });
+  var byId={}; DEFS.forEach(function(d){byId[d.id]=d;});
+  var gold=[7,]; (function(){ var g=7000; for(var i=0;i<N;i++){ g*=1+0.00042+(shared[i]*0.3+(rnd()-0.5)*0.7)*0.006; gold[i]=g; } var gg=Math.log(7000*1.38/gold[N-1])/(N-1); for(var i=0;i<N;i++) gold[i]*=Math.exp(gg*i); })();
+  window.NP={days:days,DEFS:DEFS,byId:byId,ALLOT:ALLOT,LAST:LAST,gold:gold};
+  var active=['fund','cat'], from=0, to=N-1, activePeriod='SA';
+  var svg=document.getElementById('navchart'), tip=document.getElementById('navTip'), statsEl=document.getElementById('chartStats');
+  var W=1080,H=380,padL=52,padR=16,padT=16,padB=36;
+  function idxOnOrAfter(dt){ for(var i=0;i<N;i++) if(days[i]>=dt) return i; return N-1; }
+  function idxOnOrBefore(dt){ for(var i=N-1;i>=0;i--) if(days[i]<=dt) return i; return 0; }
+  function periodStart(p, endD){
+    var d=new Date(endD);
+    if(p==='SA') return ALLOT;
+    var n=parseInt(p,10); if(p.slice(-1)==='M') d.setMonth(d.getMonth()-n); else d.setFullYear(d.getFullYear()-n);
+    return d;
+  }
+  function niceStep(range){ var cands=[0.5,1,2,5,10,20,25,50,100,200]; for(var i=0;i<cands.length;i++){ if(range/cands[i]<=7) return cands[i]; } return 500; }
+  var cur=null;
+  function render(){
+    W=cw(svg);
+    var n=to-from+1, x0=padL, x1=W-padR, y0=padT, y1=H-padB;
+    var ser=active.map(function(id){ var d=byId[id], base=d.nav[from]; return {def:d, pct:d.nav.slice(from,to+1).map(function(v){return (v/base-1)*100;})}; });
+    var mn=0,mx=0; ser.forEach(function(s){ s.pct.forEach(function(v){ if(v<mn)mn=v; if(v>mx)mx=v; }); });
+    var step=niceStep(mx-mn||1); mn=Math.floor(mn/step)*step; mx=Math.ceil(mx/step)*step; if(mx===mn) mx=mn+step;
+    function X(i){ return x0+(n===1?0:i*(x1-x0)/(n-1)); }
+    function Y(v){ return y0+(1-(v-mn)/(mx-mn))*(y1-y0); }
+    var h='';
+    for(var g=mn; g<=mx+1e-9; g+=step){
+      var gy=Y(g); h+='<line x1="'+x0+'" y1="'+gy+'" x2="'+x1+'" y2="'+gy+'" style="stroke:'+(Math.abs(g)<1e-9?'var(--color-border-strong)':'var(--chart-grid)')+'" stroke-width="'+(Math.abs(g)<1e-9?1.4:1)+'"/>';
+      h+='<text x="'+(x0-8)+'" y="'+(gy+4)+'" text-anchor="end" font-size="12" style="fill:var(--chart-axis)">'+(g>0?'+':'')+(step<1?g.toFixed(1):Math.round(g))+'%</text>';
+    }
+    // x axis: month-year labels
+    var spanDays=(days[to]-days[from])/MS, ticks=[], want=tickWant(W,spanDays<=100?6:8), every=Math.max(1,Math.round(n/want));
+    var lastLab='';
+    for(var i=0;i<n;i+=every){ var d=days[from+i], lab=spanDays<=100?(d.getDate()+' '+MON[d.getMonth()]):my(d); if(lab!==lastLab){ ticks.push([i,lab]); lastLab=lab; } }
+    ticks.forEach(function(t){ h+='<text x="'+X(t[0])+'" y="'+(H-10)+'" text-anchor="middle" font-size="12" style="fill:var(--chart-axis)">'+t[1]+'</text>'; h+='<line x1="'+X(t[0])+'" y1="'+y1+'" x2="'+X(t[0])+'" y2="'+(y1+4)+'" style="stroke:var(--color-border-strong)"/>'; });
+    ser.forEach(function(s,k){
+      var d=s.pct.map(function(v,i){return (i?'L':'M')+X(i).toFixed(1)+' '+Y(v).toFixed(1);}).join(' ');
+      if(s.def.id==='fund') h+='<path d="'+d+' L'+X(n-1).toFixed(1)+' '+Y(mn)+' L'+X(0)+' '+Y(mn)+' Z" style="fill:'+s.def.color+'" opacity="0.06"/>';
+      h+='<path d="'+d+'" fill="none" style="stroke:'+s.def.color+'"'+(s.def.dash?' stroke-dasharray="'+s.def.dash+'"':'')+' stroke-width="'+(s.def.id==='fund'?2.6:1.8)+'"/>';
+    });
+    h+='<g id="cross"></g><rect id="hoverpad" x="'+x0+'" y="'+y0+'" width="'+(x1-x0)+'" height="'+(y1-y0)+'" fill="transparent"/>';
+    svg.innerHTML=h;
+    cur={ser:ser,n:n,X:X,Y:Y,x0:x0,x1:x1,y0:y0,y1:y1};
+    // stats
+    var yrs=spanDays/365.25;
+    statsEl.innerHTML=ser.map(function(s){
+      var r=s.pct[s.pct.length-1], cagr=yrs>=1?((Math.pow(1+r/100,1/yrs)-1)*100):null;
+      return '<span class="st"><span class="dot" style="background:'+s.def.color+'"></span>'+s.def.name.split(' (')[0]+' <b class="'+(r>=0?'up':'down')+'">'+(r>=0?'+':'')+r.toFixed(2)+'%</b>'+(cagr!==null?' <span>('+cagr.toFixed(2)+'% CAGR)</span>':'')+'</span>';
+    }).join('')+'<span class="st"><span>'+dmy(days[from])+' to '+dmy(days[to])+'</span></span>';
+    // chips
+    document.getElementById('seriesChips').innerHTML=active.map(function(id){ var d=byId[id]; return '<span class="schip"><span class="dot" style="background:'+d.color+'"></span>'+d.name+'<button data-rm="'+id+'" title="Remove" '+(d.fixed?'disabled':'')+' aria-label="Remove">'+XIC+'</button></span>'; }).join('');
+    var sel=document.getElementById('addScheme'), opts='<option value="">Add a Strategy to Compare</option>';
+    DEFS.forEach(function(d){ if(active.indexOf(d.id)<0) opts+='<option value="'+d.id+'">'+d.name+'</option>'; });
+    sel.innerHTML=opts; sel.disabled=active.length>=7;
+    document.getElementById('dFrom').value=iso(days[from]); document.getElementById('dTo').value=iso(days[to]);
+    document.querySelectorAll('#periodPills button').forEach(function(b){ b.classList.toggle('on',b.dataset.p===activePeriod); });
+  }
+  // period availability
+  document.querySelectorAll('#periodPills button').forEach(function(b){
+    var p=b.dataset.p; if(p!=='SA' && periodStart(p,LAST)<ALLOT){ b.disabled=true; b.title='Strategy allotted 7 Oct 2025, history is shorter than '+p; }
+  });
+  document.getElementById('periodPills').addEventListener('click',function(e){
+    if(e.target.tagName!=='BUTTON'||e.target.disabled)return;
+    activePeriod=e.target.dataset.p; to=N-1; from=idxOnOrAfter(periodStart(activePeriod,days[to])); render();
+  });
+  document.getElementById('dApply').addEventListener('click',function(){
+    var f=new Date(document.getElementById('dFrom').value), t=new Date(document.getElementById('dTo').value);
+    if(isNaN(f)||isNaN(t)) return; if(f<ALLOT) f=ALLOT; if(t>LAST) t=LAST; if(f>=t){ alert('Start date must be before end date'); return; }
+    from=idxOnOrAfter(f); to=idxOnOrBefore(t); activePeriod=''; render();
+  });
+  document.getElementById('dFrom').min=iso(ALLOT); document.getElementById('dFrom').max=iso(LAST);
+  document.getElementById('dTo').min=iso(ALLOT); document.getElementById('dTo').max=iso(LAST);
+  document.getElementById('addScheme').addEventListener('change',function(){ if(this.value&&active.indexOf(this.value)<0&&active.length<7){ active.push(this.value); render(); } });
+  document.getElementById('seriesChips').addEventListener('click',function(e){ var rb=e.target.closest('[data-rm]'), id=rb&&rb.dataset.rm; if(id&&!byId[id].fixed){ active=active.filter(function(a){return a!==id;}); render(); } });
+  // hover
+  var wrap=svg.parentNode;
+  svg.addEventListener('mousemove',function(e){
+    if(!cur) return;
+    var r=svg.getBoundingClientRect(), fx=(e.clientX-r.left)/r.width*W;
+    var i=Math.round((fx-cur.x0)/(cur.x1-cur.x0)*(cur.n-1)); if(i<0)i=0; if(i>cur.n-1)i=cur.n-1;
+    var cx=cur.X(i), g='<line x1="'+cx+'" y1="'+cur.y0+'" x2="'+cx+'" y2="'+cur.y1+'" style="stroke:var(--chart-axis)" stroke-dasharray="3 3"/>';
+    var rows='';
+    cur.ser.forEach(function(s){ var v=s.pct[i]; g+='<circle cx="'+cx+'" cy="'+cur.Y(v)+'" r="4" style="fill:'+s.def.color+'" stroke="#fff" stroke-width="1.5"/>';
+      var nav=s.def.nav[from+i]; rows+='<div class="r"><span class="sq" style="background:'+s.def.color+'"></span><span class="nm">'+s.def.name.split(' (')[0]+'</span><span class="nv">'+nav.toFixed(2)+'</span><span class="rt '+(v>=0?'tpos':'tneg')+'">'+(v>=0?'+':'')+v.toFixed(2)+'%</span></div>'; });
+    document.getElementById('cross').innerHTML=g;
+    tip.innerHTML='<div class="d">'+dmy(days[from+i])+' <span>NAV and return since '+dmy(days[from])+'</span></div>'+rows;
+    tip.style.display='block';
+    var left=(e.clientX-r.left)+14; if(left+250>r.width) left=(e.clientX-r.left)-260; tip.style.left=left+'px'; tip.style.top=Math.max(0,(e.clientY-r.top)-20)+'px';
+  });
+  svg.addEventListener('mouseleave',function(){ tip.style.display='none'; var c=document.getElementById('cross'); if(c) c.innerHTML=''; });
+  render(); onWidth(svg,render);
+})();
+
+/* ================= Drawdown chart: same features as the growth chart ================= */
+(function(){
+  var NP=window.NP, days=NP.days, byId=NP.byId, DEFS=NP.DEFS, ALLOT=NP.ALLOT, LAST=NP.LAST;
+  var N=days.length, MS=86400000, MON=['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+  function iso(d){ return d.getFullYear()+'-'+('0'+(d.getMonth()+1)).slice(-2)+'-'+('0'+d.getDate()).slice(-2); }
+  function dmy(d){ return d.getDate()+' '+MON[d.getMonth()]+' '+d.getFullYear(); }
+  function my(d){ return MON[d.getMonth()]+' '+String(d.getFullYear()).slice(2); }
+  var active=['fund','cat'], from=0, to=N-1, activePeriod='SA', cur=null;
+  var svg=document.getElementById('ddchart'), tip=document.getElementById('ddTip');
+  var W=1080,H=360,padL=52,padR=16,padT=14,padB=36;
+  function idxOnOrAfter(dt){ for(var i=0;i<N;i++) if(days[i]>=dt) return i; return N-1; }
+  function idxOnOrBefore(dt){ for(var i=N-1;i>=0;i--) if(days[i]<=dt) return i; return 0; }
+  function periodStart(p,endD){ var d=new Date(endD); if(p==='SA') return ALLOT; var n=parseInt(p,10); if(p.slice(-1)==='M') d.setMonth(d.getMonth()-n); else d.setFullYear(d.getFullYear()-n); return d; }
+  function ddStep(range){ var c=[0.5,1,2,5,10,20,25]; for(var i=0;i<c.length;i++) if(range/c[i]<=6) return c[i]; return 50; }
+  function series(){
+    return active.map(function(id){
+      var d=byId[id], nav=d.nav.slice(from,to+1), peak=-1e9, dd=[], ath=[];
+      for(var i=0;i<nav.length;i++){ if(nav[i]>peak) peak=nav[i]; ath.push(peak); dd.push((nav[i]/peak-1)*100); }
+      var mi=0; for(var i=1;i<dd.length;i++) if(dd[i]<dd[mi]) mi=i;
+      return {def:d,nav:nav,ath:ath,dd:dd,maxIdx:mi};
+    });
+  }
+  function render(){
+    W=cw(svg);
+    var ser=series(), n=to-from+1, x0=padL,x1=W-padR,y0=padT,y1=H-padB;
+    var mn=0; ser.forEach(function(s){ s.dd.forEach(function(v){ if(v<mn)mn=v; }); });
+    var step=ddStep(-mn||1); mn=Math.floor(mn/step)*step; if(mn===0) mn=-step;
+    var mx=0;
+    function X(i){ return x0+(n===1?0:i*(x1-x0)/(n-1)); }
+    function Y(v){ return y0+((mx-v)/(mx-mn))*(y1-y0); }
+    var h='';
+    for(var g=mx; g>=mn-1e-9; g-=step){
+      var gy=Y(g); h+='<line x1="'+x0+'" y1="'+gy+'" x2="'+x1+'" y2="'+gy+'" style="stroke:'+(g===0?'var(--color-border-strong)':'var(--chart-grid)')+'" stroke-width="'+(g===0?1.4:1)+'"/>';
+      h+='<text x="'+(x0-8)+'" y="'+(gy+4)+'" text-anchor="end" font-size="12" style="fill:var(--chart-axis)">'+(step<1?g.toFixed(1):Math.round(g))+'%</text>';
+    }
+    var spanDays=(days[to]-days[from])/MS, want=tickWant(W,spanDays<=100?6:8), every=Math.max(1,Math.round(n/want)), lastLab='';
+    for(var i=0;i<n;i+=every){ var d=days[from+i], lab=spanDays<=100?(d.getDate()+' '+MON[d.getMonth()]):my(d); if(lab!==lastLab){ h+='<text x="'+X(i)+'" y="'+(H-10)+'" text-anchor="middle" font-size="12" style="fill:var(--chart-axis)">'+lab+'</text><line x1="'+X(i)+'" y1="'+y1+'" x2="'+X(i)+'" y2="'+(y1+4)+'" style="stroke:var(--color-border-strong)"/>'; lastLab=lab; } }
+    ser.forEach(function(s){
+      var d=s.dd.map(function(v,i){return (i?'L':'M')+X(i).toFixed(1)+' '+Y(v).toFixed(1);}).join(' ');
+      if(s.def.id==='fund') h+='<path d="'+d+' L'+X(n-1).toFixed(1)+' '+Y(0)+' L'+X(0)+' '+Y(0)+' Z" style="fill:var(--color-loss)" opacity="0.07"/>';
+      h+='<path d="'+d+'" fill="none" style="stroke:'+s.def.color+'"'+(s.def.dash?' stroke-dasharray="'+s.def.dash+'"':'')+' stroke-width="'+(s.def.id==='fund'?2.4:1.7)+'"/>';
+      h+='<circle cx="'+X(s.maxIdx)+'" cy="'+Y(s.dd[s.maxIdx])+'" r="4.5" fill="none" style="stroke:'+s.def.color+'" stroke-width="1.6"/>';
+    });
+    h+='<g id="ddcross"></g>';
+    svg.innerHTML=h;
+    cur={ser:ser,n:n,X:X,Y:Y,x0:x0,x1:x1,y0:y0,y1:y1};
+    document.getElementById('ddChips').innerHTML=active.map(function(id){ var d=byId[id]; return '<span class="schip"><span class="dot" style="background:'+d.color+'"></span>'+d.name+'<button data-rm="'+id+'" title="Remove" '+(d.fixed?'disabled':'')+' aria-label="Remove">'+XIC+'</button></span>'; }).join('');
+    var sel=document.getElementById('ddAdd'), opts='<option value="">Add a Strategy to Compare</option>';
+    DEFS.forEach(function(d){ if(active.indexOf(d.id)<0) opts+='<option value="'+d.id+'">'+d.name+'</option>'; });
+    sel.innerHTML=opts; sel.disabled=active.length>=7;
+    document.getElementById('ddFrom').value=iso(days[from]); document.getElementById('ddTo').value=iso(days[to]);
+    document.querySelectorAll('#ddPills button').forEach(function(b){ b.classList.toggle('on',b.dataset.p===activePeriod); });
+    horizonTable();
+  }
+  document.querySelectorAll('#ddPills button').forEach(function(b){ var p=b.dataset.p; if(p!=='SA'&&periodStart(p,LAST)<ALLOT){ b.disabled=true; b.title='Strategy allotted 7 Oct 2025, history is shorter than '+p; } });
+  document.getElementById('ddPills').addEventListener('click',function(e){ if(e.target.tagName!=='BUTTON'||e.target.disabled)return; activePeriod=e.target.dataset.p; to=N-1; from=idxOnOrAfter(periodStart(activePeriod,days[to])); render(); });
+  document.getElementById('ddApply').addEventListener('click',function(){ var f=new Date(document.getElementById('ddFrom').value), t=new Date(document.getElementById('ddTo').value); if(isNaN(f)||isNaN(t)) return; if(f<ALLOT)f=ALLOT; if(t>LAST)t=LAST; if(f>=t){ alert('Start date must be before end date'); return; } from=idxOnOrAfter(f); to=idxOnOrBefore(t); activePeriod=''; render(); });
+  document.getElementById('ddFrom').min=iso(ALLOT); document.getElementById('ddFrom').max=iso(LAST);
+  document.getElementById('ddTo').min=iso(ALLOT); document.getElementById('ddTo').max=iso(LAST);
+  document.getElementById('ddAdd').addEventListener('change',function(){ if(this.value&&active.indexOf(this.value)<0&&active.length<7){ active.push(this.value); render(); } });
+  document.getElementById('ddChips').addEventListener('click',function(e){ var rb=e.target.closest('[data-rm]'), id=rb&&rb.dataset.rm; if(id&&!byId[id].fixed){ active=active.filter(function(a){return a!==id;}); render(); } });
+  function ddWindow(id, i0, i1){
+    var d=byId[id], nav=d.nav.slice(i0,i1+1), peak=-1e9, dd=[], mi=0;
+    for(var i=0;i<nav.length;i++){ if(nav[i]>peak) peak=nav[i]; dd.push((nav[i]/peak-1)*100); if(dd[i]<dd[mi]) mi=i; }
+    var rec=null; for(var j=mi+1;j<dd.length;j++){ if(dd[j]>=-1e-9){ rec=Math.round((days[i0+j]-days[i0+mi])/MS); break; } }
+    return {dd:dd[mi], dt:days[i0+mi], rec:rec};
+  }
+  function horizonTable(){
+    var HOR=[['1M','Last 1 Month',1],['3M','Last 3 Months',3],['6M','Last 6 Months',6],['1Y','Last 1 Year',12],['2Y','Last 2 Years',24],['3Y','Last 3 Years',36],['5Y','Last 5 Years',60],['7Y','Last 7 Years',84],['10Y','Last 10 Years',120],['SI','Since Inception',null]];
+    var histYrs=(LAST-ALLOT)/31557600000;
+    var h='<tr><th rowspan="2">Period</th>';
+    active.forEach(function(id){ h+='<th colspan="3" class="bl"><span style="display:inline-flex;align-items:center;gap:6px"><span style="width:8px;height:8px;border-radius:var(--radius-full);background:'+byId[id].color+';display:inline-block"></span>'+byId[id].name.split(' (')[0]+'</span></th>'; });
+    h+='</tr><tr>';
+    active.forEach(function(){ h+='<th class="bl">Max Drawdown</th><th>On Date</th><th class="wraphead" style="min-width:110px">Recovery to ATH</th>'; });
+    h+='</tr>';
+    HOR.forEach(function(hz){
+      h+='<tr><td>'+hz[1]+(hz[0]==='SI'?' (7 Oct 2025)':'')+'</td>';
+      var avail = hz[2]===null || hz[2]/12<=histYrs;
+      active.forEach(function(id){
+        if(!avail){ h+='<td class="bl na">n.a.</td><td class="na">n.a.</td><td class="na">history '+histYrs.toFixed(1)+' yrs</td>'; return; }
+        var start = hz[2]===null?ALLOT:(function(){var d=new Date(LAST);d.setMonth(d.getMonth()-hz[2]);return d;})();
+        var i0=idxOnOrAfter(start), r=ddWindow(id,i0,N-1);
+        h+='<td class="num down bl" style="font-weight:600">'+r.dd.toFixed(2)+'%</td><td class="num">'+dmy(r.dt)+'</td><td class="num">'+(r.rec!=null?r.rec+' days':'not yet recovered')+'</td>';
+      });
+      h+='</tr>';
+    });
+    document.getElementById('ddHorizon').innerHTML=h;
+  }
+  svg.addEventListener('mousemove',function(e){
+    if(!cur) return;
+    var r=svg.getBoundingClientRect(), fx=(e.clientX-r.left)/r.width*W;
+    var i=Math.round((fx-cur.x0)/(cur.x1-cur.x0)*(cur.n-1)); if(i<0)i=0; if(i>cur.n-1)i=cur.n-1;
+    var cx=cur.X(i), g='<line x1="'+cx+'" y1="'+cur.y0+'" x2="'+cx+'" y2="'+cur.y1+'" style="stroke:var(--chart-axis)" stroke-dasharray="3 3"/>', rows='';
+    cur.ser.forEach(function(s){ var v=s.dd[i], nav=s.nav[i], ath=s.ath[i];
+      g+='<circle cx="'+cx+'" cy="'+cur.Y(v)+'" r="4" style="fill:'+s.def.color+'" stroke="#fff" stroke-width="1.5"/>';
+      rows+='<div class="r"><span class="sq" style="background:'+s.def.color+'"></span><span class="nm">'+s.def.name.split(' (')[0]+'</span><span class="nv">'+nav.toFixed(2)+' / '+ath.toFixed(2)+'</span><span class="rt '+(v<-0.005?'tneg':'tpos')+'">'+v.toFixed(2)+'%</span></div>';
+    });
+    document.getElementById('ddcross').innerHTML=g;
+    tip.innerHTML='<div class="d">'+dmy(days[from+i])+' <span>NAV / ATH and drawdown</span></div>'+rows;
+    tip.style.display='block';
+    var left=(e.clientX-r.left)+14; if(left+260>r.width) left=(e.clientX-r.left)-270; tip.style.left=left+'px'; tip.style.top=Math.max(0,(e.clientY-r.top)-20)+'px';
+  });
+  svg.addEventListener('mouseleave',function(){ tip.style.display='none'; var c=document.getElementById('ddcross'); if(c) c.innerHTML=''; });
+  render(); onWidth(svg,render);
+})();
+
+/* ================= Rolling returns: live, multi scheme, common tenure ================= */
+(function(){
+  var NP=window.NP, days=NP.days, byId=NP.byId, DEFS=NP.DEFS, N=days.length, MS=86400000;
+  var MON=['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+  function dmy(d){ return d.getDate()+' '+MON[d.getMonth()]+' '+d.getFullYear(); }
+  function my(d){ return MON[d.getMonth()]+' '+String(d.getFullYear()).slice(2); }
+  var active=['fund','cat'], tenure=1, cur=null;
+  var svg=document.getElementById('rollchart'), tip=document.getElementById('rollTip');
+  function startIdxFor(y){
+    // first index i such that a window of y years ending at days[i] fits inside history
+    var t=new Date(NP.ALLOT); t.setFullYear(t.getFullYear()+y);
+    for(var i=0;i<N;i++) if(days[i]>=t) return i;
+    return -1;
+  }
+  function windowStartIdx(i,y){
+    var t=new Date(days[i]); t.setFullYear(t.getFullYear()-y);
+    var lo=0, hi=i;
+    while(lo<hi){ var m=(lo+hi)>>1; if(days[m]<t) lo=m+1; else hi=m; }
+    return lo;
+  }
+  function rollSeries(id,y,i0){
+    var nav=byId[id].nav, out=[];
+    for(var i=i0;i<N;i++){
+      var j=windowStartIdx(i,y);
+      var yrsExact=(days[i]-days[j])/31557600000;
+      out.push((Math.pow(nav[i]/nav[j],1/Math.max(yrsExact,1e-6))-1)*100);
+    }
+    return out;
+  }
+  function stats(arr){
+    var n=arr.length, mn=1e9,mx=-1e9,sum=0,neg=0,b=[0,0,0,0,0,0];
+    var srt=arr.slice().sort(function(a,b){return a-b;});
+    arr.forEach(function(v){ if(v<mn)mn=v; if(v>mx)mx=v; sum+=v; if(v<0){neg++;b[0]++;} else if(v<6)b[1]++; else if(v<12)b[2]++; else if(v<15)b[3]++; else if(v<20)b[4]++; else b[5]++; });
+    var avg=sum/n, va=0; arr.forEach(function(v){ va+=(v-avg)*(v-avg); });
+    return {n:n,min:mn,max:mx,avg:avg,med:srt[Math.floor(n/2)],sd:Math.sqrt(va/n),neg:neg,b:b.map(function(x){return x/n*100;})};
+  }
+  function render(){
+    // chips + picker
+    document.getElementById('rollChips').innerHTML=active.map(function(id){ var d=byId[id]; return '<span class="schip"><span class="dot" style="background:'+d.color+'"></span>'+d.name+'<button data-rm="'+id+'" title="Remove" '+(d.fixed?'disabled':'')+' aria-label="Remove">'+XIC+'</button></span>'; }).join('');
+    var sel=document.getElementById('rollAdd'), opts='<option value="">Add a Strategy to Compare</option>';
+    DEFS.forEach(function(d){ if(active.indexOf(d.id)<0) opts+='<option value="'+d.id+'">'+d.name+'</option>'; });
+    sel.innerHTML=opts; sel.disabled=active.length>=7;
+    document.querySelectorAll('#rollPills button').forEach(function(b){ b.classList.toggle('on',parseInt(b.dataset.r,10)===tenure); });
+    var i0=startIdxFor(tenure);
+    var histYrs=(NP.LAST-NP.ALLOT)/31557600000;
+    if(i0<0){
+      document.getElementById('rollNA').innerHTML='<div class="empty"><b>'+tenure+(tenure===1?' year':' years')+' rolling returns are not applicable.</b><br>The shortest history among the selected strategies is '+histYrs.toFixed(1)+' years (qsif Equity Long-Short Fund, allotted 7 Oct 2025), so a '+tenure+' year window has no observations. The data does not exist for this tenure yet.</div>';
+      document.getElementById('rollBody').style.display='none';
+      document.getElementById('rollObsNote').textContent='';
+      cur=null; return;
+    }
+    document.getElementById('rollNA').innerHTML=''; document.getElementById('rollBody').style.display='';
+    document.getElementById('rollChartTitle').textContent=tenure+(tenure===1?' Year':' Years')+' Rolling Returns on Daily Basis (% CAGR)';
+    var ser=active.map(function(id){ return {def:byId[id], v:rollSeries(id,tenure,i0)}; });
+    var n=ser[0].v.length;
+    document.getElementById('rollObsNote').textContent=fmtIN(n)+' observations per scheme, '+dmy(days[i0])+' to '+dmy(days[N-1]);
+    // chart
+    var W=cw(svg),H=300,x0=52,x1=W-16,y0=14,y1=H-34;
+    var mn=0,mx=0; ser.forEach(function(s){ s.v.forEach(function(v){ if(v<mn)mn=v; if(v>mx)mx=v; }); });
+    var range=mx-mn||1, step=[1,2,5,10,20,25,50][ [1,2,5,10,20,25,50].findIndex(function(c){return range/c<=7;}) ]||50;
+    mn=Math.floor(mn/step)*step; mx=Math.ceil(mx/step)*step;
+    function X(i){ return x0+(n===1?0:i*(x1-x0)/(n-1)); }
+    function Y(v){ return y0+(1-(v-mn)/(mx-mn))*(y1-y0); }
+    var h='';
+    for(var g=mn;g<=mx+1e-9;g+=step){ var gy=Y(g); h+='<line x1="'+x0+'" y1="'+gy+'" x2="'+x1+'" y2="'+gy+'" style="stroke:'+(Math.abs(g)<1e-9?'var(--color-border-strong)':'var(--chart-grid)')+'"/>'; h+='<text x="'+(x0-8)+'" y="'+(gy+4)+'" text-anchor="end" font-size="12" style="fill:var(--chart-axis)">'+Math.round(g)+'%</text>'; }
+    var every=Math.max(1,Math.round(n/tickWant(W,8))), lastLab='';
+    for(var i=0;i<n;i+=every){ var lab=my(days[i0+i]); if(lab!==lastLab){ h+='<text x="'+X(i)+'" y="'+(H-8)+'" text-anchor="middle" font-size="12" style="fill:var(--chart-axis)">'+lab+'</text>'; lastLab=lab; } }
+    ser.forEach(function(sd){
+      var d=sd.v.map(function(v,i){return (i?'L':'M')+X(i).toFixed(1)+' '+Y(v).toFixed(1);}).join(' ');
+      if(sd.def.id==='fund') h+='<path d="'+d+' L'+X(n-1).toFixed(1)+' '+Y(Math.max(mn,0))+' L'+X(0)+' '+Y(Math.max(mn,0))+' Z" style="fill:'+sd.def.color+'" opacity="0.07"/>';
+      h+='<path d="'+d+'" fill="none" style="stroke:'+sd.def.color+'"'+(sd.def.dash?' stroke-dasharray="'+sd.def.dash+'"':'')+' stroke-width="'+(sd.def.id==='fund'?2.3:1.7)+'"/>';
+    });
+    h+='<g class="crossg"></g>';
+    svg.innerHTML=h;
+    cur={ser:ser,n:n,X:X,Y:Y,x0:x0,x1:x1,y0:y0,y1:y1,i0:i0,dots:function(i){ var g=''; ser.forEach(function(sd){ g+='<circle cx="'+X(i)+'" cy="'+Y(sd.v[i])+'" r="4" style="fill:'+sd.def.color+'" stroke="#fff" stroke-width="1.5"/>'; }); return g; }};
+    // merged table
+    var th='<tr><th rowspan="2">Scheme</th><th rowspan="2">Observations</th><th rowspan="2" class="wraphead">Average Returns</th><th rowspan="2" class="wraphead">Median Returns</th><th rowspan="2" class="wraphead">Maximum Returns</th><th rowspan="2" class="wraphead">Minimum Returns</th><th rowspan="2" class="wraphead">Standard Deviation (%)</th><th rowspan="2" class="wraphead">Loss Probability (Less Than 0%)</th><th colspan="5" class="grp">Probability of Returns Between</th></tr><tr><th>0 - 6%</th><th>6 - 12%</th><th>12 - 15%</th><th>15 - 20%</th><th class="wraphead">Greater Than 20%</th></tr>';
+    var rows=ser.map(function(sd,k){
+      var st=stats(sd.v);
+      return '<tr'+(sd.def.id==='fund'?' class="hl"':'')+'><td><span style="display:inline-flex;align-items:center;gap:7px"><span style="width:8px;height:8px;border-radius:var(--radius-full);background:'+sd.def.color+';display:inline-block"></span>'+sd.def.name.split(' (')[0]+'</span></td><td class="num">'+fmtIN(st.n)+'</td><td class="num">'+st.avg.toFixed(2)+'%</td><td class="num">'+st.med.toFixed(2)+'%</td><td class="num up">'+st.max.toFixed(2)+'%</td><td class="num down">'+st.min.toFixed(2)+'%</td><td class="num">'+st.sd.toFixed(2)+'%</td><td class="num" style="font-weight:600">'+st.b[0].toFixed(2)+'%</td><td class="num">'+st.b[1].toFixed(2)+'%</td><td class="num">'+st.b[2].toFixed(2)+'%</td><td class="num">'+st.b[3].toFixed(2)+'%</td><td class="num">'+st.b[4].toFixed(2)+'%</td><td class="num">'+st.b[5].toFixed(2)+'%</td></tr>';
+    }).join('');
+    document.getElementById('rollTable').innerHTML=th+rows;
+    document.getElementById('rollCommonNote').textContent='Observations run from '+dmy(days[i0])+', the earliest date from which every selected strategy has a full '+tenure+' year lookback, so counts match across schemes. Consistency columns show the percent of observations landing in each return band.';
+  }
+  document.getElementById('rollPills').addEventListener('click',function(e){ if(e.target.tagName!=='BUTTON')return; tenure=parseInt(e.target.dataset.r,10); render(); });
+  document.getElementById('rollAdd').addEventListener('change',function(){ if(this.value&&active.indexOf(this.value)<0&&active.length<7){ active.push(this.value); render(); } });
+  document.getElementById('rollChips').addEventListener('click',function(e){ var rb=e.target.closest('[data-rm]'), id=rb&&rb.dataset.rm; if(id&&!byId[id].fixed){ active=active.filter(function(a){return a!==id;}); render(); } });
+  bindHover(svg,tip,function(){return cur;},function(i){
+    return cur.ser.map(function(sd){ var v=sd.v[i]; return '<div class="r"><span class="sq" style="background:'+sd.def.color+'"></span><span class="nm">'+sd.def.name.split(' (')[0]+'</span><span class="nv"></span><span class="rt '+(v>=0?'tpos':'tneg')+'">'+v.toFixed(2)+'%</span></div>'; }).join('');
+  },function(i){ return dmy(days[cur.i0+i])+' <span>'+tenure+'Y rolling CAGR</span>'; });
+  render(); onWidth(svg,render);
+})();
+
+/* ================= SIP returns: live, adjustable ================= */
+(function(){
+  var NP=window.NP, days=NP.days, byId=NP.byId, N=days.length;
+  var MON=['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+  function dmy(d){ return d.getDate()+' '+MON[d.getMonth()]+' '+d.getFullYear(); }
+  var amt=10000, period='SI', cur=null;
+  var svg=document.getElementById('sipchart'), tip=document.getElementById('sipTip');
+  var SHOW={inv:true,po:true,sbi:true,gold:true,fund:true};
+  var META=[['inv','Amount Invested','var(--chart-other)'],['po','5 Year Post Office RD','var(--chart-2)'],['sbi','5 Year SBI RD','var(--chart-3)'],['gold','Gold','var(--chart-4)'],['fund','qsif Equity Long-Short Fund','var(--chart-1)']];
+  function sipDates(fromIdx){
+    // first business day of each month from fromIdx
+    var out=[], lastM=-1;
+    for(var i=fromIdx;i<N;i++){ var m=days[i].getFullYear()*12+days[i].getMonth(); if(m!==lastM){ out.push(i); lastM=m; } }
+    return out;
+  }
+  function startIdx(){
+    if(period==='SI') return 0;
+    var d=new Date(NP.LAST), n=parseInt(period,10);
+    if(period.slice(-1)==='M') d.setMonth(d.getMonth()-n); else d.setFullYear(d.getFullYear()-n);
+    for(var i=0;i<N;i++) if(days[i]>=d) return i;
+    return 0;
+  }
+  function build(){
+    var i0=startIdx(), dates=sipDates(i0), n=dates.length;
+    var fund=byId['fund'].nav, gold=NP.gold;
+    var rP=Math.pow(1.0672,1/12)-1, rB=Math.pow(1.0667,1/12)-1;
+    var inv=[],po=[],sbi=[],gv=[],fv=[],uF=0,uG=0,vP=0,vB=0;
+    for(var k=0;k<n;k++){
+      var i=dates[k];
+      uF+=amt/fund[i]; uG+=amt/gold[i];
+      vP=(vP+amt)*(1+rP); vB=(vB+amt)*(1+rB);
+      inv.push(amt*(k+1)); po.push(vP); sbi.push(vB); gv.push(uG*gold[i]); fv.push(uF*fund[i]);
+    }
+    var iEnd=N-1;
+    return {dates:dates,n:n,inv:inv,po:po,sbi:sbi,gold:gv,fund:fv,
+      final:{inv:amt*n, po:(vP)*Math.pow(1+rP,0), sbi:vB, gold:uG*gold[iEnd], fund:uF*fund[iEnd]}};
+  }
+  function lakhs(v){ return '\u20B9'+fmtIN(v); }
+  function render(){
+    var D=build(), n=D.n;
+    // legend with checkboxes
+    document.getElementById('sipLegend').innerHTML=META.map(function(m){ return '<label class="lgchk lg"><input type="checkbox" data-s="'+m[0]+'"'+(SHOW[m[0]]?' checked':'')+'><span class="sw" style="background:'+m[2]+';'+(m[0]==='inv'?'height:8px;':'')+'"></span>'+m[1]+'</label>'; }).join('');
+    var series=META.filter(function(m){return SHOW[m[0]];}).map(function(m){ return {key:m[0],name:m[1],color:m[2],data:D[m[0]]}; });
+    // chart
+    var W=cw(svg),H=330,x0=58,x1=W-16,y0=14,y1=H-34;
+    var mx=0; series.forEach(function(s){ s.data.forEach(function(v){ if(v>mx)mx=v; }); }); mx=mx*1.06||1;
+    function X(i){ return x0+(n===1?0:i*(x1-x0)/(n-1)); }
+    function Y(v){ return y0+(1-v/mx)*(y1-y0); }
+    var h='';
+    for(var g=0;g<=4;g++){ var gv2=g*mx/4, gy=Y(gv2); h+='<line x1="'+x0+'" y1="'+gy+'" x2="'+x1+'" y2="'+gy+'" style="stroke:var(--chart-grid)"/>'; h+='<text x="'+(x0-8)+'" y="'+(gy+4)+'" text-anchor="end" font-size="12" style="fill:var(--chart-axis)">\u20B9'+fmtIN(gv2)+'</text>'; }
+    var every=Math.max(1,Math.round(n/tickWant(W,8))), lastLab='';
+    for(var i=0;i<n;i+=every){ var d=days[D.dates[i]], lab=MON[d.getMonth()]+' '+String(d.getFullYear()).slice(2); if(lab!==lastLab){ h+='<text x="'+X(i)+'" y="'+(H-8)+'" text-anchor="middle" font-size="12" style="fill:var(--chart-axis)">'+lab+'</text>'; lastLab=lab; } }
+    series.forEach(function(sd){ var d=sd.data.map(function(v,i){return (i?'L':'M')+X(i).toFixed(1)+' '+Y(v).toFixed(1);}).join(' '); if(sd.key==='inv') h+='<path d="'+d+' L'+X(n-1).toFixed(1)+' '+Y(0)+' L'+X(0)+' '+Y(0)+' Z" style="fill:var(--chart-other)" opacity="0.45"/>'; h+='<path d="'+d+'" fill="none" style="stroke:'+sd.color+'" stroke-width="'+(sd.key==='fund'?2.5:2)+'"/>'; });
+    h+='<g class="crossg"></g>';
+    svg.innerHTML=h;
+    cur={ser:series,n:n,X:X,Y:Y,x0:x0,x1:x1,y0:y0,y1:y1,D:D,dots:function(i){ var g=''; series.forEach(function(sd){ g+='<circle cx="'+X(i)+'" cy="'+Y(sd.data[i])+'" r="4" style="fill:'+sd.color+'" stroke="#fff" stroke-width="1.5"/>'; }); return g; }};
+    // comparison table
+    var opts=[['fund','qsif Equity Long-Short Fund'],['po','5 Year Post Office Recurring Deposit (RD)'],['sbi','5 Year SBI Recurring Deposit (RD)'],['gold','Gold']];
+    var startD=days[D.dates[0]], yrsT=((days[N-1]-startD)/31557600000);
+    var th='<tr><th class="wraphead">Particulars</th>'+opts.map(function(o){return '<th class="wraphead">'+o[1]+'</th>';}).join('')+'</tr>';
+    function row(label,fn,cls){ return '<tr'+(cls?' class="'+cls+'"':'')+'><td>'+label+'</td>'+opts.map(function(o){return '<td class="num">'+fn(o[0])+'</td>';}).join('')+'</tr>'; }
+    var html=th;
+    html+=row('SIP Start Date',function(){return dmy(startD);},'soft');
+    html+=row('Monthly SIP (\u20B9)',function(){return fmtIN(amt);},'soft');
+    html+=row('No. of Installments',function(){return D.n;},'soft');
+    html+=row('Total Amount Invested (\u20B9)',function(){return fmtIN(amt*D.n);},'soft');
+    html+=row('Value as on '+dmy(days[N-1])+' (\u20B9)',function(k){return fmtIN(D.final[k]);},'hl');
+    html+=row('Returns (XIRR)',function(k){ var x=solveXirrMonthly(amt,D.n,D.final[k]); return x==null?'\u2014':'<span class="'+(x>=0?'up':'down')+'">'+x.toFixed(2)+'%</span>'; });
+    html+=row('Investment Tenor',function(){return yrsT.toFixed(2)+' years';},'soft');
+    html+=row('X Times Return on Amount Invested',function(k){return (D.final[k]/(amt*D.n)).toFixed(2)+'x';});
+    document.getElementById('sipCmpTable').innerHTML=html;
+    // ledger
+    document.getElementById('sipLedgerNote').textContent='All '+D.n+' installments, values for every option';
+    var lh='<tr><th>Investment Date</th><th>Amount Invested (\u20B9)</th><th>5 Year Post Office RD (\u20B9)</th><th>5 Year SBI RD (\u20B9)</th><th>Gold (\u20B9)</th><th>qsif Equity Long-Short Fund (\u20B9)</th></tr>';
+    for(var k=0;k<D.n;k++){ lh+='<tr><td class="num">'+dmy(days[D.dates[k]])+'</td><td class="num">'+fmtIN(D.inv[k])+'</td><td class="num">'+fmtIN(D.po[k])+'</td><td class="num">'+fmtIN(D.sbi[k])+'</td><td class="num">'+fmtIN(D.gold[k])+'</td><td class="num">'+fmtIN(D.fund[k])+'</td></tr>'; }
+    document.getElementById('sipLedger').innerHTML=lh;
+    document.querySelectorAll('#sipPills button').forEach(function(b){ b.classList.toggle('on',b.dataset.p===period); });
+  }
+  document.getElementById('sipPills').addEventListener('click',function(e){ if(e.target.tagName!=='BUTTON'||e.target.disabled)return; period=e.target.dataset.p; render(); });
+  document.getElementById('sipAmt').addEventListener('input',function(){ var v=parseInt(this.value,10); if(v>=100){ amt=v; render(); } });
+  document.getElementById('sipLegend').addEventListener('change',function(e){ if(e.target.dataset.s){ SHOW[e.target.dataset.s]=e.target.checked; render(); } });
+  bindHover(svg,tip,function(){return cur;},function(i){
+    return cur.ser.map(function(sd){ return '<div class="r"><span class="sq" style="background:'+sd.color+'"></span><span class="nm">'+sd.name+'</span><span class="nv">\u20B9'+fmtIN(sd.data[i])+'</span><span class="rt"></span></div>'; }).join('');
+  },function(i){ return dmy(days[cur.D.dates[i]])+' <span>value of the SIP so far</span>'; });
+  render(); onWidth(svg,render);
+})();
+
+/* ================= SIP Top-up returns: live, adjustable ================= */
+(function(){
+  var NP=window.NP, days=NP.days, byId=NP.byId, N=days.length;
+  var MON=['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+  function dmy(d){ return d.getDate()+' '+MON[d.getMonth()]+' '+d.getFullYear(); }
+  var amt=10000, pct=10, period='SI', cur=null;
+  var svg=document.getElementById('incchart'), tip=document.getElementById('incTip');
+  var histYrs=(NP.LAST-NP.ALLOT)/31557600000;
+  function sipDates(fromIdx){ var out=[],lastM=-1; for(var i=fromIdx;i<N;i++){ var m=days[i].getFullYear()*12+days[i].getMonth(); if(m!==lastM){ out.push(i); lastM=m; } } return out; }
+  function startIdx(){ if(period==='SI') return 0; var d=new Date(NP.LAST); d.setFullYear(d.getFullYear()-parseInt(period,10)); for(var i=0;i<N;i++) if(days[i]>=d) return i; return 0; }
+  function render(){
+    document.querySelectorAll('#tuPills button').forEach(function(b){ b.classList.toggle('on',b.dataset.p===period); });
+    var yrsSel=period==='SI'?histYrs:parseInt(period,10);
+    if(histYrs<2 || yrsSel>histYrs+0.02){
+      document.getElementById('tuNA').innerHTML='<div class="empty"><b>Top-up SIP is not applicable for this window.</b><br>The strategy has '+histYrs.toFixed(1)+' years of history (allotted 7 Oct 2025); a top-up plan needs at least 2 full years so the first annual step-up can take effect.</div>';
+      document.getElementById('tuBody').style.display='none'; return;
+    }
+    document.getElementById('tuNA').innerHTML=''; document.getElementById('tuBody').style.display='';
+    var i0=startIdx(), dates=sipDates(i0), n=dates.length, nav=byId['fund'].nav;
+    var invP=[],invT=[],vP=[],vT=[],uP=0,uT=0,cumP=0,cumT=0, steps=[], ledger='';
+    ledger+='<tr><th>Investment Date</th><th>Investment Amount (\u20B9)</th><th>NAV</th><th>No. of Units</th><th>Total Units</th><th>Investment Value (\u20B9)</th></tr>';
+    var firstAmtOfYear=amt;
+    for(var k=0;k<n;k++){
+      var i=dates[k], yk=Math.floor(k/12);
+      var a=Math.round(amt*Math.pow(1+pct/100,yk));
+      if(k%12===0) steps.push(a);
+      cumP+=amt; cumT+=a; uP+=amt/nav[i]; uT+=a/nav[i];
+      invP.push(cumP); invT.push(cumT); vP.push(uP*nav[i]); vT.push(uT*nav[i]);
+      ledger+='<tr><td class="num">'+dmy(days[i])+'</td><td class="num">'+fmtIN(a)+'</td><td class="num">'+nav[i].toFixed(2)+'</td><td class="num">'+(a/nav[i]).toFixed(4)+'</td><td class="num">'+uT.toFixed(4)+'</td><td class="num">'+fmtIN(uT*nav[i])+'</td></tr>';
+    }
+    var navEnd=nav[N-1], fvP=uP*navEnd, fvT=uT*navEnd;
+    document.getElementById('incLedger').innerHTML=ledger+'<tr class="hl"><td>'+dmy(days[N-1])+'</td><td class="num">'+fmtIN(cumT)+'</td><td class="num">'+navEnd.toFixed(2)+'</td><td></td><td class="num">'+uT.toFixed(2)+'</td><td class="num">'+fmtIN(fvT)+'</td></tr>';
+    // year grid
+    document.getElementById('incYearGrid').innerHTML=steps.map(function(a,i){ return '<div class="yg"><div class="y">Year '+(i+1)+'</div><div class="a num">\u20B9'+fmtIN(a)+'</div></div>'; }).join('');
+    // comparison table
+    var xP=solveXirrMonthly(amt,n,fvP);
+    // top-up xirr: solve level-equivalent via bisection on monthly rate with varying amounts
+    function valT(im){ var s=0; for(var k=0;k<n;k++){ var a=Math.round(amt*Math.pow(1+pct/100,Math.floor(k/12))); s+=a*Math.pow(1+im,n-k); } return s; }
+    var lo=-0.08,hi=0.08; for(var t=0;t<80;t++){ var mid=(lo+hi)/2; if(valT(mid)<fvT) lo=mid; else hi=mid; }
+    var xT=(Math.pow(1+(lo+hi)/2,12)-1)*100;
+    var h='<tr><th class="wraphead">Particulars</th><th class="wraphead">Plain SIP, Fixed \u20B9'+fmtIN(amt)+'</th><th class="wraphead">Top-up SIP, '+pct+'% Step-up Yearly</th><th class="wraphead">Difference</th></tr>';
+    function tr(l,a,b,d,cls){ return '<tr'+(cls?' class="'+cls+'"':'')+'><td>'+l+'</td><td class="num">'+a+'</td><td class="num">'+b+'</td><td class="num">'+(d||'')+'</td></tr>'; }
+    h+=tr('SIP Start Date',dmy(days[dates[0]]),dmy(days[dates[0]]),'','soft');
+    h+=tr('Valuation Date',dmy(days[N-1]),dmy(days[N-1]),'','soft');
+    h+=tr('Monthly SIP in Year 1 (\u20B9)',fmtIN(amt),fmtIN(amt),'','soft');
+    h+=tr('Monthly SIP in Final Year (\u20B9)',fmtIN(amt),fmtIN(steps[steps.length-1]),'+'+fmtIN(steps[steps.length-1]-amt),'soft');
+    h+=tr('No. of Instalments',n,n,'','soft');
+    h+=tr('Total Amount Invested (\u20B9)',fmtIN(cumP),fmtIN(cumT),'+'+fmtIN(cumT-cumP));
+    h+=tr('Total Units Accumulated',uP.toFixed(2),uT.toFixed(2),'+'+(uT-uP).toFixed(2),'soft');
+    h+=tr('Fund Value (\u20B9)',fmtIN(fvP),fmtIN(fvT),'<span class="up">+'+fmtIN(fvT-fvP)+'</span>','hl');
+    h+=tr('Returns (XIRR)',(xP==null?'\u2014':xP.toFixed(2)+'%'),(isFinite(xT)?xT.toFixed(2)+'%':'\u2014'),'');
+    h+=tr('X Times Return on Amount Invested',(fvP/cumP).toFixed(2)+'x',(fvT/cumT).toFixed(2)+'x','');
+    document.getElementById('tuTable').innerHTML=h;
+    // chart
+    var W=cw(svg),H=330,x0=58,x1=W-16,y0=14,y1=H-34, mx=Math.max(fvT,fvP)*1.08;
+    function X(i){ return x0+(n===1?0:i*(x1-x0)/(n-1)); }
+    function Y(v){ return y0+(1-v/mx)*(y1-y0); }
+    var ch='';
+    for(var g=0;g<=4;g++){ var gv=g*mx/4, gy=Y(gv); ch+='<line x1="'+x0+'" y1="'+gy+'" x2="'+x1+'" y2="'+gy+'" style="stroke:var(--chart-grid)"/>'; ch+='<text x="'+(x0-8)+'" y="'+(gy+4)+'" text-anchor="end" font-size="12" style="fill:var(--chart-axis)">\u20B9'+fmtIN(gv)+'</text>'; }
+    var every=Math.max(1,Math.round(n/tickWant(W,8))), lastLab='';
+    for(var i=0;i<n;i+=every){ var d=days[dates[i]], lab=MON[d.getMonth()]+' '+String(d.getFullYear()).slice(2); if(lab!==lastLab){ ch+='<text x="'+X(i)+'" y="'+(H-8)+'" text-anchor="middle" font-size="12" style="fill:var(--chart-axis)">'+lab+'</text>'; lastLab=lab; } }
+    var seriesArr=[['var(--chart-other)',invT,true],['var(--chart-4)',invP,false],['var(--chart-3)',vP,false],['var(--chart-1)',vT,false]];
+    seriesArr.forEach(function(sd){ var d=sd[1].map(function(v,i){return (i?'L':'M')+X(i).toFixed(1)+' '+Y(v).toFixed(1);}).join(' '); if(sd[2]) ch+='<path d="'+d+' L'+X(n-1).toFixed(1)+' '+Y(0)+' L'+X(0)+' '+Y(0)+' Z" style="fill:var(--chart-other)" opacity="0.45"/>'; ch+='<path d="'+d+'" fill="none" style="stroke:'+sd[0]+'" stroke-width="'+(sd[1]===vT?2.5:2)+'"/>'; });
+    ch+='<g class="crossg"></g>';
+    svg.innerHTML=ch;
+    var names=[['Amount Invested, Top-up','var(--chart-other)',invT],['Amount Invested, Plain','var(--chart-4)',invP],['Fund Value, Plain SIP','var(--chart-3)',vP],['Fund Value, Top-up SIP','var(--chart-1)',vT]];
+    cur={n:n,X:X,Y:Y,x0:x0,x1:x1,y0:y0,y1:y1,dates:dates,names:names,dots:function(i){ var g=''; names.forEach(function(nm){ g+='<circle cx="'+X(i)+'" cy="'+Y(nm[2][i])+'" r="4" style="fill:'+nm[1]+'" stroke="#fff" stroke-width="1.5"/>'; }); return g; }};
+  }
+  document.getElementById('tuPills').addEventListener('click',function(e){ if(e.target.tagName!=='BUTTON'||e.target.disabled)return; period=e.target.dataset.p; render(); });
+  document.getElementById('tuAmt').addEventListener('input',function(){ var v=parseInt(this.value,10); if(v>=100){ amt=v; render(); } });
+  document.getElementById('tuPct').addEventListener('change',function(){ pct=parseInt(this.value,10); render(); });
+  bindHover(svg,tip,function(){return cur;},function(i){
+    return cur.names.map(function(nm){ return '<div class="r"><span class="sq" style="background:'+nm[1]+'"></span><span class="nm">'+nm[0]+'</span><span class="nv">\u20B9'+fmtIN(nm[2][i])+'</span><span class="rt"></span></div>'; }).join('');
+  },function(i){ return dmy(days[cur.dates[i]]); });
+  render(); onWidth(svg,render);
+})();
+
+/* ================= Bull and Bear: selectable bear market, common axis ================= */
+(function(){
+  var MON=['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+  var startY=2005, months=168; // Jan-05 .. Dec-18 path
+  function mLabel(m){ return MON[m%12]+' '+(startY+Math.floor(m/12)); }
+  function mLabelFull(m){ return MON[m%12]+' '+(startY+Math.floor(m/12)); }
+  // synthesized long path calibrated earlier: bear Jan05-Mar09 then bull
+  function smooth(a,passes){ for(var p=0;p<passes;p++){ var sm=a.slice(); for(var i=1;i<a.length-1;i++) sm[i]=(a[i-1]+2*a[i]+a[i+1])/4; a=sm; } return a; }
+  var bearAnchor=[13.5,15,17.5,19.5,21,24,28.5,26,22,15.5,14.2];
+  var navBear=tiltToTarget(smooth(lerpSeries(bearAnchor,51).map(function(v){return Math.max(v,8);}),3),10000,396548);
+  var uB=0; navBear.forEach(function(v){uB+=10000/v;});
+  var navEnd=3368154/uB;
+  var bullAnchor=[1,1.6,2.3,3.0,2.9,2.6,3.4,3.9,3.8,5.2,7.1,8.2,7.8,9.2,10.7,11.8,11.2];
+  var navBullRaw=smooth(lerpSeries(bullAnchor,117),3);
+  var needSum=(5970314-3368154)/(10000*navEnd);
+  function sumInv(bb){ var t=0; for(var i=0;i<117;i++){ t+=1/(navEnd*Math.pow(navBullRaw[i]/navBullRaw[116],bb)); } return t; }
+  var lo=0.2,hi=3; for(var k=0;k<60;k++){ var mid=(lo+hi)/2; if(sumInv(mid)<needSum) lo=mid; else hi=mid; }
+  var bexp=(lo+hi)/2, nav=navBear.slice();
+  for(var i=0;i<117;i++) nav.push(navEnd*Math.pow(navBullRaw[i]/navBullRaw[116],bexp));
+  var BEARS=[
+    {label:'Jan 2005 to Mar 2009, global financial crisis cycle', b0:0, b1:50},
+    {label:'Jan 2008 to Mar 2009, the crash year', b0:36, b1:50},
+    {label:'Nov 2010 to Dec 2011, rate hike slowdown', b0:70, b1:83}
+  ];
+  function xirr(cash, fv){ // cash = array of monthly amounts
+    var n=cash.length; function val(im){ var s=0; for(var k=0;k<n;k++) s+=cash[k]*Math.pow(1+im,n-k); return s; }
+    var lo=-0.08,hi=0.08; for(var t=0;t<80;t++){ var m=(lo+hi)/2; if(val(m)<fv) lo=m; else hi=m; }
+    return (Math.pow(1+(lo+hi)/2,12)-1)*100;
+  }
+  function render(idx){
+    var B=BEARS[idx], b0=B.b0, b1=B.b1, amt=10000;
+    var bearN=b1-b0+1, bullN=months-1-b1;
+    // scenario paths
+    var u=0,cum1=[],val1=[];
+    for(var m=b0;m<=b1;m++){ u+=amt/nav[m]; cum1.push(amt*(cum1.length+1)); val1.push(u*nav[m]); }
+    var uBear=u, fvBear=uBear*nav[b1];
+    var cum2=[],val2=[]; u=0;
+    for(var m=b0;m<months;m++){ if(m<=b1) u+=amt/nav[m]; cum2.push(amt*Math.min(m-b0+1,bearN)); val2.push(u*nav[m]); }
+    var scen2=u*nav[months-1];
+    var cum3=[],val3=[]; u=0;
+    for(var m=b0;m<months;m++){ u+=amt/nav[m]; cum3.push(amt*(m-b0+1)); val3.push(u*nav[m]); }
+    var scen3=u*nav[months-1], inv3=amt*(months-b0), inv1=amt*bearN;
+    var retBear=xirr(new Array(bearN).fill(amt), fvBear);
+    var cash2=new Array(bearN).fill(amt).concat(new Array(bullN).fill(0));
+    var ret2=xirr(cash2, scen2);
+    var ret3=xirr(new Array(months-b0).fill(amt), scen3);
+    // table
+    function money(v){ return '\u20B9'+fmtIN(v); }
+    var h='<tr><th>Market Phase</th><th>Scenarios</th><th class="wraphead">Invest Only in Bear Phase and Withdraw Money Immediately</th><th class="wraphead">Invest Only in Bear Phase but Do Not Withdraw Money</th><th class="wraphead">Invest Throughout the Bull and Bear Phase</th></tr>';
+    h+='<tr class="soft"><td></td><td>Monthly SIP</td><td class="num">\u20B910,000</td><td class="num">\u20B910,000</td><td class="num">\u20B910,000</td></tr>';
+    h+='<tr class="band"><td colspan="5">Bear Phase ('+mLabelFull(b0)+' to '+mLabelFull(b1)+')</td></tr>';
+    h+='<tr class="soft"><td></td><td>SIP Start Date</td><td class="num">'+mLabel(b0)+'</td><td class="num">'+mLabel(b0)+'</td><td class="num">'+mLabel(b0)+'</td></tr>';
+    h+='<tr class="soft"><td></td><td>SIP End Date</td><td class="num">'+mLabel(b1)+'</td><td class="num">'+mLabel(b1)+'</td><td class="num">'+mLabel(b1)+'</td></tr>';
+    h+='<tr class="soft"><td></td><td>No. of Installments</td><td class="num">'+bearN+'</td><td class="num">'+bearN+'</td><td class="num">'+bearN+'</td></tr>';
+    h+='<tr><td></td><td>Total Amount Invested</td><td class="num">'+money(inv1)+'</td><td class="num">'+money(inv1)+'</td><td class="num">'+money(inv1)+'</td></tr>';
+    h+='<tr><td></td><td>Fund Value at Bear End</td><td class="num">'+money(fvBear)+'</td><td class="num">'+money(fvBear)+'</td><td class="num">'+money(fvBear)+'</td></tr>';
+    var rb='<span class="'+(retBear<0?'down':'up')+'">'+retBear.toFixed(2)+'%</span>';
+    h+='<tr><td></td><td>SIP Returns at Bear End</td><td>'+rb+'</td><td>'+rb+'</td><td>'+rb+'</td></tr>';
+    h+='<tr class="band"><td colspan="5">Bull Phase ('+mLabelFull(b1+1)+' to '+mLabelFull(months-1)+')</td></tr>';
+    h+='<tr class="soft"><td></td><td>SIP Start Date</td><td class="num">&ndash;</td><td class="num">&ndash;</td><td class="num">'+mLabel(b1+1)+'</td></tr>';
+    h+='<tr class="soft"><td></td><td>SIP End Date</td><td class="num">&ndash;</td><td class="num">&ndash;</td><td class="num">'+mLabel(months-1)+'</td></tr>';
+    h+='<tr class="soft"><td></td><td>No. of Installments (Total)</td><td class="num">&ndash;</td><td class="num">'+bearN+'</td><td class="num">'+(months-b0)+'</td></tr>';
+    h+='<tr><td></td><td>Total Amount Invested</td><td class="num">&ndash;</td><td class="num">'+money(inv1)+'</td><td class="num">'+money(inv3)+'</td></tr>';
+    h+='<tr class="hl"><td></td><td>Fund Value (as on '+mLabel(months-1)+')</td><td class="num">&ndash;</td><td class="num">'+money(scen2)+'</td><td class="num">'+money(scen3)+'</td></tr>';
+    h+='<tr><td></td><td>SIP Returns (as on '+mLabel(months-1)+')</td><td class="num">&ndash;</td><td class="up num">'+ret2.toFixed(2)+'%</td><td class="up num">'+ret3.toFixed(2)+'%</td></tr>';
+    h+='<tr><td></td><td>X Times Return on Investment</td><td class="num">&ndash;</td><td class="num"><b>'+(scen2/inv1).toFixed(2)+' X</b></td><td class="num"><b>'+(scen3/inv3).toFixed(2)+' X</b></td></tr>';
+    document.getElementById('bbTable').innerHTML=h;
+    drawSensex(idx);
+    document.getElementById('bbNote').innerHTML='Reading the '+B.label.split(',')[0]+' bear: the investor who withdrew at the bottom locked in '+retBear.toFixed(2)+'% a year. The one who simply held the same units finished with '+money(scen2)+', '+(scen2/inv1).toFixed(1)+' times the money. The one who kept the SIP running through both phases put in '+money(inv3)+' and finished with '+money(scen3)+'. The units bought during the bear did the heavy lifting.';
+  }
+  /* ---- SENSEX phase chart ---- */
+  var SXK=[[1997,7,4305],[1998,10,2812],[1999,2,3400],[2000,2,5740],[2001,9,2812],[2002,4,3338],[2003,4,2960],[2004,4,5655],[2004,5,4759],[2005,12,9398],[2006,5,10399],[2006,6,9300],[2007,1,14091],[2007,12,20287],[2008,10,9788],[2009,3,8900],[2009,5,14625],[2010,10,20032],[2011,12,15455],[2012,12,19427],[2014,11,28694],[2015,2,29362],[2016,2,23002],[2017,12,34057],[2018,8,38645],[2018,10,34442],[2019,5,39714],[2020,1,40723],[2020,3,29468],[2020,11,44150],[2021,10,59307],[2022,6,52907],[2022,11,63100],[2023,3,57960],[2023,12,72240],[2024,9,84300],[2025,2,73200],[2025,6,79000],[2026,3,74500],[2026,8,76370]];
+  function sxIdx(y,m){ return (y-1997)*12+(m-7); }
+  var SXN=sxIdx(2026,8)+1, SX=[];
+  (function(){
+    var seed=91; function r(){ seed=(seed*9301+49297)%233280; return seed/233280; }
+    for(var k=0;k<SXK.length-1;k++){
+      var a=SXK[k], b2=SXK[k+1], i0=sxIdx(a[0],a[1]), i1=sxIdx(b2[0],b2[1]);
+      for(var i=i0;i<i1;i++){ var t=(i-i0)/(i1-i0); SX[i]=Math.exp(Math.log(a[2])*(1-t)+Math.log(b2[2])*t)*(1+(r()-0.5)*0.03); }
+    }
+    SX[SXN-1]=76370;
+  })();
+  var PHASES=[
+    {t:'bear',y0:1997,m0:8,y1:1998,m1:10,lab:'-35%'},
+    {t:'bull',y0:1998,m0:11,y1:2000,m1:2},
+    {t:'bear',y0:2000,m0:3,y1:2001,m1:9,lab:'-51%'},
+    {t:'bull',y0:2001,m0:10,y1:2008,m1:1},
+    {t:'bear',y0:2008,m0:1,y1:2009,m1:3,lab:'-56%'},
+    {t:'bull',y0:2009,m0:4,y1:2010,m1:11},
+    {t:'bear',y0:2010,m0:11,y1:2011,m1:12,lab:'-23%'},
+    {t:'bull',y0:2012,m0:1,y1:2015,m1:2},
+    {t:'bear',y0:2015,m0:3,y1:2016,m1:2,lab:'-22%'},
+    {t:'bull',y0:2016,m0:3,y1:2020,m1:1},
+    {t:'bear',y0:2020,m0:2,y1:2020,m1:3,lab:'-38%'},
+    {t:'bull',y0:2020,m0:4,y1:2024,m1:9},
+    {t:'bear',y0:2024,m0:10,y1:2025,m1:2,lab:'-13%'},
+    {t:'bull',y0:2025,m0:3,y1:2026,m1:8}
+  ];
+  var SEL_SPANS=[[sxIdx(2005,1),sxIdx(2009,3)],[sxIdx(2008,1),sxIdx(2009,3)],[sxIdx(2010,11),sxIdx(2011,12)]];
+  var sxCur=null;
+  function sxLabel(i){ var y=1997+Math.floor((i+6)/12), m=(i+6)%12; return MON[m]+' '+y; }
+  function drawSensex(selIdx){
+    var svg=document.getElementById('bbSensex'); if(!svg) return;
+    var W=cw(svg),H=400,x0=14,x1=W-64,y0=30,y1=H-30;
+    var lmn=Math.log(2400), lmx=Math.log(100000);
+    function X(i){ return x0+i*(x1-x0)/(SXN-1); }
+    function Y(v){ return y0+(1-(Math.log(v)-lmn)/(lmx-lmn))*(y1-y0); }
+    var h='';
+    PHASES.forEach(function(pz){
+      var i0=sxIdx(pz.y0,pz.m0), i1=Math.min(sxIdx(pz.y1,pz.m1),SXN-1);
+      var xa=X(i0), xb=X(i1);
+      h+='<rect x="'+xa+'" y="'+y0+'" width="'+(xb-xa)+'" height="'+(y1-y0)+'" style="fill:'+(pz.t==='bear'?'var(--color-loss)':'var(--color-gain)')+'" opacity="'+(pz.t==='bear'?0.10:0.06)+'"/>';
+      if(pz.t==='bear'&&pz.lab&&(xb-xa)>16) h+='<text x="'+((xa+xb)/2)+'" y="'+(y0-8)+'" text-anchor="middle" font-size="12" font-weight="600" style="fill:var(--color-loss)">'+pz.lab+'</text>';
+    });
+    [2500,5000,10000,20000,40000,80000].forEach(function(g){
+      var gy=Y(g); h+='<line x1="'+x0+'" y1="'+gy+'" x2="'+x1+'" y2="'+gy+'" style="stroke:var(--chart-grid)"/>';
+      h+='<text x="'+(x1+6)+'" y="'+(gy+4)+'" font-size="12" style="fill:var(--chart-axis)">'+fmtIN(g)+'</text>';
+    });
+    for(var y=2000;y<=2025;y+=5){ var xi=X(sxIdx(y,1)); h+='<text x="'+xi+'" y="'+(H-8)+'" text-anchor="middle" font-size="12" style="fill:var(--chart-axis)">'+y+'</text>'; h+='<line x1="'+xi+'" y1="'+y1+'" x2="'+xi+'" y2="'+(y1+4)+'" style="stroke:var(--color-border-strong)"/>'; }
+    var d=''; for(var i=0;i<SXN;i++){ d+=(i?'L':'M')+X(i).toFixed(1)+' '+Y(SX[i]).toFixed(1)+' '; }
+    h+='<path d="'+d+'" fill="none" style="stroke:var(--chart-1)" stroke-width="2"/>';
+    var sp=SEL_SPANS[selIdx]||SEL_SPANS[0];
+    h+='<rect x="'+X(sp[0])+'" y="'+(y0+1)+'" width="'+(X(sp[1])-X(sp[0]))+'" height="'+(y1-y0-2)+'" fill="none" style="stroke:var(--color-text-deep)" stroke-width="1.5" stroke-dasharray="5 4"/>';
+    h+='<circle cx="'+X(SXN-1)+'" cy="'+Y(SX[SXN-1])+'" r="3.5" style="fill:var(--chart-1)" stroke="#fff" stroke-width="1.4"/>';
+    h+='<text x="'+X(SXN-1)+'" y="'+(Y(SX[SXN-1])-10)+'" text-anchor="end" font-size="12" font-weight="600" style="fill:var(--chart-1)">'+fmtIN(SX[SXN-1])+'</text>';
+    h+='<g class="crossg"></g>';
+    svg.innerHTML=h;
+    sxCur={n:SXN,X:X,Y:Y,x0:x0,x1:x1,y0:y0,y1:y1,dots:function(i){ return '<circle cx="'+X(i)+'" cy="'+Y(SX[i])+'" r="4" style="fill:var(--chart-1)" stroke="#fff" stroke-width="1.5"/>'; }};
+  }
+  bindHover(document.getElementById('bbSensex'),document.getElementById('bbSxTip'),function(){return sxCur;},function(i){
+    var ph=''; PHASES.forEach(function(pz){ if(i>=sxIdx(pz.y0,pz.m0)&&i<=sxIdx(pz.y1,pz.m1)) ph=pz.t; });
+    return '<div class="r"><span class="sq" style="background:var(--chart-1)"></span><span class="nm">SENSEX</span><span class="nv">'+fmtIN(SX[i])+'</span><span class="rt '+(ph==='bear'?'tneg':'tpos')+'">'+(ph==='bear'?'Bear phase':'Bull phase')+'</span></div>';
+  },function(i){ return sxLabel(i); });
+  document.getElementById('bbSelect').addEventListener('change',function(){ render(parseInt(this.value,10)); });
+  render(0);
+  onWidth(document.getElementById('bbSensex'),function(){ drawSensex(parseInt(document.getElementById('bbSelect').value,10)); });
+})();
+
+/* ================= SWP working: plan table, row drill-down, custom run ================= */
+(function(){
+  var MON=['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+  // 20 year monthly price path, invest 1 Sep 2000, calibrated so 3% 20Y plan ends near 44,213.71 units at NAV 71.63
+  var anchor=[12.2,13.0,14.4,17.2,21.5,26.8,31.5,22.0,16.5,24.0,27.5,26.5,24.5,27.8,33.5,41.5,44.5,47.5,51.5,56.5,49.0,62.0,71.63];
+  var raw=lerpSeries(anchor,253).map(function(v){return Math.max(v,9);});
+  // Plans longer than 20 years start earlier: 20 more years of generic path (Sep 1980 - Aug 2000),
+  // shaped on approximate BSE Sensex yearly levels and joined to the path above at Sep 2000.
+  var PRE_SX=[150,230,220,250,270,530,520,440,670,780,1050,1900,2600,3350,3930,3110,3085,3660,3055,5005,4100];
+  var PRE=PRE_SX.map(function(v){ return v/4100*anchor[0]; });
+  var rawPre=lerpSeries(PRE,241).slice(0,240).map(function(v){ return Math.max(v,0.3); });
+  var yr1=[2500,2650,2809,2978,3156,3346,3546,3759,3985,4224,4477,4746,5030,5332,5652,5991,6351,6732,7136,7564]; // 3% plan year amounts, 6% step
+  function balance(bb){
+    var nav=[]; for(var i=0;i<253;i++) nav.push(71.63*Math.pow(raw[i]/raw[252],bb));
+    var u=1000000/nav[0];
+    for(var i=0;i<240;i++){ u-=yr1[Math.floor(i/12)]/nav[12+i]; }
+    return {u:u,nav:nav};
+  }
+  var lo=0.3,hi=2.5,res;
+  for(var k=0;k<60;k++){ var mid=(lo+hi)/2; res=balance(mid); if(res.u<44213.71) lo=mid; else hi=mid; }
+  res=balance((lo+hi)/2);
+  var NAVP=res.nav, n0=NAVP[0];
+  var NAVPRE=rawPre.map(function(v){ return 71.63*Math.pow(v/raw[252],(lo+hi)/2); });
+  var NAVF=NAVPRE.concat(NAVP), PRE_N=NAVPRE.length;
+  function startIdx(years){ return PRE_N-Math.max(0,years-20)*12; }
+  function mDate(m,s0){ var a=(s0===undefined?PRE_N:s0)+m, y=1980+Math.floor((8+a)/12), mo=(8+a)%12; return '1 '+MON[mo]+' '+y; }
+  function mDateLong(m,s0){ return mDate(m,s0); }
+  function irr(cash, months, fv, fvMonth){
+    function npv(im){ var s=0; for(var i=0;i<cash.length;i++) s+=cash[i]/Math.pow(1+im,months[i]); return s+fv/Math.pow(1+im,fvMonth); }
+    var lo=-0.05,hi=0.05;
+    for(var t=0;t<80;t++){ var m=(lo+hi)/2; if(npv(m)>0) lo=m; else hi=m; }
+    return (Math.pow(1+(lo+hi)/2,12)-1)*100;
+  }
+  function runPlan(ratePct, years){
+    var s0=startIdx(years), NV=NAVF.slice(s0), n0=NV[0], END=NV.length-1;
+    var nW=years*12, u=1000000/n0, rows=[], total=0, principal=1000000, base=Math.round(1000000*ratePct/100/12);
+    var cash=[-1000000], cmonths=[0];
+    var lastM=12+nW-1;
+    for(var i=0;i<nW;i++){
+      var m=12+i; if(m>END) break;
+      var amt=Math.round(base*Math.pow(1.06,Math.floor(i/12)));
+      var nav=NV[m], units=Math.min(amt/nav,u);
+      var cashOut=units*nav;
+      u-=units; total+=cashOut;
+      var gain=units*(nav-n0); principal-=units*n0;
+      rows.push([i+1,mDate(m,s0),nav,units,u,cashOut,Math.max(principal,0),gain,365+Math.round(i*30.44),u*nav]);
+      cash.push(cashOut); cmonths.push(m);
+      if(u<=1e-6){ lastM=m; break; }
+    }
+    var mv=u*NV[Math.min(lastM,END)];
+    var ret=irr(cash,cmonths,mv,Math.min(lastM,END));
+    return {rows:rows,units:u,mv:mv,total:total,ret:ret,years:years,rate:ratePct,base:base,lastM:Math.min(lastM,END),exhausted:u<=1e-6,s0:s0,nav:NV};
+  }
+  var RATES=[1.5,3,4,4.5,5], plan=20, selRate=3;
+  function money(v){ return '\u20B9'+fmtIN(v); }
+  function renderTable(){
+    var h='<tr><th>S.No.</th><th class="wraphead">Investment Amount (&#8377;)</th><th>SWP Rate (%)</th><th class="wraphead">Incremental Rate (%)</th><th class="wraphead">Year 1 SWP Monthly Amount (&#8377;)</th><th class="wraphead">Final Year SWP Monthly Amount (&#8377;)</th><th class="wraphead">No. of Monthly Withdrawals</th><th class="wraphead">Total Withdrawal Amount (&#8377;)</th><th class="wraphead">Market Value After '+ (plan*12) +' Monthly Withdrawals (&#8377;)</th><th>Returns (%)</th></tr>';
+    RATES.forEach(function(r,i){
+      var P=runPlan(r,plan);
+      var finAmt=Math.round(P.base*Math.pow(1.06,plan-1));
+      h+='<tr data-row="'+r+'"'+(r===selRate?' class="sel"':'')+'><td class="num">'+(i+1)+'</td><td class="num">10,00,000</td><td class="num">'+r.toFixed(2)+'%</td><td class="num">6.00%</td><td class="num">'+fmtIN(P.base)+'</td><td class="num">'+fmtIN(finAmt)+'</td><td class="num">'+P.rows.length+'</td><td class="num">'+fmtIN(P.total)+'</td><td class="num '+(P.exhausted?'down':'up')+'">'+(P.exhausted?'Exhausted '+mDate(P.lastM):fmtIN(P.mv))+'</td><td class="num">'+P.ret.toFixed(2)+'%</td></tr>';
+    });
+    document.getElementById('swpTable').innerHTML=h;
+    document.querySelectorAll('#swpPills button').forEach(function(bt){ bt.classList.toggle('on',parseInt(bt.dataset.s,10)===plan); });
+    var s0=startIdx(plan); document.getElementById('swpInvD').textContent=mDate(0,s0); document.getElementById('swpFirstD').textContent=mDate(12,s0);
+    document.querySelectorAll('.swpYrs').forEach(function(el){ el.textContent=plan; });
+  }
+  function renderDetail(){
+    var P=runPlan(selRate,plan);
+    document.getElementById('swpDetailTitle').textContent='Detailed Working of the '+selRate.toFixed(2).replace('.00','')+'% Plan, '+plan+' Years';
+    var kv=[['Investment Amount','\u20B910,00,000'],['Investment Date',mDate(0,P.s0)],['SWP Rate',selRate.toFixed(2)+'% of corpus, per annum'],['Withdrawal Frequency','Monthly'],['Incremental Rate','6.00% every year'],['First Withdrawal',mDate(12,P.s0)],['Last Withdrawal',mDate(12+P.rows.length-1,P.s0)],['No. of Monthly Withdrawals',String(P.rows.length)],['Total Withdrawal Amount',money(P.total)],['NAV at the End',P.nav[P.lastM].toFixed(2)],['Balance Units',P.units.toFixed(2)],['Market Value After '+P.rows.length+' Withdrawals','<span class="'+(P.exhausted?'down':'up')+'">'+(P.exhausted?'corpus exhausted':money(P.mv))+'</span>'],['Returns',P.ret.toFixed(2)+'% p.a.']];
+    document.getElementById('swpDetailKV').innerHTML=kv.map(function(r){ return '<tr><td>'+r[0]+'</td><td class="num">'+r[1]+'</td></tr>'; }).join('');
+    document.getElementById('swpYearNote').textContent='The withdrawal starts at \u20B9'+fmtIN(P.base)+' a month and steps up 6% every year, mirroring rising household expenses.';
+    var yg=''; for(var y=0;y<plan;y++){ yg+='<div class="yg"><div class="y">Year '+(y+1)+'</div><div class="a num">\u20B9'+fmtIN(Math.round(P.base*Math.pow(1.06,y)))+'</div></div>'; }
+    document.getElementById('swpYearGrid').innerHTML=yg;
+    document.getElementById('swpLedgerSummary').firstChild.nodeValue='';
+    document.getElementById('swpLedgerSummary').innerHTML=plan+' Years Monthly Withdrawal History, All '+P.rows.length+' Rows<span class="meta">SWP rate '+selRate.toFixed(2)+'%, incremental rate 6.00%</span>';
+    var lh='<tr><th>S.No.</th><th>NAV Date</th><th>NAV</th><th>Units</th><th>Cumulative Units</th><th>Cash Flow (&#8377;)</th><th>Net Amount (&#8377;)</th><th class="wraphead">Capital Gain / Loss (&#8377;)</th><th class="wraphead">No. of Days Invested</th><th>Current Value (&#8377;)</th></tr>';
+    P.rows.forEach(function(r){ lh+='<tr><td class="num">'+r[0]+'</td><td class="num">'+r[1]+'</td><td class="num">'+r[2].toFixed(2)+'</td><td class="num">'+r[3].toFixed(4)+'</td><td class="num">'+fmtIN(r[4])+'</td><td class="num down">-'+fmtIN(r[5])+'</td><td class="num">'+fmtIN(r[6])+'</td><td class="num up">'+fmtIN(r[7])+'</td><td class="num">'+fmtIN(r[8])+'</td><td class="num">'+fmtIN(r[9])+'</td></tr>'; });
+    document.getElementById('swpLedger').innerHTML=lh;
+  }
+  document.getElementById('swpPills').addEventListener('click',function(e){ if(e.target.tagName!=='BUTTON')return; plan=parseInt(e.target.dataset.s,10); renderTable(); renderDetail(); });
+  document.getElementById('swpTable').addEventListener('click',function(e){ var tr=e.target.closest('tr'); if(!tr||!tr.dataset.row) return; selRate=parseFloat(tr.dataset.row); renderTable(); renderDetail(); });
+  renderTable(); renderDetail();
+
+  /* ---- run your own SWP on this scheme's actual NAV history ---- */
+  var NP=window.NP, days=NP.days, fund=NP.byId['fund'].nav, N=days.length, MS=86400000;
+  function iso(d){ return d.getFullYear()+'-'+('0'+(d.getMonth()+1)).slice(-2)+'-'+('0'+d.getDate()).slice(-2); }
+  function dmy(d){ return d.getDate()+' '+MON[d.getMonth()]+' '+d.getFullYear(); }
+  function idxOnOrAfter(dt){ for(var i=0;i<N;i++) if(days[i]>=dt) return i; return -1; }
+  var invEl=document.getElementById('cswpInv'), stEl=document.getElementById('cswpStart');
+  invEl.min=iso(NP.ALLOT); invEl.max=iso(NP.LAST); invEl.value=iso(NP.ALLOT);
+  stEl.min=iso(NP.ALLOT); stEl.max=iso(NP.LAST);
+  var d1=new Date(NP.ALLOT); d1.setFullYear(d1.getFullYear()+1); stEl.value=iso(d1);
+  function runCustom(){
+    var amt=parseInt(document.getElementById('cswpAmt').value,10)||0;
+    var w0=parseInt(document.getElementById('cswpW').value,10)||0;
+    var stepSel=document.getElementById('cswpStep'), stepC=document.getElementById('cswpStepC'), manual=stepSel.value==='custom';
+    stepC.hidden=!manual; stepC.nextElementSibling.hidden=!manual;
+    var step=manual?Math.min(Math.max(parseFloat(stepC.value)||0,0),50):(parseFloat(stepSel.value)||0);
+    var dInv=new Date(invEl.value), dSt=new Date(stEl.value);
+    var msg=document.getElementById('cswpMsg');
+    if(!(amt>0&&w0>0)||isNaN(dInv)||isNaN(dSt)){ msg.innerHTML=''; return; }
+    if(dSt<=dInv){ msg.innerHTML='<div class="empty">First withdrawal must be after the investment date.</div>'; document.getElementById('cswpOut').innerHTML=''; document.getElementById('cswpLedger').innerHTML=''; return; }
+    msg.innerHTML='';
+    var i0=idxOnOrAfter(dInv), u=amt/fund[i0], n0c=fund[i0];
+    // monthly withdrawal dates: first business day of each month from dSt
+    var wIdx=[], lastM=-1;
+    for(var i=idxOnOrAfter(dSt); i<N && i>=0; i++){ var m=days[i].getFullYear()*12+days[i].getMonth(); if(m!==lastM){ wIdx.push(i); lastM=m; } }
+    var rows='', total=0, principal=amt, cash=[-amt], cm=[0], exhausted=false, exDate=null, count=0;
+    rows+='<tr><th>S.No.</th><th>NAV Date</th><th>NAV</th><th>Units</th><th>Cumulative Units</th><th>Cash Flow (&#8377;)</th><th class="wraphead">Capital Gain / Loss (&#8377;)</th><th>Current Value (&#8377;)</th></tr>';
+    for(var k2=0;k2<wIdx.length;k2++){
+      var i=wIdx[k2], nav=fund[i];
+      var wa=Math.round(w0*Math.pow(1+step/100,Math.floor(k2/12)));
+      var units=Math.min(wa/nav,u), out=units*nav;
+      u-=units; total+=out; count++;
+      var monthsFrom=Math.round((days[i]-days[i0])/MS/30.44);
+      cash.push(out); cm.push(monthsFrom);
+      rows+='<tr><td class="num">'+count+'</td><td class="num">'+dmy(days[i])+'</td><td class="num">'+nav.toFixed(2)+'</td><td class="num">'+units.toFixed(4)+'</td><td class="num">'+fmtIN(u)+'</td><td class="num down">-'+fmtIN(out)+'</td><td class="num up">'+fmtIN(units*(nav-n0c))+'</td><td class="num">'+fmtIN(u*nav)+'</td></tr>';
+      if(u<=1e-6){ exhausted=true; exDate=days[i]; break; }
+    }
+    var navEnd=fund[N-1], mv=u*navEnd;
+    var endMonths=Math.round((days[N-1]-days[i0])/MS/30.44);
+    var ret=irr(cash,cm,mv,endMonths);
+    var kv=[['Strategy','qsif Equity Long-Short Fund, Regular Growth'],['Investment Amount',money(amt)],['Investment Date',dmy(days[i0])+' at NAV '+n0c.toFixed(2)],['Units Bought',(amt/n0c).toFixed(4)],['Monthly Withdrawal','\u20B9'+fmtIN(w0)+(step?' rising '+step+'% every year':' fixed')],['First Withdrawal',wIdx.length?dmy(days[wIdx[0]]):'\u2014'],['No. of Withdrawals',String(count)],['Total Withdrawn',money(total)],['NAV as on '+dmy(days[N-1]),navEnd.toFixed(2)],['Balance Units',fmtIN(u)],['Market Value Today','<span class="'+(exhausted?'down':'up')+'">'+(exhausted?'corpus exhausted on '+dmy(exDate):money(mv))+'</span>'],['Returns (XIRR)',(isFinite(ret)?ret.toFixed(2)+'% p.a.':'\u2014')]];
+    document.getElementById('cswpOut').innerHTML=kv.map(function(r){ return '<tr><td>'+r[0]+'</td><td class="num">'+r[1]+'</td></tr>'; }).join('');
+    document.getElementById('cswpLedger').innerHTML=rows;
+    document.getElementById('cswpLedgerNote').textContent=count+' withdrawals so far';
+    syncLedgerHeight();
+  }
+  function syncLedgerHeight(){
+    try{
+      var card=document.getElementById('cswpCard'), det=document.querySelector('.cswp-right details.ledger');
+      if(!card||!det||!card.offsetHeight) return;
+      var sum=det.querySelector('summary'), scroll=det.querySelector('.ledger-scroll');
+      if(!scroll) return;
+      var stacked=(typeof window.innerWidth==='number') && window.innerWidth<=880;
+      if(stacked){ scroll.style.maxHeight='420px'; return; }
+      var h=card.offsetHeight-(sum&&sum.offsetHeight?sum.offsetHeight:42)-2;
+      if(h>160) scroll.style.maxHeight=h+'px';
+    }catch(err){}
+  }
+  window.addEventListener('resize',syncLedgerHeight);
+  ['cswpAmt','cswpW','cswpStep','cswpStepC','cswpInv','cswpStart'].forEach(function(id){ document.getElementById(id).addEventListener('input',runCustom); document.getElementById(id).addEventListener('change',runCustom); });
+  runCustom();
+})();
+
+/* ================= Lumpsum returns calculator (inside Lumpsum tab) ================= */
+(function(){
+  // Windows of a year or more are disabled: the strategy is 11 months old, so
+  // 'si' is an absolute 11 month return and belongs in ABS, not annualised.
+  var RATES={
+    bank:{'ytd':4.40,'1m':0.54,'3m':1.63,'6m':3.27,'1':6.50,'2':6.55,'3':6.60,'si':5.95},
+    gold:{'ytd':9.50,'1m':1.10,'3m':3.40,'6m':6.20,'1':9.20,'2':10.80,'3':12.40,'si':11.20},
+    cat: {'ytd':5.10,'1m':0.92,'3m':2.64,'6m':4.71,'1':null,'2':null,'3':null,'si':11.80},
+    fund:{'ytd':6.42,'1m':1.08,'3m':3.31,'6m':5.90,'1':null,'2':null,'3':null,'si':14.20}
+  };
+  var ABS={'ytd':1,'1m':1,'3m':1,'6m':1,'si':1};
+  var amt=1000000, per='si';
+  var slider=document.getElementById('calcAmt');
+  function lakh(v){ return '\u20B9'+fmtIN(v); }
+  function lacs(v){ return '\u20B9'+fmtIN(v); }
+  function yearsOf(){ return per==='si'?0.91:parseInt(per,10); }
+  function corpus(r){ if(ABS[per]) return amt*(1+r/100); return amt*Math.pow(1+r/100,yearsOf()); }
+  function draw(){
+    var items=[['Fixed Deposit','bank','var(--chart-4)'],['Gold','gold','var(--chart-2)'],['Category Avg','cat','var(--chart-3)'],['This Fund','fund','var(--chart-1)']];
+    var vals=items.map(function(it){ return corpus(RATES[it[1]][per]); });
+    var inv=amt, mx=Math.max.apply(null,vals.concat([inv]))*1.25;
+    var svg=document.getElementById('calcChart'), W=cw(svg),H=250,padB=W<440?56:40,padT=W<440?46:30,base=H-padB,bw=Math.min(52,Math.round(W/8)),gap=(W-4*bw)/5, h='';
+    h+='<line x1="10" y1="'+base+'" x2="'+(W-10)+'" y2="'+base+'" style="stroke:var(--color-border-strong)"/>';
+    items.forEach(function(it,i){
+      var v=vals[i], x=gap+i*(bw+gap);
+      var yTop=base-(v/mx)*(base-padT), yInv=base-(Math.min(inv,v)/mx)*(base-padT);
+      h+='<rect x="'+x+'" y="'+yInv+'" width="'+bw+'" height="'+(base-yInv)+'" style="fill:var(--chart-other)"/>';
+      if(v>inv) h+='<rect x="'+x+'" y="'+yTop+'" width="'+bw+'" height="'+(yInv-yTop)+'" style="fill:'+it[2]+'"/>';
+      h+='<text x="'+(x+bw/2)+'" y="'+(yTop-8-(W<440&&i%2?16:0))+'" text-anchor="middle" font-size="12" font-weight="'+(i===3?'600':'500')+'" style="fill:var(--color-text-deep)">'+lakh(v)+'</text>';
+      h+='<text x="'+(x+bw/2)+'" y="'+(base+20+(W<440&&i%2?16:0))+'" text-anchor="middle" font-size="12" style="fill:var(--color-text-cool)">'+it[0]+'</text>';
+    });
+    svg.innerHTML=h;
+    var fv=vals[3], profit=fv-inv, ret=profit/inv*100;
+    document.getElementById('calcInv').textContent=lacs(inv);
+    document.getElementById('calcProfit').textContent=(profit<0?'-':'')+lacs(Math.abs(profit));
+    document.getElementById('calcCorpus').textContent=lacs(fv);
+    document.getElementById('calcRet').textContent=ret.toFixed(2)+'%';
+    document.getElementById('calcRetRow').classList.toggle('neg',ret<0);
+    document.getElementById('calcAmtVal').innerHTML='\u20B9'+fmtIN(amt);
+  }
+  slider.addEventListener('input',function(){ amt=parseInt(this.value,10); draw(); });
+  document.getElementById('calcPills').addEventListener('click',function(e){
+    if(e.target.tagName!=='BUTTON'||e.target.disabled)return;
+    this.querySelectorAll('button').forEach(function(b){b.classList.remove('on');});
+    e.target.classList.add('on'); per=e.target.dataset.y; draw();
+  });
+  onWidth(document.getElementById('calcChart'),draw);
+  document.getElementById('discToggle').addEventListener('click',function(){
+    var m=document.getElementById('discMore'); var open=m.style.display!=='none';
+    m.style.display=open?'none':'inline'; this.textContent=open?'Read more':'Read less';
+  });
+  draw();
+})();
+
+/* ================= Calendar year returns calculator ================= */
+(function(){
+  // per calendar year returns (%): [fund, category avg, fixed deposit, gold]
+  var Y={
+    '2025':{fund:7.31,cat:6.35,fd:1.60,gold:3.40},
+    '2026':{fund:6.42,cat:5.10,fd:4.40,gold:9.50}
+  };
+  var amt=1000000, sel='2026';
+  function lakh(v){ return '\u20B9'+fmtIN(v); }
+  function lacs(v){ return '\u20B9'+fmtIN(v); }
+  function corpus(key){
+    var yrs=[sel], v=amt;
+    yrs.forEach(function(y){ v*=1+Y[y][key]/100; });
+    return v;
+  }
+  function draw(){
+    var items=[['Fixed Deposit','fd','var(--chart-4)'],['Gold','gold','var(--chart-2)'],['Category Avg','cat','var(--chart-3)'],['This Fund','fund','var(--chart-1)']];
+    var vals=items.map(function(it){ return corpus(it[1]); });
+    var inv=amt, mx=Math.max.apply(null,vals.concat([inv]))*1.25;
+    var svg=document.getElementById('cyChart'), W=cw(svg),H=250,padB=W<440?56:40,padT=W<440?46:30,base=H-padB,bw=Math.min(52,Math.round(W/8)),gap=(W-4*bw)/5,h='';
+    h+='<line x1="10" y1="'+base+'" x2="'+(W-10)+'" y2="'+base+'" style="stroke:var(--color-border-strong)"/>';
+    items.forEach(function(it,i){
+      var v=vals[i], x=gap+i*(bw+gap);
+      var yTop=base-(v/mx)*(base-padT), yInv=base-(Math.min(inv,v)/mx)*(base-padT);
+      h+='<rect x="'+x+'" y="'+yInv+'" width="'+bw+'" height="'+(base-yInv)+'" style="fill:var(--chart-other)"/>';
+      if(v>inv) h+='<rect x="'+x+'" y="'+yTop+'" width="'+bw+'" height="'+(yInv-yTop)+'" style="fill:'+it[2]+'"/>';
+      h+='<text x="'+(x+bw/2)+'" y="'+(yTop-8-(W<440&&i%2?16:0))+'" text-anchor="middle" font-size="12" font-weight="'+(i===3?'600':'500')+'" style="fill:var(--color-text-deep)">'+lakh(v)+'</text>';
+      h+='<text x="'+(x+bw/2)+'" y="'+(base+20+(W<440&&i%2?16:0))+'" text-anchor="middle" font-size="12" style="fill:var(--color-text-cool)">'+it[0]+'</text>';
+    });
+    svg.innerHTML=h;
+    var fv=vals[3], profit=fv-inv, ret=profit/inv*100;
+    document.getElementById('cyInv').textContent=lacs(inv);
+    document.getElementById('cyProfit').textContent=(profit<0?'-':'')+lacs(Math.abs(profit));
+    document.getElementById('cyCorpus').textContent=lacs(fv);
+    document.getElementById('cyRet').textContent=ret.toFixed(2)+'%';
+    document.getElementById('cyRetRow').classList.toggle('neg',ret<0);
+    document.getElementById('cyAmtVal').innerHTML='\u20B9'+fmtIN(amt);
+  }
+  document.getElementById('cyAmt').addEventListener('input',function(){ amt=parseInt(this.value,10); draw(); });
+  document.getElementById('cyPills').addEventListener('click',function(e){
+    if(e.target.tagName!=='BUTTON')return;
+    this.querySelectorAll('button').forEach(function(b){b.classList.remove('on');});
+    e.target.classList.add('on'); sel=e.target.dataset.y; draw();
+  });
+  onWidth(document.getElementById('cyChart'),draw);
+  draw();
+})();
+
+/* ================= SIF risk band, scale of 1 to 5 ================= */
+function drawBand(svgId, level){
+  // SIF risk bands are not the MF riskometer: a grey scale with the current level in navy ("Riskometer and Risk-Band Display")
+  var W=280, x0=16, x1=W-16, sw=(x1-x0)/5, top=54, hgt=32, h='';
+  // the scale shrinks with its box: its 12px labels are set so they are drawn at 12px at any width
+  var svg=document.getElementById(svgId), bw=svg.getBoundingClientRect().width, f12=(12*(bw>0?Math.max(1,W/bw):1)).toFixed(2);
+  svg.dataset.level=level;
+  for(var i=0;i<5;i++){
+    var x=x0+i*sw, on=(i+1)===level;
+    var y=on?top-7:top, hh=on?hgt+14:hgt;
+    h+='<rect x="'+(x+2.5)+'" y="'+y+'" width="'+(sw-5)+'" height="'+hh+'" rx="4" style="fill:'+(on?'var(--color-brand)':'var(--color-border-soft)')+'"/>';
+    h+='<text x="'+(x+sw/2)+'" y="'+(y+hh/2+6)+'" text-anchor="middle" font-size="'+(on?18:16)+'" font-weight="600" style="fill:'+(on?'var(--color-surface-page)':'var(--color-text-cool)')+'">'+(i+1)+'</text>';
+    if(on){
+      var cx=x+sw/2;
+      h+='<polygon points="'+cx+','+(y-5)+' '+(cx-7)+','+(y-15)+' '+(cx+7)+','+(y-15)+'" style="fill:var(--color-text-deep)"/>';
+      h+='<text x="'+cx+'" y="'+(y-21)+'" text-anchor="middle" font-size="'+f12+'" font-weight="600" style="fill:var(--color-text-deep)">Band '+level+' of 5</text>';
+    }
+  }
+  h+='<text x="'+x0+'" y="112" font-size="'+f12+'" style="fill:var(--color-text-cool)">Lower Risk</text>';
+  h+='<text x="'+x1+'" y="112" text-anchor="end" font-size="'+f12+'" style="fill:var(--color-text-cool)">Higher Risk</text>';
+  h+='<text x="'+(W/2)+'" y="127" text-anchor="middle" font-size="'+f12+'" font-weight="500" letter-spacing="0.06em" style="fill:var(--chart-axis)">SIF RISK BAND</text>';
+  svg.innerHTML=h;
+}
+drawBand('rbNow',3);
+drawBand('rbLaunch',5);
+['rbNow','rbLaunch'].forEach(function(id){ var s=document.getElementById(id); onWidth(s,function(){ drawBand(id,+s.dataset.level); }); });
+
+/* ================= tabs + sticky nav ================= */
+document.getElementById('perfTabs').addEventListener('click',function(e){
+  if(e.target.tagName!=='BUTTON')return;
+  this.querySelectorAll('button').forEach(function(b){b.classList.remove('on');});
+  e.target.classList.add('on');
+  document.querySelectorAll('.tabpanel').forEach(function(p){p.classList.remove('show');});
+  document.getElementById('tab-'+e.target.dataset.t).classList.add('show');
+  document.dispatchEvent(new Event('mh:tabshown'));
+});
+var links=document.querySelectorAll('.secnav a');
+var secs=['nav-chart','performance','riskband','details','taxation'].map(function(id){return document.getElementById(id);});
+window.addEventListener('scroll',function(){
+  var y=window.scrollY+140, idx=0;
+  secs.forEach(function(s,i){ if(s&&s.offsetTop<=y) idx=i; });
+  // at the very bottom the last (short) section can never reach the top: mark it current
+  if(window.innerHeight+window.scrollY>=document.documentElement.scrollHeight-2) idx=secs.length-1;
+  links.forEach(function(l,i){ l.classList.toggle('here',i===idx); });
+});
+</script>
+<script>
+/* ================= Growth / IDCW option switch ================= */
+(function(){
+  var sw=document.querySelector('.id-right .plan-switch'); if(!sw) return;
+  var big=document.querySelector('.id-right .nav-big'), chg=document.querySelector('.id-right .nav-chg'), note=document.getElementById('optNote');
+  function show(bt){
+    sw.querySelectorAll('button').forEach(function(b){ var on=b===bt; b.classList.toggle('on',on); b.setAttribute('aria-pressed',on?'true':'false'); });
+    big.innerHTML='&#8377;'+bt.dataset.nav;
+    chg.textContent=bt.dataset.chg+' today';
+    chg.classList.toggle('up',bt.dataset.chg.charAt(0)!=='-'); chg.classList.toggle('down',bt.dataset.chg.charAt(0)==='-');
+    if(note){ note.hidden=!bt.dataset.note; note.textContent=bt.dataset.note||''; }
+  }
+  sw.addEventListener('click',function(e){ var bt=e.target.closest('button'); if(bt) show(bt); });
+})();
+</script>
+<script>
+window.TAX_CFG={"cls": "eq", "product": "SIF", "listed": false, "checked": "29 Sep 2026", "basis": "As stated in its Investment Strategy Information Document (page 31), which gives equity-fund tax rates for this strategy."};
+/* ================= Taxation =================
+   Rules: Income-tax Act, 2025 (in force 1 Apr 2026) as amended by the Finance Act, 2026.
+   Tax class per scheme comes from tax_classify.py (see docs/taxation-logic.md); set it in TAX_CFG. */
+(function(){
+  var R='₹';
+  var CLS={
+    eq:{name:'Equity-Oriented Fund', chip:'status-brand',
+        rows:[['Long Term After','More than 12 months'],
+              ['Short-Term Gains','20%'],
+              ['Long-Term Gains','12.5% on gains above '+R+'1,25,000 in a financial year<span class="sub">The '+R+'1,25,000 is shared across all your listed shares and equity-oriented funds. No indexation.</span>'],
+              ['Securities Transaction Tax','0.001% of the redemption value, deducted when you redeem'],
+              ['Income Distributions (IDCW)','Added to your income and taxed at your slab rate'],
+              ['TDS','10% on IDCW above '+R+'10,000 a year from this fund house<span class="sub">No TDS on redemptions for resident investors.</span>']]},
+    sp:{name:'Debt-Oriented (Specified) Fund', chip:'status-info',
+        rows:[['Long Term After','Not applicable. For units bought on or after 1 Apr 2023, every gain is short term'],
+              ['Gains','Added to your income and taxed at your slab rate, however long you hold'],
+              ['Units Bought Before 1 Apr 2023','Long term after more than 24 months (12 months if listed), taxed at 12.5% without indexation; earlier sales at your slab rate'],
+              ['Securities Transaction Tax','None'],
+              ['Income Distributions (IDCW)','Added to your income and taxed at your slab rate'],
+              ['TDS','10% on IDCW above '+R+'10,000 a year from this fund house']]},
+    ot:{name:'Other Fund', chip:'status-warning',
+        rows:[['Long Term After',function(c){return c.listed?'More than 12 months, because the units are listed on a stock exchange':'More than 24 months (12 months for units listed on a stock exchange)';}],
+              ['Short-Term Gains','Added to your income and taxed at your slab rate'],
+              ['Long-Term Gains','12.5% without indexation<span class="sub">The '+R+'1,25,000 exemption does not apply.</span>'],
+              ['Securities Transaction Tax','None'],
+              ['Income Distributions (IDCW)','Added to your income and taxed at your slab rate'],
+              ['TDS','10% on IDCW above '+R+'10,000 a year from this fund house']]}
+  };
+  var CMP=[
+    ['What Decides It','At least 65% in Indian listed shares','More than 65% in debt and money market','Neither, for example hybrids with 35% to 65% equity, gold, silver and overseas funds'],
+    ['Long Term After','More than 12 months','Never, for units bought on or after 1 Apr 2023','More than 24 months, or 12 months if listed'],
+    ['Short-Term Gains','20%','Slab rate','Slab rate'],
+    ['Long-Term Gains','12.5% above '+R+'1,25,000 a year','Not applicable','12.5%, no exemption'],
+    ['Securities Transaction Tax','0.001% on redemption','None','None']
+  ];
+  var BASIS={category:'Classified from its SEBI category',name:'Classified from what it invests in',portfolio:'Classified from its latest portfolios',document:'As stated in its scheme document'};
+  var box=document.getElementById('taxBody'); if(!box) return;
+  function render(c, demo){
+  var k=CLS[c.cls]?c.cls:'nc', h='';
+  if(demo) h+='<div class="alert alert-warning tax-illus" role="status">Illustration only. This is how the section reads for a scheme in this tax class; it is not this scheme&rsquo;s tax class.</div>';
+  h+='<div class="card tax-card"><div class="tax-top">';
+  h+=k==='nc'?'<span class="status no-dot">Tax Class Not Yet Confirmed</span>':'<span class="status no-dot '+CLS[k].chip+'">'+CLS[k].name+'</span>';
+  h+='<span class="tax-basis">'+(c.basis||'')+(c.checked?' Last checked '+c.checked+'.':'')+'</span></div>';
+  if(k==='nc'){
+    h+='<p class="text-strong">This scheme&rsquo;s tax class depends on how its portfolio is invested over the year, so it is shown here once confirmed from its scheme document or portfolios. The table below shows how each class is taxed.</p>';
+  } else {
+    h+='<h3 class="card__title">How This Scheme Is Taxed</h3><table class="tax-kv" style="margin-top:var(--space-3)">';
+    CLS[k].rows.forEach(function(r){ var v=typeof r[1]==='function'?r[1](c):r[1]; h+='<tr><th scope="row">'+r[0]+'</th><td>'+v+'</td></tr>'; });
+    h+='</table>';
+  }
+  h+='</div>';
+  var col={eq:1,sp:2,ot:3}[k]||0;
+  h+='<h3 class="tax-h">How the Three Tax Classes Compare</h3><div class="scrollx"><table class="data tax-compare"><thead><tr><th scope="col">Rule</th>';
+  ['Equity-Oriented','Debt-Oriented (Specified)','Other'].forEach(function(t,i){ h+='<th scope="col"'+(col===i+1?' class="cur"':'')+'>'+t+(col===i+1?' <span class="sr-only">(this scheme)</span>':'')+'</th>'; });
+  h+='</tr></thead><tbody>';
+  CMP.forEach(function(r){ h+='<tr>'+r.map(function(v,i){ return '<td'+(i&&col===i?' class="cur"':'')+'>'+v+'</td>'; }).join('')+'</tr>'; });
+  h+='</tbody></table></div>';
+  var notes=[];
+  if(c.product==='SIF') notes.push('A Specialised Investment Fund is a mutual fund scheme under SEBI&rsquo;s regulations, so the same tax rules apply. Derivative positions, long or short, do not count toward the 65% in Indian listed shares.');
+  notes.push('The class is tested every year on the fund&rsquo;s actual holdings: the annual average of monthly opening and closing figures for equity, and of daily figures for debt.');
+  notes.push('Switching between plans or options, for example Regular to Direct or Growth to IDCW, counts as a redemption and a fresh purchase, so it can create a taxable gain.');
+  notes.push('Short-term capital losses can be set off against any capital gain; long-term losses only against long-term gains. Unused losses carry forward for 8 years.');
+  notes.push('Surcharge is capped at 15% on equity gains, long-term gains and IDCW; slab-rate gains carry the normal surcharge. A 4% health and education cess applies on top.');
+  h+='<h3 class="tax-h">Good to Know</h3><ul class="tax-notes">'+notes.map(function(n){return '<li>'+n+'</li>';}).join('')+'</ul>';
+  h+='<p class="tax-foot">Rates are for resident individuals for tax year 2026-27 under the Income-tax Act, 2025, as amended by the Finance Act, 2026, and exclude surcharge and cess. Tax laws change and your tax depends on your circumstances, so please consult a tax adviser before acting. This section is for information only and is not tax or investment advice.</p>';
+  box.innerHTML=h;
+  }
+  render(window.TAX_CFG||{cls:'nc'});
+  /* Demo only: shows how the section reads for the other tax classes.
+     Set window.TAX_DEMO=false to remove the switcher. */
+  var DEMO={
+    sp:{cls:'sp',product:'SIF',listed:false,basis:'Illustration: for example a Debt Long-Short strategy, which must keep more than 65% in debt.'},
+    ot:{cls:'ot',product:'SIF',listed:false,basis:'Illustration: for example a Hybrid Long-Short strategy whose Investment Strategy Information Document gives non-equity tax rates.'},
+    nc:{cls:'nc',product:'SIF',listed:false,basis:'Illustration: for example an Active Asset Allocator Long-Short strategy, whose document gives one tax table for every fund type.'}
+  };
+  var bar=document.getElementById('taxDemoBar'), btn=document.getElementById('taxDemoBtn'), opts=document.getElementById('taxDemo');
+  if(!bar||window.TAX_DEMO===false) return;
+  bar.hidden=false;
+  function pick(cls){
+    opts.querySelectorAll('.chip').forEach(function(b){ b.setAttribute('aria-pressed',b.getAttribute('data-cls')===cls?'true':'false'); });
+    if(cls) render(DEMO[cls],true); else render(window.TAX_CFG||{cls:'nc'});
+  }
+  btn.addEventListener('click',function(){
+    var open=opts.hidden;
+    opts.hidden=!open; btn.setAttribute('aria-expanded',open?'true':'false');
+    btn.textContent=open?'Hide Demo Tax Classes':'Show Demo Tax Classes';
+    if(!open) pick('');
+  });
+  opts.addEventListener('click',function(e){ var b=e.target.closest('.chip'); if(b) pick(b.getAttribute('data-cls')); });
+})();
+</script>
+<script>
+window.SCHEME_NAMES={"S-22":"Altiva Equity Ex- Top 100 Long - Short Fund","S-34":"Altiva Equity Long-Short Fund","S-3":"Altiva Hybrid Long-Short Fund","S-32":"Apex Equity Ex-Top 100 Long-short Fund","S-31":"Apex Equity Long-Short Fund","S-13":"Apex Hybrid Long-Short Fund","S-20":"Arthaya Equity Long Short Fund","S-12":"Arudha Equity Long-Short Fund","S-10":"Arudha Hybrid Long-Short Fund","S-5":"Diviniti Equity Long Short Fund","S-14":"DynaSIF Active Asset Allocator Long-Short Fund","S-28":"DynaSIF Equity Ex-Top 100 Long - Short Fund","S-11":"DynaSIF Equity Long - Short Fund","S-29":"INFINITY HYBRID LONG-SHORT FUND","S-23":"iSIF Active Asset Allocator Long-Short Fund","S-8":"iSIF Equity Ex-Top 100 Long-Short Fund","S-24":"iSIF Equity Long-Short Fund","S-9":"iSIF Hybrid Long-Short Fund","S-33":"Magnum Equity Ex-Top 100Long Short Fund","S-4":"Magnum Hybrid Long Short Fund","S-26":"Platinum Hybrid Long-Short Fund","S-27":"Prism Hybrid Long - Short Fund","S-15":"qsif Active Asset Allocator Long-Short Fund","S-6":"qsif Equity Ex-Top 100 Long-Short Fund","S-1":"qsif Equity Long-Short Fund","S-2":"qsif Hybrid Long-Short Fund","S-21":"qsif Sector Rotation Long-Short Fund","S-25":"RedHex Hybrid Long-Short Fund","S-16":"Sapphire Equity Long-Short SIF","S-30":"Summit Equity Long-Short Fund","S-17":"Titanium Equity Long-Short Fund","S-7":"Titanium Hybrid Long-Short Fund","S-18":"WSIF Equity Ex-Top 100 Long-Short Fund","S-19":"WSIF Equity Long-Short Fund"};
+</script>
+<script>
+/* ================= Links from the content site ("Upgrading the Existing 5 Pages") =================
+   ?scheme=<id> for any scheme other than the one shown: a notice that this is a sample page.
+   ?scheme=sample-<frequency>-<letter>: a fictional IDCW scheme from the IDCW explorer. Its name and
+   record-date history replace the Dividend History tab under an "Illustration" banner. The content-site
+   build injects SCHEME_NAMES (id -> name) and SAMPLE_IDCW (id -> {name, cat, hist}) before this script;
+   opened on its own, the page falls back to generic wording. */
+(function(){
+  var id; try{ id=new URLSearchParams(location.search).get('scheme'); }catch(e){ return; }
+  var SHOWN='qsif Equity Long-Short Fund';
+  var names=window.SCHEME_NAMES||{}, samples=window.SAMPLE_IDCW||{};
+  var h1=document.querySelector('.identity h1'), anchor=document.querySelector('.identity .wrap');
+  if(!id||!h1||!anchor) return;
+  if(names[id]===SHOWN) return;
+  function esc(s){ return String(s).replace(/[&<>"]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c];}); }
+  var back=document.referrer?'<a href="'+esc(document.referrer)+'">Go back</a>':'';
+  var box=document.createElement('div');
+  var S=null;
+  if(S){
+    box.className='alert alert-warning sample-note';
+    box.innerHTML='<div><b>Illustration &ndash; sample data.</b> '+esc(S.name)+' is a fictional scheme. The payouts and record dates below are sample figures for demonstration only. They are not actual or expected IDCW declarations of any scheme. '+back+'</div>';
+    anchor.insertBefore(box, anchor.firstChild);
+    h1.textContent=S.name;
+    var sub=document.querySelector('.identity .subline'); if(sub) sub.textContent='Sample AMC. '+S.cat+'. A fictional scheme used to illustrate the IDCW pages.';
+    var tab=document.getElementById('tab-idcw');
+    if(tab){
+      var rows=S.hist.map(function(r){ return '<tr><td>'+esc(r.date)+'</td><td class="num">&#8377;'+r.amt.toFixed(4)+'</td><td><span class="badge">Illustration</span></td></tr>'; }).join('');
+      tab.innerHTML='<h4>IDCW History of '+esc(S.name)+' (Illustration)</h4>'+
+        '<div class="scrollx"><table class="data"><tr><th>Record Date</th><th>IDCW per Unit</th><th>Data</th></tr>'+rows+'</table></div>'+
+        '<div class="tab-note">After the payout, the NAV of the scheme falls to the extent of the payout and statutory levy, if applicable. '+
+        'IDCW amounts can be distributed out of investors’ capital (Equalization Reserve), which is part of the sale price that represents realised gains. '+
+        'Past IDCW is not an indication of future IDCW. IDCW is not guaranteed and depends on distributable surplus.</div>';
+      var btn=document.querySelector('#perfTabs [data-t="idcw"]'); if(btn) btn.click();
+      if(location.hash==='#dividend') setTimeout(function(){ tab.scrollIntoView({block:'start'}); },0);
+    }
+    return;
+  }
+  var nm=names[id];
+  box.className='alert sample-note';
+  box.innerHTML='<div><b>Detailed pages for each scheme are coming.</b> This is a sample page showing '+SHOWN+
+    (nm?', not '+esc(nm):'')+'. '+back+'</div>';
+  anchor.insertBefore(box, anchor.firstChild);
+})();
+</script>
+<section aria-labelledby="sr-sun-h" class="sr-sun"><div class="sr-wrap"><h2 id="sr-sun-h">Thinking about a SIF?</h2><p>SIFs start at ₹10,00,000 and carry higher risk than most mutual funds. Talk it through with us first.</p><div class="sr-sun__cta"><a class="btn btn-primary" href="../../contact/index.html">Talk to Us</a><a class="sr-more" href="tel:+917738032704">Or call +91 77380 32704 <svg aria-hidden="true" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a></div></div><svg aria-hidden="true" class="sr-sun__art" focusable="false" preserveaspectratio="xMidYMax slice" viewbox="0 0 1440 240"><circle cx="720" cy="250" fill="#FF8A50" fill-opacity=".30" r="230"></circle><circle cx="720" cy="250" fill="#FF4A00" r="168"></circle><path d="M0 170c160-34 300-34 460-6s300 30 460 4 340-36 520-4v76H0z" fill="#2E3D99"></path><path d="M0 196c200-26 380-24 560 0s360 22 540 0 240-18 340-8v52H0z" fill="#16205B"></path><path d="M0 220c240-14 480-14 720 0s480 14 720 0v20H0z" fill="#0C1240"></path></svg></section><footer class="sr-foot" data-nosnippet=""><div class="sr-wrap"><div class="sr-foot__top"><div><a aria-label="MoneyHoney home" class="sr-logo" href="../../index.html" tabindex="-1"><svg aria-label="MoneyHoney" fill="none" height="20" role="img" viewbox="0 0 139 20" width="139" xmlns="http://www.w3.org/2000/svg">
+<path d="M1 10C1 15.2842 5.12632 19.6211 10.3474 20C10.3474 18.4632 9.46316 17.0316 8.07368 16.3579C5.67368 15.2211 4.01053 12.8 4.01053 9.97895C4.01053 7.51579 5.27368 5.36842 7.18947 4.08421V7.64211C7.18947 9.36842 8.6 10.7789 10.3474 10.7789V0C5.12632 0.4 1 4.73684 1 10Z" fill="#FF4A00"></path>
+<path d="M21.2318 10C21.2318 15.2842 17.1054 19.6211 11.8844 20C11.8844 18.4632 12.7686 17.0316 14.1581 16.3579C16.5581 15.2211 18.2212 12.8 18.2212 9.97895C18.2212 7.51579 16.9581 5.36842 15.0212 4.08421V7.64211C15.0212 9.36842 13.6107 10.7789 11.8633 10.7789V0C17.0844 0.4 21.2107 4.73684 21.2107 10H21.2318Z" fill="#FF4A00"></path>
+<path d="M13.4418 14.0201C13.4418 15.3043 12.4103 16.3359 11.126 16.3359C9.84184 16.3359 8.81026 15.3043 8.81026 14.0201C8.81026 12.7359 9.84184 11.7043 11.126 11.7043C12.4103 11.7043 13.4418 12.7359 13.4418 14.0201Z" fill="#16205B"></path>
+<path d="M27.6319 3.41083H29.5477C30.1582 3.41083 30.7056 3.72662 31.0214 4.23188L33.6951 8.52662L36.3687 4.23188C36.6845 3.72662 37.253 3.41083 37.8424 3.41083H39.7582V15.474H38.5161C37.7372 15.474 37.1056 14.8424 37.1056 14.0635V7.6003L33.6951 12.7582H33.6319L30.2424 7.66346V14.0845C30.2424 14.8635 29.6108 15.495 28.8319 15.495H27.6319V3.43188V3.41083Z" fill="#16205B"></path>
+<path d="M49.0839 10.905V10.8629C49.0839 9.49451 48.0944 8.31556 46.6418 8.31556C45.1892 8.31556 44.2207 9.47345 44.2207 10.8419V10.884C44.2207 12.2524 45.2102 13.4313 46.6628 13.4313C48.1155 13.4313 49.0839 12.2735 49.0839 10.905ZM41.6102 10.905V10.8629C41.6102 8.21029 43.7576 6.06293 46.6628 6.06293C49.5681 6.06293 51.6734 8.18924 51.6734 10.8419V10.884C51.6734 13.5366 49.526 15.684 46.6207 15.684C43.7155 15.684 41.6102 13.5577 41.6102 10.905Z" fill="#16205B"></path>
+<path d="M53.2529 6.25173H55.0003C55.5055 6.25173 55.9055 6.65173 55.9055 7.13594V7.557C56.5161 6.77805 57.295 6.08331 58.6213 6.08331C60.6213 6.08331 61.7792 7.38858 61.7792 9.51489V15.4938H60.3897C59.695 15.4938 59.1476 14.9465 59.1476 14.2517V10.3359C59.1476 9.09384 58.5582 8.46226 57.5476 8.46226C56.5371 8.46226 55.9055 9.09384 55.9055 10.3359V14.2517C55.9055 14.9254 55.3371 15.4938 54.6634 15.4938H53.274V6.25173H53.2529Z" fill="#16205B"></path>
+<path d="M69.8203 10.1471C69.673 8.96819 68.9782 8.18924 67.8624 8.18924C66.7467 8.18924 66.0519 8.96819 65.8414 10.1471H69.8203ZM63.273 10.905V10.8629C63.273 8.23135 65.1677 6.06293 67.8624 6.06293C70.9782 6.06293 72.3888 8.46293 72.3888 11.0735C72.3888 11.284 72.3888 11.5156 72.3467 11.7682H65.8624C66.1151 12.9471 66.9572 13.5787 68.1361 13.5787C68.8309 13.5787 69.3782 13.4103 69.9256 13.0103C70.2203 12.7998 70.6203 12.8419 70.873 13.0735L71.8835 13.9577C71.0203 15.0313 69.7572 15.684 68.073 15.684C65.273 15.684 63.2098 13.7471 63.2098 10.905H63.273Z" fill="#16205B"></path>
+<path d="M80.8733 6.2522H82.4312L78.8523 15.7048C78.1365 17.5785 77.3786 18.2943 75.7996 18.2943C74.8523 18.2943 74.1365 18.0627 73.4628 17.6627L74.2417 16.0206C74.3049 15.8943 74.4523 15.8311 74.5786 15.8943C74.8733 16.0417 75.2102 16.1259 75.4628 16.1259C75.9049 16.1259 76.1575 15.9785 76.3891 15.5154L72.747 6.2522H74.2839C75.0417 6.2522 75.6944 6.73641 75.926 7.43114L77.6523 12.5469L79.3154 7.36799C79.526 6.6943 80.1575 6.2522 80.8523 6.2522H80.8733Z" fill="#16205B"></path>
+<path d="M84.4945 3.41083H85.6735C86.4945 3.41083 87.1682 4.06346 87.1682 4.88451V8.18977H92.0945V4.88451C92.0945 4.06346 92.7682 3.41083 93.5893 3.41083H94.7682V15.474H93.6314C92.7682 15.474 92.0945 14.7792 92.0945 13.9371V10.6319H87.1682V13.9371C87.1682 14.7792 86.4735 15.474 85.6314 15.474H84.4945V3.41083Z" fill="#FF4A00"></path>
+<path d="M104.073 10.905V10.8629C104.073 9.49451 103.083 8.31556 101.631 8.31556C100.178 8.31556 99.2098 9.47345 99.2098 10.8419V10.884C99.2098 12.2524 100.199 13.4313 101.652 13.4313C103.105 13.4313 104.073 12.2735 104.073 10.905ZM96.6203 10.905V10.8629C96.6203 8.21029 98.7677 6.06293 101.673 6.06293C104.578 6.06293 106.683 8.18924 106.683 10.8419V10.884C106.683 13.5366 104.536 15.684 101.631 15.684C98.7256 15.684 96.6203 13.5577 96.6203 10.905Z" fill="#FF4A00"></path>
+<path d="M135.863 6.2522H137.421L133.842 15.7048C133.126 17.5785 132.368 18.2943 130.789 18.2943C129.842 18.2943 129.126 18.0627 128.452 17.6627L129.231 16.0206C129.294 15.8943 129.442 15.8311 129.589 15.8943C129.884 16.0417 130.199 16.1259 130.473 16.1259C130.915 16.1259 131.168 15.9785 131.399 15.5154L127.757 6.2522H129.294C130.052 6.2522 130.705 6.73641 130.936 7.43114L132.663 12.5469L134.326 7.36799C134.536 6.6943 135.168 6.2522 135.863 6.2522Z" fill="#FF4A00"></path>
+<path d="M108.243 6.25173H109.99C110.495 6.25173 110.895 6.65173 110.895 7.13594V7.557C111.506 6.77805 112.285 6.08331 113.611 6.08331C115.611 6.08331 116.769 7.38858 116.769 9.51489V15.4938H115.379C114.685 15.4938 114.137 14.9465 114.137 14.2517V10.3359C114.137 9.09384 113.548 8.46226 112.537 8.46226C111.527 8.46226 110.895 9.09384 110.895 10.3359V14.2517C110.895 14.9254 110.327 15.4938 109.653 15.4938H108.264V6.25173H108.243Z" fill="#FF4A00"></path>
+<path d="M124.895 10.1471C124.747 8.96819 124.053 8.18924 122.937 8.18924C121.821 8.18924 121.126 8.96819 120.916 10.1471H124.895ZM118.326 10.905V10.8629C118.326 8.23135 120.221 6.06293 122.916 6.06293C126.032 6.06293 127.442 8.46293 127.442 11.0735C127.442 11.284 127.442 11.5156 127.4 11.7682H120.916C121.168 12.9471 122.01 13.5787 123.189 13.5787C123.884 13.5787 124.432 13.4103 124.979 13.0103C125.274 12.7998 125.674 12.8419 125.926 13.0735L126.937 13.9577C126.074 15.0313 124.81 15.684 123.126 15.684C120.326 15.684 118.263 13.7471 118.263 10.905H118.326Z" fill="#FF4A00"></path>
+</svg></a><p class="sr-foot__id">Money Honey Financial Services Private Limited · AMFI Registered Mutual Fund Distributor &amp; SIF Distributor · ARN-60930, valid till 6 May 2028</p></div><nav aria-label="Footer" class="sr-foot__cols"><div><h3>Invest</h3><ul><li><a href="../../mutual-funds/index.html">Mutual Funds</a></li><li><a href="../../mutual-funds/explore/index.html">Explore Funds</a></li><li><a href="../../mutual-funds/screens/index.html">Fund Screens</a></li><li><a href="../../mutual-funds/screener/index.html">Screener</a></li><li><a href="../../sif/index.html">SIF</a></li><li><a href="../../gift-city-funds/index.html">GIFT City Funds</a></li><li><a href="../../mutual-funds/nfo/index.html">New Fund Offers</a></li></ul></div><div><h3>Save</h3><ul><li><a href="../../fixed-deposits/index.html">Fixed Deposits</a></li><li><a href="../../fixed-deposits/bank-fd-rates/index.html">Compare FD Rates</a></li><li><a href="../../bonds/ncd/index.html">NCD IPOs</a></li><li><a href="../../bonds/rbi-bonds/index.html">RBI Bonds</a></li><li><a href="../../bonds/capital-gain-bonds/index.html">Capital Gain Bonds</a></li></ul></div><div><h3>Plan</h3><ul><li><a href="../../solutions/index.html">Solutions</a></li><li><a href="../../solutions/retirement/index.html">Retirement</a></li><li><a href="../../solutions/child-education/index.html">Child Education</a></li><li><a href="../../solutions/sip/index.html">SIP</a></li><li><a href="../../solutions/tax-saving/index.html">Tax Saving</a></li><li><a href="../../calculators/index.html">Calculators</a></li></ul></div><div><h3>Learn</h3><ul><li><a href="../../blog/index.html">Blog</a></li><li><a href="../../videos/index.html">Videos and Posts</a></li><li><a href="../../mutual-funds/market-outlook/index.html">Market Outlook</a></li><li><a href="../../mutual-funds/dividends/index.html">Dividends (IDCW)</a></li><li><a href="../../methodology/index.html">Methodology</a></li></ul></div><div><h3>Company</h3><ul><li><a href="../../about/index.html">About</a></li><li><a href="../../contact/index.html">Contact</a></li><li><a href="https://ba.moneyhoney.co.in/">Business Associates</a></li><li><a href="../../mutual-funds/amc/index.html">Fund Houses We Distribute</a></li><li><a href="../../site-map/index.html">Site Map</a></li></ul></div><div><h3>Disclosures</h3><ul><li><a href="../../disclaimer/index.html">Disclaimer</a></li><li><a href="../../commission-disclosure/index.html">Commission Disclosure</a></li><li><a href="../../contact/index.html#grievance-redressal">Grievance Redressal</a></li><li><a href="https://smartodr.in/">SMART ODR</a></li></ul></div></nav></div><section aria-labelledby="sr-disc-h" class="sr-disc"><h2 class="sr-disc__h" id="sr-disc-h">Important MoneyHoney Disclosures</h2><p class="sr-disc__lead">About Risk</p><p>Mutual Fund investments are subject to market risks, read all scheme related documents carefully.</p><p>Investments in Specialized Investment Fund involves relatively higher risk including potential loss of capital, liquidity risk and market volatility. Please read all investment strategy related documents carefully before making the investment decision.</p></section><p class="sr-foot__legal"><span>MoneyHoney is a mutual fund distributor, not a SEBI-registered investment adviser.</span><a href="../../disclaimer/index.html">Disclaimer</a><a href="../../commission-disclosure/index.html">Commission Disclosure</a><a href="../../site-map/index.html">Site Map</a></p></div></footer></body>
+</html>
